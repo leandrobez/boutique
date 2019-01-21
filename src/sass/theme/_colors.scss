@@ -1,0 +1,47 @@
+/*---------------TEXT COLORS AND BACKGROUN COLORS----------------*/
+
+/**Colors*/
+.il-color--text {
+  color: $textColor;
+}
+
+.il-color--text__light {
+  color: $textColorLight;
+}
+
+.il-color--text__dark {
+  color: $textColorDark;
+}
+
+.il-color--text__accent{
+  color: $textColorAccent;
+}
+
+.il-color--text__gold{
+  color: $textColorGold;
+}
+
+.il-color--text__thirty {
+  color: $thirtyColor;
+}
+
+.il-color--text__alt {
+  color: $textColorAlt;
+}
+
+/**Backgrounds*/
+.il-color--background__default{
+  background: $primaryAccent;
+}
+
+.il-color--background__light{
+  background: $secondColorAccent;
+}
+
+.il-color--background__modal{
+  background: $colorBg;
+}
+
+.il-color--background__dark{
+  background: rgba(73, 73, 73, 0.5);
+}

@@ -1,0 +1,347 @@
+/*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:21
+    */
+@import 'variables';
+
+@font-face {
+  font-family: 'Flaticon';
+  src: url('#{$fi-font-path}/Flaticon.eot');
+  src: url('#{$fi-font-path}/Flaticon.eot?#iefix') format('embedded-opentype'),
+    url('#{$fi-font-path}/Flaticon.woff') format('woff'),
+    url('#{$fi-font-path}/Flaticon.ttf') format('truetype'),
+    url('#{$fi-font-path}/Flaticon.svg#Flaticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'Flaticon';
+    src: url('#{$fi-font-path}/Flaticon.svg#Flaticon') format('svg');
+  }
+}
+
+@import 'core';
+.flaticon-balance-control-position:before {
+    content: '\f100';
+  }
+  .flaticon-barrel-position:before {
+    content: '\f101';
+  }
+  .flaticon-bicycle-position:before {
+    content: '\f102';
+  }
+  .flaticon-body-arc-position:before {
+    content: '\f103';
+  }
+  .flaticon-boomerang-position:before {
+    content: '\f104';
+  }
+  .flaticon-bosu-ball:before {
+    content: '\f105';
+  }
+  .flaticon-breath-position:before {
+    content: '\f106';
+  }
+  .flaticon-cat-position:before {
+    content: '\f107';
+  }
+  .flaticon-centering-position:before {
+    content: '\f108';
+  }
+  .flaticon-change-legs-position:before {
+    content: '\f109';
+  }
+  .flaticon-clothing-fot-pilates:before {
+    content: '\f10a';
+  }
+  .flaticon-concentration-position:before {
+    content: '\f10b';
+  }
+  .flaticon-control-position:before {
+    content: '\f10c';
+  }
+  .flaticon-corkscrew-position:before {
+    content: '\f10d';
+  }
+  .flaticon-crab-position:before {
+    content: '\f10e';
+  }
+  .flaticon-crisscross-position:before {
+    content: '\f10f';
+  }
+  .flaticon-double-kick-position:before {
+    content: '\f110';
+  }
+  .flaticon-double-leg-position:before {
+    content: '\f111';
+  }
+  .flaticon-downward-dog-position:before {
+    content: '\f112';
+  }
+  .flaticon-elongation-posture:before {
+    content: '\f113';
+  }
+  .flaticon-excercises-lying-with-ball-at-feet:before {
+    content: '\f114';
+  }
+  .flaticon-exercise-bands:before {
+    content: '\f115';
+  }
+  .flaticon-exercise-ring:before {
+    content: '\f116';
+  }
+  .flaticon-exercises-with-barrel:before {
+    content: '\f117';
+  }
+  .flaticon-exercises-with-body-arc:before {
+    content: '\f118';
+  }
+  .flaticon-exercises-with-bosu-ball:before {
+    content: '\f119';
+  }
+  .flaticon-exercises-with-cadillac:before {
+    content: '\f11a';
+  }
+  .flaticon-exercises-with-chair:before {
+    content: '\f11b';
+  }
+  .flaticon-exercises-with-mat:before {
+    content: '\f11c';
+  }
+  .flaticon-exercises-with-reformer:before {
+    content: '\f11d';
+  }
+  .flaticon-exercises-with-resistance-bands:before {
+    content: '\f11e';
+  }
+  .flaticon-exercises-with-ring:before {
+    content: '\f11f';
+  }
+  .flaticon-extension-posture:before {
+    content: '\f120';
+  }
+  .flaticon-flexion-position:before {
+    content: '\f121';
+  }
+  .flaticon-hip-twist-with-stretched-leg-position:before {
+    content: '\f122';
+  }
+  .flaticon-incurve-position:before {
+    content: '\f123';
+  }
+  .flaticon-jackknife-position:before {
+    content: '\f124';
+  }
+  .flaticon-leg-lifting-position:before {
+    content: '\f125';
+  }
+  .flaticon-leg-pull-front-position:before {
+    content: '\f126';
+  }
+  .flaticon-leg-pull-position:before {
+    content: '\f127';
+  }
+  .flaticon-neck-pull-position:before {
+    content: '\f128';
+  }
+  .flaticon-one-leg-kick-laying:before {
+    content: '\f129';
+  }
+  .flaticon-one-leg-stretching-position:before {
+    content: '\f12a';
+  }
+  .flaticon-one-leg-up-position:before {
+    content: '\f12b';
+  }
+  .flaticon-open-leg-rocker-posture:before {
+    content: '\f12c';
+  }
+  .flaticon-pelvic-curl-posture:before {
+    content: '\f12d';
+  }
+  .flaticon-physio-balls:before {
+    content: '\f12e';
+  }
+  .flaticon-pilates-accesory:before {
+    content: '\f12f';
+  }
+  .flaticon-pilates-cadillac:before {
+    content: '\f130';
+  }
+  .flaticon-pilates-chair:before {
+    content: '\f131';
+  }
+  .flaticon-pilates-equipment:before {
+    content: '\f132';
+  }
+  .flaticon-pilates-mat:before {
+    content: '\f133';
+  }
+  .flaticon-pilates-posture:before {
+    content: '\f134';
+  }
+  .flaticon-pilates-reformer:before {
+    content: '\f135';
+  }
+  .flaticon-pilates-springboard:before {
+    content: '\f136';
+  }
+  .flaticon-pilates-tower:before {
+    content: '\f137';
+  }
+  .flaticon-plan-position:before {
+    content: '\f138';
+  }
+  .flaticon-precision-posture:before {
+    content: '\f139';
+  }
+  .flaticon-push-up-posture:before {
+    content: '\f13a';
+  }
+  .flaticon-rise-up-position:before {
+    content: '\f13b';
+  }
+  .flaticon-rocking-on-the-floor:before {
+    content: '\f13c';
+  }
+  .flaticon-roll-over-position:before {
+    content: '\f13d';
+  }
+  .flaticon-roll-up-posture:before {
+    content: '\f13e';
+  }
+  .flaticon-rolling-like-a-ball-position:before {
+    content: '\f13f';
+  }
+  .flaticon-saw-posture:before {
+    content: '\f140';
+  }
+  .flaticon-scirssors-posture:before {
+    content: '\f141';
+  }
+  .flaticon-seal-posture:before {
+    content: '\f142';
+  }
+  .flaticon-shoulder-bridge-posture:before {
+    content: '\f143';
+  }
+  .flaticon-side-bend-posture:before {
+    content: '\f144';
+  }
+  .flaticon-side-bending-posture:before {
+    content: '\f145';
+  }
+  .flaticon-side-kick-kneeling:before {
+    content: '\f146';
+  }
+  .flaticon-side-kick-posture-laying-on-the-floor:before {
+    content: '\f147';
+  }
+  .flaticon-spine-stretch:before {
+    content: '\f148';
+  }
+  .flaticon-spine-twist:before {
+    content: '\f149';
+  }
+  .flaticon-stick-man-swimming:before {
+    content: '\f14a';
+  }
+  .flaticon-stretching-exercise:before {
+    content: '\f14b';
+  }
+  .flaticon-swan-dive-posture:before {
+    content: '\f14c';
+  }
+  .flaticon-teaser-posture:before {
+    content: '\f14d';
+  }
+  .flaticon-turn-around-leg-posture:before {
+    content: '\f14e';
+  }
+  .flaticon-twisting-arms:before {
+    content: '\f14f';
+  }
+  
+  $font-Flaticon-balance-control-position: '\f100';
+  $font-Flaticon-barrel-position: '\f101';
+  $font-Flaticon-bicycle-position: '\f102';
+  $font-Flaticon-body-arc-position: '\f103';
+  $font-Flaticon-boomerang-position: '\f104';
+  $font-Flaticon-bosu-ball: '\f105';
+  $font-Flaticon-breath-position: '\f106';
+  $font-Flaticon-cat-position: '\f107';
+  $font-Flaticon-centering-position: '\f108';
+  $font-Flaticon-change-legs-position: '\f109';
+  $font-Flaticon-clothing-fot-pilates: '\f10a';
+  $font-Flaticon-concentration-position: '\f10b';
+  $font-Flaticon-control-position: '\f10c';
+  $font-Flaticon-corkscrew-position: '\f10d';
+  $font-Flaticon-crab-position: '\f10e';
+  $font-Flaticon-crisscross-position: '\f10f';
+  $font-Flaticon-double-kick-position: '\f110';
+  $font-Flaticon-double-leg-position: '\f111';
+  $font-Flaticon-downward-dog-position: '\f112';
+  $font-Flaticon-elongation-posture: '\f113';
+  $font-Flaticon-excercises-lying-with-ball-at-feet: '\f114';
+  $font-Flaticon-exercise-bands: '\f115';
+  $font-Flaticon-exercise-ring: '\f116';
+  $font-Flaticon-exercises-with-barrel: '\f117';
+  $font-Flaticon-exercises-with-body-arc: '\f118';
+  $font-Flaticon-exercises-with-bosu-ball: '\f119';
+  $font-Flaticon-exercises-with-cadillac: '\f11a';
+  $font-Flaticon-exercises-with-chair: '\f11b';
+  $font-Flaticon-exercises-with-mat: '\f11c';
+  $font-Flaticon-exercises-with-reformer: '\f11d';
+  $font-Flaticon-exercises-with-resistance-bands: '\f11e';
+  $font-Flaticon-exercises-with-ring: '\f11f';
+  $font-Flaticon-extension-posture: '\f120';
+  $font-Flaticon-flexion-position: '\f121';
+  $font-Flaticon-hip-twist-with-stretched-leg-position: '\f122';
+  $font-Flaticon-incurve-position: '\f123';
+  $font-Flaticon-jackknife-position: '\f124';
+  $font-Flaticon-leg-lifting-position: '\f125';
+  $font-Flaticon-leg-pull-front-position: '\f126';
+  $font-Flaticon-leg-pull-position: '\f127';
+  $font-Flaticon-neck-pull-position: '\f128';
+  $font-Flaticon-one-leg-kick-laying: '\f129';
+  $font-Flaticon-one-leg-stretching-position: '\f12a';
+  $font-Flaticon-one-leg-up-position: '\f12b';
+  $font-Flaticon-open-leg-rocker-posture: '\f12c';
+  $font-Flaticon-pelvic-curl-posture: '\f12d';
+  $font-Flaticon-physio-balls: '\f12e';
+  $font-Flaticon-pilates-accesory: '\f12f';
+  $font-Flaticon-pilates-cadillac: '\f130';
+  $font-Flaticon-pilates-chair: '\f131';
+  $font-Flaticon-pilates-equipment: '\f132';
+  $font-Flaticon-pilates-mat: '\f133';
+  $font-Flaticon-pilates-posture: '\f134';
+  $font-Flaticon-pilates-reformer: '\f135';
+  $font-Flaticon-pilates-springboard: '\f136';
+  $font-Flaticon-pilates-tower: '\f137';
+  $font-Flaticon-plan-position: '\f138';
+  $font-Flaticon-precision-posture: '\f139';
+  $font-Flaticon-push-up-posture: '\f13a';
+  $font-Flaticon-rise-up-position: '\f13b';
+  $font-Flaticon-rocking-on-the-floor: '\f13c';
+  $font-Flaticon-roll-over-position: '\f13d';
+  $font-Flaticon-roll-up-posture: '\f13e';
+  $font-Flaticon-rolling-like-a-ball-position: '\f13f';
+  $font-Flaticon-saw-posture: '\f140';
+  $font-Flaticon-scirssors-posture: '\f141';
+  $font-Flaticon-seal-posture: '\f142';
+  $font-Flaticon-shoulder-bridge-posture: '\f143';
+  $font-Flaticon-side-bend-posture: '\f144';
+  $font-Flaticon-side-bending-posture: '\f145';
+  $font-Flaticon-side-kick-kneeling: '\f146';
+  $font-Flaticon-side-kick-posture-laying-on-the-floor: '\f147';
+  $font-Flaticon-spine-stretch: '\f148';
+  $font-Flaticon-spine-twist: '\f149';
+  $font-Flaticon-stick-man-swimming: '\f14a';
+  $font-Flaticon-stretching-exercise: '\f14b';
+  $font-Flaticon-swan-dive-posture: '\f14c';
+  $font-Flaticon-teaser-posture: '\f14d';
+  $font-Flaticon-turn-around-leg-posture: '\f14e';
+  $font-Flaticon-twisting-arms: '\f14f';
+  

@@ -1,0 +1,143 @@
+//Import fonts google
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Nunito:400,600');
+
+$heading-font: 'Nunito', sans-serif; // only 400 and 400i
+$body-font: 'Pathway Gothic One', sans-serif; // only 700
+
+body {
+  background: $primaryColor;
+  color: $colorBg;
+  font-family: $body-font;
+  line-height: 1.5;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  //sections
+  &.il-section--title {
+    @media screen and (max-width: 360px) {
+      font-size: 2.2rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+    }
+    @media screen and (min-width: 361px) and (max-width: 480px) {
+      font-size: 2.5rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+    }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      font-size: 3rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+    }
+    font-size: 4rem;
+    & span {
+      font-weight: 200;
+    }
+    &.il-title--full {
+      width: 100%;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      @media screen and (max-width: 480px) {
+        font-size: 2.2rem;
+      }
+      & span {
+        margin-left: 0.45rem;
+      }
+    }
+  }
+  &.il-section--sm-title {
+    @media screen and (max-width: 360px) {
+      font-size: .9rem;
+      margin: 0;
+      padding: 0;
+    }
+    @media screen and (min-width: 361px) and (max-width: 480px) {
+      font-size: 1.1rem;
+      margin: 0;
+      padding: 0;
+    }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      font-size: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &.il-section--title__small {
+    font-weight: 500;
+    font-size: 80%;
+  }
+
+  &.il-cards--title {
+    text-align: center;
+  }
+
+  &.il-section--sub-title {
+    font-size: 1.7rem;
+    margin-bottom: 1.4rem;
+    padding: 0.3rem 0.8rem;
+    font-weight: 400;
+    @media screen and (max-width: 360px) {
+      font-size: 1rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+    }
+    @media screen and (min-width: 361px) and (max-width: 480px) {
+      font-size: 1.1rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+    }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      font-size: 1.2rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+    }
+    background: rgba(lighten($primaryColor, 2), 0.5);
+  }
+}
+p.il-section--description {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 4px;
+  position: relative;
+  @media screen and (max-width: 360px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (min-width: 361px) and (max-width: 480px) {
+      font-size: 1.3rem;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    top: 1.45rem;
+    left: 0;
+    width: 49.5%;
+    height: 3px;
+    border-bottom: 2px solid $lines-bg;
+  }
+}
+a {
+  color: $textColorLight;
+  text-decoration: none;
+}

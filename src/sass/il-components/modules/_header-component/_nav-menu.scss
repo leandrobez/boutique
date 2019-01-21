@@ -1,0 +1,47 @@
+&--menu {
+  position: fixed;
+  top: $pos-top;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 104;
+  width: $m-w;
+  height: $m-h;
+  border: 1px solid $secondColor;
+  padding: 7px 0;
+  cursor: pointer;
+  @include easeOut;
+  &.radius {
+    border-radius: 50%;
+    background: $thirtyColorAccent;
+    @include easeOut;
+  }
+  & .il-menu--line {
+    height: 3px;
+    background: $lines-bg;
+    padding: 2px 0;
+    margin: 3px;
+    opacity: 1;
+    @include easeOut;
+    &:hover {
+      background: $thirtyColorAccent;
+      @include easeOut;
+    }
+    &.deform {
+      background: $secondColorAccent;
+      width: 24px;
+      height: 2px;
+      margin-left: 7px;
+      @include easeOut;
+      &:nth-child(1) {
+        margin-top: 5px;
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+    }
+  }
+}

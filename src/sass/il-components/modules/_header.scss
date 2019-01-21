@@ -1,0 +1,14 @@
+.il-header {
+  width: 100%;
+  position: absolute;
+  height: 15vh;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  &.active{
+    height: 100vh;
+    z-index: 104;
+  }
+  @import '_header-component/nav-menu';
+  @import '_header-component/content';
+}

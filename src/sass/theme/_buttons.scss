@@ -1,0 +1,63 @@
+input[type='submit'],
+a.il-btn,
+button.il-btn {
+  font-size: 0.9em;
+  word-spacing: 2px;
+  font-weight: 700;
+  padding: 0.5em 1.3em;
+  background-color: $btn-background-color;
+  text-transform: uppercase;
+  border: 1px solid $btn-border-color;
+  transition: all 0.5s;
+  max-width: $max-width;
+  text-decoration: none;
+  &.left {
+    margin-left: 0;
+  }
+  &.right {
+    margin-right: 0;
+  }
+  &.auto {
+    margin: auto;
+  }
+  &.bigger {
+    width: 240px;
+    @media screen and (min-width: 1171px) {
+      width: 280px;
+    }
+  }
+}
+
+input[type='submit']:focus,
+a.il-btn:focus,
+button.il-btn:focus,
+a.il-btn:hover,
+button.il-btn:hover,
+input[type='submit']:hover {
+  background-color: $btn-background-color;
+  border: 1px solid $btn-border-color-hover;
+}
+a.il-btn--cards,
+button.il-btn--cards {
+  background-color: rgb(51, 12, 12);
+  &:focus,
+  &:hover {
+    background-color: $btn-cards-background-color-hoover;
+    border: none;
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+a.il-btn--empty,
+button.il-btn--empty {
+  background-color: transparent;
+  &:focus,
+  &:hover {
+    border: none;
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+}

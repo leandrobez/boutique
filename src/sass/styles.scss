@@ -1,0 +1,43 @@
+/*
+*****===============*****
+Boutique Pilates - ESTILOS
+*****===============*****
+*/
+
+//base
+@import 'il-components/base/normalize';
+@include normalize();
+
+/*ICONs MDI*/
+@import './mdi/materialdesignicons';
+@import './pilatesicons/icons';
+
+/*VARIABLES*/
+@import './config/variables';
+
+/*MIXIS*/
+@import 'config/mixins';
+
+/*THEMES*/
+@import 'theme/colors';
+@import 'theme/buttons';
+
+/*GRID*/
+@import 'il-components/grid/geral';
+@import 'il-components/grid/grid';
+
+/*CONFIG*/
+@import 'config/tipography';
+
+/*MODULES*/
+@import 'il-components/modules/header';
+@import 'il-components/modules/home';
+@import 'il-components/modules/space';
+@import 'il-components/modules/instructor';
+@import 'il-components/modules/class';
+@import 'il-components/modules/videos';
+@import 'il-components/modules/footer';
+/*
+@import 'il-components/modules/albuns';
+
+@import 'il-components/modules/modal';*/

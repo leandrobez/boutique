@@ -1,0 +1,62 @@
+[
+  {
+    "repository": "videos/chalenger.mov",
+    "name": "chalenger.mov",
+    "id": "video1",
+    "description": "Enfase no desafio e no equilíbrio.",
+    "youtube": {
+      "width": "560",
+      "height": "325",
+      "cod": "pT7I4afnrTo",
+      "thumbnail": "images/thumbnails/chalenger.jpg"
+    }
+  },
+  {
+    "repository": "videos/coordination.mov",
+    "name": "coordination.mov",
+    "id": "video2",
+    "description": "Aqui a enfase está na coordenação e concentração.",
+    "youtube": {
+      "width": "560",
+      "height": "325",
+      "cod": "BC5kitSA2aU",
+      "thumbnail": "images/thumbnails/coordination.jpg"
+    }
+  },
+  {
+    "repository": "videos/corealign.mov",
+    "name": "corealign.mov",
+    "id": "video3",
+    "description": "Movimentos harmoniosos e vigorosos.",
+    "youtube": {
+      "width": "560",
+      "height": "325",
+      "cod": "pVTuIHAcwmg",
+      "thumbnail": "images/thumbnails/corealign.jpg"
+    }
+  },
+  {
+    "repository": "videos/plank.mov",
+    "name": "plank.mov",
+    "id": "video4",
+    "description": "Flexibilidade e equilíbrio.",
+    "youtube": {
+      "width": "560",
+      "height": "325",
+      "cod": "9HnhYYR6oE0",
+      "thumbnail": "images/thumbnails/plank.jpg"
+    }
+  },
+  {
+    "repository": "videos/snake.mov",
+    "name": "snake.mov",
+    "id": "video5",
+    "description": "Resistência, equilíbrio e concentração.",
+    "youtube": {
+      "width": "560",
+      "height": "325",
+      "cod": "3jPq1SmsKO8",
+      "thumbnail": "images/thumbnails/snake.jpg"
+    }
+  }
+]
