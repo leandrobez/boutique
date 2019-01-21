@@ -4,16 +4,18 @@
         <h1 class="il-section--title il-title--full">Os <span class="il-color--text__accent">Instrutores</span></h1>
         <div class="il-intructors--cards">
             <div class="il-cards">
-                <div class="il-cards--avatar"><img class="img-circle" :src="teachers.number1" alt="client1.jpg" /></div>
-                    <div class="il-cards--body">
-                        <div class="il-cards--caption">
-                            <h4>Professor Alfa</h4>
-                        </div>
-                        <div class="il-cards--content">
-                            <i class="mdi mdi-format-quote-close mdi-24px"></i>
-                            <p class="il-cards--text">Excelente professora de CoreAlign</p>
-                        </div>
+                <div class="il-cards--avatar">
+                    <img class="img-circle" :src="teachers.number1" alt="client1.jpg" />
+                </div>
+                <div class="il-cards--body">
+                    <div class="il-cards--caption">
+                        <h4>Professor Alfa</h4>
                     </div>
+                    <div class="il-cards--content">
+                        <i class="mdi mdi-format-quote-close mdi-24px"></i>
+                        <p class="il-cards--text">Excelente professora de CoreAlign</p>
+                    </div>
+                </div>
                 </div>
                 <div class="il-cards">
                     <div class="il-cards--avatar"><img class="img-circle" :src="teachers.number2" alt="client1.jpg" /></div>

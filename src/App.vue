@@ -12,6 +12,9 @@
 
         <!-- /* ======FOOTER=====*/ -->
         <il-footer />
+
+        <!-- /* ======MODAL=====*/ -->
+        <il-modal />
         
     </div>
 </div>
@@ -21,12 +24,15 @@
 import ilHeader from './components/includes/HeaderComponent.vue';
 import ilFooter from './components/includes/FooterComponent.vue';
 
+import ilModal from './components/includes/ModalComponent.vue';
+
 export default {
     name: 'App',
 
     components: {
         ilHeader,
-        ilFooter
+        ilFooter,
+        ilModal
     },
 
     data(){

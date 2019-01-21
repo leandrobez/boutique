@@ -9578,6 +9578,172 @@ button.il-btn--empty:active {
           transform: scale(1.1);
 }
 
+section.il-section--modal {
+  position: absolute;
+  width: 92%;
+  height: auto;
+  top: 20%;
+  left: 4%;
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -2;
+  padding: 1rem;
+  border: 1px solid rgba(40, 55, 58, 0.7);
+  z-index: 1000;
+  -webkit-transition: all 550ms ease-out;
+  transition: all 550ms ease-out;
+}
+
+section.il-section--modal .il-modal--content {
+  border: 2px solid #333;
+}
+
+section.il-section--modal .il-modal--content .il-form--side:first-child {
+  border-right: 2px solid #333;
+}
+
+section.il-section--modal .il-modal--content .il-info {
+  background: #d5d5d4;
+  padding: 0;
+}
+
+section.il-section--modal .il-modal--content .il-info .il-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+section.il-section--modal .il-modal--content .il-info .il-address > div {
+  height: 33.33333%;
+  padding: 0.25rem;
+  border-bottom: 1px solid #afced5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.il-section--modal .il-modal--content .il-info .il-address > div span:first-child {
+  font-weight: bolder;
+  margin-right: 0.35rem;
+}
+
+section.il-section--modal .il-modal--content .il-info .il-address > div:last-child {
+  border: none;
+}
+
+section.il-section--modal .il-modal--content .il-modal--caption {
+  position: relative;
+  height: 3.5rem;
+}
+
+section.il-section--modal .il-modal--content .il-modal--caption h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+section.il-section--modal .il-modal--content .il-modal--caption i#il-closeModal {
+  position: absolute;
+  padding: 2px;
+  right: 1rem;
+  top: -2rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  line-height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: #f1ee0b;
+  -webkit-transition: 450ms;
+  transition: 450ms;
+}
+
+section.il-section--modal .il-modal--content .il-modal--caption i#il-closeModal:hover {
+  background: #532c2c;
+  color: #fcfcfc;
+  -webkit-transition: 450ms;
+  transition: 450ms;
+}
+
+section.il-section--modal .il-modal--content .il-modal--body {
+  padding: 0.35rem;
+}
+
+section.il-section--modal .il-modal--content .il-modal--body form.il-form {
+  text-align: left;
+}
+
+section.il-section--modal .il-modal--content .il-modal--body form.il-form .il-form--content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.35rem;
+  color: #343434;
+}
+
+section.il-section--modal .il-modal--content .il-modal--body form.il-form .il-form--content .il-field--wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.15rem;
+}
+
+section.il-section--modal .il-modal--content .il-modal--body form.il-form .il-form--content .il-field--wrapper > label {
+  font-weight: bolder;
+}
+
+section.il-section--modal .il-modal--content .il-modal--footer {
+  padding: 0.35rem;
+}
+
+section.il-section--modal .il-modal--content .il-modal--footer form.il-form {
+  text-align: left;
+}
+
+section.il-section--modal .il-modal--content .il-modal--footer form.il-form .il-form--content {
+  width: 100%;
+}
+
+section.il-section--modal .il-modal--content .il-modal--footer form.il-form .il-form--content .il-field--wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0.25rem;
+  color: #343434;
+}
+
+section.il-section--modal .il-modal--content .il-modal--footer form.il-form .il-form--content .il-field--wrapper input[type='text'] {
+  padding: 0.25rem;
+}
+
+section.il-section--modal.showModal {
+  z-index: 201;
+  width: 92%;
+  left: 4%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 550ms ease-out;
+  transition: all 550ms ease-out;
+  opacity: 0.9;
+  visibility: visible;
+}
+
 /*GRID*/
 *,
 *:before,
@@ -10556,7 +10722,7 @@ section.il-section.il-section--instructor .il-intructors--cards {
 }
 
 section.il-section.il-section--instructor .il-intructors--cards .il-cards {
-  background: #554d4d;
+  background: #f7dea3;
   padding: 0.45rem;
   -webkit-box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
           box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
@@ -10605,7 +10771,7 @@ section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-ca
 section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content {
   position: relative;
   top: 0.89rem;
-  background: #4faaa0;
+  background: #b69f69;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10650,11 +10816,11 @@ section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-ca
   display: flex;
 }
 
-section.il-section.il-section--instructor {
+section.il-section.il-section--class {
   position: relative;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards {
+section.il-section.il-section--class .il-intructors--cards {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
@@ -10662,7 +10828,7 @@ section.il-section.il-section--instructor .il-intructors--cards {
   grid-column-gap: 0.95rem;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards {
+section.il-section.il-section--class .il-intructors--cards .il-cards {
   background: #554d4d;
   padding: 0.45rem;
   -webkit-box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
@@ -10670,7 +10836,7 @@ section.il-section.il-section--instructor .il-intructors--cards .il-cards {
   position: relative;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--avatar {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--avatar {
   position: absolute;
   width: 100%;
   max-width: 90px;
@@ -10679,13 +10845,13 @@ section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-ca
   z-index: 10;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--avatar img {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--avatar img {
   display: block;
   width: 100%;
   border-radius: 50%;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body {
   position: relative;
   width: 100%;
   height: 100%;
@@ -10699,17 +10865,17 @@ section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-ca
           flex-direction: column;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--caption {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--caption {
   text-align: right;
   color: white;
   margin-right: 20px;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--caption h4 {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--caption h4 {
   font-size: 0.89rem;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content {
   position: relative;
   top: 15px;
   background: #fdb27c;
@@ -10736,7 +10902,7 @@ section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-ca
           transform: skewY(-4deg);
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content p.il-cards--text {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content p.il-cards--text {
   color: #d1e4e4;
   -webkit-transform: skewY(4deg);
           transform: skewY(4deg);
@@ -10744,22 +10910,22 @@ section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-ca
   background: grey;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img1, section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img2, section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img3 {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img1, section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img2, section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img3 {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-position: top center;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img1 {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img1 {
   background-image: url("../../public/images/banners/banner-class1.jpg");
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img2 {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img2 {
   background-image: url("../../public/images/banners/banner-class2.png");
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img3 {
+section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img3 {
   background-image: url("../../public/images/banners/banner-class3.jpg");
 }
 
