@@ -97,7 +97,7 @@ section.il-modal {
           width: 100%;
           & .il-field--wrapper {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-column-gap: 0.25rem;
             color: #343434;
             & input[type='text'] {

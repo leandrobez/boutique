@@ -3,8 +3,20 @@
 
   &.il-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 220px));
-    grid-column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 110px));
+    grid-column-gap: 4px;
+    @media screen and (min-width: 501px) and (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
+      grid-column-gap: 6px;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
+      grid-column-gap: 8px;
+    }
+    @media screen and (min-width: 1171px) {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 160px));
+      grid-column-gap: 9px;
+    }
     justify-content: center;
   }
 
@@ -15,6 +27,13 @@
       padding: 0.35rem 0;
       color: #533606;
       min-height: 4rem;
+      font-size: .75rem;
+      @media screen and (min-width: 501px) and (max-width: 768px) {
+        font-size: .85rem;
+      }
+      @media screen and (min-width: 1171px) {
+        font-size: .9rem;
+      }
     }
     & .il-cards--bottom {
       padding-bottom: 0.45rem;

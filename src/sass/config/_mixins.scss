@@ -7,7 +7,7 @@
   width: 50%;
   left: 0;
   height: 100%;
-  background: $back-body;
+  //background: $back-body;
   z-index: 1;
   //background-image: url('../images/theme/dott.png');
   background-position: center top;
@@ -18,9 +18,9 @@
     width: 100%;
     height: 100%;
     left: 100%;
-    background: rgba(125,103,19,0.3);
+    background: rgba(243, 232, 190, 0.3);
     z-index: 1;
-    background-image: url('../../public/images/theme/dott.png');
+    
     background-position: left top;
     background-repeat: repeat;
   }
@@ -36,7 +36,8 @@
     background-repeat: no-repeat;
     &:after {
       content: '';
-      //background: $back-body;
+      background: #e6c11f;
+      opacity: .5;
       width: 100%;
       height: 100vh;
       position: absolute;
@@ -144,7 +145,7 @@
   }
 }
 
-@mixin mediaLgUp {
+@mixin mediaXl {
   @media screen and (min-width: 1171px) {
     @content;
   }

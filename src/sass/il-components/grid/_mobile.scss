@@ -1,7 +1,6 @@
 // Smaller Screen - max de 360px
 @include mediaSmaller {
   & .il-header .il-header--content {
-    
     & .il-portrait--content {
       & .il-avatar--portrait {
         width: 100px;
@@ -121,7 +120,7 @@
 
 // - entre 501px e 768px
 @include mediaMd {
-  .il-hidden--md-screen{
+  .il-hidden--md-screen {
     display: none;
   }
   .il-header {

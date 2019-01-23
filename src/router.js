@@ -10,6 +10,7 @@ import Class from './components/ClassComponent/class.vue';
 import Student from './components/StudentsComponent/students.vue';
 import Advantage from './components/AdvantangesComponent/advantages.vue';
 import Video from './components/VideosComponent/videos.vue';
+import Albuns from './components/AlbunsComponent/albuns.vue';
 
 Vue.use(Router);
 
@@ -56,6 +57,11 @@ export default new Router({
       path: '/videos',
       name: 'video',
       component: Video
+    },
+    {
+      path: '/albuns',
+      name: 'albuns',
+      component: Albuns
     },
     {
       path: '*',

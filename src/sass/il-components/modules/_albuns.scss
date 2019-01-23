@@ -1,6 +1,6 @@
-section#studio,
-section#events,
-section#course{
+.il-albuns--studio,
+.il-albuns--events,
+.il-albuns--course{
     visibility: hidden;
     transition: all 550ms ease-out;
     &.showAlbum{
@@ -11,6 +11,14 @@ section#course{
 
 .il-albuns--content{
     width: 100%;
+    
+    &.il-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(170px, 320px));
+        grid-gap: .35rem;
+        align-items: center;
+        justify-content: center;
+    }
     & .il-album--cards{
         border: 2px solid $colorBorder;
         border-radius: 4px;
@@ -18,13 +26,6 @@ section#course{
         flex-direction: column;
         align-items: center;
         padding: .25rem;
-    }
-    &.il-grid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(170px, 320px));
-        grid-gap: .35rem;
-        align-items: center;
-        justify-content: center;
     }
     & .il-cards--photo{
         width: 100%;

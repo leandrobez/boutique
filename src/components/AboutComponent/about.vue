@@ -1,7 +1,10 @@
 <template>
 <div class="il-container--wrapper">
     <section id="il-about" class="il-section il-section--about">
-        <h1 class="il-section--title il-title--full">Boutique <span class="il-color--text__gold">Pilates</span></h1>
+        <h1 class="il-section--title il-title--full">
+            <!--<i :class="whatIcon"></i>-->Boutique
+            <span class="il-color--text__gold">Pilates</span>
+        </h1>
     </section>
     <section class="il-section il-section--about__content">
         <div class="il-about--content">
@@ -22,6 +25,12 @@
 
 <script>
 export default {
-    name: 'About'
-}
+  name: 'About',
+
+  data() {
+    return {
+      whatIcon: 'il-pilates-icon flaticon-side-bending-posture'
+    };
+  }
+};
 </script>

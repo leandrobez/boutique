@@ -1,0 +1,21 @@
+.#{$fi-css-prefix}:before {
+  display: inline-block;
+  font-family: '#{$fi-font-family}';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+}
+
+[class^='#{$fi-css-class}']:before,
+[class*='#{$fi-css-class-space}']:before,
+[class^='#{$fi-css-class}']:after,
+[class*='#{$fi-css-class-space}']:after {
+  font-family: '#{$fi-font-family}';
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20px;
+}

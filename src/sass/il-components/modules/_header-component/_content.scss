@@ -83,23 +83,31 @@
         margin: 0;
         text-align: center;
         & a.il-menu--link {
-          font-size: 0.95rem;
-          @media screen and (min-width: 501px) and (max-width: 768px) {
-            font-size: 1.2rem;
-            padding: 0.2rem 0;
-          }
           text-transform: uppercase;
           transform: translate3d(100%, 25%, 0);
           @include easeOut;
+          font-size: 0.95rem;
+          & i {
+            text-align: center;
+            margin-right: .45rem;
+            color: #c9f85d;
+          }
+          @media screen and (min-width: 501px) and (max-width: 768px) {
+            font-size: 1.2rem;
+            padding: 0.2rem 0;
+            
+          }
           @media screen and (min-width: 769px) and (max-width: 1170px) {
             font-size: 1.4rem;
             letter-spacing: 5px;
             padding: 0.3rem 0;
+            
           }
           @media screen and (min-width: 1171px) {
             font-size: 1.5rem;
             letter-spacing: 7px;
             padding: 0.35rem 0;
+            
           }
           &.current {
             color: $thirtyColor;

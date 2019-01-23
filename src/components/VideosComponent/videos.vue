@@ -1,7 +1,7 @@
 <template>
 <section id="il-videos" class="il-section il-section--videos">
     <div class="il-container--wrapper">
-        <h1 class="il-section--title il-title--full">Veja esses <span class="il-color--text__accent">Vídeos</span></h1>
+        <h1 class="il-section--title il-title--full"><!--<i :class="whatIcon"></i>-->Veja esses <span class="il-color--text__gold">Vídeos</span></h1>
 
         <div class="il-videos--content il-grid">
             <div class="il-videos--cards" v-for="(video, index) in videos" :key="video.id">
@@ -36,6 +36,7 @@ export default {
 
   data() {
     return {
+      whatIcon: "il-pilates-icon flaticon-exercise-bands",
       show: false,
       trailer: null,
       videos: []

@@ -16,7 +16,7 @@
                 <ul class="il-menu--list">
                     <li class="il-menu--list__item" v-for="m in menu" :key="m.id">
                         <router-link :to="{name: m.link}" class="il-menu--link" :class="isActive(m.id)" :title="m.title">
-                          <i :class="m.icon"></i>
+                          
                           <span @click="hiddenMenu()">{{m.label}}</span>
                         </router-link>
                     </li>
@@ -42,7 +42,7 @@ export default {
           link: 'home',
           title: 'Comece por aqui',
           label: 'Home',
-          icon: 'flaticon-precision-posture',
+          icon: 'il-pilates-icon flaticon-precision-posture',
           show: true
         },
         {
@@ -50,7 +50,7 @@ export default {
           link: 'about',
           title: 'Saiba mais',
           label: 'Sobre',
-          icon: 'flaticon-side-bending-posture',
+          icon: 'il-pilates-icon flaticon-side-bending-posture',
           show: true
         },
         {
@@ -58,7 +58,7 @@ export default {
           link: 'studio',
           title: 'Esse é o nosso studio',
           label: 'O Studio',
-          icon: 'flaticon-pilates-reformer',
+          icon: 'il-pilates-icon flaticon-pilates-reformer',
           show: true
         },
         {
@@ -66,7 +66,7 @@ export default {
           link: 'teachers',
           title: 'Sem eles não existiriamos',
           label: 'Os Intrutores',
-          icon: 'flaticon-twisting-arms',
+          icon: 'il-pilates-icon flaticon-twisting-arms',
           show: true
         },
         {
@@ -74,7 +74,7 @@ export default {
           link: 'class',
           title: 'E para isso existimos',
           label: 'As Aulas',
-          icon: 'flaticon-pilates-chair',
+          icon: 'il-pilates-icon flaticon-pilates-chair',
           show: true
         },
         {
@@ -82,7 +82,7 @@ export default {
           link: 'student',
           title: 'Tudo isso para vocês',
           label: 'Os Alunos',
-          icon: 'flaticon-exercises-with-reformer',
+          icon: 'il-pilates-icon flaticon-exercises-with-reformer',
           show: true
         },
         {
@@ -90,7 +90,7 @@ export default {
           link: 'advantage',
           title: 'Como ganhamos sua confiança',
           label: 'Vantagens',
-          icon: 'flaticon-pilates-equipment',
+          icon: 'il-pilates-icon flaticon-pilates-equipment',
           show: true
         },
         {
@@ -98,7 +98,7 @@ export default {
           link: 'video',
           title: 'Para conhecer mais',
           label: 'Vídeos',
-          icon: 'flaticon-centering-position',
+          icon: 'il-pilates-icon flaticon-centering-position',
           show: true
         }
       ]

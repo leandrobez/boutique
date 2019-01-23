@@ -6,7 +6,7 @@
   z-index: 104;
   width: $m-w;
   height: $m-h;
-  border: 1px solid $secondColor;
+  border: 1px solid $textColorGold;
   padding: 7px 0;
   cursor: pointer;
   @include easeOut;
@@ -17,7 +17,7 @@
   }
   & .il-menu--line {
     height: 3px;
-    background: $lines-bg;
+    background: $textColorGold;
     padding: 2px 0;
     margin: 3px;
     opacity: 1;

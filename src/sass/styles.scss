@@ -10,7 +10,7 @@ Boutique Pilates - ESTILOS
 
 /*ICONs MDI*/
 @import './mdi/materialdesignicons';
-@import './pilatesicons/icons';
+@import './fi/flaticon';
 
 /*VARIABLES*/
 @import './config/variables';
@@ -26,6 +26,7 @@ Boutique Pilates - ESTILOS
 /*GRID*/
 @import 'il-components/grid/geral';
 @import 'il-components/grid/grid';
+//@import 'il-components/grid/mobile';
 
 /*CONFIG*/
 @import 'config/tipography';

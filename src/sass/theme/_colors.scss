@@ -38,6 +38,10 @@
   background: $secondColorAccent;
 }
 
+.il-color--background__verylight{
+  background: darken($secondColorAccent,10%);
+}
+
 .il-color--background__modal{
   background: $colorBg;
 }

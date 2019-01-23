@@ -1,30 +1,16 @@
 <template>
 <div class="il-container--wrapper">
     <section id="il-class" class="il-section il-section--class">
-        <header id="il-space">
-            <div class="il-banner">
-                <h1 class="il-section--title il-title--full">Nossos <span class="il-color--text__accent">Aulas</span></h1>
-            </div>
-        </header>
+        <h1 class="il-section--title il-title--full">
+            <!--<i :class="whatIcon"></i>-->As
+            <span class="il-color--text__gold">Aulas</span>
+        </h1>
+        <h2 class="il-section--sub-title">Venha fazer uma aula com a gente.</h2>
     </section>
-    <section class="il-section il-section--class__content">
-        <div class="il-container">
-            <div class="il-container--wrapper">
-                <h4 class="il-section--sub-title">Venha fazer uma aula com a gente.</h4>
-            </div>
-        </div>
-        <div class="il-class--items">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fuga dignissimos
-                voluptatum
-                tempora,
-                non laboriosam nisi! Omnis quam, repellendus harum inventore dignissimos hic sed itaque,
-                illo debitis,
-                perspiciatis
-                eum ducimus voluptas corporis animi ullam delectus culpa accusantium possimus et earum
-                mollitia. Eum
-                eaque
-                quidem possimus.
-            </p>
+    <section class="il-section il-section--about__content">
+        <div class="il-space--content il-color--background__verylight">
+            <h3 class="il-section--title__small il-color--text__dark">Olá!</h3>
+            <p class="il-color--text__dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, repellat hic. In eligendi rerum fuga soluta ipsam facere quam, architecto vel repellendus ducimus modi accusantium nostrum saepe dolorum ratione. Accusamus?.</p>
         </div>
     </section>
 </div>
@@ -32,6 +18,12 @@
 
 <script>
 export default {
-    name: 'Class'
-}
+  name: 'Class',
+
+  data() {
+    return {
+      whatIcon: 'il-pilates-icon flaticon-exercises-with-chair'
+    };
+  }
+};
 </script>
