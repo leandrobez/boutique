@@ -10,9 +10,9 @@
             <!--<h3 class="il-section--sm-title il-color--text__gold">Proprietária da Boutique Pilates e CoreAlign</h3>-->
             <p class="il-section--description il-color--text__gold">Palestrante e Instrutora.</p>
             <div class="il-icons">
-                <a href="#" class="il-icons--link"><i class="mdi mdi-facebook mdi-48px"></i></a>
-                <a href="#" class="il-icons--link"><i class="mdi mdi-instagram mdi-48px"></i></a>
-                <a href="#" class="il-icons--link"><i class="mdi mdi-git mdi-48px"></i></a>
+                <a href="#" class="il-icons--link" title="Visite a rede social"><i class="mdi mdi-facebook mdi-48px"></i></a>
+                <a href="#" class="il-icons--link" title="Visite a rede social"><i class="mdi mdi-instagram mdi-48px"></i></a>
+                <a href="#" class="il-icons--link" title="Visite a rede social"><i class="mdi mdi-git mdi-48px"></i></a>
             </div>
 
         </div>
