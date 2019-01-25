@@ -1,7 +1,20 @@
 <template>
 <div id="app" :class="getBigImg()">
+
+    <!--background video-->
+    <div class="il-back--video" v-if="hasVideoBackground">
+        <div class="il-video" id="il-video">
+            <div class="il-content--video">
+                <!--loop="",-->
+                <video autoplay loop muted type="video/mp4">
+              <source :src="videoBack" />
+            </video>
+            </div>
+        </div>
+    </div>
+
     <!--Header-->
-    <ilHeader/>
+    <ilHeader />
     <div class="il-container">
         <div class="il-overlay--dark"></div>
         <!-- /* ==========MAIN===========*/ -->
@@ -15,7 +28,7 @@
 
         <!-- /* ======MODAL=====*/ -->
         <il-modal />
-        
+
     </div>
 </div>
 </template>
@@ -23,7 +36,6 @@
 <script>
 import ilHeader from './components/includes/HeaderComponent.vue';
 import ilFooter from './components/includes/FooterComponent.vue';
-
 import ilModal from './components/includes/ModalComponent.vue';
 
 export default {
@@ -35,9 +47,25 @@ export default {
         ilModal
     },
 
-    data(){
+    data() {
         return {
-            headerActive: false
+            videoBack: 'video/video-esteira.mp4',
+            headerActive: false,
+            modal: {
+              title: "",
+              content: "",
+              footer: ""
+            }
+        };
+    },
+
+    computed: {
+        hasVideoBackground() {
+            let rota = this.$route.name;
+            if (rota == 'video') {
+                return true;
+            }
+            return false;
         }
     },
 
@@ -69,16 +97,17 @@ export default {
                     currentImg = 'big-img-advantage';
                     break;
                 case 'video':
-                    currentImg = 'big-img-video';
+                    currentImg = '';
+                    //currentImg = 'big-img-video';
                     break;
             }
 
-            return currentImg
+            return currentImg;
         }
     }
-}
+};
 </script>
 
 <style>
-@import './sass/styles.css'
+@import './sass/styles.css';
 </style>

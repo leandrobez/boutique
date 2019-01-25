@@ -25,6 +25,11 @@
                           <i class="mdi mdi-24px mdi-camera-party-mode il-color--text__light"></i>
                           <a href="#" class="il-footer--list" title="Veja fotos de cursos">cursos</a></h4>
                     </div>
+                    <div class="il-footer--col">
+                        <h4 class="il-footer--title">
+                          <i class="mdi mdi-24px mdi-email il-color--text__light"></i>
+                          <a href="#" class="il-footer--list" title="Aguardamos seu contato">contato</a></h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,7 +94,7 @@ export default {
           break;
         case 'video':
           currentFooter = 'il-footer--video';
-          this.whereIAm = 'home';
+          this.whereIAm = 'videos';
           this.whatIcon = 'il-pilates-icon flaticon-exercise-bands';
           break;
         default:

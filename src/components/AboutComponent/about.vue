@@ -5,19 +5,10 @@
             <!--<i :class="whatIcon"></i>-->Boutique
             <span class="il-color--text__gold">Pilates</span>
         </h1>
-    </section>
-    <section class="il-section il-section--about__content">
-        <div class="il-about--content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur aspernatur soluta rem. Ipsam.</p>
-            <blockquote class="il-color--text__light">
-                Equilíbrio perfeito entre corpo e mente é aquela qualidade do homem civilizado, que não somente
-                dá a ele
-                uma superioridade
-                sobre o reino selvagem e animal, mas também provê ao mesmo todos os poderes físicos e mentais
-                que são
-                indispensáveis
-                para atingir o objetivo da humanidade!
-            </blockquote>
+        <h2 class="il-section--sub-title">E assim dizia Pilates:</h2>
+    
+        <div class="il-about--content il-color--background__verylight">
+            <p class="il-color--text__dark"> Equilíbrio perfeito entre corpo e mente é aquela qualidade do homem civilizado, que não somente dá a ele uma superioridade sobre o reino selvagem e animal, mas também provê ao mesmo todos os poderes físicos e mentais que são indispensáveis para atingir o objetivo da humanidade!.</p>
         </div>
     </section>
 </div>

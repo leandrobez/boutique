@@ -2,6 +2,7 @@
 <div class="il-container--wrapper">
     <section id="il-instructor" class="il-section il-section--instructor">
         <h1 class="il-section--title il-title--full"><!--<i :class="whatIcon"></i>-->Os <span class="il-color--text__gold">Instrutores</span></h1>
+        <h2 class="il-section--sub-title">Esses são os nossos profissionais especializados:</h2>
         <div class="il-intructors--cards">
             <div class="il-cards">
                 <div class="il-cards--avatar">
