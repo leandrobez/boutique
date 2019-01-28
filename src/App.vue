@@ -1,39 +1,33 @@
 <template>
 <div id="app" :class="getBigImg()">
+    <!--VIDEO BACK-->
+    <ilVideoBack v-if="hasVideoBackground" />
 
-    <!--background video-->
-    <div class="il-back--video" v-if="hasVideoBackground">
-        <div class="il-video" id="il-video">
-            <div class="il-content--video">
-                <!--loop="",-->
-                <video autoplay loop muted type="video/mp4">
-              <source :src="videoBack" />
-            </video>
-            </div>
-        </div>
-    </div>
+    <!--HEADER-->
+    <header id="il-header" class="il-header" :class="isActive()">
+        <ilHeader />
+    </header>
 
-    <!--Header-->
-    <ilHeader />
-    <div class="il-container">
-        <div class="il-overlay--dark"></div>
-        <!-- /* ==========MAIN===========*/ -->
-
-        <main>
+    <!--MAIN-->
+    <main>
+        <div class="il-container">
             <RouterView />
-        </main>
+        </div>
+    </main>
 
-        <!-- /* ======FOOTER=====*/ -->
-        <il-footer />
+    <!--FOOTER-->
+    <footer id="il-footer" class="il-footer" :class="whatClass">
+        <ilFooter />
+    </footer>
 
-        <!-- /* ======MODAL=====*/ -->
-        <il-modal />
+    <!--MODAL-->
+    <ilModal />
 
-    </div>
 </div>
 </template>
 
 <script>
+import ilVideoBack from './components/VideosComponent/includes/videoBackground.vue';
 import ilHeader from './components/includes/HeaderComponent.vue';
 import ilFooter from './components/includes/FooterComponent.vue';
 import ilModal from './components/includes/ModalComponent.vue';
@@ -42,6 +36,7 @@ export default {
     name: 'App',
 
     components: {
+        ilVideoBack,
         ilHeader,
         ilFooter,
         ilModal
@@ -49,12 +44,12 @@ export default {
 
     data() {
         return {
-            videoBack: 'video/video-esteira.mp4',
             headerActive: false,
+            whatClass: '',
             modal: {
-              title: "",
-              content: "",
-              footer: ""
+                title: '',
+                content: '',
+                footer: ''
             }
         };
     },
@@ -70,6 +65,12 @@ export default {
     },
 
     methods: {
+        isActive() {
+            if (this.headerActive) {
+                return 'active';
+            }
+            return;
+        },
 
         getBigImg() {
             let rota = this.$route.name;
@@ -77,32 +78,46 @@ export default {
             switch (rota) {
                 case 'home':
                     currentImg = 'big-img-home';
+                    this.whatClass = 'il-footer--home';
                     break;
                 case 'about':
                     currentImg = 'big-img-about';
+                    this.whatClass = 'il-footer--about';
                     break;
                 case 'studio':
                     currentImg = 'big-img-studio';
+                    this.whatClass = 'il-footer--studio';
                     break;
                 case 'teachers':
                     currentImg = 'big-img-instructor';
+                    this.whatClass = 'il-footer--teacher';
                     break;
                 case 'class':
                     currentImg = 'big-img-class';
+                    this.whatClass = 'il-footer--class';
                     break;
                 case 'student':
                     currentImg = 'big-img-student';
+                    this.whatClass = 'il-footer--student';
                     break;
                 case 'advantage':
                     currentImg = 'big-img-advantage';
+                    this.whatClass = 'il-footer--advantage';
                     break;
                 case 'video':
                     currentImg = '';
-                    //currentImg = 'big-img-video';
+                    this.whatClass = 'il-footer--video';
                     break;
             }
 
             return currentImg;
+        },
+
+        showFooter() {
+            setTimeout(() => {
+                const showClass = document.getElementById('il-footer');
+                showClass.classList.add('il-footer--show');
+            }, 1200);
         }
     }
 };

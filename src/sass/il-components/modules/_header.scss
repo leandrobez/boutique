@@ -1,13 +1,16 @@
 .il-header {
   width: 100%;
   position: absolute;
-  height: 15vh;
+  height: $header-height;
   top: 0;
   z-index: 100;
-  overflow: hidden;
-  &.active{
+  @include easeOut;
+  &.active {
     height: 100vh;
-    z-index: 104;
+    @include easeOut;
+    &:after {
+      @include overlay(#5a5646,'../../public/images/theme/dott.png',.9);
+    }
   }
   @import '_header-component/nav-menu';
   @import '_header-component/content';

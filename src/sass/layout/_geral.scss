@@ -1,0 +1,30 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+main{
+  height: 100%;
+  min-height: 100vh - $header-height;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+blockquote {
+  padding-left: 0.45rem;
+  border-left: 2px solid $primaryColor;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+}

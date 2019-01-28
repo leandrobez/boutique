@@ -1,81 +1,67 @@
 &--content {
   position: absolute;
-  top: 20vh;
-  z-index: 4;
+  z-index: 99;
+  left: -50%;
+  height: 0;
   display: flex;
   flex-direction: column;
+  &.il-show--header{
+    width: 100%;
+    left: 0;
+    height: 100vh;
+    @include easeOut;
+    & .il-header--portrait {
+        opacity: 1;
+        @include easeOut;
+    }
+    & nav.il-header--nav {
+        opacity: 1;
+        @include easeOut;
+    }
+  }
   @media screen and (min-width: 501px) {
-    top: 0;
+    top: $header-height;
     flex-direction: row;
   }
-  align-content: center;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
   @include easeOut;
-  &.il-show--header {
-    opacity: 1;
-    @include easeOut;
-  }
+
   & .il-header--portrait {
-    width: 100%;
-    @media screen and (min-width: 501px) {
-      width: 50%;
-    }
-    background: $back-portrait;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    transform: translate3d(-100%, -25%, 0);
     @include easeOut;
-    opacity: 0.4;
-    &.show {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-      @include easeOut;
-    }
+    flex: 1;
+    padding: 1rem 0.35rem 0;
+    opacity: 0;
+    background: $back-portrait;
     & .il-avatar--portrait {
       height: 140px;
       width: 140px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 1px solid $thirtyColor;
       @media screen and (min-width: 501px) {
+        height: 160px;
+        width: 160px;
+        border: 2px solid $thirtyColor;
+      }
+      @media screen and (min-width: 768px) {
         height: 200px;
         width: 200px;
+        border: 3px solid $thirtyColor;
       }
-      border-radius: 50%;
-      border: 3px solid $thirtyColor;
-      #il-avatar {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        @if $show-avatar {
-          background-image: $avatar-url;
-          background-position: center;
-          background-repeat: none;
-          background-size: cover;
-          border-radius: 50%;
-        }
-        @include easeOut;
-      }
+      background-image: $avatar-url;
+      background-position: center;
+      background-repeat: none;
+      background-size: cover;
     }
   }
 
   & nav.il-header--nav {
-    width: 100%;
-    @media screen and (min-width: 501px) {
-      width: 50%;
-    }
+    @include easeOut;
+    flex: 1;
+    padding: 0 0.35rem;
     background: $back-nav;
     display: flex;
-    align-items: center;
-    transform: translate3d(100%, 25%, 0);
-    @include easeOut;
-    opacity: 0.4;
-    &.show {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-      @include easeOut;
-    }
+    justify-content: center;
+    opacity: 0;
     & ul.il-menu--list {
       width: 100%;
       & li.il-menu--list__item {
@@ -87,27 +73,22 @@
           transform: translate3d(100%, 25%, 0);
           @include easeOut;
           font-size: 0.95rem;
-          & i {
-            text-align: center;
-            margin-right: .45rem;
-            color: #c9f85d;
-          }
           @media screen and (min-width: 501px) and (max-width: 768px) {
             font-size: 1.2rem;
             padding: 0.2rem 0;
-            
           }
           @media screen and (min-width: 769px) and (max-width: 1170px) {
             font-size: 1.4rem;
             letter-spacing: 5px;
             padding: 0.3rem 0;
-            
           }
           @media screen and (min-width: 1171px) {
             font-size: 1.5rem;
             letter-spacing: 7px;
             padding: 0.35rem 0;
-            
+          }
+          & span {
+            animation: slider1 1s;
           }
           &.current {
             color: $thirtyColor;
@@ -118,32 +99,29 @@
           &:hover {
             color: $thirtyColor;
           }
-          &.show-me1 span{
+          &.show-me1 span {
             animation: slider 1s;
           }
-          &.show-me2 span{
+          &.show-me2 span {
             animation: slider 1.2s 1.1s;
           }
-          &.show-me3 span{
+          &.show-me3 span {
             animation: slider 1.3s 1.2s;
           }
-          &.show-me4 span{
+          &.show-me4 span {
             animation: slider 1.4s 1.3s;
           }
-          &.show-me5 span{
+          &.show-me5 span {
             animation: slider 1.5s 1.4s;
           }
-          &.show-me6 span{
+          &.show-me6 span {
             animation: slider 1.6s 1.7s;
           }
-          &.show-me7 span{
+          &.show-me7 span {
             animation: slider 1.7s 1.8s;
           }
-          &.show-me8 span{
+          &.show-me8 span {
             animation: slider 1.8s 1.9s;
-          }
-          & span{
-            animation: slider1 1s
           }
         }
       }
@@ -151,20 +129,11 @@
   }
 }
 
-@keyframes slider1{
-  0% {
-    transform: scale(1.1);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
-
-@keyframes slider{
+@keyframes slider {
   0% {
     opacity: 0;
   }
-  100%{
-    opacity: 1
+  100% {
+    opacity: 1;
   }
 }

@@ -1,66 +1,54 @@
 footer.il-footer {
   width: 100%;
-  height: 150px;
-  transform: translateY(150px);
-  transition: all 1s ease-out;
-  position: fixed;
-  z-index: 1;
-  bottom: 0;
-  background: #e6a01f;
-  & h4.il-footer--title {
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
+  z-index: 101;
+  position: relative;
+  height: $height-footer;
+  background: #f8b064;
   & .il-footer--content {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  & .il-footer--top,
-  & .il-footer--bottom {
-    padding: 0 1rem 0 0;
-    width: 100%;
-    color: rgb(63, 31, 31);
-  }
-  & .il-footer--top {
-    background: darken(#f0a709, 15%);
-  }
-  & .il-footer--top h4 {
-    text-align: center;
-  }
-  & .il-footer--top .il-footer--breadcrumb {
-    display: flex;
-    margin: 0.75rem auto;
-    width: 120px;
-    justify-content: center;
-    font-size: 1.35rem;
-    color: rgb(231, 229, 206);
-    height: 1.2rem;
-    font-weight: 800;
-    
-    & span {
-      display: block;
-      margin-left: .55rem;
-      text-transform: uppercase;
+    height: 100%;
+    & .il-footer--top,
+    & .il-footer--bottom {
+      padding: 0 1rem 0 0;
+      width: 100%;
+      color: rgb(63, 31, 31);
     }
-  }
 
-  & .il-footer--bottom {
-    background: none;
-    color: #160503;
-  }
-  & .il-footer--cols {
-    display: flex;
-    margin: 0 0.5rem;
-    justify-content: center;
-    & .il-footer--col {
-      flex: 1;
-      // margin: 0 .45rem;
-      // padding-bottom: .35rem;
+    & .il-footer--top {
+      background: darken(#f8b064, 15%);
+      height: 100px;
+      & .il-footer--breadcrumb {
+        margin: 0.35rem auto;
+        display: flex;
+        justify-content: center;
+        font-size: 1.35rem;
+        height: 1.2rem;
+        font-weight: 800;
+        height: 40px;
+        & span {
+          display: block;
+          margin-left: 0.55rem;
+          text-transform: uppercase;
+        }
+      }
+      & .il-footer--cols {
+        display: flex;
+        margin: 0 0.5rem;
+        justify-content: center;
+        & .il-footer--col {
+          flex: 1;
+        }
+      }
     }
-  }
-  &.il-footer--show {
-    transform: translateY(0);
-    transition: all 1s ease-out;
+    & .il-footer--bottom {
+      padding: 0;
+	  text-align: center;
+	  height: 100%;
+	  & .il-footer--copy{
+		  line-height: 50px;
+	  }
+    }
   }
 }

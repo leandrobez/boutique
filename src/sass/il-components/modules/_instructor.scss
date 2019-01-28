@@ -1,9 +1,11 @@
 section.il-section.il-section--instructor {
   position: relative;
+  top: 15px;
   & .il-intructors--cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-column-gap: 0.95rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
     height: 100%;
     & .il-cards {
       background: #f7dea3;
@@ -54,7 +56,8 @@ section.il-section.il-section--instructor {
           & p.il-cards--text {
             width: 100%;
             transform: skewY(4deg);
-            padding: 0.45rem;
+            padding: 0 0.45rem;
+            font-size: .85rem;
             background: transparent !important;
           }
           &:after  {

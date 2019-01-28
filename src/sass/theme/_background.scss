@@ -1,0 +1,33 @@
+/** BACKGROUND IMAGES*/
+
+#app.big-img-home {
+  @include big-img($show-img-home, $big-img-url-home);
+}
+
+#app.big-img-about {
+  @include big-img($show-img-about, $big-img-url-about);
+}
+
+#app.big-img-studio {
+  @include big-img($show-img-space, $big-img-url-space);
+}
+
+#app.big-img-instructor {
+  @include big-img($show-img-instructor, $big-img-url-instructor);
+}
+
+#app.big-img-class {
+  @include big-img($show-img-class, $big-img-url-class);
+}
+
+#app.big-img-student {
+  @include big-img($show-img-student, $big-img-url-student);
+}
+
+#app.big-img-advantage {
+  @include big-img($show-img-advantage, $big-img-url-advantage);
+}
+
+#app.big-img-video {
+  @include big-img($show-img-video, $big-img-url-video);
+}

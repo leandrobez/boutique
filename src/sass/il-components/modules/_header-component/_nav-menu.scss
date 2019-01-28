@@ -1,9 +1,10 @@
 &--menu {
   position: fixed;
+  z-index: 101;
   top: $pos-top;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 104;
+  //z-index: 104;
   width: $m-w;
   height: $m-h;
   border: 1px solid $textColorGold;
@@ -12,7 +13,7 @@
   @include easeOut;
   &.radius {
     border-radius: 50%;
-    background: $thirtyColorAccent;
+    background: $textColorAlt;
     @include easeOut;
   }
   & .il-menu--line {

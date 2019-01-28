@@ -24,13 +24,19 @@ Boutique Pilates - ESTILOS
 @import 'theme/modal';
 @import 'theme/video';
 @import 'theme/images';
+@import 'theme/boxes-prices';
 
 /*GRID*/
-@import 'il-components/grid/geral';
 @import 'il-components/grid/grid';
+
+/*LAYOUT*/
+@import 'layout/geral';
 
 /*CONFIG*/
 @import 'config/tipography';
+
+/*LAYOUT*/
+@import 'theme/background';
 
 /*MODULES*/
 @import 'il-components/modules/header';

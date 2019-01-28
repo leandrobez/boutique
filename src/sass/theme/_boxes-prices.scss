@@ -1,0 +1,53 @@
+section.il-section--prices {
+  margin-top: 1rem;
+}
+/* flex container */
+.il-pricing--grid {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  align-items: stretch;
+  & .il-plan {
+    border: 2px solid #99823a;
+    justify-content: center;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+        flex: 1 1 100%;
+      }
+    & h2 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    & p {
+      font-size: 1rem;
+      &.il-price {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        & span {
+            font-size:.95rem;
+            font-weight: 100;
+            letter-spacing: 0;
+          }
+      }
+      &.il-description {
+        font-size: 14px;
+      }
+    }
+    & ul.il-features {
+      margin-top: 20px;
+      padding: 0;
+      list-style: none;
+      & li {
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: #454354;
+      }
+    }
+  }
+}
