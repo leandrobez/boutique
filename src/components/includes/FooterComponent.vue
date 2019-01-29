@@ -12,14 +12,14 @@
 			<div class="il-footer-col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-iris"></i>
-					<a href="#!" class="il-footer--list il-color--text__dark"  title="Veja fotos do studio">studio</a>
+          <router-link :to="{name:'galleryStudio'}" class="il-footer--list il-color--text__dark" title="Veja fotos do studio">studio</router-link>
 				</h4>
 			</div>
 
 			<div class="il-footer-col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-rear"></i>
-					<a href="#!" class="il-footer--list il-color--text__dark"  title="Veja fotos do studio">eventos</a>
+          <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__dark" title="Veja fotos de eventos">eventos</router-link>
 				</h4>
 			</div>
 
@@ -41,11 +41,10 @@
 
 	<div class="il-footer--bottom">
 		<div class="il-footer--copy">
-			<span>design by <a href="http://www.internetlojas.com" target="_black">www.internetlojas.com</a></span>
+			<span class="il-color--text__light">design by <a href="http://www.internetlojas.com" target="_blanck" class="il-color--text">www.internetlojas.com</a></span>
 		</div>
 	</div>
 </div>
-</template>
 </template>
 
 <script>

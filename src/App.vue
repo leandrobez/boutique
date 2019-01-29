@@ -108,6 +108,10 @@ export default {
                     currentImg = '';
                     this.whatClass = 'il-footer--video';
                     break;
+                case 'gallery':
+                    currentImg = 'big-img-gallery';
+                    this.whatClass = 'il-footer--gallery';
+                    break;
             }
 
             return currentImg;

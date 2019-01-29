@@ -24,8 +24,11 @@ $colorBorder: #fcfdfe;
 $max-width: 1344px;
 
 /*footer*/
-$primary-light-blue: #83b6f3;
-$primary-line-color: #ccc;
+$height-footer: 150px;
+$back-footer: #f8b064;
+
+/*$primary-light-blue: #83b6f3;
+$primary-line-color: #ccc;*/
 
 /*header*/
 $pos-top: 1vh;
@@ -35,17 +38,20 @@ $m-w: 40px;
 $m-h: 40px;
 $header-height: 17vh;
 
+/*app*/
+$app-overlay: darken($secondColor, 6.5%);
+
 /*Other elements*/
 $back-body: rgba(darken($secondColor, 1%), 0.5);
-$height-footer: 150px;
-$back-footer-home: darken($primaryAccent, 5.5%);
+
+/*$back-footer-home: darken($primaryAccent, 5.5%);
 $back-footer-about: darken($primaryAccent, 6%);
 $back-footer-studio: darken($primaryAccent, 6.5%);
 $back-footer-class: darken($primaryAccent, 7%);
 $back-footer-teacher: darken($primaryAccent, 7.5%);
 $back-footer-student: darken($primaryAccent, 8%);
 $back-footer-advantage: darken($primaryAccent, 8.5%);
-$back-footer-albuns: darken($primaryAccent, 9%);
+$back-footer-albuns: darken($primaryAccent, 9%);*/
 
 $back-header: rgba(darken(rgba(40, 55, 58, 0.7), 3%), 0.85);
 $back-portrait: rgba(40, 55, 58, 0.7);
@@ -79,6 +85,9 @@ $avatar-space: url('../../public/images/pictures/img-muraguti-space.jpg');
 
 $show-avatar: true;
 $avatar-url: url('../../public/images/pictures/img-muraguti.jpg');
+
+$show-img-gallery: false;
+$big-img-url-gallery: url('../../public/images/banners/banner-class2.png');
 
 
 /** depoiments*/

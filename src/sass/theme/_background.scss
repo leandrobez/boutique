@@ -28,6 +28,10 @@
   @include big-img($show-img-advantage, $big-img-url-advantage);
 }
 
+#app.big-img-gallery {
+  @include big-img($show-img-gallery, $big-img-url-gallery);
+}
+
 #app.big-img-video {
   @include big-img($show-img-video, $big-img-url-video);
 }

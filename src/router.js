@@ -11,6 +11,9 @@ import Student from './components/StudentsComponent/students.vue';
 import Advantage from './components/AdvantangesComponent/advantages.vue';
 import Video from './components/VideosComponent/videos.vue';
 import Albuns from './components/AlbunsComponent/albuns.vue';
+import Gallery from './components/GalleryComponent/GalleryComponent.vue';
+import studioGallery from './components/GalleryComponent/includes/studioGallery.vue';
+import eventsGallery from './components/GalleryComponent/includes/eventsGallery.vue';
 
 Vue.use(Router);
 
@@ -64,16 +67,25 @@ export default new Router({
       component: Albuns
     },
     {
+      path: '/gallery',
+      name: 'gallery',
+      component: Gallery,
+      children: [
+        {
+          path: 'studio',
+          name: 'galleryStudio',
+          component: studioGallery
+        },
+        {
+          path: 'events',
+          name: 'galleryEvents',
+          component: eventsGallery
+        }
+      ]
+    },
+    {
       path: '*',
       redirect: '/'
     }
-    /*{
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      //component: () => import(/* webpackChunkName: "about" * './views/About.vue')
-    //}*/
   ]
 });

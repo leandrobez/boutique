@@ -4,13 +4,12 @@
 }
 
 #app {
-  //height: 100vh;
   position: relative;
   display: grid;
   grid-template-rows: 1fr auto;
   overflow-y: hidden;
   &:after {
-    @include overlay(#f5d97d, '../../public/images/theme/dott.png', 0.7);
+    @include overlay($app-overlay, '../../public/images/theme/dott.png', 0.7);
   }
 }
 

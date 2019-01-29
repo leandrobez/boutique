@@ -3,7 +3,7 @@ footer.il-footer {
   z-index: 101;
   position: relative;
   height: $height-footer;
-  background: #f8b064;
+  background: $back-footer;
   & .il-footer--content {
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@ footer.il-footer {
     }
 
     & .il-footer--top {
-      background: darken(#f8b064, 15%);
+      background: darken($back-footer, 5%);
       height: 100px;
       & .il-footer--breadcrumb {
         margin: 0.35rem auto;
@@ -44,11 +44,15 @@ footer.il-footer {
     }
     & .il-footer--bottom {
       padding: 0;
-	  text-align: center;
-	  height: 100%;
-	  & .il-footer--copy{
-		  line-height: 50px;
-	  }
+      text-align: center;
+      height: 100%;
+      border-top: 1px solid darken($back-footer,10%);
+      & .il-footer--copy {
+        line-height: 49px;
+        & a {
+          font-weight: 100;
+        }
+      }
     }
   }
 }
