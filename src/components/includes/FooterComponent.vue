@@ -33,7 +33,7 @@
 			<div class="il-footer-col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-email"></i>
-					<a href="#!" class="il-footer--list il-color--text__dark"  title="Veja fotos do studio">contato</a>
+					<a href="#!" class="il-footer--list il-color--text__dark" @click.prevent="activeModal('Contato')" title="Faça contato com a gente">contato</a>
 				</h4>
 			</div>
 		</div>
@@ -59,6 +59,7 @@ export default {
   },
 
   methods: {
+
     getClass() {
       let routeName = this.$route.name;
       let currentFooter = '';
@@ -110,6 +111,12 @@ export default {
       }
       return currentFooter;
     },
+
+    activeModal(title){
+      this.$parent.modal.title = title;
+      this.$parent.modal.content = 'Aguardamos seu contato. Preencha o formulário';
+      this.$parent.showModal = true
+    }
 
   }
 };

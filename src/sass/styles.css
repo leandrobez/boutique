@@ -1,8 +1,9 @@
-/*
-*****===============*****
-Boutique Pilates - ESTILOS
-*****===============*****
-*/
+/*==================================================
+=            Boutique Pilates - ESTILOS            =
+==================================================*/
+/*<!--===============================
+=            NORMALIZE            =
+================================-->*/
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -465,7 +466,9 @@ template {
   display: none;
 }
 
-/*ICONs MDI*/
+/*<!--===============================
+=            ICONS            =
+================================-->*/
 /* MaterialDesignIcons.com */
 @font-face {
   font-family: "Material Design Icons";
@@ -9440,11 +9443,14 @@ template {
   content: '\f14f';
 }
 
-/*VARIABLES*/
+/*<!--===============================
+=            VARIABLES            =
+================================-->*/
 /*---------------VARIABLES----------------*/
 /*colors*/
 /*STRUCTUE*/
 /*footer*/
+/*modal*/
 /*$primary-light-blue: #83b6f3;
 $primary-line-color: #ccc;*/
 /*header*/
@@ -9460,8 +9466,12 @@ $back-footer-advantage: darken($primaryAccent, 8.5%);
 $back-footer-albuns: darken($primaryAccent, 9%);*/
 /** depoiments*/
 /**buttons*/
-/*MIXIS*/
-/*THEMES*/
+/*<!--===============================
+=            MIXINS            =
+================================-->*/
+/*<!--===============================
+=            THEMES            =
+================================-->*/
 /*---------------TEXT COLORS AND BACKGROUN COLORS----------------*/
 /**Colors*/
 .il-color--text {
@@ -9492,6 +9502,71 @@ $back-footer-albuns: darken($primaryAccent, 9%);*/
   color: #1b0219;
 }
 
+/** BACKGROUND IMAGES*/
+#app.big-img-home {
+  background-image: url("../../public/images/banners/big-img-home.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#app.big-img-about {
+  background-image: url("../../public/images/banners/big-img-about.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#app.big-img-studio {
+  background-image: url("../../public/images/banners/big-img-space.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#app.big-img-instructor {
+  background-image: url("../../public/images/banners/big-img-teacher.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#app.big-img-class {
+  background-image: url("../../public/images/banners/big-img-class.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#app.big-img-student {
+  background-image: url("../../public/images/banners/big-img-student.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#app.big-img-advantage {
+  background-image: url("../../public/images/banners/big-img-advantage.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#app.big-img-video {
+  background-image: url("../../public/images/banners/big-img-video.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /**Backgrounds*/
 .il-color--background__default {
   background: #554d4d;
@@ -9506,7 +9581,11 @@ $back-footer-albuns: darken($primaryAccent, 9%);*/
 }
 
 .il-color--background__modal {
-  background: #c7bc74;
+  background: #52514b;
+}
+
+.il-color--background__modal-content {
+  background: #f3cd4e;
 }
 
 .il-color--background__dark {
@@ -9612,7 +9691,6 @@ section.il-section--modal {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background: #94946c;
 }
 
 section.il-section--modal:after {
@@ -9620,6 +9698,7 @@ section.il-section--modal:after {
   position: absolute;
   width: 100%;
   height: 100%;
+  opacity: 0.6;
   background-image: url("../../public/images/theme/dott.png");
   background-position: center top;
   background-repeat: repeat;
@@ -9664,20 +9743,49 @@ section.il-section--modal .il-modal {
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   -webkit-transition-delay: 400ms;
           transition-delay: 400ms;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
+}
+
+@media screen and (min-width: 361px) and (max-width: 500px) {
+  section.il-section--modal .il-modal {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  section.il-section--modal .il-modal {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  section.il-section--modal .il-modal {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1171px) {
+  section.il-section--modal .il-modal {
+    width: 80%;
+    height: auto;
+  }
 }
 
 section.il-section--modal .il-modal--dialog {
+  width: 100%;
+  height: 100%;
   position: fixed;
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 section.il-section--modal .il-modal--content {
   will-change: transform, opacity;
   position: relative;
-  padding: 2.4rem;
-  background: #2f3029;
+  padding: 1.4rem;
   background-clip: padding-box;
   -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
@@ -9849,7 +9957,9 @@ section.il-section--prices {
   color: #454354;
 }
 
-/*GRID*/
+/*<!--===============================
+=            GRID            =
+================================-->*/
 #app {
   position: relative;
   display: -ms-grid;
@@ -9920,7 +10030,9 @@ main .il-container .il-container--wrapper {
   }
 }
 
-/*LAYOUT*/
+/*<!--===============================
+=            LAYOUT            =
+================================-->*/
 *,
 *:before,
 *:after {
@@ -9952,7 +10064,9 @@ blockquote {
   letter-spacing: 1.6px;
 }
 
-/*CONFIG*/
+/*<!--===============================
+=            CONFIG            =
+================================-->*/
 body {
   background: #444;
   color: #fcfcfc;
@@ -10217,73 +10331,9 @@ a {
   text-decoration: none;
 }
 
-/*LAYOUT*/
-/** BACKGROUND IMAGES*/
-#app.big-img-home {
-  background-image: url("../../public/images/banners/big-img-home.jpg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#app.big-img-about {
-  background-image: url("../../public/images/banners/big-img-about.jpg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#app.big-img-studio {
-  background-image: url("../../public/images/banners/big-img-space.jpg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#app.big-img-instructor {
-  background-image: url("../../public/images/banners/big-img-teacher.jpg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#app.big-img-class {
-  background-image: url("../../public/images/banners/big-img-class.jpg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#app.big-img-student {
-  background-image: url("../../public/images/banners/big-img-student.jpg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#app.big-img-advantage {
-  background-image: url("../../public/images/banners/big-img-advantage.jpg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-#app.big-img-video {
-  background-image: url("../../public/images/banners/big-img-video.jpg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/*MODULES*/
+/*<!--===============================
+=            MODULES            =
+================================-->*/
 .il-header {
   width: 100%;
   position: absolute;
@@ -11345,6 +11395,5 @@ footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy a {
   font-weight: 100;
 }
 
-/*
-@import 'il-components/modules/albuns';*/
+/*=====  End of Boutique Pilates - ESTILOS  ======*/
 /*# sourceMappingURL=styles.css.map */

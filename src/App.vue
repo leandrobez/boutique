@@ -45,6 +45,7 @@ export default {
     data() {
         return {
             headerActive: false,
+            showModal: false,
             whatClass: '',
             modal: {
                 title: '',
@@ -61,7 +62,14 @@ export default {
                 return true;
             }
             return false;
-        }
+        },
+
+        /*checkShowModal(){
+            if(this.showModal){
+                return true
+            }
+            return false
+        }*/
     },
 
     methods: {

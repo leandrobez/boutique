@@ -1,44 +1,52 @@
-/*
-*****===============*****
-Boutique Pilates - ESTILOS
-*****===============*****
-*/
+/*==================================================
+=            Boutique Pilates - ESTILOS            =
+==================================================*/
 
-//base
+/*<!--===============================
+=            NORMALIZE            =
+================================-->*/
 @import 'il-components/base/normalize';
 @include normalize();
-
-/*ICONs MDI*/
+/*<!--===============================
+=            ICONS            =
+================================-->*/
 @import './mdi/materialdesignicons';
 @import './fi/flaticon';
-
-/*VARIABLES*/
+/*<!--===============================
+=            VARIABLES            =
+================================-->*/
 @import './config/variables';
-
-/*MIXIS*/
+/*<!--===============================
+=            MIXINS            =
+================================-->*/
 @import 'config/mixins';
 
-/*THEMES*/
+/*<!--===============================
+=            THEMES            =
+================================-->*/
 @import 'theme/colors';
+@import 'theme/background';
 @import 'theme/buttons';
 @import 'theme/modal';
 @import 'theme/video';
 @import 'theme/images';
 @import 'theme/boxes-prices';
-
-/*GRID*/
+/*<!--===============================
+=            GRID            =
+================================-->*/
 @import 'il-components/grid/grid';
-
-/*LAYOUT*/
+/*<!--===============================
+=            LAYOUT            =
+================================-->*/
 @import 'layout/geral';
 
-/*CONFIG*/
+/*<!--===============================
+=            CONFIG            =
+================================-->*/
 @import 'config/tipography';
-
-/*LAYOUT*/
-@import 'theme/background';
-
-/*MODULES*/
+/*<!--===============================
+=            MODULES            =
+================================-->*/
 @import 'il-components/modules/header';
 @import 'il-components/modules/home';
 @import 'il-components/modules/space';
@@ -49,5 +57,5 @@ Boutique Pilates - ESTILOS
 @import 'il-components/modules/videos';
 @import 'il-components/modules/gallery';
 @import 'il-components/modules/footer';
-/*
-@import 'il-components/modules/albuns';*/
+
+/*=====  End of Boutique Pilates - ESTILOS  ======*/
