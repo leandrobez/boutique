@@ -9971,7 +9971,7 @@ section.il-section--prices {
 
 #app:after {
   content: "";
-  background: #deb626;
+  background: #d3b965;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -10028,40 +10028,6 @@ main .il-container .il-container--wrapper {
     width: 80%;
     margin: 0 10%;
   }
-}
-
-/*<!--===============================
-=            LAYOUT            =
-================================-->*/
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main {
-  height: 100%;
-  min-height: 83vh;
-}
-
-img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-blockquote {
-  padding-left: 0.45rem;
-  border-left: 2px solid #444;
-  font-weight: 400;
-  letter-spacing: 1.6px;
 }
 
 /*<!--===============================
@@ -10332,6 +10298,42 @@ a {
 }
 
 /*<!--===============================
+=            LAYOUT            =
+================================-->*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+  min-height: 83vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+blockquote {
+  font-family: "Nunito", sans-serif;
+  padding-left: 0.45rem;
+  border-left: 5px solid white;
+  font-size: .85rem;
+  letter-spacing: 1.1px;
+  margin: .5rem 0;
+}
+
+/*<!--===============================
 =            MODULES            =
 ================================-->*/
 .il-header {
@@ -10358,7 +10360,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.9;
+  opacity: 0.5;
   background-image: url("../../public/images/theme/dott.png");
   background-position: top center;
   background-repeat: repeat;
@@ -10431,7 +10433,6 @@ a {
   position: absolute;
   z-index: 99;
   left: -50%;
-  height: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10446,7 +10447,7 @@ a {
 .il-header--content.il-show--header {
   width: 100%;
   left: 0;
-  height: 100vh;
+  height: 100%;
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
 }
@@ -10478,16 +10479,21 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 0.35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0;
-  background: rgba(40, 55, 58, 0.7);
-  height: 100%;
 }
 
 .il-header--content .il-header--portrait .il-avatar--portrait {
   height: 140px;
   width: 140px;
-  margin: auto;
   border-radius: 50%;
   border: 1px solid #e2c043;
   background-image: url("../../public/images/pictures/img-muraguti.jpg");
@@ -10513,20 +10519,20 @@ a {
 }
 
 .il-header--content nav.il-header--nav {
-  height: 100%;
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 0.35rem;
-  background: rgba(34, 46, 49, 0.75);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0;
 }
 
@@ -10631,6 +10637,20 @@ a {
           animation: slider 1.8s 1.9s;
 }
 
+.il-header--content nav.il-header--nav:after {
+  content: '';
+  background: #4d3902;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  opacity: .4;
+  background-position: top center;
+  background-repeat: repeat;
+}
+
 @-webkit-keyframes slider {
   0% {
     opacity: 0;
@@ -10682,6 +10702,10 @@ a {
   font-family: "Nunito", sans-serif;
   font-size: 0.8rem;
   line-height: 1.19rem;
+}
+
+.il-about--content.il-nopadding {
+  padding: 0;
 }
 
 section.il-section.il-section--instructor {
@@ -11315,7 +11339,7 @@ footer.il-footer {
   z-index: 101;
   position: relative;
   height: 150px;
-  background: #f8b064;
+  background: #d69045;
 }
 
 footer.il-footer .il-footer--content {
@@ -11340,7 +11364,7 @@ footer.il-footer .il-footer--content .il-footer--bottom {
 }
 
 footer.il-footer .il-footer--content .il-footer--top {
-  background: #f7a44c;
+  background: rgba(194, 121, 43, 0.6);
   height: 100px;
 }
 
@@ -11384,7 +11408,7 @@ footer.il-footer .il-footer--content .il-footer--bottom {
   padding: 0;
   text-align: center;
   height: 100%;
-  border-top: 1px solid #f69733;
+  border-top: 1px solid #be772a;
 }
 
 footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy {

@@ -2,8 +2,10 @@
   padding: 0.45rem;
   & p {
     font-family: $heading-font;
-    //font-weight: 300;
     font-size: 0.8rem;
     line-height: 1.19rem;
+  }
+  &.il-nopadding{
+    padding: 0;
   }
 }

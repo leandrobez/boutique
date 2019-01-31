@@ -25,7 +25,7 @@ $max-width: 1344px;
 
 /*footer*/
 $height-footer: 150px;
-$back-footer: #f8b064;
+$back-footer: #d69045;
 
 /*modal*/
 
@@ -43,7 +43,7 @@ $m-h: 40px;
 $header-height: 17vh;
 
 /*app*/
-$app-overlay: darken($thirtyColor, 6.5%);
+$app-overlay: #d3b965;//darken($secondColor, 7.5%);
 
 /*Other elements*/
 $back-body: rgba(darken($secondColor, 1%), 0.5);

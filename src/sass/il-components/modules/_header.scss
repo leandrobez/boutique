@@ -9,7 +9,7 @@
     height: 100vh;
     @include easeOut;
     &:after {
-      @include overlay(#5a5646,'../../public/images/theme/dott.png',.9);
+      @include overlay(#5a5646,'../../public/images/theme/dott.png',.5);
     }
   }
   @import '_header-component/nav-menu';

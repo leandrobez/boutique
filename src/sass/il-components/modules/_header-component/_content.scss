@@ -2,21 +2,21 @@
   position: absolute;
   z-index: 99;
   left: -50%;
-  height: 0;
+  //height: 0;
   display: flex;
   flex-direction: column;
-  &.il-show--header{
+  &.il-show--header {
     width: 100%;
     left: 0;
-    height: 100vh;
+    height: 100%;//100vh - $header-height;
     @include easeOut;
     & .il-header--portrait {
-        opacity: 1;
-        @include easeOut;
+      opacity: 1;
+      @include easeOut;
     }
     & nav.il-header--nav {
-        opacity: 1;
-        @include easeOut;
+      opacity: 1;
+      @include easeOut;
     }
   }
   @media screen and (min-width: 501px) {
@@ -27,14 +27,16 @@
   & .il-header--portrait {
     @include easeOut;
     flex: 1;
-    padding: 0 0.35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
-    background: $back-portrait;
-    height: 100%;
+    //background: $back-portrait;
+    //height: 100%;
     & .il-avatar--portrait {
       height: 140px;
       width: 140px;
-      margin: auto;
+      //margin: 50% auto auto auto;
       border-radius: 50%;
       border: 1px solid $thirtyColor;
       @media screen and (min-width: 501px) {
@@ -55,13 +57,11 @@
   }
 
   & nav.il-header--nav {
-    height: 100%;
     @include easeOut;
     flex: 1;
-    padding: 0 0.35rem;
-    background: $back-nav;
     display: flex;
     justify-content: center;
+    align-items: center;
     opacity: 0;
     & ul.il-menu--list {
       width: 100%;
@@ -126,6 +126,19 @@
           }
         }
       }
+    }
+    &:after {
+      content: '';
+      background: #4d3902;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 50%;
+      opacity: .4;
+      background-position: top center;
+      background-repeat: repeat;
     }
   }
 }

@@ -17,7 +17,7 @@ footer.il-footer {
     }
 
     & .il-footer--top {
-      background: darken($back-footer, 5%);
+      background: darken(rgba($back-footer, .6),9%);
       height: 100px;
       & .il-footer--breadcrumb {
         margin: 0.35rem auto;
@@ -53,6 +53,33 @@ footer.il-footer {
           font-weight: 100;
         }
       }
+    }
+  }
+  &--home {
+    background: $back-footer-home;
+    & li.il-footer--item a.il-footer--link {
+      color: $colorBorder;//rgb(36, 36, 44);
+    }
+  }
+
+  &--about {
+    background: $back-footer-about;
+    & li.il-footer--item a.il-footer--link {
+      color: $colorBorder;//rgb(168, 59, 8);
+    }
+  }
+
+  &--studio {
+    background: $back-footer-studio;
+    & li.il-footer--item a.il-footer--link {
+      color: $colorBorder;//rgb(115, 115, 185);
+    }
+  }
+
+  &--class {
+    background: $back-footer-class;
+    & li.il-footer--item a.il-footer--link {
+      color: $colorBorder;// rgb(19, 19, 59);
     }
   }
 }
