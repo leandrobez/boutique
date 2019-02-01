@@ -1,7 +1,8 @@
 //Import fonts google
-@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Nunito:400,600');
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Nunito:400,600|Oswald');
 
 $heading-font: 'Nunito', sans-serif; // only 400 and 400i
+$h3-font: 'Oswald', sans-serif;
 $body-font: 'Pathway Gothic One', sans-serif; // only 700
 
 body {
@@ -22,28 +23,25 @@ h4,
 h5,
 h6 {
   font-family: $heading-font;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.2rem;
   margin: 0;
-  //sections
   &.il-section--title {
     @media screen and (max-width: 360px) {
       font-size: 2.2rem;
       margin: 0;
       padding: 0;
-      font-weight: 500;
+      font-weight: 400;
     }
     @media screen and (min-width: 361px) and (max-width: 480px) {
       font-size: 2.5rem;
       margin: 0;
       padding: 0;
-      font-weight: 500;
     }
     @media screen and (min-width: 481px) and (max-width: 1024px) {
       font-size: 3rem;
       margin: 0;
       padding: 0;
-      font-weight: 500;
     }
     font-size: 4rem;
     & span {
@@ -62,9 +60,32 @@ h6 {
       }
     }
   }
+
+  &.il-section--sub-title {
+    font-size: 1.7rem;
+    margin-bottom: 1.4rem;
+    padding: 0;
+    font-weight: 400;
+    @media screen and (max-width: 360px) {
+      font-size: 0.95rem;
+      margin: 0;
+      padding: 0;
+    }
+    @media screen and (min-width: 361px) and (max-width: 480px) {
+      font-size: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    @media screen and (min-width: 481px) and (max-width: 1024px) {
+      font-size: 1.15rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   &.il-section--sm-title {
     @media screen and (max-width: 360px) {
-      font-size: .9rem;
+      font-size: 0.9rem;
       margin: 0;
       padding: 0;
     }
@@ -88,30 +109,10 @@ h6 {
   &.il-cards--title {
     text-align: center;
   }
-
-  &.il-section--sub-title {
-    font-size: 1.7rem;
-    margin-bottom: 1.4rem;
-    padding: 0.3rem 0.8rem;
-    font-weight: 400;
-    @media screen and (max-width: 360px) {
-      font-size: .95rem;
-      margin: 0;
-      padding: 0;
-    }
-    @media screen and (min-width: 361px) and (max-width: 480px) {
-      font-size: 1rem;
-      margin: 0;
-      padding: 0;
-    }
-    @media screen and (min-width: 481px) and (max-width: 1024px) {
-      font-size: 1.15rem;
-      margin: 0;
-      padding: 0;
-      
-    }
-    //background: rgba(lighten($primaryColor, 2), 0.5);
-  }
+}
+h2,
+h3 {
+  font-family: $h3-font;
 }
 p.il-section--description {
   font-size: 1.1rem;
@@ -125,9 +126,9 @@ p.il-section--description {
     font-size: 1.2rem;
   }
   @media screen and (min-width: 361px) and (max-width: 480px) {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     top: 1.45rem;

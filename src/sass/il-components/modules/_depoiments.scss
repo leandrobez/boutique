@@ -15,50 +15,53 @@ section.il-section--depoiments {
       opacity: 0.9;
     }
   }
-
-  & .il-depoiments--slider {
-    display: grid;
-    grid-template-columns: 1fr;
+  & .il-depoiments--content {
     height: $height-slider;
-    text-align: center;
-    & .il-depoiment--item {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      width: 80%;
-      left: -50%;
-      opacity: 0;
-      transform: translateX(-50%);
-      transition: all 2s ease-out;
-      & .il-item--caption {
-        text-align: center;
-        font-weight: 400;
-        padding: .15rem 0;
-      }
-      & .il-item--picture {
-        max-width: $portrait-width;
-        margin: auto;
-      }
-      & .il-item--info {
-        padding: 0 1rem;
-        text-align: center;
-        width: 100%;
-        & p {
-          margin: 0;
-          padding-bottom: .45rem;
-        }
-      }
-      & .il-item--social {
-        margin: .25rem auto;
-        & a.il-styles--social__link {
-          padding: 0 0.45rem;
-        }
-      }
-      &.il-item--active {
-        transition: all 2s ease-out;
-        opacity: 1;
-        left: 50%;
+    padding: .45rem;
+    & .il-depoiments--slider {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      text-align: center;
+      & .il-depoiment--item {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        left: -50%;
+        opacity: 0;
         transform: translateX(-50%);
+        transition: all 2s ease-out;
+        & .il-item--caption {
+          text-align: center;
+          font-weight: 400;
+          padding: 0.15rem 0;
+        }
+        & .il-item--picture {
+          max-width: $portrait-width;
+          margin: auto;
+        }
+        & .il-item--info {
+          padding: 0 1rem;
+          text-align: center;
+          width: 100%;
+          & p {
+            margin: 0;
+            padding-bottom: 0.45rem;
+          }
+        }
+        & .il-item--social {
+          margin: 0.25rem auto;
+          & a.il-styles--social__link {
+            padding: 0 0.45rem;
+          }
+        }
+        &.il-item--active {
+          transition: all 2s ease-out;
+          opacity: 1;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
   }

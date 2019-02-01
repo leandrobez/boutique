@@ -23,10 +23,6 @@ $colorBorder: #fcfdfe;
 /*STRUCTUE*/
 $max-width: 1344px;
 
-/*footer*/
-$height-footer: 150px;
-$back-footer: #d69045;
-
 /*modal*/
 
 $width-modal: 300px;
@@ -48,14 +44,17 @@ $app-overlay: #d3b965;//darken($secondColor, 7.5%);
 /*Other elements*/
 $back-body: rgba(darken($secondColor, 1%), 0.5);
 
-/*$back-footer-home: darken($primaryAccent, 5.5%);
-$back-footer-about: darken($primaryAccent, 6%);
-$back-footer-studio: darken($primaryAccent, 6.5%);
-$back-footer-class: darken($primaryAccent, 7%);
-$back-footer-teacher: darken($primaryAccent, 7.5%);
-$back-footer-student: darken($primaryAccent, 8%);
-$back-footer-advantage: darken($primaryAccent, 8.5%);
-$back-footer-albuns: darken($primaryAccent, 9%);*/
+/*footer*/
+$height-footer: 150px;
+$back-footer: #cc9c6a;
+$back-footer-home: darken($back-footer, 5.5%);
+$back-footer-about: darken($back-footer, 6%);
+$back-footer-studio: darken($back-footer, 6.5%);
+$back-footer-class: darken($back-footer, 7%);
+$back-footer-teacher: darken($back-footer, 7.5%);
+$back-footer-student: darken($back-footer, 8%);
+$back-footer-advantage: darken($back-footer, 8.5%);
+$back-footer-albuns: darken($back-footer, 9%);
 
 $back-header: rgba(darken(rgba(40, 55, 58, 0.7), 3%), 0.85);
 $back-portrait: rgba(40, 55, 58, 0.7);

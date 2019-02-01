@@ -12,7 +12,7 @@
      * 2. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Nunito:400,600");
+@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Nunito:400,600|Oswald");
 html {
   line-height: 1.15;
   /* 1 */
@@ -9449,21 +9449,13 @@ template {
 /*---------------VARIABLES----------------*/
 /*colors*/
 /*STRUCTUE*/
-/*footer*/
 /*modal*/
 /*$primary-light-blue: #83b6f3;
 $primary-line-color: #ccc;*/
 /*header*/
 /*app*/
 /*Other elements*/
-/*$back-footer-home: darken($primaryAccent, 5.5%);
-$back-footer-about: darken($primaryAccent, 6%);
-$back-footer-studio: darken($primaryAccent, 6.5%);
-$back-footer-class: darken($primaryAccent, 7%);
-$back-footer-teacher: darken($primaryAccent, 7.5%);
-$back-footer-student: darken($primaryAccent, 8%);
-$back-footer-advantage: darken($primaryAccent, 8.5%);
-$back-footer-albuns: darken($primaryAccent, 9%);*/
+/*footer*/
 /** depoiments*/
 /**buttons*/
 /*<!--===============================
@@ -10052,7 +10044,7 @@ h4,
 h5,
 h6 {
   font-family: "Nunito", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.2rem;
   margin: 0;
 }
@@ -10076,7 +10068,7 @@ h6.il-section--title {
     font-size: 2.2rem;
     margin: 0;
     padding: 0;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
@@ -10090,7 +10082,6 @@ h6.il-section--title {
     font-size: 2.5rem;
     margin: 0;
     padding: 0;
-    font-weight: 500;
   }
 }
 
@@ -10104,7 +10095,6 @@ h6.il-section--title {
     font-size: 3rem;
     margin: 0;
     padding: 0;
-    font-weight: 500;
   }
 }
 
@@ -10151,6 +10141,57 @@ h6.il-section--title.il-title--full span {
   margin-left: 0.45rem;
 }
 
+h1.il-section--sub-title,
+h2.il-section--sub-title,
+h3.il-section--sub-title,
+h4.il-section--sub-title,
+h5.il-section--sub-title,
+h6.il-section--sub-title {
+  font-size: 1.7rem;
+  margin-bottom: 1.4rem;
+  padding: 0;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 360px) {
+  h1.il-section--sub-title,
+  h2.il-section--sub-title,
+  h3.il-section--sub-title,
+  h4.il-section--sub-title,
+  h5.il-section--sub-title,
+  h6.il-section--sub-title {
+    font-size: 0.95rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  h1.il-section--sub-title,
+  h2.il-section--sub-title,
+  h3.il-section--sub-title,
+  h4.il-section--sub-title,
+  h5.il-section--sub-title,
+  h6.il-section--sub-title {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  h1.il-section--sub-title,
+  h2.il-section--sub-title,
+  h3.il-section--sub-title,
+  h4.il-section--sub-title,
+  h5.il-section--sub-title,
+  h6.il-section--sub-title {
+    font-size: 1.15rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 360px) {
   h1.il-section--sm-title,
   h2.il-section--sm-title,
@@ -10158,7 +10199,7 @@ h6.il-section--title.il-title--full span {
   h4.il-section--sm-title,
   h5.il-section--sm-title,
   h6.il-section--sm-title {
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin: 0;
     padding: 0;
   }
@@ -10209,55 +10250,9 @@ h6.il-cards--title {
   text-align: center;
 }
 
-h1.il-section--sub-title,
-h2.il-section--sub-title,
-h3.il-section--sub-title,
-h4.il-section--sub-title,
-h5.il-section--sub-title,
-h6.il-section--sub-title {
-  font-size: 1.7rem;
-  margin-bottom: 1.4rem;
-  padding: 0.3rem 0.8rem;
-  font-weight: 400;
-}
-
-@media screen and (max-width: 360px) {
-  h1.il-section--sub-title,
-  h2.il-section--sub-title,
-  h3.il-section--sub-title,
-  h4.il-section--sub-title,
-  h5.il-section--sub-title,
-  h6.il-section--sub-title {
-    font-size: .95rem;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 361px) and (max-width: 480px) {
-  h1.il-section--sub-title,
-  h2.il-section--sub-title,
-  h3.il-section--sub-title,
-  h4.il-section--sub-title,
-  h5.il-section--sub-title,
-  h6.il-section--sub-title {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-  h1.il-section--sub-title,
-  h2.il-section--sub-title,
-  h3.il-section--sub-title,
-  h4.il-section--sub-title,
-  h5.il-section--sub-title,
-  h6.il-section--sub-title {
-    font-size: 1.15rem;
-    margin: 0;
-    padding: 0;
-  }
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
 }
 
 p.il-section--description {
@@ -10957,16 +10952,20 @@ section.il-section--depoiments .il-depoiments--navigation i:hover {
   opacity: 0.9;
 }
 
-section.il-section--depoiments .il-depoiments--slider {
+section.il-section--depoiments .il-depoiments--content {
+  height: 400px;
+  padding: .45rem;
+}
+
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  height: 400px;
   text-align: center;
 }
 
-section.il-section--depoiments .il-depoiments--slider .il-depoiment--item {
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .il-depoiment--item {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10984,37 +10983,37 @@ section.il-section--depoiments .il-depoiments--slider .il-depoiment--item {
   transition: all 2s ease-out;
 }
 
-section.il-section--depoiments .il-depoiments--slider .il-depoiment--item .il-item--caption {
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .il-depoiment--item .il-item--caption {
   text-align: center;
   font-weight: 400;
-  padding: .15rem 0;
+  padding: 0.15rem 0;
 }
 
-section.il-section--depoiments .il-depoiments--slider .il-depoiment--item .il-item--picture {
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .il-depoiment--item .il-item--picture {
   max-width: 160px;
   margin: auto;
 }
 
-section.il-section--depoiments .il-depoiments--slider .il-depoiment--item .il-item--info {
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .il-depoiment--item .il-item--info {
   padding: 0 1rem;
   text-align: center;
   width: 100%;
 }
 
-section.il-section--depoiments .il-depoiments--slider .il-depoiment--item .il-item--info p {
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .il-depoiment--item .il-item--info p {
   margin: 0;
-  padding-bottom: .45rem;
+  padding-bottom: 0.45rem;
 }
 
-section.il-section--depoiments .il-depoiments--slider .il-depoiment--item .il-item--social {
-  margin: .25rem auto;
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .il-depoiment--item .il-item--social {
+  margin: 0.25rem auto;
 }
 
-section.il-section--depoiments .il-depoiments--slider .il-depoiment--item .il-item--social a.il-styles--social__link {
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .il-depoiment--item .il-item--social a.il-styles--social__link {
   padding: 0 0.45rem;
 }
 
-section.il-section--depoiments .il-depoiments--slider .il-depoiment--item.il-item--active {
+section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .il-depoiment--item.il-item--active {
   -webkit-transition: all 2s ease-out;
   transition: all 2s ease-out;
   opacity: 1;
@@ -11339,7 +11338,7 @@ footer.il-footer {
   z-index: 101;
   position: relative;
   height: 150px;
-  background: #d69045;
+  background: #cc9c6a;
 }
 
 footer.il-footer .il-footer--content {
@@ -11364,7 +11363,7 @@ footer.il-footer .il-footer--content .il-footer--bottom {
 }
 
 footer.il-footer .il-footer--content .il-footer--top {
-  background: rgba(194, 121, 43, 0.6);
+  background: rgba(192, 133, 72, 0.6);
   height: 100px;
 }
 
@@ -11408,7 +11407,7 @@ footer.il-footer .il-footer--content .il-footer--bottom {
   padding: 0;
   text-align: center;
   height: 100%;
-  border-top: 1px solid #be772a;
+  border-top: 1px solid #bf8344;
 }
 
 footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy {
@@ -11417,6 +11416,38 @@ footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy {
 
 footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy a {
   font-weight: 100;
+}
+
+footer.il-footer--home {
+  background: #c58e55;
+}
+
+footer.il-footer--home li.il-footer--item a.il-footer--link {
+  color: #fcfdfe;
+}
+
+footer.il-footer--about {
+  background: #c48d53;
+}
+
+footer.il-footer--about li.il-footer--item a.il-footer--link {
+  color: #fcfdfe;
+}
+
+footer.il-footer--studio {
+  background: #c48c51;
+}
+
+footer.il-footer--studio li.il-footer--item a.il-footer--link {
+  color: #fcfdfe;
+}
+
+footer.il-footer--class {
+  background: #c38a4f;
+}
+
+footer.il-footer--class li.il-footer--item a.il-footer--link {
+  color: #fcfdfe;
 }
 
 /*=====  End of Boutique Pilates - ESTILOS  ======*/

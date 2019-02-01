@@ -58,28 +58,28 @@ footer.il-footer {
   &--home {
     background: $back-footer-home;
     & li.il-footer--item a.il-footer--link {
-      color: $colorBorder;//rgb(36, 36, 44);
+      color: $colorBorder;
     }
   }
 
   &--about {
     background: $back-footer-about;
     & li.il-footer--item a.il-footer--link {
-      color: $colorBorder;//rgb(168, 59, 8);
+      color: $colorBorder;
     }
   }
 
   &--studio {
     background: $back-footer-studio;
     & li.il-footer--item a.il-footer--link {
-      color: $colorBorder;//rgb(115, 115, 185);
+      color: $colorBorder;
     }
   }
 
   &--class {
     background: $back-footer-class;
     & li.il-footer--item a.il-footer--link {
-      color: $colorBorder;// rgb(19, 19, 59);
+      color: $colorBorder;
     }
   }
 }

@@ -5,15 +5,15 @@
             <!--<i :class="whatIcon"></i>-->As
             <span class="il-color--text__gold">Aulas</span>
         </h1>
-        <h2 class="il-section--sub-title">Venha fazer uma aula com a gente.</h2>
+        <h2 class="il-section--sub-title il-color--text__gold">Venha fazer uma aula com a gente.</h2>
 
         <div class="il-space--content il-color--background__verylight">
-            <h3 class="il-section--title__small il-color--text__dark">Olá!</h3>
-            <p class="il-color--text__dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, repellat hic. In eligendi rerum fuga soluta ipsam facere quam, architecto vel repellendus ducimus modi accusantium nostrum saepe dolorum ratione. Accusamus?.</p>
+            <h3 class="il-section--title__small il-color--text__dark">Por que aqui?</h3>
+            <p class="il-color--text__dark"><b>Porque aqui no Studio 10 Pilates e CoreAlign</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>
         </div>
     </section>
         <section class="il-section il-section--prices">
-        <h2 class="il-section--sub-title">Escolha um plano de aula:</h2>
+        <h2 class="il-section--sub-title il-color--text__gold">Escolha um plano de aula:</h2>
         <div class="il-pricing--grid">
             <div class="il-plan il-color--background__light plan1">
                 <h2 class="il-color--text__dark">1 X Semana</h2>

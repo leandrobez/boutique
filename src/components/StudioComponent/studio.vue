@@ -2,7 +2,7 @@
 <div class="il-container--wrapper">
     <section id="il-space" class="il-section il-section--space">
         <h1 class="il-section--title"><!--<i :class="whatIcon"></i>-->O <span class="il-color--text__gold">Studio</span></h1>
-        <h2 class="il-section--sub-title">Seja Bem vindo a Boutique Pilates</h2>
+        <h2 class="il-section--sub-title il-color--text__gold">Seja Bem vindo a Boutique Pilates</h2>
 
         <div class="il-space--content il-color--background__verylight">
             <h3 class="il-section--title__small il-color--text__dark">Olá!</h3>
