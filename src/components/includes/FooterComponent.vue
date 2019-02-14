@@ -1,39 +1,39 @@
 <template>
-<div class="il-footer--content" :class="getClass()">
-	<div class="il-footer--top">
+<div class="il-footer--content">
+	<div class="il-footer--top" :class="getClass()">
 		<div class="il-container--wrapper">
-			<div class="il-footer--breadcrumb il-color--text__dark">
+			<div class="il-footer--breadcrumb il-color--text__very-light">
 				<i :class="whatIcon"></i>
 				<span class="il-path">{{whereIAm}}</span>
 			</div>
 		</div>
 
-		<div class="il-footer--cols il-color--text__dark">
+		<div class="il-footer--cols il-color--text__very-light">
 			<div class="il-footer-col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-iris"></i>
-          <router-link :to="{name:'galleryStudio'}" class="il-footer--list il-color--text__dark" title="Veja fotos do studio">studio</router-link>
+          <router-link :to="{name:'galleryStudio'}" class="il-footer--list il-color--text__very-light" title="Veja fotos do studio">studio</router-link>
 				</h4>
 			</div>
 
 			<div class="il-footer-col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-rear"></i>
-          <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__dark" title="Veja fotos de eventos">eventos</router-link>
+          <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__very-light" title="Veja fotos de eventos">eventos</router-link>
 				</h4>
 			</div>
 
 			<div class="il-footer-col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-party-mode"></i>
-					<a href="#!" class="il-footer--list il-color--text__dark"  title="Veja fotos do studio">cursos</a>
+					<a href="#!" class="il-footer--list il-color--text__very-light"  title="Veja fotos do studio">cursos</a>
 				</h4>
 			</div>
 
 			<div class="il-footer-col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-email"></i>
-					<a href="#!" class="il-footer--list il-color--text__dark" @click.prevent="activeModal('Contato')" title="Faça contato com a gente">contato</a>
+					<a href="#!" class="il-footer--list il-color--text__very-light" @click.prevent="activeModal('Contato')" title="Faça contato com a gente">contato</a>
 				</h4>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 
 	<div class="il-footer--bottom">
 		<div class="il-footer--copy">
-			<span class="il-color--text__light">design by <a href="http://www.internetlojas.com" target="_blanck" class="il-color--text">www.internetlojas.com</a></span>
+			<span class="il-color--text__light">design by <a href="http://www.internetlojas.com" target="_blanck" class="il-color--text__gold">www.internetlojas.com</a></span>
 		</div>
 	</div>
 </div>

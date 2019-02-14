@@ -9467,31 +9467,35 @@ $primary-line-color: #ccc;*/
 /*---------------TEXT COLORS AND BACKGROUN COLORS----------------*/
 /**Colors*/
 .il-color--text {
-  color: #470742;
+  color: #343434;
 }
 
 .il-color--text__light {
-  color: #d1e4e4;
+  color: #CACACA;
+}
+
+.il-color--text__very-light {
+  color: #FCFAF1;
 }
 
 .il-color--text__dark {
-  color: #010f0f;
+  color: #0e0e0e;
 }
 
 .il-color--text__accent {
-  color: #c7c0b5;
+  color: #0e0e0e;
 }
 
 .il-color--text__gold {
-  color: #5d4214;
+  color: #d6b212;
 }
 
 .il-color--text__thirty {
-  color: #e2c043;
+  color: #E6B31E;
 }
 
 .il-color--text__alt {
-  color: #1b0219;
+  color: #272727;
 }
 
 /** BACKGROUND IMAGES*/
@@ -9561,15 +9565,15 @@ $primary-line-color: #ccc;*/
 
 /**Backgrounds*/
 .il-color--background__default {
-  background: #554d4d;
+  background: #efe4b2;
 }
 
 .il-color--background__light {
-  background: #f5ecd0;
+  background: #CACACA;
 }
 
 .il-color--background__verylight {
-  background: #ecdba6;
+  background: #a4a4a4;
 }
 
 .il-color--background__clean {
@@ -9577,15 +9581,15 @@ $primary-line-color: #ccc;*/
 }
 
 .il-color--background__modal {
-  background: #52514b;
+  background: #747474;
 }
 
 .il-color--background__modal-content {
-  background: #f3cd4e;
+  background: #E6B31E;
 }
 
 .il-color--background__dark {
-  background: rgba(73, 73, 73, 0.5);
+  background: #343434;
 }
 
 input[type='submit'],
@@ -9595,9 +9599,9 @@ button.il-btn {
   word-spacing: 2px;
   font-weight: 700;
   padding: 0.5em 1.3em;
-  background-color: #853002;
+  background-color: #343434;
   text-transform: uppercase;
-  border: 1px solid #99a7b3;
+  border: 1px solid #FCFAF1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   max-width: 1344px;
@@ -9642,8 +9646,8 @@ button.il-btn:focus,
 a.il-btn:hover,
 button.il-btn:hover,
 input[type='submit']:hover {
-  background-color: #853002;
-  border: 1px solid #0d3350;
+  background-color: #343434;
+  border: 1px solid #0e0e0e;
 }
 
 a.il-btn--cards,
@@ -9654,7 +9658,7 @@ button.il-btn--cards {
 a.il-btn--cards:focus, a.il-btn--cards:hover,
 button.il-btn--cards:focus,
 button.il-btn--cards:hover {
-  background-color: #1b6ba8;
+  background-color: #414141;
   border: none;
 }
 
@@ -10054,8 +10058,8 @@ main .il-container .il-container--wrapper {
 =            CONFIG            =
 ================================-->*/
 body {
-  background: #444;
-  color: #fcfcfc;
+  background: #FCFAF1;
+  color: #343434;
   font-family: "Pathway Gothic One", sans-serif;
   line-height: 1.5;
 }
@@ -10352,7 +10356,7 @@ p.il-section--description:after {
 }
 
 a {
-  color: #d1e4e4;
+  color: #FCFAF1;
   text-decoration: none;
 }
 
@@ -10413,7 +10417,7 @@ blockquote {
 
 .il-header.active:after {
   content: "";
-  background: #5a5646;
+  background: #FCFAF1;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -10434,7 +10438,7 @@ blockquote {
           transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  border: 1px solid #5d4214;
+  border: 1px solid #FCFAF1;
   padding: 7px 0;
   cursor: pointer;
   -webkit-transition: all 650ms ease-out;
@@ -10443,14 +10447,14 @@ blockquote {
 
 .il-header .il-header--menu.radius {
   border-radius: 50%;
-  background: #1b0219;
+  background: #a4a4a4;
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
 }
 
 .il-header .il-header--menu .il-menu--line {
   height: 3px;
-  background: #5d4214;
+  background: #FCFAF1;
   padding: 2px 0;
   margin: 3px;
   opacity: 1;
@@ -10459,13 +10463,13 @@ blockquote {
 }
 
 .il-header .il-header--menu .il-menu--line:hover {
-  background: #fdb27c;
+  background: #a58012;
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
 }
 
 .il-header .il-header--menu .il-menu--line.deform {
-  background: #f5ecd0;
+  background: #FCFAF1;
   width: 24px;
   height: 2px;
   margin-left: 7px;
@@ -10554,7 +10558,7 @@ blockquote {
   height: 140px;
   width: 140px;
   border-radius: 50%;
-  border: 1px solid #e2c043;
+  border: 1px solid #CACACA;
   background-image: url("../../public/images/pictures/img-muraguti.jpg");
   background-position: center;
   background-repeat: none;
@@ -10565,7 +10569,7 @@ blockquote {
   .il-header .il-header--content .il-content--portrait .il-avatar--portrait {
     height: 160px;
     width: 160px;
-    border: 2px solid #e2c043;
+    border: 2px solid #CACACA;
   }
 }
 
@@ -10573,7 +10577,7 @@ blockquote {
   .il-header .il-header--content .il-content--portrait .il-avatar--portrait {
     height: 200px;
     width: 200px;
-    border: 3px solid #e2c043;
+    border: 3px solid #CACACA;
   }
 }
 
@@ -10644,7 +10648,7 @@ blockquote {
 }
 
 .il-header .il-header--content nav.il-content--nav ul.il-menu--list li.il-menu--list__item a.il-menu--link.current {
-  color: #e2c043;
+  color: #E6B31E;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   -webkit-text-decoration-color: #dac4a8;
@@ -10654,7 +10658,7 @@ blockquote {
 }
 
 .il-header .il-header--content nav.il-content--nav ul.il-menu--list li.il-menu--list__item a.il-menu--link:hover {
-  color: #e2c043;
+  color: #E6B31E;
 }
 
 .il-header .il-header--content nav.il-content--nav ul.il-menu--list li.il-menu--list__item a.il-menu--link.show-me1 span {
@@ -10739,7 +10743,7 @@ blockquote {
 }
 
 .il-section--home .il-icons a:hover {
-  color: #e2c043;
+  color: #E6B31E;
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
 }
@@ -10840,7 +10844,7 @@ section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-ca
 
 section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--caption {
   text-align: right;
-  color: #010f0f;
+  color: #0e0e0e;
   margin-right: 20px;
 }
 
@@ -10910,7 +10914,7 @@ section.il-section.il-section--class .il-intructors--cards {
 }
 
 section.il-section.il-section--class .il-intructors--cards .il-cards {
-  background: #554d4d;
+  background: #efe4b2;
   padding: 0.45rem;
   -webkit-box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
           box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
@@ -10959,7 +10963,7 @@ section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--
 section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content {
   position: relative;
   top: 15px;
-  background: #fdb27c;
+  background: #a58012;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10984,7 +10988,7 @@ section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--
 }
 
 section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content p.il-cards--text {
-  color: #d1e4e4;
+  color: #CACACA;
   -webkit-transform: skewY(4deg);
           transform: skewY(4deg);
   padding: 0.45rem;
@@ -11421,7 +11425,6 @@ footer.il-footer {
   z-index: 101;
   position: relative;
   height: 150px;
-  background: #cc9c6a;
 }
 
 footer.il-footer .il-footer--content {
@@ -11440,13 +11443,12 @@ footer.il-footer .il-footer--content {
 
 footer.il-footer .il-footer--content .il-footer--top,
 footer.il-footer .il-footer--content .il-footer--bottom {
-  padding: 0 1rem 0 0;
+  padding: 0 0 1rem 0;
   width: 100%;
-  color: #3f1f1f;
+  color: #FCFAF1;
 }
 
 footer.il-footer .il-footer--content .il-footer--top {
-  background: rgba(192, 133, 72, 0.6);
   height: 100px;
 }
 
@@ -11486,11 +11488,60 @@ footer.il-footer .il-footer--content .il-footer--top .il-footer--cols .il-footer
           flex: 1;
 }
 
+footer.il-footer .il-footer--content .il-footer--top.il-home {
+  background: #424242;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-home li.il-footer--item a.il-footer--link {
+  color: #FCFAF1;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-about {
+  background: #454545;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-about li.il-footer--item a.il-footer--link {
+  color: #FCFAF1;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-studio {
+  background: #464646;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-studio li.il-footer--item a.il-footer--link {
+  color: #FCFAF1;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-class {
+  background: #474747;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-class li.il-footer--item a.il-footer--link {
+  color: #FCFAF1;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-teacher {
+  background: #484848;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-teacher li.il-footer--item a.il-footer--link {
+  color: #FCFAF1;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-student {
+  background: #4a4a4a;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-student li.il-footer--item a.il-footer--link {
+  color: #FCFAF1;
+}
+
 footer.il-footer .il-footer--content .il-footer--bottom {
   padding: 0;
   text-align: center;
   height: 100%;
-  border-top: 1px solid #bf8344;
+  background: #717171;
+  border-top: 1px solid #1b1b1b;
 }
 
 footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy {
@@ -11499,38 +11550,6 @@ footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy {
 
 footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy a {
   font-weight: 100;
-}
-
-footer.il-footer--home {
-  background: #c58e55;
-}
-
-footer.il-footer--home li.il-footer--item a.il-footer--link {
-  color: #fcfdfe;
-}
-
-footer.il-footer--about {
-  background: #c48d53;
-}
-
-footer.il-footer--about li.il-footer--item a.il-footer--link {
-  color: #fcfdfe;
-}
-
-footer.il-footer--studio {
-  background: #c48c51;
-}
-
-footer.il-footer--studio li.il-footer--item a.il-footer--link {
-  color: #fcfdfe;
-}
-
-footer.il-footer--class {
-  background: #c38a4f;
-}
-
-footer.il-footer--class li.il-footer--item a.il-footer--link {
-  color: #fcfdfe;
 }
 
 /*=====  End of Boutique Pilates - ESTILOS  ======*/

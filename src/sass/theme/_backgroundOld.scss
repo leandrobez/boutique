@@ -37,30 +37,30 @@
 }
 
 /**Backgrounds*/
-.il-color--background__default{
+.il-color--background__default {
   background: $primaryAccent;
 }
 
-.il-color--background__light{
-  background: $secondColor;
-}
-
-.il-color--background__verylight{
+.il-color--background__light {
   background: $secondColorAccent;
 }
 
-.il-color--background__clean{
-  background: lighten($secondColor,40%);
+.il-color--background__verylight {
+  background: darken($secondColorAccent, 10%);
 }
 
-.il-color--background__modal{
-  background: lighten($fortyColor, 25%);
+.il-color--background__clean {
+  background: lighten($secondColorAccent, 70%);
 }
 
-.il-color--background__modal-content{
-  background: $thirtyColor;
+.il-color--background__modal {
+  background: #52514b;
 }
 
-.il-color--background__dark{
-  background: $fortyColor;
+.il-color--background__modal-content {
+  background: #f3cd4e;
+}
+
+.il-color--background__dark {
+  background: rgba(73, 73, 73, 0.5);
 }

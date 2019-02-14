@@ -38,16 +38,16 @@
       width: 140px;
       //margin: 50% auto auto auto;
       border-radius: 50%;
-      border: 1px solid $thirtyColor;
+      border: 1px solid $secondColor;
       @media screen and (min-width: 501px) {
         height: 160px;
         width: 160px;
-        border: 2px solid $thirtyColor;
+        border: 2px solid $secondColor;
       }
       @media screen and (min-width: 768px) {
         height: 200px;
         width: 200px;
-        border: 3px solid $thirtyColor;
+        border: 3px solid $secondColor;
       }
       background-image: $avatar-url;
       background-position: center;

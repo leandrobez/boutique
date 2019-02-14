@@ -3,7 +3,7 @@ footer.il-footer {
   z-index: 101;
   position: relative;
   height: $height-footer;
-  background: $back-footer;
+  // background: $back-footer;
   & .il-footer--content {
     display: flex;
     flex-direction: column;
@@ -11,13 +11,12 @@ footer.il-footer {
     height: 100%;
     & .il-footer--top,
     & .il-footer--bottom {
-      padding: 0 1rem 0 0;
+      padding: 0 0 1rem 0;
       width: 100%;
-      color: rgb(63, 31, 31);
+      color: $primaryColor;
     }
 
     & .il-footer--top {
-      background: darken(rgba($back-footer, .6),9%);
       height: 100px;
       & .il-footer--breadcrumb {
         margin: 0.35rem auto;
@@ -41,11 +40,51 @@ footer.il-footer {
           flex: 1;
         }
       }
+      &.il-home {
+        background: $back-footer-home;
+        & li.il-footer--item a.il-footer--link {
+          color: $colorBorder;
+        }
+      }
+    
+      &.il-about {
+        background: $back-footer-about;
+        & li.il-footer--item a.il-footer--link {
+          color: $colorBorder;
+        }
+      }
+    
+      &.il-studio {
+        background: $back-footer-studio;
+        & li.il-footer--item a.il-footer--link {
+          color: $colorBorder;
+        }
+      }
+    
+      &.il-class {
+        background: $back-footer-class;
+        & li.il-footer--item a.il-footer--link {
+          color: $colorBorder;
+        }
+      }
+      &.il-teacher {
+        background: $back-footer-teacher;
+        & li.il-footer--item a.il-footer--link {
+          color: $colorBorder;
+        }
+      }
+      &.il-student {
+        background: $back-footer-student;
+        & li.il-footer--item a.il-footer--link {
+          color: $colorBorder;
+        }
+      }
     }
     & .il-footer--bottom {
       padding: 0;
       text-align: center;
       height: 100%;
+      background: $back-footer-bottom;
       border-top: 1px solid darken($back-footer,10%);
       & .il-footer--copy {
         line-height: 49px;
@@ -53,33 +92,6 @@ footer.il-footer {
           font-weight: 100;
         }
       }
-    }
-  }
-  &--home {
-    background: $back-footer-home;
-    & li.il-footer--item a.il-footer--link {
-      color: $colorBorder;
-    }
-  }
-
-  &--about {
-    background: $back-footer-about;
-    & li.il-footer--item a.il-footer--link {
-      color: $colorBorder;
-    }
-  }
-
-  &--studio {
-    background: $back-footer-studio;
-    & li.il-footer--item a.il-footer--link {
-      color: $colorBorder;
-    }
-  }
-
-  &--class {
-    background: $back-footer-class;
-    & li.il-footer--item a.il-footer--link {
-      color: $colorBorder;
     }
   }
 }

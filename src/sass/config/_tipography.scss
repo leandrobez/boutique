@@ -7,7 +7,7 @@ $body-font: 'Pathway Gothic One', sans-serif; // only 700
 
 body {
   background: $primaryColor;
-  color: $colorBg;
+  color: $textColor;
   font-family: $body-font;
   line-height: 1.5;
 }
@@ -152,6 +152,6 @@ p.il-section--description {
   }
 }
 a {
-  color: $textColorLight;
+  color: $primaryColor;
   text-decoration: none;
 }

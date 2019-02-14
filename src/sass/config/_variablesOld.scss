@@ -1,26 +1,24 @@
 /*---------------VARIABLES----------------*/
 
 /*colors*/
-$primaryColor: #FCFAF1;
-$primaryAccent: darken($primaryColor, 15%);
-$secondColor: #CACACA;
-$secondColorAccent: darken($secondColor, 15%);
-$thirtyColor: #E6B31E;
-$fortyColor: #343434;
-$thirtyColorAccent: darken($thirtyColor, 15%);
-$fortyColorAccent: darken($fortyColor, 15%);
-$textColor: #343434;
-$textColorGold: #d6b212;
-$textColorAlt: darken($textColor, 5%);
-$textColorAccent: darken($textColor, 15%);
-$textColorLight: $secondColor;
-$textColorVeryLight: $primaryColor;
-$textColorDark: darken($textColor, 15%);
+$primaryColor: #5d5d5a;
+$primaryAccent: rgb(85, 77, 77);
+$secondColor: #b6b5be;
+$secondColorAccent: #f5ecd0;
+$thirtyColor: #e2c043;
+$thirtyColorAccent: #fdb27c;
+$textColor: #470742;
+$textColorGold: #5d4214;
+$textColorAlt: #1b0219;
+$textColorAccent: #c7c0b5;
+$textColorAlt: #1b0219;
+$textColorLight: #d1e4e4;
+$textColorDark: #010f0f;
 
 //body
-$colorBg: $primaryColor;
-$lines-bg: $secondColor;
-$colorBorder: $primaryColor;
+$colorBg: #fcfcfc;
+$lines-bg: #c7c0b7;
+$colorBorder: #fcfdfe;
 
 /*STRUCTUE*/
 $max-width: 1344px;
@@ -41,27 +39,26 @@ $m-h: 40px;
 $header-height: 17vh;
 
 /*app*/
-$app-overlay: #d3b965;//darken($secondColor, 7.5%);
+$app-overlay: #d3b965; //darken($secondColor, 7.5%);
 
 /*Other elements*/
-$back-body: #eee;
+$back-body: rgba(darken($secondColor, 1%), 0.5);
 
 /*footer*/
 $height-footer: 150px;
-$back-footer: $fortyColor;
-$back-footer-home: lighten($back-footer, 5.5%);
-$back-footer-about: lighten($back-footer, 6.5%);
-$back-footer-studio: lighten($back-footer, 7%);
-$back-footer-class: lighten($back-footer, 7.5%);
-$back-footer-teacher: lighten($back-footer, 8%);
-$back-footer-student: lighten($back-footer, 8.5%);
-$back-footer-advantage: lighten($back-footer, 9%);
-$back-footer-albuns: lighten($back-footer, 9.5%);
-$back-footer-bottom: darken($secondColor,35%);
+$back-footer: #cc9c6a;
+$back-footer-home: darken($back-footer, 5.5%);
+$back-footer-about: darken($back-footer, 6%);
+$back-footer-studio: darken($back-footer, 6.5%);
+$back-footer-class: darken($back-footer, 7%);
+$back-footer-teacher: darken($back-footer, 7.5%);
+$back-footer-student: darken($back-footer, 8%);
+$back-footer-advantage: darken($back-footer, 8.5%);
+$back-footer-albuns: darken($back-footer, 9%);
 
-$back-header: rgba(darken($fortyColor, 0.85), .75);
-$back-portrait: $thirtyColor;
-$back-nav: $secondColor;
+$back-header: rgba(darken(rgba(40, 55, 58, 0.7), 3%), 0.85);
+$back-portrait: rgba(40, 55, 58, 0.7);
+$back-nav: rgba(darken(rgba(40, 55, 58, 0.7), 3%), 0.75);
 $show-img-home: true;
 $big-img-url-home: url('../../public/images/banners/big-img-home.jpg');
 
@@ -95,14 +92,13 @@ $avatar-url: url('../../public/images/pictures/img-muraguti.jpg');
 $show-img-gallery: false;
 $big-img-url-gallery: url('../../public/images/banners/banner-class2.png');
 
-
 /** depoiments*/
 $height-slider: 400px;
 $portrait-width: 160px;
 $background-opacity: 0.5;
 
 /**buttons*/
-$btn-background-color: $fortyColor;
-$btn-border-color: $primaryColor;
-$btn-border-color-hover: $fortyColorAccent;
-$btn-cards-background-color-hoover: lighten($btn-border-color-hover,20%);
+$btn-background-color: #853002;
+$btn-border-color: #99a7b3;
+$btn-border-color-hover: #0d3350;
+$btn-cards-background-color-hoover: lighten($btn-border-color-hover, 20%);

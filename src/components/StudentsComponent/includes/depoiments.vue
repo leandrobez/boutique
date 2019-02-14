@@ -5,7 +5,7 @@
         <i id="nav-left" class="mdi mdi-24px mdi-arrow-left-drop-circle il-color--text__alt" @click.prevent="move('left')" ></i>
         <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--text__alt" @click.prevent="move('right')"></i>
     </div>
-    <div class="il-depoiments--content  il-color--background__light">
+    <div class="il-depoiments--content">
         <h3 class="il-section--title__small il-color--text__dark">Com a palavra os alunos:</h3>
 
         <div class="il-depoiments--slider">
