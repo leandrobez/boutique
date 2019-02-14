@@ -12,6 +12,6 @@
       @include overlay(#5a5646,'../../public/images/theme/dott.png',.5);
     }
   }
-  @import '_header-component/nav-menu';
-  @import '_header-component/content';
+  @import 'header-component/nav-menu';
+  @import 'header-component/content';
 }

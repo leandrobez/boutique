@@ -7,13 +7,13 @@
     </div>
 
     <div class="il-header--content">
-        <div class="il-header--portrait">
+        <div class="il-content--portrait">
             <div class="il-avatar--portrait">
                 <div class="il-avatar"></div>
             </div>
         </div>
 
-        <nav class="il-header--nav">
+        <nav class="il-content--nav">
             <ul class="il-menu--list">
                 <li class="il-menu--list__item" v-for="m in menu" :key="m.id">
                     <router-link class="il-menu--link" :to="{name:m.link}" :class="isActive(m.id)" :title="m.title">
@@ -121,8 +121,8 @@ export default {
             const menuLine = document.querySelectorAll('.il-menu--line');
             const header = document.getElementById('il-header');
             const headerContent = document.querySelector('.il-header--content');
-            const headerPortrait = document.querySelector('.il-header--portrait');
-            const headerNav = document.querySelector('.il-header--nav');
+            const headerPortrait = document.querySelector('.il-content--portrait');
+            const headerNav = document.querySelector('.il-content--nav');
             const headerNavList = document.querySelectorAll('.il-menu--list__item');
             menuLine.forEach(item => {
                 item.classList.remove('deform');
@@ -141,9 +141,9 @@ export default {
 
         activeMenu() {
             const headerContent = document.querySelector('.il-header--content');
-            const headerPortrait = document.querySelector('.il-header--portrait');
+            const headerPortrait = document.querySelector('.il-content--portrait');
             const header = document.getElementById('il-header');
-            const headerNav = document.querySelector('.il-header--nav');
+            const headerNav = document.querySelector('.il-content--nav');
             const headerNavList = document.querySelectorAll('.il-menu--list__item');
             const menuLine = document.querySelectorAll('.il-menu--line');
 

@@ -2,8 +2,8 @@
 <div class="il-container--wrapper">
     <section id="il-instructor" class="il-section il-section--instructor">
         <h1 class="il-section--title il-title--full"><!--<i :class="whatIcon"></i>-->Os <span class="il-color--text__gold">Instrutores</span></h1>
-        <h2 class="il-section--sub-title il-color--text__gold">Aqui estão nossos professores:</h2>
-        <div class="il-intructors--cards">
+        <h2 class="il-section--sub-title il-color--text__verylight text-right">Conheça nossos professores:</h2>
+        <div class="il-intructors--cards il-color--background__verylight">
             <div class="il-cards">
                 <div class="il-cards--avatar">
                     <img class="img-circle" :src="teachers.number1" alt="client1.jpg" />
@@ -46,7 +46,7 @@
                         </div>
                     </div>
     <div class="il-about--content il-color--background__verylight">
-            <p class="il-color--text__dark">No Studio 10 Pilates e CoreAlign</b> você contará com profissionais preparados, motivados e dispostos a lhe oferecer um serviço de excelente qualidade.</p>
+            <p class="il-color--text__dark">N <b>Boutique Pilates e CoreAlign</b> você contará com profissionais preparados, motivados e dispostos a lhe oferecer um serviço de excelente qualidade.</p>
         </div>
     </section>
 </div>

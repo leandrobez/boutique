@@ -49,6 +49,10 @@
   background: darken($secondColorAccent,10%);
 }
 
+.il-color--background__clean{
+  background: lighten($secondColorAccent,70%);
+}
+
 .il-color--background__modal{
   background: #52514b;
 }

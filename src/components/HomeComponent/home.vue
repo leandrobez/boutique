@@ -10,9 +10,9 @@
             <!--<h3 class="il-section--sm-title il-color--text__gold">Proprietária da Boutique Pilates e CoreAlign</h3>-->
             <p class="il-section--description il-color--text__gold">Palestrante e Instrutora.</p>
             <div class="il-icons">
-                <a href="#" class="il-icons--link" title="Visite a rede social"><i class="mdi mdi-facebook mdi-48px"></i></a>
-                <a href="#" class="il-icons--link" title="Visite a rede social"><i class="mdi mdi-instagram mdi-48px"></i></a>
-                <a href="#" class="il-icons--link" title="Visite a rede social"><i class="mdi mdi-git mdi-48px"></i></a>
+                <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('fb')"><i class="mdi mdi-facebook mdi-48px"></i></a>
+                <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('in')"><i class="mdi mdi-instagram mdi-48px"></i></a>
+                <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('go')"><i class="mdi mdi-git mdi-48px"></i></a>
             </div>
 
         </div>
@@ -29,5 +29,26 @@ export default {
             whatIcon: "il-pilates-icon flaticon-precision-posture"
         }
     },
+
+    methods: {
+        socialNetOpen (path) {
+            let w = 626, h = 436;
+            let urlFb = 'https://www.facebook.com/BusqueFilme/?ref=bookmarks'
+            let urlFbShare = 'https://www.facebook.com/sharer/sharer.php?u='
+            let urlIn = 'http://instagram.com/claumuraguti?ref=badge'
+            let urlGo = 'https://plus.google.com/u/0/114144280855980132006'
+            switch(path){
+                case 'fb':
+                    window.open(urlFbShare + encodeURIComponent(urlFb),"fb-follow",`"width=${w},height=${h}"`)
+                    break
+                case 'in':
+                    window.open(urlIn,"instagram-share-dialog",`"width=${w},height=${h}"`)
+                    break
+                case 'go':
+                    window.open(urlGo,"google-share-dialog",`"width=${w},height=${h}"`)
+                    break
+            }
+        }
+    }
 }
 </script>
