@@ -4,6 +4,10 @@
   @include big-img($show-img-home, $big-img-url-home);
 }
 
+#app.big-img-curriculum {
+  @include big-img($show-img-home, $big-img-url-curriculum);
+}
+
 #app.big-img-about {
   @include big-img($show-img-about, $big-img-url-about);
 }

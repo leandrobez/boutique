@@ -21,7 +21,7 @@
     </footer>
 
     <!--MODAL-->
-    <ilModal />
+    <ilModal v-if="checkShowModal" />
 
 </div>
 </template>
@@ -64,12 +64,13 @@ export default {
             return false;
         },
 
-        /*checkShowModal(){
-            if(this.showModal){
+        checkShowModal(){
+            let rota = this.$route.name;
+            if(rota == 'home' && this.showModal){
                 return true
             }
             return false
-        }*/
+        }
     },
 
     methods: {
@@ -85,39 +86,44 @@ export default {
             let currentImg = null;
             switch (rota) {
                 case 'home':
-                    currentImg = 'big-img-home';
+                    this.showModal = true
+                    currentImg     = 'big-img-home';
                     this.whatClass = 'il-footer--home';
                     break;
+                case 'curriculum':
+                    currentImg     = 'big-img-curriculum';
+                    this.whatClass = 'il-footer--curriculum';
+                    break;
                 case 'about':
-                    currentImg = 'big-img-about';
+                    currentImg     = 'big-img-about';
                     this.whatClass = 'il-footer--about';
                     break;
                 case 'studio':
-                    currentImg = 'big-img-studio';
+                    currentImg     = 'big-img-studio';
                     this.whatClass = 'il-footer--studio';
                     break;
                 case 'teachers':
-                    currentImg = 'big-img-instructor';
+                    currentImg     = 'big-img-instructor';
                     this.whatClass = 'il-footer--teacher';
                     break;
                 case 'class':
-                    currentImg = 'big-img-class';
+                    currentImg     = 'big-img-class';
                     this.whatClass = 'il-footer--class';
                     break;
                 case 'student':
-                    currentImg = 'big-img-student';
+                    currentImg     = 'big-img-student';
                     this.whatClass = 'il-footer--student';
                     break;
                 case 'advantage':
-                    currentImg = 'big-img-advantage';
+                    currentImg     = 'big-img-advantage';
                     this.whatClass = 'il-footer--advantage';
                     break;
                 case 'video':
-                    currentImg = '';
+                    currentImg     = '';
                     this.whatClass = 'il-footer--video';
                     break;
                 case 'gallery':
-                    currentImg = 'big-img-gallery';
+                    currentImg     = 'big-img-gallery';
                     this.whatClass = 'il-footer--gallery';
                     break;
             }

@@ -3,6 +3,7 @@ import Router from 'vue-router';
 
 /**componente do client**/
 import Home from './components/HomeComponent/home.vue';
+import Curriculum from './components/CurriculumComponent/curriculum.vue';
 import About from './components/AboutComponent/about.vue';
 import Studio from './components/StudioComponent/studio.vue';
 import Teacher from './components/TeachersComponent/teachers.vue';
@@ -30,6 +31,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/curriculum',
+      name: 'curriculum',
+      component: Curriculum
     },
     {
       path: '/studio',

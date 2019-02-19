@@ -1,9 +1,6 @@
 /*==================================================
 =            Boutique Pilates - ESTILOS            =
 ==================================================*/
-/*<!--===============================
-=            NORMALIZE            =
-================================-->*/
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -12,7 +9,7 @@
      * 2. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Nunito:400,600|Oswald");
+@import url("https://fonts.googleapis.com/css?family=Cousine|Nunito:400,600|Oswald");
 html {
   line-height: 1.15;
   /* 1 */
@@ -9507,6 +9504,14 @@ $primary-line-color: #ccc;*/
   background-attachment: fixed;
 }
 
+#app.big-img-curriculum {
+  background-image: url("../../public/images/banners/big-img-curriculum.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 #app.big-img-about {
   background-image: url("../../public/images/banners/big-img-about.jpg");
   background-position: bottom center;
@@ -9775,6 +9780,117 @@ section.il-section--modal .il-modal {
   }
 }
 
+section.il-section--modal .il-modal .il-forms {
+  border: 1px solid #e7e7e7;
+  background: #f4f7f8;
+}
+
+section.il-section--modal .il-modal .il-forms h3 {
+  text-align: center;
+  color: #f40001;
+}
+
+section.il-section--modal .il-modal form.il-form {
+  padding: 0.45rem;
+  max-width: 700px;
+  padding: 20px;
+  background: #f4f7f8;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.il-section--modal .il-modal form.il-form .il-form--fields {
+  padding: 0.35rem 0.5rem;
+  width: 90%;
+  margin: 0 5%;
+}
+
+section.il-section--modal .il-modal form.il-form .il-form--fields.il-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+section.il-section--modal .il-modal form.il-form input[type='text'],
+section.il-section--modal .il-modal form.il-form input[type='email'],
+section.il-section--modal .il-modal form.il-form input[type='tel'] {
+  border: 1px solid #e7e7e7;
+  background-color: #fff;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 4px 4px;
+  border-radius: 3px;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+  height: 2rem;
+  width: 100%;
+  margin: 0.25rem 0;
+  outline: none;
+}
+
+section.il-section--modal .il-modal form.il-form input[type='text']:focus,
+section.il-section--modal .il-modal form.il-form input[type='email']:focus,
+section.il-section--modal .il-modal form.il-form input[type='tel']:focus {
+  outline: none;
+  border: 1px solid #28b9b5;
+  background: #d2d9dd;
+}
+
+section.il-section--modal .il-modal form.il-form select.il-select {
+  border: 1px solid #e7e7e7;
+  font-size: 0.85rem;
+  color: inherit;
+  background-color: #fff;
+  font-weight: 300;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+  height: 2rem;
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+section.il-section--modal .il-modal form.il-form select.il-select:focus {
+  outline: none;
+  border: 1px solid #28b9b5;
+  background: #d2d9dd;
+}
+
+section.il-section--modal .il-modal form.il-form button.il-btn {
+  background: -webkit-gradient(linear, left top, left bottom, from(#d3d3d3), to(#8a8a8a));
+  background: linear-gradient(top, #d3d3d3 0%, #8a8a8a 100%);
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.22);
+  font: bold 12px/25px Arial, sans-serif;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+section.il-section--modal .il-modal form.il-form button.il-btn.il-btn--submit {
+  color: #fff;
+  margin: 0 auto;
+  background: #a4afad;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border: 1px solid #3d3f3f;
+}
+
+section.il-section--modal .il-modal form.il-form button.il-btn:hover {
+  background: #b8af7e;
+}
+
 section.il-section--modal .il-modal--dialog {
   width: 100%;
   height: 100%;
@@ -9801,11 +9917,10 @@ section.il-section--modal .il-modal--close {
   display: block;
   width: 25px;
   height: 25px;
-  background: #faf2f2;
   z-index: 1000;
   cursor: pointer;
   position: absolute;
-  top: 10px;
+  top: 15%;
   right: 30px;
   border: 1px solid #432344;
   border-radius: 50%;
@@ -9995,13 +10110,13 @@ section.il-section--prices {
 
 #app:after {
   content: "";
-  background: #d3b965;
+  background: #a58012;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.7;
+  opacity: 0.3;
   background-image: url("../../public/images/theme/dott.png");
   background-position: top center;
   background-repeat: repeat;
@@ -10060,7 +10175,7 @@ main .il-container .il-container--wrapper {
 body {
   background: #FCFAF1;
   color: #343434;
-  font-family: "Pathway Gothic One", sans-serif;
+  font-family: "Cousine", monospace;
   line-height: 1.5;
 }
 
@@ -10321,6 +10436,24 @@ h6.text-justify {
 h2,
 h3 {
   font-family: "Oswald", sans-serif;
+}
+
+p {
+  font-family: "Cousine", monospace;
+  font-size: .85rem;
+  text-align: right;
+}
+
+@media screen and (max-width: 360px) {
+  p {
+    font-size: .9rem;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  p {
+    font-size: .95rem;
+  }
 }
 
 p.il-section--description {
@@ -10762,32 +10895,24 @@ blockquote {
   padding: 0.45rem;
 }
 
-.il-about--content p {
-  font-family: "Nunito", sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.19rem;
-}
-
 .il-about--content.il-nopadding {
   padding: 0;
 }
 
 .il-about--content .il-box--items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 0.95rem;
+  grid-row-gap: 0.45rem;
 }
 
 .il-about--content .il-box--items .il-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0 .45rem;
-  margin: 0 .25rem;
-}
-
-.il-about--content .il-box--items .il-item i {
-  font-size: 1.8rem;
+  background: #efe4b2;
+  padding: 0.45rem;
+  -webkit-box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
+          box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
 }
 
 section.il-section.il-section--instructor {
@@ -11489,50 +11614,34 @@ footer.il-footer .il-footer--content .il-footer--top .il-footer--cols .il-footer
 }
 
 footer.il-footer .il-footer--content .il-footer--top.il-home {
-  background: #424242;
+  background: #434343;
 }
 
-footer.il-footer .il-footer--content .il-footer--top.il-home li.il-footer--item a.il-footer--link {
-  color: #FCFAF1;
+footer.il-footer .il-footer--content .il-footer--top.il-curriculum {
+  background: #4e4e4e;
 }
 
 footer.il-footer .il-footer--content .il-footer--top.il-about {
   background: #454545;
 }
 
-footer.il-footer .il-footer--content .il-footer--top.il-about li.il-footer--item a.il-footer--link {
-  color: #FCFAF1;
-}
-
 footer.il-footer .il-footer--content .il-footer--top.il-studio {
   background: #464646;
-}
-
-footer.il-footer .il-footer--content .il-footer--top.il-studio li.il-footer--item a.il-footer--link {
-  color: #FCFAF1;
 }
 
 footer.il-footer .il-footer--content .il-footer--top.il-class {
   background: #474747;
 }
 
-footer.il-footer .il-footer--content .il-footer--top.il-class li.il-footer--item a.il-footer--link {
-  color: #FCFAF1;
-}
-
 footer.il-footer .il-footer--content .il-footer--top.il-teacher {
   background: #484848;
-}
-
-footer.il-footer .il-footer--content .il-footer--top.il-teacher li.il-footer--item a.il-footer--link {
-  color: #FCFAF1;
 }
 
 footer.il-footer .il-footer--content .il-footer--top.il-student {
   background: #4a4a4a;
 }
 
-footer.il-footer .il-footer--content .il-footer--top.il-student li.il-footer--item a.il-footer--link {
+footer.il-footer .il-footer--content .il-footer--top li.il-footer--item a.il-footer--link {
   color: #FCFAF1;
 }
 
@@ -11551,6 +11660,4 @@ footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy {
 footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy a {
   font-weight: 100;
 }
-
-/*=====  End of Boutique Pilates - ESTILOS  ======*/
 /*# sourceMappingURL=styles.css.map */

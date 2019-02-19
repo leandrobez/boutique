@@ -42,42 +42,31 @@ footer.il-footer {
       }
       &.il-home {
         background: $back-footer-home;
-        & li.il-footer--item a.il-footer--link {
-          color: $colorBorder;
-        }
+      }
+
+      &.il-curriculum {
+        background: $back-footer-curriculum;
       }
     
       &.il-about {
         background: $back-footer-about;
-        & li.il-footer--item a.il-footer--link {
-          color: $colorBorder;
-        }
       }
     
       &.il-studio {
         background: $back-footer-studio;
-        & li.il-footer--item a.il-footer--link {
-          color: $colorBorder;
-        }
       }
     
       &.il-class {
         background: $back-footer-class;
-        & li.il-footer--item a.il-footer--link {
-          color: $colorBorder;
-        }
       }
       &.il-teacher {
         background: $back-footer-teacher;
-        & li.il-footer--item a.il-footer--link {
-          color: $colorBorder;
-        }
       }
       &.il-student {
         background: $back-footer-student;
-        & li.il-footer--item a.il-footer--link {
-          color: $colorBorder;
-        }
+      }
+      & li.il-footer--item a.il-footer--link {
+        color: $colorBorder;
       }
     }
     & .il-footer--bottom {

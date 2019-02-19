@@ -43,6 +43,14 @@ export default {
                 },
                 {
                     id: 2,
+                    link: 'curriculum',
+                    title: 'Informações sobre a proprietária',
+                    label: 'Currículo',
+                    icon: 'il-pilates-icon flaticon-precision-posture',
+                    show: true
+                },
+                {
+                    id: 3,
                     link: 'about',
                     title: 'Saiba mais',
                     label: 'Sobre',
@@ -50,7 +58,7 @@ export default {
                     show: true
                 },
                 {
-                    id: 3,
+                    id: 4,
                     link: 'studio',
                     title: 'Esse é o nosso studio',
                     label: 'O Studio',
@@ -58,7 +66,7 @@ export default {
                     show: true
                 },
                 {
-                    id: 4,
+                    id: 5,
                     link: 'teachers',
                     title: 'Sem eles não existiriamos',
                     label: 'Os Intrutores',
@@ -66,7 +74,7 @@ export default {
                     show: true
                 },
                 {
-                    id: 5,
+                    id: 6,
                     link: 'class',
                     title: 'E para isso existimos',
                     label: 'As Aulas',
@@ -74,7 +82,7 @@ export default {
                     show: true
                 },
                 {
-                    id: 6,
+                    id: 7,
                     link: 'student',
                     title: 'Tudo isso para vocês',
                     label: 'Os Alunos',
@@ -82,7 +90,7 @@ export default {
                     show: true
                 },
                 {
-                    id: 7,
+                    id: 8,
                     link: 'advantage',
                     title: 'Como ganhamos sua confiança',
                     label: 'Vantagens',
@@ -90,7 +98,7 @@ export default {
                     show: true
                 },
                 {
-                    id: 8,
+                    id: 9,
                     link: 'video',
                     title: 'Para conhecer mais',
                     label: 'Vídeos',

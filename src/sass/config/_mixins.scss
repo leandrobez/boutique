@@ -21,7 +21,9 @@
   top:0;
   left:0;
   opacity: $opacity;
-  background-image: url($url-dott);
-  background-position: top center;
-  background-repeat: repeat;
+  @if ($url-dott) {
+    background-image: url($url-dott);
+    background-position: top center;
+    background-repeat: repeat;
+  }
 }

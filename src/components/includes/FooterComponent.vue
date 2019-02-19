@@ -69,6 +69,11 @@ export default {
           this.whereIAm = 'home';
           this.whatIcon = 'il-pilates-icon flaticon-precision-posture';
           break;
+        case 'curriculum':
+          currentFooter = 'il-curriculum';
+          this.whereIAm = 'curriculum';
+          this.whatIcon = 'il-pilates-icon flaticon-precision-posture';
+          break;
         case 'about':
           currentFooter = 'il-about';
           this.whereIAm = 'about';

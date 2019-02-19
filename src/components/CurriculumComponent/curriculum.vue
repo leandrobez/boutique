@@ -1,13 +1,14 @@
 <template>
 <div>
-    <!--SECTION HOME-->
-    <section id="il-home" class="il-section il-section--home">
+    <!--SECTION Curriculum-->
+    <section id="il-curriculum" class="il-section il-section--curriculum">
         <div class="il-container--wrapper">
 
-            <h1 class="il-section--title"><!--<i :class="whatIcon"></i>-->Bem <span class="il-color--text__very-light">Vindo!</span></h1>
-            <h2 class="il-section--sub-title">A Boutique </h2>
-            <h3 class="il-section--sm-title il-color--text">Pilates e CoreAlign!</h3>
-            
+            <h1 class="il-section--title"><!--<i :class="whatIcon"></i>-->Claudia <span class="il-color--text__very-light">Muraguti</span></h1>
+            <h2 class="il-section--sub-title">Educadora Physio Pilates, Master Trainer CoreAlign, Educadora
+                Física</h2>
+            <!--<h3 class="il-section--sm-title il-color--text__gold">Proprietária da Boutique Pilates e CoreAlign</h3>-->
+            <p class="il-section--description il-color--text__very-light">Palestrante e Instrutora.</p>
             <div class="il-icons">
                 <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('fb')"><i class="mdi mdi-facebook mdi-48px"></i></a>
                 <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('in')"><i class="mdi mdi-instagram mdi-48px"></i></a>
@@ -21,7 +22,7 @@
 
 <script>
 export default {
-    name: "Home",
+    name: "Curriculum",
     
     data() {
         return {

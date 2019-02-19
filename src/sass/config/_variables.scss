@@ -41,7 +41,7 @@ $m-h: 40px;
 $header-height: 17vh;
 
 /*app*/
-$app-overlay: #d3b965;//darken($secondColor, 7.5%);
+$app-overlay: $thirtyColorAccent; // $primaryColor;
 
 /*Other elements*/
 $back-body: #eee;
@@ -49,7 +49,7 @@ $back-body: #eee;
 /*footer*/
 $height-footer: 150px;
 $back-footer: $fortyColor;
-$back-footer-home: lighten($back-footer, 5.5%);
+$back-footer-home: lighten($back-footer, 6%);
 $back-footer-about: lighten($back-footer, 6.5%);
 $back-footer-studio: lighten($back-footer, 7%);
 $back-footer-class: lighten($back-footer, 7.5%);
@@ -57,6 +57,7 @@ $back-footer-teacher: lighten($back-footer, 8%);
 $back-footer-student: lighten($back-footer, 8.5%);
 $back-footer-advantage: lighten($back-footer, 9%);
 $back-footer-albuns: lighten($back-footer, 9.5%);
+$back-footer-curriculum: lighten($back-footer, 10%);
 $back-footer-bottom: darken($secondColor,35%);
 
 $back-header: rgba(darken($fortyColor, 0.85), .75);
@@ -64,6 +65,8 @@ $back-portrait: $thirtyColor;
 $back-nav: $secondColor;
 $show-img-home: true;
 $big-img-url-home: url('../../public/images/banners/big-img-home.jpg');
+
+$big-img-url-curriculum: url('../../public/images/banners/big-img-curriculum.jpg');
 
 $show-img-space: true;
 $big-img-url-space: url('../../public/images/banners/big-img-space.jpg');
