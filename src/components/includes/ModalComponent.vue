@@ -21,7 +21,7 @@
                   </select>
                   <input type="hidden" name="form-name" value="contact" />
                 </div>
-                <button class="il-btn il-btn--submit" type="submit">Enviar</button>
+                <button class="il-btn il-btn--submit">Enviar</button>
             </form>
         </div>
     </div>
