@@ -55,8 +55,12 @@ export default {
         };
     },
 
+    mounted () {
+        
+    },
+
     computed: {
-        hasVideoBackground() {
+        hasVideoBackground () {
             let rota = this.$route.name;
             if (rota == 'video') {
                 return true;
@@ -64,24 +68,30 @@ export default {
             return false;
         },
 
-        checkShowModal(){
+        checkShowModal () {
             let rota = this.$route.name;
-            if(rota == 'home' && this.showModal){
-                return true
+            if (rota === 'home') {
+                if (this.showModal) {
+                    return true
+                }
+                console.log(this.showModal)
+                return false
+            } else {
+                return false
             }
             return false
         }
     },
 
     methods: {
-        isActive() {
+        isActive () {
             if (this.headerActive) {
                 return 'active';
             }
             return;
         },
 
-        getBigImg() {
+        getBigImg () {
             let rota = this.$route.name;
             let currentImg = null;
             switch (rota) {
@@ -131,8 +141,8 @@ export default {
             return currentImg;
         },
 
-        showFooter() {
-            setTimeout(() => {
+        showFooter () {
+            setTimeout( () => {
                 const showClass = document.getElementById('il-footer');
                 showClass.classList.add('il-footer--show');
             }, 1200);

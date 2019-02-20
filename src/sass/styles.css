@@ -9454,6 +9454,7 @@ $primary-line-color: #ccc;*/
 /*Other elements*/
 /*footer*/
 /** depoiments*/
+/**alerts**/
 /**buttons*/
 /*<!--===============================
 =            MIXINS            =
@@ -9461,6 +9462,44 @@ $primary-line-color: #ccc;*/
 /*<!--===============================
 =            THEMES            =
 ================================-->*/
+.il-alert {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: .45rem 0;
+}
+
+.il-alert--info {
+  background: #ececcf;
+}
+
+.il-alert--success {
+  background: #6cb94d;
+}
+
+.il-alert--warning {
+  background: #d88865;
+}
+
+.il-alert p {
+  font-weight: 500;
+  font-size: .8rem;
+  color: #FCFAF1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.il-alert p i {
+  margin-right: 0.4rem;
+}
+
 /*---------------TEXT COLORS AND BACKGROUN COLORS----------------*/
 /**Colors*/
 .il-color--text {

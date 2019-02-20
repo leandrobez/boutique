@@ -1,25 +1,26 @@
 <template>
 <!--MODAL-->
-<section :class="active" v-if="activeModal">
+<section class="il-section il-section--modal il-color--background__modal" :class="getActive">
     <!--modal-->
     <div id="il-modal" class="il-modal">
         <div class="il-forms">
-            <a href="#" class="il-modal--close">X</a>
+            <a href="#" class="il-modal--close" @click.prevent="closeModal()">X</a>
             <h3>Fale com a gente</h3>
-            <form name="contact" method="POST" data-netlify="true" class="il-form" data-netlify-honeypot="bot-field">
+            <form name="form-contact" method="post" data-netlify="true" class="il-form" data-netlify-honeypot="bot-field" @submit.prevent="sendData">
                 <div class="il-form--fields">
-                    <input type="text" id="name" class="il-input" name="name" placeholder="Seu nome">
-                    <input type="text" id="lastname" class="il-input" name="lastname" placeholder="Seu sobrenome">
-                    <input type="email" id="email" class="il-input" name="email" placeholder="Seu email">
-                    <input type="tel" id="phone" class="il-input" name="phone" placeholder="(xx) xxxx-xxxx">
-                    <input type="tel" id="mobil" class="il-input" name="mobil" placeholder="(xx) xxxx-xxxx">
-                    <select name="frowhere" id="frowhere" class="il-select">
+                    <input type="text" id="name" class="il-input" v-model="contact.name" placeholder="Seu nome">
+                    <input type="text" id="lastname" class="il-input" v-model="contact.lastname" placeholder="Seu sobrenome">
+                    <input type="email" id="email" class="il-input" v-model="contact.email" placeholder="Seu email">
+                    <input type="tel" id="phone" class="il-input" v-model="contact.phone" placeholder="(xx) xxxx-xxxx">
+                    <input type="tel" id="mobil" class="il-input" v-model="contact.mobil" placeholder="(xx) xxxx-xxxx">
+                    <select v-model="contact.frowhere" id="frowhere" class="il-select">
                       <option value="fromfriends" selected>Meus amigos me indicaram</option>
                       <option value="fromface">Conheci a página no facebook</option>
                       <option value="fromemail">Recebi um email convidando</option>
                       <option value="fromcards">Li num encarte</option>
                   </select>
-                  <input type="hidden" name="form-name" value="contact" />
+                  <div data-netlify-recaptcha="true"></div>
+                  <input type="hidden" name="form-name" value="form-contact" />
                 </div>
                 <button class="il-btn il-btn--submit">Enviar</button>
             </form>
@@ -29,56 +30,58 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-    name: 'Modal',
-    data() {
-        return {
-        }
-    },
-    computed: {
-        activeModal() {
-            if (this.$parent.showModal) {
-                this.active =
-                    'il-section il-section--modal il-color--background__modal il-section--modal__active';
-                return true;
-            }
-            this.active = 'il-section il-section--modal il-color--background__modal';
-            return false;
-        }
-    },
-
-    data() {
-        return {
-            active: 'il-section il-section--modal il-color--background__modal'
-        };
-    },
-
-    methods: {
-        _activeModal() {
-            /*const modal = document.querySelector('.il-section--modal');
-                        modal.classList.add('il-section--modal__active')
-                        console.log(modal)
-                        return this.active;
-                        /*let rota = this.$route.name;
-                        if (rota == 'home' && this.active !="il-section--modal__no-active") {
-
-                            setTimeout( () => {
-                                this.active = "il-section--modal__active"                 
-                                this.$parent.modal.title = "Aula Experimental";
-                                this.$parent.modal.content = "Não perca tempo! Agende um aula experimental grátis. Clique no botão e faça uma ligação no telefone 32311661";
-                                this.$parent.modal.footer = "";
-
-                            }, 4000);
-                            return this.active;
-                        }*/
-        },
-
-        closeModal() {
-            this.$parent.modal.title = '';
-            this.$parent.modal.content = '';
-            this.active = 'il-section il-section--modal il-color--background__modal';
-            this.$parent.showModal = false;
-        }
+  name: 'Modal',
+  data () {
+    return {
+      contact: {
+        "form-name": 'form-contact',
+        name: '',
+        lastname: '',
+        email: '',
+        phone: '',
+        mobil: '',
+        frowhere: ''
+      }
+    };
+  },
+  computed: {
+    getActive () {
+      if (this.$parent.checkShowModal) {
+        return 'il-section--modal__active'
+      }
+      return ''
     }
-};
+  },
+  methods: {
+    encode (data) {
+      return Object.keys(data)
+      .map(
+        key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+      )
+      .join("&");
+    },
+    sendData () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      
+      let content = this.encode(this.contact)
+      
+      axios.post("/#", content, axiosConfig)
+      .then( () => {
+        this.$router.push({path: 'email/success'})
+      }).catch( () => {
+        this.$router.push({path: 'email/fails'})
+      }) 
+    },
+    closeModal () {
+      alert('cliquei')
+      console.log(this.$parent.showModal)
+      this.$parent.showModal = false
+      console.log(this.$parent.showModal)
+    }
+  }
+}
 </script>

@@ -15,7 +15,7 @@ import Albuns from './components/AlbunsComponent/albuns.vue';
 import Gallery from './components/GalleryComponent/GalleryComponent.vue';
 import studioGallery from './components/GalleryComponent/includes/studioGallery.vue';
 import eventsGallery from './components/GalleryComponent/includes/eventsGallery.vue';
-
+import formSubmission from './components/includes/SubmissionForms.vue';
 Vue.use(Router);
 
 export default new Router({
@@ -88,6 +88,11 @@ export default new Router({
           component: eventsGallery
         }
       ]
+    },
+    {
+      path: '/email/:type',
+      name: 'email',
+      component: formSubmission
     },
     {
       path: '*',
