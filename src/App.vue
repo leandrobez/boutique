@@ -47,16 +47,7 @@ export default {
             headerActive: false,
             showModal: false,
             whatClass: '',
-            modal: {
-                title: '',
-                content: '',
-                footer: ''
-            }
         };
-    },
-
-    mounted () {
-        
     },
 
     computed: {
@@ -69,15 +60,8 @@ export default {
         },
 
         checkShowModal () {
-            let rota = this.$route.name;
-            if (rota === 'home') {
-                if (this.showModal) {
-                    return true
-                }
-                console.log(this.showModal)
-                return false
-            } else {
-                return false
+            if (this.showModal) {
+                return true
             }
             return false
         }
@@ -136,6 +120,14 @@ export default {
                     currentImg     = 'big-img-gallery';
                     this.whatClass = 'il-footer--gallery';
                     break;
+                case 'email':
+                    currentImg     = 'big-img-email';
+                    this.whatClass = 'il-footer--email';
+                    break;
+                default :
+                    this.showModal = false
+                    currentImg     = 'big-img-home';
+                    this.whatClass = 'il-footer--home';
             }
 
             return currentImg;

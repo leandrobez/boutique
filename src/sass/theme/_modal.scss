@@ -64,10 +64,7 @@ section.il-section--modal {
     & .il-forms{
       border: 1px solid #e7e7e7;
       background: #f4f7f8;
-      & h3 {
-        text-align: center;
-        color: #f40001;
-      }
+      position: relative;
     }
     & form.il-form {
       padding: 0.45rem;
@@ -124,7 +121,7 @@ section.il-section--modal {
         }
       }
       & button.il-btn {
-        background: linear-gradient(top, #d3d3d3 0%, #8a8a8a 100%);
+        background:  #d3d3d3;
         display: inline-block;
         position: relative;
         padding: 0 20px;
@@ -167,16 +164,30 @@ section.il-section--modal {
     }
     &--close {
       display: block;
-      width: 25px;
-      height: 25px;
-      //background: #faf2f2;
+      width: 30px;
+      height: 30px;
+      background: $thirtyColor;
       z-index: 1000;
       cursor: pointer;
       position: absolute;
-      top: 15%;
+      top: -15px;
       right: 30px;
-      border: 1px solid #432344;
+      border: 1px solid $textColorDark;
       border-radius: 50%;
+      color: $fortyColor;
+      text-align: center;
+      transition: background color 450ms ease;
+      &:hover{
+        transition: background color 450ms ease;
+        background: $primaryColor;
+        color: $secondColorAccent;
+      }
+      & i {
+        line-height: 28px;
+      }
+      &:hover i {
+        transform: scale(1.1);
+      } 
     }
   }
 }

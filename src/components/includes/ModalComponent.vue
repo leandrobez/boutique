@@ -1,11 +1,13 @@
 <template>
 <!--MODAL-->
-<section class="il-section il-section--modal il-color--background__modal" :class="getActive">
+<section class="il-section il-section--modal il-color--background__modal il-section--modal__active" v-show="active">
     <!--modal-->
     <div id="il-modal" class="il-modal">
         <div class="il-forms">
-            <a href="#" class="il-modal--close" @click.prevent="closeModal()">X</a>
-            <h3>Fale com a gente</h3>
+            <a href="!#" class="il-modal--close" @click.prevent="closeModal()">
+              <i class="mdi mdi-12px mdi-close"></i>
+            </a>
+            <h3 class="il-color--text__dark text-center">Fale com a gente</h3>
             <form name="form-contact" method="post" data-netlify="true" class="il-form" data-netlify-honeypot="bot-field" @submit.prevent="sendData">
                 <div class="il-form--fields">
                     <input type="text" id="name" class="il-input" v-model="contact.name" placeholder="Seu nome">
@@ -35,6 +37,7 @@ export default {
   name: 'Modal',
   data () {
     return {
+      active: false,
       contact: {
         "form-name": 'form-contact',
         name: '',
@@ -46,12 +49,9 @@ export default {
       }
     };
   },
-  computed: {
-    getActive () {
-      if (this.$parent.checkShowModal) {
-        return 'il-section--modal__active'
-      }
-      return ''
+  mounted() {
+    if (this.$parent.checkShowModal) {
+      this.active = true
     }
   },
   methods: {
@@ -78,10 +78,9 @@ export default {
       }) 
     },
     closeModal () {
-      alert('cliquei')
-      console.log(this.$parent.showModal)
       this.$parent.showModal = false
-      console.log(this.$parent.showModal)
+      this.active = false
+      return
     }
   }
 }

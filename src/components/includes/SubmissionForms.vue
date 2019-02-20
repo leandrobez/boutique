@@ -1,4 +1,5 @@
 <template>
+<div>
     <section class="il-section il-section--about">
         <div class="il-container--wrapper" v-if="alertOk">
             <div class="il-alert il-alert--success">
@@ -15,6 +16,21 @@
             </div>  
         </div>
     </section>
+    <section class="il-bars">
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+        <div class="il-bars--items"></div>
+    </section>
+</div>
 </template>
 
 <script>
@@ -25,6 +41,7 @@ export default {
     },
     mounted() {
         this.getParam()
+        this.animateBars()
     },
     data () {
         return {
@@ -41,6 +58,17 @@ export default {
                 this.alertOk = false
             }
             return
+        },
+        animateBars () {
+            let bars = document.querySelectorAll('.il-bars--items')
+            bars.forEach(bar => {
+                bar.style.width       = '97%'
+                bar.style.borderRight = '1px solid beige'
+                bar.style.width       = '100%'
+                bar.style.height      = '100vh'
+                bar.style.transform   = 'translate(65vw, -75vh) rotate(45deg)'
+            });
+  
         }
     }
 

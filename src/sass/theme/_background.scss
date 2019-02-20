@@ -40,6 +40,10 @@
   @include big-img($show-img-video, $big-img-url-video);
 }
 
+#app.big-img-email {
+  @include big-img($show-img-email, $big-img-url-email);
+}
+
 /**Backgrounds*/
 .il-color--background__default{
   background: $primaryAccent;

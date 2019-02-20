@@ -1,0 +1,14 @@
+section.il-bars {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  .il-bars--items {
+    background: $secondColor;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    opacity: .5;
+  }
+}
