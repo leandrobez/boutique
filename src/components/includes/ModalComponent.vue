@@ -68,11 +68,12 @@ export default {
       };
       
       let content = this.encode(this.contact)
-      
-      axios.post("/#", content, axiosConfig)
+      let url = '/'
+      axios.post(url, content, axiosConfig)
       .then( () => {
         this.$router.push({path: 'email/success'})
       }).catch( () => {
+        console.log(url)
         this.$router.push({path: 'email/fails'})
       }) 
     },
