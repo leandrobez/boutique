@@ -9,7 +9,7 @@
      * 2. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import url("https://fonts.googleapis.com/css?family=Cousine|Nunito:400,600|Oswald");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Nunito:400,600|Oswald");
 html {
   line-height: 1.15;
   /* 1 */
@@ -9463,10 +9463,27 @@ $primary-line-color: #ccc;*/
 =            THEMES            =
 ================================-->*/
 .il-alert {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  margin: 0 auto;
-  padding: .45rem 0;
+  padding: 0.45rem 0;
+}
+
+.il-alert i {
+  margin: 0.4rem auto;
+}
+
+.il-alert p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #343434;
+  text-transform: uppercase;
 }
 
 .il-alert--info {
@@ -9479,25 +9496,6 @@ $primary-line-color: #ccc;*/
 
 .il-alert--warning {
   background: #d88865;
-}
-
-.il-alert p {
-  font-weight: 500;
-  font-size: .8rem;
-  color: #FCFAF1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.il-alert p i {
-  margin-right: 0.4rem;
 }
 
 /*---------------TEXT COLORS AND BACKGROUN COLORS----------------*/
@@ -9515,6 +9513,11 @@ $primary-line-color: #ccc;*/
 }
 
 .il-color--text__dark {
+  color: #343434;
+  font-weight: bolder;
+}
+
+.il-color--text__very-dark {
   color: #0e0e0e;
 }
 
@@ -10173,13 +10176,13 @@ section.il-section--prices {
 
 #app:after {
   content: "";
-  background: #a58012;
+  background: #99a2a2;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.5;
   background-image: url("../../public/images/theme/dott.png");
   background-position: top center;
   background-repeat: repeat;
@@ -10232,13 +10235,23 @@ main .il-container .il-container--wrapper {
   }
 }
 
+div.il-margin--top,
+li.il-margin--top {
+  margin-top: 1.5rem;
+}
+
+div.il-margin--bottom,
+li.il-margin--bottom {
+  margin-bottom: 1.5rem;
+}
+
 /*<!--===============================
 =            CONFIG            =
 ================================-->*/
 body {
   background: #FCFAF1;
   color: #343434;
-  font-family: "Cousine", monospace;
+  font-family: "PT Sans", sans-serif;
   line-height: 1.5;
 }
 
@@ -10502,7 +10515,7 @@ h3 {
 }
 
 p {
-  font-family: "Cousine", monospace;
+  font-family: "PT Sans", sans-serif;
   font-size: .85rem;
   text-align: right;
 }
@@ -10517,6 +10530,11 @@ p {
   p {
     font-size: .95rem;
   }
+}
+
+p.il-content--description {
+  text-align: justify;
+  font-size: 1rem;
 }
 
 p.il-section--description {
@@ -10945,21 +10963,31 @@ blockquote {
 }
 
 .il-space--content {
-  padding: 0.45rem;
+  padding: 0.45rem 0;
 }
 
-.il-space--content p {
-  font-family: "Nunito", sans-serif;
-  font-size: .8rem;
-  line-height: 1.19rem;
+.il-space--content.il-box {
+  padding: 0.45rem;
+  border: 2px solid #99823a;
+}
+
+.il-space--content.il-box p {
+  text-align: justify;
+}
+
+.il-space--content.il-box i {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  border: 1px solid #CACACA;
+  border-radius: 50%;
 }
 
 .il-about--content {
-  padding: 0.45rem;
-}
-
-.il-about--content.il-nopadding {
-  padding: 0;
+  padding: 0.45rem 0;
 }
 
 .il-about--content .il-box--items {
@@ -10972,10 +11000,28 @@ blockquote {
 }
 
 .il-about--content .il-box--items .il-item {
-  background: #efe4b2;
-  padding: 0.45rem;
-  -webkit-box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
-          box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
+  border: 2px solid #CACACA;
+  padding: 0.45rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.il-about--content .il-box--items .il-item p {
+  text-align: left;
+  padding: 0 0.45rem;
+}
+
+.il-about--content .il-box--items .il-item i {
+  margin: auto;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  border: 1px solid #CACACA;
+  border-radius: 50%;
 }
 
 section.il-section.il-section--instructor {
@@ -10994,10 +11040,8 @@ section.il-section.il-section--instructor .il-intructors--cards {
 }
 
 section.il-section.il-section--instructor .il-intructors--cards .il-cards {
-  background: #f7dea3;
+  border: 2px solid #99823a;
   padding: 0.45rem;
-  -webkit-box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
-          box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
   position: relative;
 }
 
@@ -11608,6 +11652,18 @@ section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .i
   }
 }
 
+section.il-section--submission {
+  position: relative;
+  margin-top: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.il-email--content {
+  background: #a4a4a4;
+  opacity: 0.7;
+}
+
 section.il-bars {
   position: relative;
   width: 100vw;
@@ -11616,14 +11672,14 @@ section.il-bars {
   display: grid;
   -ms-grid-columns: (auto)[12];
       grid-template-columns: repeat(12, auto);
+  z-index: 5;
 }
 
 section.il-bars .il-bars--items {
-  background: #CACACA;
+  background: #E6B31E;
   width: 0;
   height: 0;
-  z-index: -1;
-  opacity: .5;
+  opacity: 0.6;
 }
 
 footer.il-footer {

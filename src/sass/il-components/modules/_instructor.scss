@@ -8,9 +8,9 @@ section.il-section.il-section--instructor {
     grid-row-gap: 10px;
     height: 100%;
     & .il-cards {
-      background: #f7dea3;
+      border: 2px solid #99823a;
       padding: 0.45rem;
-      box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
+      // box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
       position: relative;
       & .il-cards--avatar {
         position: absolute;

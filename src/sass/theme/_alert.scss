@@ -1,26 +1,28 @@
-.il-alert{
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding: .45rem 0;
-    &--info {
-        background: $bck-alert-info;
-    }
-    &--success {
-        background: $bck-alert-success;
-    }
-    &--warning {
-        background: $bck-alert-warning;
-    }
-    & p {
-      font-weight: 500;
-      font-size: .8rem;
-      color: $primaryColor;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      & i {
-        margin-right: 0.4rem;
-      }
-    }
+.il-alert {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.45rem 0;
+  
+  & i {
+    margin: 0.4rem auto;
+  }
+ 
+  & p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: $fortyColor;
+    text-transform: uppercase;
+  }
+
+  &--info {
+    background: $bck-alert-info;
+  }
+  &--success {
+    background: $bck-alert-success;
+  }
+  &--warning {
+    background: $bck-alert-warning;
+  }
 }

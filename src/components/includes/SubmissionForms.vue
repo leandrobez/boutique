@@ -1,22 +1,24 @@
 <template>
 <div>
-    <section class="il-section il-section--about">
-        <div class="il-container--wrapper" v-if="alertOk">
-            <div class="il-alert il-alert--success">
+    <section class="il-section il-section--submission">
+        <div class="il-email--content" v-if="alertOk">
+            <div class="il-alert">
+                <i class="mdi mdi-24px mdi-checkbox-marked-circle-outline"></i>
                 <p>
-                    <i class="mdi mdi-24px mdi-checkbox-marked-circle-outline"></i>
-                    Obrigado pelo seu email. Em breve entraremos em contato.</p>
+                    Obrigado pelo seu email!<br>Em breve entraremos em contato.
+                </p>
             </div>
         </div>
-        <div class="il-container--wrapper" v-else>
-            <div class="il-alert il-alert--warning">
+        <div class="il-email--content" v-else>
+            <div class="il-alert">
+                <i class="mdi mdi-24px mdi-alert-octagon"></i>
                 <p>
-                    <i class="mdi mdi-24px mdi-alert-octagon"></i>
-                    O envio de seu email não teve sucesso.</p>
+                    O envio de seu email não teve sucesso.
+                </p>
             </div>  
         </div>
     </section>
-    <section class="il-bars">
+    <!--<section class="il-bars">
         <div class="il-bars--items"></div>
         <div class="il-bars--items"></div>
         <div class="il-bars--items"></div>
@@ -29,7 +31,7 @@
         <div class="il-bars--items"></div>
         <div class="il-bars--items"></div>
         <div class="il-bars--items"></div>
-    </section>
+    </section>-->
 </div>
 </template>
 
@@ -61,12 +63,26 @@ export default {
         },
         animateBars () {
             let bars = document.querySelectorAll('.il-bars--items')
+            let interacte = 0
+            const delay = time => new Promise(resolve => {
+                setTimeout(resolve,time);
+            })
+            
             bars.forEach(bar => {
-                bar.style.width       = '97%'
-                bar.style.borderRight = '1px solid beige'
-                bar.style.width       = '100%'
-                bar.style.height      = '100vh'
-                bar.style.transform   = 'translate(65vw, -75vh) rotate(45deg)'
+                delay(0).then( () => {
+                    setTimeout( () => { 
+                        bar.style.width       = '97%'
+                        bar.style.borderRight = '1px solid beige'
+                    }, interacte += 120)
+                })
+
+                delay(300).then( () => {
+                    setTimeout( () => {
+                        bar.style.width       = '100%'
+                        bar.style.height      = '100vh'
+                        bar.style.transform   = 'translate(65vw, -75vh) rotate(45deg)'
+                    }, interacte += 120)
+                })
             });
   
         }

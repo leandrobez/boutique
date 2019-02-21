@@ -1,17 +1,28 @@
 .il-about--content {
-  padding: 0.45rem;
-  &.il-nopadding{
-    padding: 0;
-  }
-  & .il-box--items{
+  padding: 0.45rem 0;
+  & .il-box--items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-column-gap: 0.95rem;
     grid-row-gap: 0.45rem;
-    & .il-item{
-      background: $primaryAccent;
-      padding: 0.45rem;
-      box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
+    & .il-item {
+      border: 2px solid $secondColor;
+      padding: 0.45rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      & p {
+        text-align: left;
+        padding: 0 0.45rem;
+      }
+      & i {
+        margin: auto;
+        text-align: center;
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        border: 1px solid $secondColor;
+        border-radius: 50%;
+      }
     }
   }
 }

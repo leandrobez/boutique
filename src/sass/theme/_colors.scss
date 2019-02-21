@@ -14,9 +14,12 @@
 }
 
 .il-color--text__dark {
+  color: $fortyColor;
+  font-weight: bolder;
+}
+.il-color--text__very-dark {
   color: $textColorDark;
 }
-
 .il-color--text__accent{
   color: $textColorAccent;
 }

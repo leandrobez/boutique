@@ -41,7 +41,8 @@ $m-h: 40px;
 $header-height: 17vh;
 
 /*app*/
-$app-overlay: $thirtyColorAccent; // $primaryColor;
+$opacity-overlay: .5;
+$app-overlay: #99a2a2; // $thirtyColorAccent; // $primaryColor;
 
 /*Other elements*/
 $back-body: #eee;

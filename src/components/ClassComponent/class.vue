@@ -7,9 +7,10 @@
         </h1>
         <h2 class="il-section--sub-title il-color--text__very-light text-right">Venha fazer uma aula com a gente.</h2>
 
-        <div class="il-space--content">
-            <h3 class="il-section--title__small il-color--text__dark">Por que aqui?</h3>
-            <p class="il-color--text__dark"><b>Porque aqui no Studio 10 Pilates e CoreAlign</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>
+        <div class="il-space--content il-color--background__clean il-box">
+            <i class="il-pilates-icon flaticon-side-bend-posture"></i>
+            <!--<h3 class="il-section--title__small il-color--text__dark text-right">Por que aqui?</h3>-->
+            <p class="il-color--text__alt"><b>Porque aqui no Studio 10 Pilates e CoreAlign</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>
         </div>
     </section>
     <section class="il-section il-section--prices">

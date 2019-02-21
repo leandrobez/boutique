@@ -9,7 +9,7 @@
   grid-template-rows: 1fr auto;
   overflow-y: hidden;
   &:after {
-    @include overlay($app-overlay, '../../public/images/theme/dott.png', 0.3);
+    @include overlay($app-overlay, '../../public/images/theme/dott.png', $opacity-overlay);
   }
 }
 
@@ -55,4 +55,12 @@ main .il-container {
       margin: 0 $lat;
     }
   }
+}
+div.il-margin--top,
+li.il-margin--top{
+  margin-top: 1.5rem;
+}
+div.il-margin--bottom,
+li.il-margin--bottom{
+  margin-bottom: 1.5rem;
 }
