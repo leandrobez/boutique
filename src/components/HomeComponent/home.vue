@@ -3,9 +3,8 @@
     <!--SECTION HOME-->
     <section id="il-home" class="il-section il-section--home">
         <div class="il-container--wrapper">
-
-            <h1 class="il-section--title"><!--<i :class="whatIcon"></i>-->Bem <span class="il-color--text__very-light">Vindo!</span></h1>
-            <h2 class="il-section--sub-title">A Boutique </h2>
+            <h1 class="il-section--title">Bem <span class="il-color--text__very-light">Vindo!</span></h1>
+            <h2 class="il-section--sub-title">Somos a Boutique </h2>
             <h3 class="il-section--sm-title il-color--text">Pilates e CoreAlign!</h3>
             
             <div class="il-icons">
