@@ -4,10 +4,9 @@
   top: $pos-top;
   left: 50%;
   transform: translateX(-50%);
-  //z-index: 104;
   width: $m-w;
   height: $m-h;
-  border: 1px solid $colorBorder;
+  border: 1px solid $primaryColor;
   padding: 7px 0;
   cursor: pointer;
   @include easeOut;
@@ -18,7 +17,7 @@
   }
   & .il-menu--line {
     height: 3px;
-    background: $colorBorder;
+    background: $primaryColor;
     padding: 2px 0;
     margin: 3px;
     opacity: 1;
@@ -45,4 +44,19 @@
       }
     }
   }
+}
+.il-header--brand{
+  width: 100px;
+  height: 58px;
+  background-image: url('../../public/images/theme/logo1very-small.png');
+  @include easeOut;
+  @media screen and (min-width: 501px) {
+    @include easeOut;
+    width: 200px;
+    height: 116px;
+    background-image: url('../../public/images/theme/logo1small.png');
+  }
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

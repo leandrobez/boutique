@@ -1,21 +1,22 @@
 <template>
-<section class="il-section il-section--depoiments ">
+ <div class="il-container--wrapper">
+    <section class="il-section il-section--depoiments ">
 
-    <div class="il-depoiments--navigation">
-        <i id="nav-left" class="mdi mdi-24px mdi-arrow-left-drop-circle il-color--text__alt" @click.prevent="move('left')" ></i>
-        <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--text__alt" @click.prevent="move('right')"></i>
-    </div>
-    <div class="il-depoiments--content">
-        <h3 class="il-section--title__small il-color--text__dark">Com a palavra os alunos:</h3>
+        <div class="il-depoiments--navigation">
+            <i id="nav-left" class="mdi mdi-24px mdi-arrow-left-drop-circle il-color--text__alt" @click.prevent="move('left')" ></i>
+            <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--text__alt" @click.prevent="move('right')"></i>
+        </div>
+        <div class="il-depoiments--content">
+            <h3 class="il-section--title__small il-color--text__dark">Com a palavra os alunos:</h3>
 
-        <div class="il-depoiments--slider">
-            <div class="il-depoiment--item" v-for="(item,index) in students" :key="index">
-                <div class="il-item--caption il-color--text__dark">
-                    {{item.name}}
-                </div>
-                <div class="il-item--picture">
-                    <img :src="item.picture" :alt="item.name" class="il-img--medium">
-            </div>
+            <div class="il-depoiments--slider">
+                <div class="il-depoiment--item" v-for="(item,index) in students" :key="index">
+                    <div class="il-item--caption il-color--text__dark">
+                        {{item.name}}
+                    </div>
+                    <div class="il-item--picture">
+                        <img :src="item.picture" :alt="item.name" class="il-img--medium">
+                    </div>
                     <div class="il-item--social">
                         <a :href="iconNet.address" class="il-styles--social__link" v-for="(iconNet,key) in item.social" :key="key" target="_blank"><i class="mdi mdi-24px il-color--text__dark" :class="iconNet.icon"></i></a>
                     </div>
@@ -24,9 +25,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
-</section>
+
+    </section>
+ </div>
 </template>
 
 <script>

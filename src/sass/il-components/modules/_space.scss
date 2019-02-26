@@ -1,20 +1,5 @@
 .il-space--content {
   padding: 0.45rem 0;
-  &.il-box {
-    padding: 0.45rem;
-    border: 2px solid #99823a;
-    & p {
-      text-align: justify;
-    }
-    & i {
-      display: block;
-      margin: auto;
-      text-align: center;
-      width: 3rem;
-      height: 3rem;
-      font-size: 2rem;
-      border: 1px solid $secondColor;
-      border-radius: 50%;
-    }
-  }
+  max-width: 986px;
+  margin: auto;
 }

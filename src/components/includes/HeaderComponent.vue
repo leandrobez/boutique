@@ -5,7 +5,11 @@
         <div class="il-menu--line"></div>
         <div class="il-menu--line"></div>
     </div>
-
+    <div class="il-container il-header--container">
+        <div class="il-container--wrapper">
+            <div class="il-header--brand"></div>
+        </div>
+    </div>
     <div class="il-header--content">
         <div class="il-content--portrait">
             <div class="il-avatar--portrait">

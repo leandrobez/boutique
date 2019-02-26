@@ -25,5 +25,14 @@
     background-image: url($url-dott);
     background-position: top center;
     background-repeat: repeat;
+    background-attachment: fixed;
   }
 }
+/*
+background-color: #183026;
+  background-image: url("../../public/images/theme/overlay.png");
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: top left, center 0;
+  background-attachment: fixed, fixed;
+*/

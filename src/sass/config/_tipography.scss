@@ -1,15 +1,24 @@
 //Import fonts google
-@import url('https://fonts.googleapis.com/css?family=PT+Sans|Nunito:400,600|Oswald');
+@import url('https://fonts.googleapis.com/css?family=News+Cycle|Nunito:400,600|Oswald');
 
 $heading-font: 'Nunito', sans-serif; // only 400 and 400i
 $h3-font: 'Oswald', sans-serif;
-$body-font: 'PT Sans', sans-serif; // only 700
+$body-font: 'News Cycle', sans-serif;
 
-body {
+/*body {
   background: $primaryColor;
   color: $textColor;
   font-family: $body-font;
   line-height: 1.5;
+}*/
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #3a3939;
+  text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
 }
 
 html {

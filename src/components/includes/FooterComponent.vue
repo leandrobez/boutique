@@ -41,7 +41,7 @@
 
 	<div class="il-footer--bottom">
 		<div class="il-footer--copy">
-			<span class="il-color--text__light">design by <a href="http://www.internetlojas.com" target="_blanck" class="il-color--text__gold">www.internetlojas.com</a></span>
+			<span class="il-color--text__light">design by <a href="http://www.internetlojas.com" target="_blank" class="il-color--text__very-light">www.internetlojas.com</a></span>
 		</div>
 	</div>
 </div>

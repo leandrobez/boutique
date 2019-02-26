@@ -20,7 +20,7 @@ $textColorDark: darken($textColor, 15%);
 //body
 $colorBg: $primaryColor;
 $lines-bg: $secondColor;
-$colorBorder: $primaryColor;
+$colorBorder: #99823a; //$primaryColor;
 
 /*STRUCTUE*/
 $max-width: 1344px;
@@ -41,14 +41,16 @@ $m-h: 40px;
 $header-height: 17vh;
 
 /*app*/
-$opacity-overlay: .5;
-$app-overlay: #99a2a2; // $thirtyColorAccent; // $primaryColor;
+$opacity-overlay: .6;
+$overlay-img: '../../public/images/theme/overlay.png';
+$app-overlay: #183026; // $thirtyColorAccent; // $primaryColor;
 
 /*Other elements*/
 $back-body: #eee;
 
 /*footer*/
 $height-footer: 150px;
+$height-footer-top: 120px;
 $back-footer: $fortyColor;
 $back-footer-home: lighten($back-footer, 6%);
 $back-footer-about: lighten($back-footer, 6.5%);
@@ -59,13 +61,14 @@ $back-footer-student: lighten($back-footer, 8.5%);
 $back-footer-advantage: lighten($back-footer, 9%);
 $back-footer-albuns: lighten($back-footer, 9.5%);
 $back-footer-curriculum: lighten($back-footer, 10%);
+$back-footer-video: lighten($back-footer, 12%);
 $back-footer-bottom: darken($secondColor,35%);
 
 $back-header: rgba(darken($fortyColor, 0.85), .75);
 $back-portrait: $thirtyColor;
 $back-nav: $secondColor;
 $show-img-home: true;
-$big-img-url-home: url('../../public/images/banners/big-img-home.jpg');
+$big-img-url-home: url('../../public/images/banners/big-img-home.png');
 
 $big-img-url-curriculum: url('../../public/images/banners/big-img-curriculum.jpg');
 
@@ -97,7 +100,7 @@ $show-avatar: true;
 $avatar-url: url('../../public/images/pictures/img-muraguti.jpg');
 
 $show-img-gallery: false;
-$big-img-url-gallery: url('../../public/images/banners/banner-class2.png');
+$big-img-url-gallery: url('../../public/images/banners/big-img-home.png');
 
 $show-img-email: true;
 $big-img-url-email: url('../../public/images/banners/big-img-email.jpg');

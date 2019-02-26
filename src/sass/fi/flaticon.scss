@@ -28,8 +28,10 @@
   font-size:inherit;
   font-style: normal;
 }
-.il-pilates-icon:before {
-  display: inline-block;
+/* [class^='il-pilates-icon']:after {
+ // content: '';
+ // display: block;
+  /*display: inline-block;
   font-family: 'Flaticon';
   font-size: inherit; 
   font-style: normal;
@@ -41,8 +43,8 @@
   text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  //font-smoothing: antialiased;
-}
+  // font-smoothing: antialiased;
+} */
 
 .flaticon-balance-control-position:before {
   content: '\f100';

@@ -1,27 +1,18 @@
 .il-about--content {
   padding: 0.45rem 0;
+  max-width: 986px;
+  margin: auto;
   & .il-box--items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-column-gap: 0.95rem;
     grid-row-gap: 0.45rem;
     & .il-item {
-      border: 2px solid $secondColor;
-      padding: 0.45rem 0;
       display: flex;
       flex-wrap: wrap;
       & p {
         text-align: left;
         padding: 0 0.45rem;
-      }
-      & i {
-        margin: auto;
-        text-align: center;
-        width: 3rem;
-        height: 3rem;
-        font-size: 2rem;
-        border: 1px solid $secondColor;
-        border-radius: 50%;
       }
     }
   }

@@ -44,6 +44,11 @@ export default {
 
     data() {
         return {
+            title: 'Kaizen Pilates',
+            titleCompost: {
+                title: 'Kaizen',
+                subTitle: 'Pilates'
+            },
             headerActive: false,
             showModal: false,
             whatClass: '',

@@ -9,7 +9,7 @@
      * 2. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import url("https://fonts.googleapis.com/css?family=PT+Sans|Nunito:400,600|Oswald");
+@import url("https://fonts.googleapis.com/css?family=News+Cycle|Nunito:400,600|Oswald");
 html {
   line-height: 1.15;
   /* 1 */
@@ -9105,10 +9105,12 @@ template {
   font-style: normal;
 }
 
-.il-pilates-icon:before {
-  display: inline-block;
+/* [class^='il-pilates-icon']:after {
+ // content: '';
+ // display: block;
+  /*display: inline-block;
   font-family: 'Flaticon';
-  font-size: inherit;
+  font-size: inherit; 
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -9118,8 +9120,8 @@ template {
   text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
+  // font-smoothing: antialiased;
+} */
 .flaticon-balance-control-position:before {
   content: '\f100';
 }
@@ -9459,6 +9461,14 @@ $primary-line-color: #ccc;*/
 /*<!--===============================
 =            MIXINS            =
 ================================-->*/
+/*
+background-color: #183026;
+  background-image: url("../../public/images/theme/overlay.png");
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: top left, center 0;
+  background-attachment: fixed, fixed;
+*/
 /*<!--===============================
 =            THEMES            =
 ================================-->*/
@@ -9539,7 +9549,7 @@ $primary-line-color: #ccc;*/
 
 /** BACKGROUND IMAGES*/
 #app.big-img-home {
-  background-image: url("../../public/images/banners/big-img-home.jpg");
+  background-image: url("../../public/images/banners/big-img-home.png");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10061,6 +10071,18 @@ img.il-img--medium {
   border-width: 1px;
 }
 
+i.il-pilates-icon {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  border: 1px solid #CACACA;
+  border-radius: 50%;
+}
+
 section.il-section--prices {
   margin-top: 1rem;
 }
@@ -10071,7 +10093,7 @@ section.il-section--prices {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 986px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -10127,15 +10149,17 @@ section.il-section--prices {
 }
 
 .il-pricing--grid .il-plan p {
-  font-size: 1rem;
+  text-align: center;
 }
 
 .il-pricing--grid .il-plan p.il-price {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   letter-spacing: 1px;
 }
 
 .il-pricing--grid .il-plan p.il-price span {
+  display: block;
+  width: 100%;
   font-size: 0.95rem;
   font-weight: 100;
   letter-spacing: 0;
@@ -10143,18 +10167,6 @@ section.il-section--prices {
 
 .il-pricing--grid .il-plan p.il-description {
   font-size: 0.95rem;
-}
-
-.il-pricing--grid .il-plan ul.il-features {
-  margin-top: 20px;
-  padding: 0;
-  list-style: none;
-}
-
-.il-pricing--grid .il-plan ul.il-features li {
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: #454354;
 }
 
 .il-pricing--grid .il-plan a {
@@ -10176,18 +10188,20 @@ section.il-section--prices {
 
 #app:after {
   content: "";
-  background: #99a2a2;
+  background: #183026;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.5;
-  background-image: url("../../public/images/theme/dott.png");
+  opacity: 0.6;
+  background-image: url("../../public/images/theme/overlay.png");
   background-position: top center;
   background-repeat: repeat;
+  background-attachment: fixed;
 }
 
+.il-container,
 main .il-container {
   z-index: 98;
   width: 100%;
@@ -10196,11 +10210,13 @@ main .il-container {
   padding-top: 17vh;
 }
 
+.il-container .il-container--wrapper,
 main .il-container .il-container--wrapper {
   max-width: 1344px;
 }
 
 @media screen and (max-width: 360px) {
+  .il-container .il-container--wrapper,
   main .il-container .il-container--wrapper {
     width: 100%;
     margin: 0;
@@ -10208,6 +10224,7 @@ main .il-container .il-container--wrapper {
 }
 
 @media screen and (min-width: 361px) and (max-width: 500px) {
+  .il-container .il-container--wrapper,
   main .il-container .il-container--wrapper {
     width: 96%;
     margin: 0 2%;
@@ -10215,6 +10232,7 @@ main .il-container .il-container--wrapper {
 }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
+  .il-container .il-container--wrapper,
   main .il-container .il-container--wrapper {
     width: 92%;
     margin: 0 4%;
@@ -10222,6 +10240,7 @@ main .il-container .il-container--wrapper {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .il-container .il-container--wrapper,
   main .il-container .il-container--wrapper {
     width: 88%;
     margin: 0 6%;
@@ -10229,10 +10248,16 @@ main .il-container .il-container--wrapper {
 }
 
 @media screen and (min-width: 1171px) {
+  .il-container .il-container--wrapper,
   main .il-container .il-container--wrapper {
     width: 80%;
     margin: 0 10%;
   }
+}
+
+.il-container.il-header--container {
+  padding: 0;
+  top: .35rem;
 }
 
 div.il-margin--top,
@@ -10245,14 +10270,48 @@ li.il-margin--bottom {
   margin-bottom: 1.5rem;
 }
 
+div.il-box,
+li.il-box {
+  border: 2px solid #99823a;
+  padding: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+div.il-box p,
+li.il-box p {
+  text-align: justify;
+  padding: 0 0.45rem;
+}
+
+div.il-box span,
+li.il-box span {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 /*<!--===============================
 =            CONFIG            =
 ================================-->*/
-body {
-  background: #FCFAF1;
-  color: #343434;
-  font-family: "PT Sans", sans-serif;
+/*body {
+  background: $primaryColor;
+  color: $textColor;
+  font-family: $body-font;
   line-height: 1.5;
+}*/
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #3a3939;
+  text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
 }
 
 html {
@@ -10515,7 +10574,7 @@ h3 {
 }
 
 p {
-  font-family: "PT Sans", sans-serif;
+  font-family: "News Cycle", sans-serif;
   font-size: .85rem;
   text-align: right;
 }
@@ -10641,6 +10700,7 @@ blockquote {
   background-image: url("../../public/images/theme/dott.png");
   background-position: top center;
   background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 .il-header .il-header--menu {
@@ -10706,6 +10766,27 @@ blockquote {
           transform: rotate(-45deg) translate(6px, -6px);
 }
 
+.il-header .il-header--brand {
+  width: 100px;
+  height: 58px;
+  background-image: url("../../public/images/theme/logo1very-small.png");
+  -webkit-transition: all 650ms ease-out;
+  transition: all 650ms ease-out;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 501px) {
+  .il-header .il-header--brand {
+    -webkit-transition: all 650ms ease-out;
+    transition: all 650ms ease-out;
+    width: 200px;
+    height: 116px;
+    background-image: url("../../public/images/theme/logo1small.png");
+  }
+}
+
 .il-header .il-header--content {
   position: absolute;
   z-index: 99;
@@ -10721,12 +10802,20 @@ blockquote {
   transition: all 650ms ease-out;
 }
 
-.il-header .il-header--content.il-show--header {
-  width: 100%;
-  left: 0;
-  height: 100%;
+.il-header .il-header--content .il-content--portrait,
+.il-header .il-header--content nav.il-content--nav {
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
+  opacity: .5;
+}
+
+.il-header .il-header--content.il-show--header {
+  -webkit-transition: all 650ms ease-out;
+  transition: all 650ms ease-out;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .il-header .il-header--content.il-show--header .il-content--portrait {
@@ -10964,30 +11053,14 @@ blockquote {
 
 .il-space--content {
   padding: 0.45rem 0;
-}
-
-.il-space--content.il-box {
-  padding: 0.45rem;
-  border: 2px solid #99823a;
-}
-
-.il-space--content.il-box p {
-  text-align: justify;
-}
-
-.il-space--content.il-box i {
-  display: block;
+  max-width: 986px;
   margin: auto;
-  text-align: center;
-  width: 3rem;
-  height: 3rem;
-  font-size: 2rem;
-  border: 1px solid #CACACA;
-  border-radius: 50%;
 }
 
 .il-about--content {
   padding: 0.45rem 0;
+  max-width: 986px;
+  margin: auto;
 }
 
 .il-about--content .il-box--items {
@@ -11000,8 +11073,6 @@ blockquote {
 }
 
 .il-about--content .il-box--items .il-item {
-  border: 2px solid #CACACA;
-  padding: 0.45rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11012,16 +11083,6 @@ blockquote {
 .il-about--content .il-box--items .il-item p {
   text-align: left;
   padding: 0 0.45rem;
-}
-
-.il-about--content .il-box--items .il-item i {
-  margin: auto;
-  text-align: center;
-  width: 3rem;
-  height: 3rem;
-  font-size: 2rem;
-  border: 1px solid #CACACA;
-  border-radius: 50%;
 }
 
 section.il-section.il-section--instructor {
@@ -11037,6 +11098,8 @@ section.il-section.il-section--instructor .il-intructors--cards {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   height: 100%;
+  max-width: 986px;
+  margin: auto;
 }
 
 section.il-section.il-section--instructor .il-intructors--cards .il-cards {
@@ -11374,15 +11437,21 @@ section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .i
 
 @media screen and (min-width: 1171px) {
   .il-videos--content.il-grid {
-    -ms-grid-columns: (minmax(120px, 160px))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(120px, 160px));
+    -ms-grid-columns: (minmax(120px, 170px))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(120px, 170px));
     grid-column-gap: 9px;
   }
 }
 
 .il-videos--content .il-videos--cards {
   padding: 0.15rem;
-  background: #decaaa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .il-videos--content .il-videos--cards .il-cards--caption {
@@ -11705,40 +11774,37 @@ footer.il-footer .il-footer--content {
 
 footer.il-footer .il-footer--content .il-footer--top,
 footer.il-footer .il-footer--content .il-footer--bottom {
-  padding: 0 0 1rem 0;
   width: 100%;
   color: #FCFAF1;
 }
 
 footer.il-footer .il-footer--content .il-footer--top {
-  height: 100px;
+  height: 120px;
 }
 
 footer.il-footer .il-footer--content .il-footer--top .il-footer--breadcrumb {
-  margin: 0.35rem auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 1.35rem;
-  height: 1.2rem;
+  margin: auto;
   font-weight: 800;
-  height: 40px;
+  max-width: 200px;
+  height: 70px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 footer.il-footer .il-footer--content .il-footer--top .il-footer--breadcrumb span {
   display: block;
-  margin-left: 0.55rem;
   text-transform: uppercase;
+  text-align: center;
+  line-height: 70px;
 }
 
 footer.il-footer .il-footer--content .il-footer--top .il-footer--cols {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0.5rem;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -11778,8 +11844,16 @@ footer.il-footer .il-footer--content .il-footer--top.il-student {
   background: #4a4a4a;
 }
 
+footer.il-footer .il-footer--content .il-footer--top.il-advantage {
+  background: #4b4b4b;
+}
+
+footer.il-footer .il-footer--content .il-footer--top.il-video {
+  background: #535353;
+}
+
 footer.il-footer .il-footer--content .il-footer--top li.il-footer--item a.il-footer--link {
-  color: #FCFAF1;
+  color: #99823a;
 }
 
 footer.il-footer .il-footer--content .il-footer--bottom {
@@ -11791,7 +11865,7 @@ footer.il-footer .il-footer--content .il-footer--bottom {
 }
 
 footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy {
-  line-height: 49px;
+  line-height: 29px;
 }
 
 footer.il-footer .il-footer--content .il-footer--bottom .il-footer--copy a {

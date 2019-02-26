@@ -7,6 +7,8 @@ section.il-section.il-section--instructor {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     height: 100%;
+    max-width: 986px;
+    margin: auto;
     & .il-cards {
       border: 2px solid #99823a;
       padding: 0.45rem;

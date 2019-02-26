@@ -1,21 +1,16 @@
 <template>
-<div>
-    <!--SECTION HOME-->
-    <section id="il-home" class="il-section il-section--home">
-        <div class="il-container--wrapper">
-            <h1 class="il-section--title">Bem <span class="il-color--text__very-light">Vindo!</span></h1>
-            <h2 class="il-section--sub-title">Somos a Boutique </h2>
-            <h3 class="il-section--sm-title il-color--text">Pilates e CoreAlign!</h3>
-            
-            <div class="il-icons">
-                <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('fb')"><i class="mdi mdi-facebook mdi-48px"></i></a>
-                <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('in')"><i class="mdi mdi-instagram mdi-48px"></i></a>
-                <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('go')"><i class="mdi mdi-git mdi-48px"></i></a>
-            </div>
-
+<!--SECTION HOME-->
+<section id="il-home" class="il-section il-section--home">
+    <div class="il-container--wrapper">
+        <h1 class="il-section--title">Bem <span class="il-color--text__very-light">Vindo!</span></h1>
+        <h2 class="il-section--sub-title">Somos a <b>{{$parent.title}}</b></h2>
+        <div class="il-icons">
+            <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('fb')"><i class="mdi mdi-facebook mdi-48px"></i></a>
+            <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('in')"><i class="mdi mdi-instagram mdi-48px"></i></a>
+            <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('go')"><i class="mdi mdi-git mdi-48px"></i></a>
         </div>
-    </section>
-</div>
+    </div>
+</section>
 </template>
 
 <script>
