@@ -3,7 +3,6 @@
   @return $result;
 }
 
-
 #app {
   position: relative;
   display: grid;
@@ -13,7 +12,7 @@
     @include overlay($app-overlay, $overlay-img, $opacity-overlay);
   }
 }
-.il-container, 
+.il-container,
 main .il-container {
   z-index: 98;
   width: 100%;
@@ -57,32 +56,15 @@ main .il-container {
     }
   }
 }
-.il-container.il-header--container{
+.il-container.il-header--container {
   padding: 0;
-  top: .35rem;
+  top: 0.35rem;
 }
 div.il-margin--top,
-li.il-margin--top{
+li.il-margin--top {
   margin-top: 1.5rem;
 }
 div.il-margin--bottom,
-li.il-margin--bottom{
+li.il-margin--bottom {
   margin-bottom: 1.5rem;
-}
-div.il-box,
-li.il-box {
-  border: 2px solid $colorBorder;
-  padding: 0.45rem;
-  display: flex;
-  flex-wrap: wrap;
-  & p {
-    text-align: justify;
-    padding: 0 0.45rem;
-  }
-  & span{
-    display: block;
-    width: 100%;
-    font-size: 1.5rem;
-    text-align: center;
-  }
 }

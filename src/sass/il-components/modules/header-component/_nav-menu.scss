@@ -45,16 +45,34 @@
     }
   }
 }
-.il-header--brand{
-  width: 100px;
-  height: 58px;
-  background-image: url('../../public/images/theme/logo1very-small.png');
+/* 
+logo 5
+$brand-vsw: 92px;
+$brand-vsh: 47px;
+$brand-sw: 183px;
+$brand-sh: 93px; */
+
+/**logo 6 */
+$brand-vsw: 63px;
+$brand-vsh: 31px;
+$brand-sw: 126px;
+$brand-sh: 62px;
+@function getLeft($w) {
+  @return calc(100% - #{$w});
+}
+.il-header--brand {
+  position: relative;
+  width: $brand-vsw;
+  height: $brand-vsh;
+  left: getLeft($brand-vsw);
+  background-image: url('../../public/images/theme/logo6very-small.png');
   @include easeOut;
   @media screen and (min-width: 501px) {
     @include easeOut;
-    width: 200px;
-    height: 116px;
-    background-image: url('../../public/images/theme/logo1small.png');
+    width: $brand-sw;
+    height: $brand-sh;
+    left: getLeft($brand-sw);
+    background-image: url('../../public/images/theme/logo6small.png');
   }
   background-position: center;
   background-size: cover;

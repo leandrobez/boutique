@@ -21,7 +21,7 @@
     </footer>
 
     <!--MODAL-->
-    <ilModal v-if="checkShowModal" />
+    <ilModal :check="checkActive" />
 
 </div>
 </template>
@@ -51,10 +51,14 @@ export default {
             },
             headerActive: false,
             showModal: false,
-            whatClass: '',
+            whatClass: ''
         };
     },
-
+    mounted () {
+        setTimeout( () => {
+            this.showModal = true
+        }, 4000)
+    },
     computed: {
         hasVideoBackground () {
             let rota = this.$route.name;
@@ -63,8 +67,7 @@ export default {
             }
             return false;
         },
-
-        checkShowModal () {
+        checkActive () {
             if (this.showModal) {
                 return true
             }
@@ -73,6 +76,9 @@ export default {
     },
 
     methods: {
+        closeModal () {
+            this.showModal = false
+        },
         isActive () {
             if (this.headerActive) {
                 return 'active';
@@ -85,7 +91,7 @@ export default {
             let currentImg = null;
             switch (rota) {
                 case 'home':
-                    this.showModal = true
+                    // this.showModal = true
                     currentImg     = 'big-img-home';
                     this.whatClass = 'il-footer--home';
                     break;
@@ -130,7 +136,7 @@ export default {
                     this.whatClass = 'il-footer--email';
                     break;
                 default :
-                    this.showModal = false
+                    // this.showModal = false
                     currentImg     = 'big-img-home';
                     this.whatClass = 'il-footer--home';
             }

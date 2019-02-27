@@ -9840,117 +9840,8 @@ section.il-section--modal .il-modal {
   }
 }
 
-section.il-section--modal .il-modal .il-forms {
-  border: 1px solid #e7e7e7;
-  background: #f4f7f8;
-  position: relative;
-}
-
-section.il-section--modal .il-modal form.il-form {
+section.il-section--modal .il-modal--body {
   padding: 0.45rem;
-  max-width: 700px;
-  padding: 20px;
-  background: #f4f7f8;
-  border-radius: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-section.il-section--modal .il-modal form.il-form .il-form--fields {
-  padding: 0.35rem 0.5rem;
-  width: 90%;
-  margin: 0 5%;
-}
-
-section.il-section--modal .il-modal form.il-form .il-form--fields.il-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-}
-
-section.il-section--modal .il-modal form.il-form input[type='text'],
-section.il-section--modal .il-modal form.il-form input[type='email'],
-section.il-section--modal .il-modal form.il-form input[type='tel'] {
-  border: 1px solid #e7e7e7;
-  background-color: #fff;
-  color: inherit;
-  font-family: inherit;
-  font-size: 0.85rem;
-  padding: 4px 4px;
-  border-radius: 3px;
-  -webkit-transition: border 0.3s;
-  transition: border 0.3s;
-  height: 2rem;
-  width: 100%;
-  margin: 0.25rem 0;
-  outline: none;
-}
-
-section.il-section--modal .il-modal form.il-form input[type='text']:focus,
-section.il-section--modal .il-modal form.il-form input[type='email']:focus,
-section.il-section--modal .il-modal form.il-form input[type='tel']:focus {
-  outline: none;
-  border: 1px solid #28b9b5;
-  background: #d2d9dd;
-}
-
-section.il-section--modal .il-modal form.il-form select.il-select {
-  border: 1px solid #e7e7e7;
-  font-size: 0.85rem;
-  color: inherit;
-  background-color: #fff;
-  font-weight: 300;
-  -webkit-transition: border 0.3s;
-  transition: border 0.3s;
-  height: 2rem;
-  width: 100%;
-  margin: 0.25rem 0;
-}
-
-section.il-section--modal .il-modal form.il-form select.il-select:focus {
-  outline: none;
-  border: 1px solid #28b9b5;
-  background: #d2d9dd;
-}
-
-section.il-section--modal .il-modal form.il-form button.il-btn {
-  background: #d3d3d3;
-  display: inline-block;
-  position: relative;
-  padding: 0 20px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.22);
-  font: bold 12px/25px Arial, sans-serif;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-}
-
-section.il-section--modal .il-modal form.il-form button.il-btn.il-btn--submit {
-  color: #fff;
-  margin: 0 auto;
-  background: #a4afad;
-  font-size: 18px;
-  text-align: center;
-  font-style: normal;
-  border: 1px solid #3d3f3f;
-}
-
-section.il-section--modal .il-modal form.il-form button.il-btn:hover {
-  background: #b8af7e;
-}
-
-section.il-section--modal .il-modal--dialog {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  padding: 1rem;
 }
 
 section.il-section--modal .il-modal--content {
@@ -9964,42 +9855,143 @@ section.il-section--modal .il-modal--content {
   transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-section.il-section--modal .il-modal--body, section.il-section--modal .il-modal--footer {
-  padding: 0.45rem;
+section.il-section--modal .il-modal--content h4 {
+  text-transform: uppercase;
 }
 
-section.il-section--modal .il-modal--close {
+section.il-section--modal .il-modal--content button {
+  margin: auto;
+}
+
+section.il-section--modal .il-modal .il-forms {
+  position: relative;
+}
+
+section.il-section--modal .il-modal .il-forms .il-modal--close {
   display: block;
-  width: 30px;
-  height: 30px;
-  background: #E6B31E;
+  width: 40px;
+  height: 40px;
+  background: #a58012;
   z-index: 1000;
   cursor: pointer;
   position: absolute;
-  top: -15px;
-  right: 30px;
-  border: 1px solid #0e0e0e;
+  top: 1px;
+  right: 50%;
+  border: 1px solid #343434;
   border-radius: 50%;
-  color: #343434;
+  color: #FCFAF1;
   text-align: center;
   -webkit-transition: background color 450ms ease;
   transition: background color 450ms ease;
 }
 
-section.il-section--modal .il-modal--close:hover {
+section.il-section--modal .il-modal .il-forms .il-modal--close:hover {
   -webkit-transition: background color 450ms ease;
   transition: background color 450ms ease;
   background: #FCFAF1;
   color: #a4a4a4;
 }
 
-section.il-section--modal .il-modal--close i {
-  line-height: 28px;
+section.il-section--modal .il-modal .il-forms .il-modal--close i {
+  line-height: 38px;
+  font-size: 1rem;
 }
 
-section.il-section--modal .il-modal--close:hover i {
+section.il-section--modal .il-modal .il-forms .il-modal--close:hover i {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+form.il-form {
+  padding: 0.45rem;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form.il-form .il-form--fields {
+  padding: 0.35rem 0.5rem;
+  width: 90%;
+  margin: 0 5%;
+}
+
+form.il-form .il-form--fields.il-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+form.il-form input[type='text'],
+form.il-form input[type='email'],
+form.il-form input[type='tel'] {
+  border: 1px solid #CACACA;
+  background-color: #FCFAF1;
+  font-size: 0.85rem;
+  padding: 4px 4px;
+  border-radius: 3px;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+  height: 2rem;
+  width: 100%;
+  margin: 0.25rem 0;
+  outline: none;
+  color: #343434;
+}
+
+form.il-form input[type='text']:focus,
+form.il-form input[type='email']:focus,
+form.il-form input[type='tel']:focus {
+  background: #efe4b2;
+}
+
+form.il-form select.il-select {
+  border: 1px solid #CACACA;
+  font-size: 0.85rem;
+  background-color: #FCFAF1;
+  font-weight: 300;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+  height: 2rem;
+  width: 100%;
+  margin: 0.25rem 0;
+  outline: none;
+  color: #343434;
+}
+
+form.il-form select.il-select:focus {
+  background: #efe4b2;
+}
+
+form.il-form button.il-btn {
+  background: #a58012;
+  display: inline-block;
+  text-align: center;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+form.il-form button.il-btn.il-btn--submit {
+  color: #FCFAF1;
+  font-size: 1.1rem;
+  border: 1px solid #343434;
+  padding: .25rem 1.4rem;
+  margin-left: 50%;
+  width: 300px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  outline: none;
+}
+
+form.il-form button.il-btn:hover {
+  background: #0e0e0e;
 }
 
 #il-video.il-video {
@@ -10083,8 +10075,184 @@ i.il-pilates-icon {
   border-radius: 50%;
 }
 
-section.il-section--prices {
-  margin-top: 1rem;
+.il-box--items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 0.95rem;
+  grid-row-gap: 0.45rem;
+}
+
+.il-box--items.il-box--vert {
+  -ms-grid-columns: 300px;
+      grid-template-columns: 300px;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.il-box--items.il-box--vert.one-vert {
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.il-box--items .il-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.il-box--items .il-item.il-box {
+  border: 2px solid #CACACA;
+  padding: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.il-box--items .il-item.il-box .il-header--box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.il-box--items .il-item.il-box .il-header--box h4 {
+  width: 100%;
+  border-bottom: 1px solid #e0dec3;
+}
+
+.il-box--items .il-item.il-box span {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.il-box--items .il-item.il-box p {
+  text-align: justify;
+  padding: 0 0.45rem;
+  width: 100%;
+}
+
+.il-intructors--cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 0.95rem;
+  grid-row-gap: 0.45rem;
+}
+
+.il-intructors--cards.il-cards--vert {
+  -ms-grid-columns: 300px;
+      grid-template-columns: 300px;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.il-intructors--cards .il-cards {
+  border: 2px solid #a58012;
+  padding: 0.45rem;
+  position: relative;
+}
+
+.il-intructors--cards .il-cards .il-cards--avatar {
+  position: absolute;
+  width: 100%;
+  max-width: 90px;
+  top: 5%;
+  left: 5%;
+  z-index: 10;
+}
+
+.il-intructors--cards .il-cards .il-cards--avatar img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.il-intructors--cards .il-cards .il-cards--body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.il-intructors--cards .il-cards .il-cards--body .il-cards--caption {
+  text-align: right;
+  color: #0e0e0e;
+  margin-right: 20px;
+}
+
+.il-intructors--cards .il-cards .il-cards--body .il-cards--caption h4 {
+  font-size: 0.89rem;
+}
+
+.il-intructors--cards .il-cards .il-cards--body .il-cards--content {
+  position: relative;
+  top: 0.89rem;
+  background: #b69f69;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  -webkit-transform: skewY(-4deg);
+          transform: skewY(-4deg);
+}
+
+.il-intructors--cards .il-cards .il-cards--body .il-cards--content p.il-cards--text {
+  width: 100%;
+  -webkit-transform: skewY(4deg);
+          transform: skewY(4deg);
+  padding: 0 0.45rem;
+  font-size: 0.85rem;
+  background: transparent !important;
+}
+
+.il-intructors--cards .il-cards .il-cards--body .il-cards--content:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 45px;
+  width: 100%;
+  background-size: cover;
+  background-position: top center;
+  background-image: url("../../public/images/banners/gold-background.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* flex container */
@@ -10188,7 +10356,7 @@ section.il-section--prices {
 
 #app:after {
   content: "";
-  background: #183026;
+  background: #74817C;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -10257,7 +10425,7 @@ main .il-container .il-container--wrapper {
 
 .il-container.il-header--container {
   padding: 0;
-  top: .35rem;
+  top: 0.35rem;
 }
 
 div.il-margin--top,
@@ -10268,31 +10436,6 @@ li.il-margin--top {
 div.il-margin--bottom,
 li.il-margin--bottom {
   margin-bottom: 1.5rem;
-}
-
-div.il-box,
-li.il-box {
-  border: 2px solid #99823a;
-  padding: 0.45rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-div.il-box p,
-li.il-box p {
-  text-align: justify;
-  padding: 0 0.45rem;
-}
-
-div.il-box span,
-li.il-box span {
-  display: block;
-  width: 100%;
-  font-size: 1.5rem;
-  text-align: center;
 }
 
 /*<!--===============================
@@ -10680,6 +10823,13 @@ blockquote {
   z-index: 100;
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
+  /* 
+logo 5
+$brand-vsw: 92px;
+$brand-vsh: 47px;
+$brand-sw: 183px;
+$brand-sh: 93px; */
+  /**logo 6 */
 }
 
 .il-header.active {
@@ -10767,9 +10917,11 @@ blockquote {
 }
 
 .il-header .il-header--brand {
-  width: 100px;
-  height: 58px;
-  background-image: url("../../public/images/theme/logo1very-small.png");
+  position: relative;
+  width: 63px;
+  height: 31px;
+  left: calc(100% - 63px);
+  background-image: url("../../public/images/theme/logo6very-small.png");
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
   background-position: center;
@@ -10781,9 +10933,10 @@ blockquote {
   .il-header .il-header--brand {
     -webkit-transition: all 650ms ease-out;
     transition: all 650ms ease-out;
-    width: 200px;
-    height: 116px;
-    background-image: url("../../public/images/theme/logo1small.png");
+    width: 126px;
+    height: 62px;
+    left: calc(100% - 126px);
+    background-image: url("../../public/images/theme/logo6small.png");
   }
 }
 
@@ -11063,250 +11216,22 @@ blockquote {
   margin: auto;
 }
 
-.il-about--content .il-box--items {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 0.95rem;
-  grid-row-gap: 0.45rem;
-}
-
-.il-about--content .il-box--items .il-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.il-about--content .il-box--items .il-item p {
-  text-align: left;
-  padding: 0 0.45rem;
-}
-
-section.il-section.il-section--instructor {
-  position: relative;
-  top: 15px;
-}
-
-section.il-section.il-section--instructor .il-intructors--cards {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  height: 100%;
+.il-instructor--content {
+  padding: 0.45rem 0;
   max-width: 986px;
   margin: auto;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards {
-  border: 2px solid #99823a;
-  padding: 0.45rem;
-  position: relative;
+.il-students--content {
+  padding: 0.45rem 0;
+  max-width: 986px;
+  margin: auto;
 }
 
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--avatar {
-  position: absolute;
-  width: 100%;
-  max-width: 90px;
-  top: 5%;
-  left: 5%;
-  z-index: 10;
-}
-
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--avatar img {
-  display: block;
-  width: 100%;
-  border-radius: 50%;
-}
-
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--caption {
-  text-align: right;
-  color: #0e0e0e;
-  margin-right: 20px;
-}
-
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--caption h4 {
-  font-size: 0.89rem;
-}
-
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content {
-  position: relative;
-  top: 0.89rem;
-  background: #b69f69;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 0.5rem;
-  -webkit-transform: skewY(-4deg);
-          transform: skewY(-4deg);
-}
-
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content p.il-cards--text {
-  width: 100%;
-  -webkit-transform: skewY(4deg);
-          transform: skewY(4deg);
-  padding: 0 0.45rem;
-  font-size: .85rem;
-  background: transparent !important;
-}
-
-section.il-section.il-section--instructor .il-intructors--cards .il-cards .il-cards--body .il-cards--content:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  height: 45px;
-  width: 100%;
-  background-size: cover;
-  background-position: top center;
-  background-image: url("../../public/images/banners/gold-background.jpg");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-section.il-section.il-section--class {
-  position: relative;
-}
-
-section.il-section.il-section--class .il-intructors--cards {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 0.95rem;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards {
-  background: #efe4b2;
-  padding: 0.45rem;
-  -webkit-box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
-          box-shadow: 3px 5px 2px rgba(66, 44, 44, 0.7);
-  position: relative;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--avatar {
-  position: absolute;
-  width: 100%;
-  max-width: 90px;
-  top: 5%;
-  left: 5%;
-  z-index: 10;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--avatar img {
-  display: block;
-  width: 100%;
-  border-radius: 50%;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--caption {
-  text-align: right;
-  color: white;
-  margin-right: 20px;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--caption h4 {
-  font-size: 0.89rem;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content {
-  position: relative;
-  top: 15px;
-  background: #a58012;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  padding: 0.5rem;
-  -webkit-transform: skewY(-4deg);
-          transform: skewY(-4deg);
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content p.il-cards--text {
-  color: #CACACA;
-  -webkit-transform: skewY(4deg);
-          transform: skewY(4deg);
-  padding: 0.45rem;
-  background: grey;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img1, section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img2, section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img3 {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: top center;
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img1 {
-  background-image: url("../../public/images/banners/banner-class1.jpg");
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img2 {
-  background-image: url("../../public/images/banners/banner-class2.png");
-}
-
-section.il-section.il-section--class .il-intructors--cards .il-cards .il-cards--body .il-cards--content.il-back--img3 {
-  background-image: url("../../public/images/banners/banner-class3.jpg");
+.il-class--content {
+  padding: 0.45rem 0;
+  max-width: 986px;
+  margin: auto;
 }
 
 section.il-section--depoiments {
@@ -11611,7 +11536,15 @@ section.il-section--depoiments .il-depoiments--content .il-depoiments--slider .i
   }
 }
 
+section.il-section--gallery h4 {
+  width: 100%;
+  border-bottom: 1px solid #e0dec3;
+}
+
 .il-gallery {
+  padding: 0.45rem .25rem;
+  max-width: 986px;
+  margin: auto;
   display: -ms-grid;
   display: grid;
   grid-gap: 15px;

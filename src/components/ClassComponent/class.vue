@@ -2,16 +2,19 @@
 <div>
     <section id="il-class" class="il-section il-section--class">
         <div class="il-container--wrapper">
-            <h1 class="il-section--title il-title--full">
-                <!--<i :class="whatIcon"></i>-->As
+            <h1 class="il-section--title il-title--full">As
                 <span class="il-color--text__very-light">Aulas</span>
             </h1>
             <h2 class="il-section--sub-title il-color--text__very-light text-right">Venha fazer uma aula com a gente.</h2>
 
-            <div class="il-space--content il-color--background__clean il-box">
-                <i class="il-pilates-icon flaticon-side-bend-posture"></i>
-                <span>Por quê?</span>
-                <p class="il-color--text__alt">Porque aqui na <b>{{$parent.title}}</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>
+            <div class="il-class--content">
+                <div class="il-box--items il-box--vert  one-vert">
+                    <div class="il-item il-box">
+                        <i class="il-pilates-icon flaticon-side-bend-posture"></i>
+                        <span>Por quê?</span>
+                        <p class="il-color--text__very-light">Porque aqui na <b>{{$parent.title}}</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui o foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

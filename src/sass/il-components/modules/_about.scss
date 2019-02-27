@@ -2,18 +2,4 @@
   padding: 0.45rem 0;
   max-width: 986px;
   margin: auto;
-  & .il-box--items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-column-gap: 0.95rem;
-    grid-row-gap: 0.45rem;
-    & .il-item {
-      display: flex;
-      flex-wrap: wrap;
-      & p {
-        text-align: left;
-        padding: 0 0.45rem;
-      }
-    }
-  }
 }

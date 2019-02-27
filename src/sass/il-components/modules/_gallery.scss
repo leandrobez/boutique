@@ -1,4 +1,12 @@
+section.il-section--gallery h4{
+    width: 100%;
+    border-bottom: 1px solid rgb(224, 222, 195);
+}
+
 .il-gallery {
+  padding: 0.45rem .25rem;
+  max-width: 986px;
+  margin: auto;
   display: grid;
   grid-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

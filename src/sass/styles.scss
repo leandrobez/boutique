@@ -26,9 +26,12 @@
 @import 'theme/background';
 @import 'theme/buttons';
 @import 'theme/modal';
+@import 'theme/form';
 @import 'theme/video';
 @import 'theme/images';
 @import 'theme/icons';
+@import 'theme/boxes';
+@import 'theme/cards';
 @import 'theme/boxes-prices';
 /*<!--===============================
 =            GRID            =
@@ -50,6 +53,7 @@
 @import 'il-components/modules/space';
 @import 'il-components/modules/about';
 @import 'il-components/modules/instructor';
+@import 'il-components/modules/students';
 @import 'il-components/modules/class';
 @import 'il-components/modules/depoiments';
 @import 'il-components/modules/videos';

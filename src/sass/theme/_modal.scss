@@ -61,94 +61,8 @@ section.il-section--modal {
       width: 80%;
       height: auto;
     }
-    & .il-forms{
-      border: 1px solid #e7e7e7;
-      background: #f4f7f8;
-      position: relative;
-    }
-    & form.il-form {
+    &--body {
       padding: 0.45rem;
-      max-width: 700px;
-      padding: 20px;
-      background: #f4f7f8;
-      border-radius: 3px;
-      display: flex;
-      & .il-form--fields {
-        padding: 0.35rem 0.5rem;
-        width: 90%;
-        margin: 0 5%;
-        &.il-flex {
-          display: flex;
-          justify-content: center;
-          align-content: space-between;
-        }
-      }
-      & input[type='text'],
-      & input[type='email'],
-      & input[type='tel'] {
-        border: 1px solid #e7e7e7;
-        background-color: #fff;
-        color: inherit;
-        font-family: inherit;
-        font-size: 0.85rem;
-        padding: 4px 4px;
-        border-radius: 3px;
-        transition: border 0.3s;
-        height: 2rem;
-        width: 100%;
-        margin: 0.25rem 0;
-        outline: none;
-        &:focus {
-          outline: none;
-          border: 1px solid #28b9b5;
-          background: #d2d9dd;
-        }
-      }
-      & select.il-select {
-        border: 1px solid #e7e7e7;
-        font-size: 0.85rem;
-        color: inherit;
-        background-color: #fff;
-        font-weight: 300;
-        transition: border 0.3s;
-        height: 2rem;
-        width: 100%;
-        margin: 0.25rem 0;
-        &:focus {
-          outline: none;
-          border: 1px solid #28b9b5;
-          background: #d2d9dd;
-        }
-      }
-      & button.il-btn {
-        background:  #d3d3d3;
-        display: inline-block;
-        position: relative;
-        padding: 0 20px;
-        text-align: center;
-        text-decoration: none;
-        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.22);
-        font: bold 12px/25px Arial, sans-serif;
-        transition: all 0.15s ease;
-        &.il-btn--submit {
-          color: #fff;
-          margin: 0 auto;
-          background: #a4afad;
-          font-size: 18px;
-          text-align: center;
-          font-style: normal;
-          border: 1px solid #3d3f3f;
-        }
-        &:hover{
-          background: #b8af7e;
-        }
-      }
-    }
-    &--dialog {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      padding: 1rem;
     }
     &--content {
       will-change: transform, opacity;
@@ -157,37 +71,43 @@ section.il-section--modal {
       background-clip: padding-box;
       box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
       transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+      & h4{
+        text-transform: uppercase
+      }
+      & button{
+        margin: auto;
+      }
     }
-    &--body,
-    &--footer {
-      padding: 0.45rem;
-    }
-    &--close {
-      display: block;
-      width: 30px;
-      height: 30px;
-      background: $thirtyColor;
-      z-index: 1000;
-      cursor: pointer;
-      position: absolute;
-      top: -15px;
-      right: 30px;
-      border: 1px solid $textColorDark;
-      border-radius: 50%;
-      color: $fortyColor;
-      text-align: center;
-      transition: background color 450ms ease;
-      &:hover{
+    & .il-forms{
+      position: relative;
+      & .il-modal--close {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: $thirtyColorAccent;
+        z-index: 1000;
+        cursor: pointer;
+        position: absolute;
+        top: 1px;
+        right: 50%;
+        border: 1px solid $fortyColor;
+        border-radius: 50%;
+        color: $primaryColor;
+        text-align: center;
         transition: background color 450ms ease;
-        background: $primaryColor;
-        color: $secondColorAccent;
+        &:hover {
+          transition: background color 450ms ease;
+          background: $primaryColor;
+          color: $secondColorAccent;
+        }
+        & i {
+          line-height: 38px;
+          font-size: 1rem;
+        }
+        &:hover i {
+          transform: scale(1.1);
+        }
       }
-      & i {
-        line-height: 28px;
-      }
-      &:hover i {
-        transform: scale(1.1);
-      } 
     }
   }
 }

@@ -1,78 +1,70 @@
 <template>
-<form action="#" class="il-form">
-    <div class="il-form--content">
-        <div class="il-form--side">
-            <div class="il-field--wrapper">
-                <label for="name">Nome</label>
-                <input id="name" type="text" class="il-input" />
-            </div>
-        </div>
-
-        <div class="il-form--side">
-            <div class="il-field--wrapper">
-                <label for="email">Email</label>
-                <input id="email" type="email" class="il-input" />
-            </div>
-        </div>
-
-        <div class="il-form--side">
-            <div class="il-field--wrapper">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-            </div>
-        </div>
-
-        <div class="il-form--side">
-            <div class="il-field--wrapper">
-                <label for="fone">Fone</label>
-                <input type="fone" name="fone" id="fone" class="il-input" />
-            </div>
-        </div>
-
-        <div class="il-form--side">
-            <div class="il-field--wrapper">
-                <input type="submit" name="submit" value="Enviar" id="ilsubmit">
-            </div>
-        </div>
-
-    </div>
-</form>
-<!--Formulário de contato--
-<form action="#" class="il-form">
-    <div class="il-form--content">
-        <div class="il-form--side">
-            
-                <div class="il-form--side il-info">
-                    <div class="il-address">
-                        <div class="il-location">
-                            <span>Address:</span>
-                            <span>2322 Street Burger, Grisy, TN 988989-000</span>
-                        </div>
-
-                        <div class="il-contacts">
-                            <span>Phone:</span>
-                            <span>+55 51 090900-8989</span>
-                        </div>
-
-                        <div class="il-email">
-                            <span>Email:</span>
-                            <span>xyz@gfgf.io</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="il-form--content">
-                <div class="il-field--wrapper">
-                    <input type="text" name="fname" placeholder="Your Full Name">
-                    <input type="text" name="fname" placeholder="Your Phone">
-                    <input type="submit" name="submit" value="Send Request" id="jsubmit">
-                            </div>
-                </div>
-</form>-->
+<div>
+    <form name="form-contact" method="post" data-netlify="true" class="il-form" data-netlify-honeypot="bot-field" @submit.prevent="sendData">
+                <div class="il-modal--content  il-color--background__default">
+                  <h4 class="il-color--text__dark text-center">Fale com a gente</h4>
+                  <div class="il-form--fields">
+                      <input type="text" id="name" class="il-input" v-model="contact.name" placeholder="Seu nome">
+                      <input type="text" id="lastname" class="il-input" v-model="contact.lastname" placeholder="Seu sobrenome">
+                      <input type="email" id="email" class="il-input" v-model="contact.email" placeholder="Seu email">
+                      <input type="tel" id="phone" class="il-input" v-model="contact.phone" placeholder="(xx) xxxx-xxxx">
+                      <input type="tel" id="mobil" class="il-input" v-model="contact.mobil" placeholder="(xx) xxxx-xxxx">
+                      <select v-model="contact.frowhere" id="frowhere" class="il-select">
+                        <option value="" selected>Como nos achou</option>
+                        <option value="fromfriends">Meus amigos me indicaram</option>
+                        <option value="fromface">Conheci a página no facebook</option>
+                        <option value="fromemail">Recebi um email convidando</option>
+                        <option value="fromcards">Li num encarte</option>
+                    </select>
+                    <div data-netlify-recaptcha="true"></div>
+                    <input type="hidden" name="form-name" value="form-contact" />
+                  </div>
+                  <button class="il-btn il-btn--submit">Enviar</button>
+                  </div>
+              </form>
+</div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-    name: "FormContato"
+    name: "FormContato",
+    data () {
+        return {
+            contact: {
+                "form-name": 'form-contact',
+                name: '',
+                lastname: '',
+                email: '',
+                phone: '',
+                mobil: '',
+                frowhere: ''
+            }
+        }
+    },
+    methods: {
+        encode (data) {
+          return Object.keys(data)
+          .map(
+            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+          )
+          .join("&");
+        },
+        sendData () {
+          const axiosConfig = {
+            header: { "Content-Type": "application/x-www-form-urlencoded" }
+          };
+
+          let content = this.encode(this.contact)
+          let url = '/'
+          axios.post(url, content, axiosConfig)
+          .then( () => {
+            this.$router.push({path: 'email/success'})
+          }).catch( () => {
+            console.log(url)
+            this.$router.push({path: 'email/fails'})
+          }) 
+        }
+    }
 }
 </script>

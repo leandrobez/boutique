@@ -1,5 +1,6 @@
 <template>
-<div class="il-gallery">
+<div class="il-gallery il-color--background__clean">
+
     <div class="il-gallery--item" v-for="item in gallery" :key="item.photo" :class="item.type" :style="getBack(item.photo)">
         <div class="il-gallery--item__details">
             {{item.caption}}
@@ -49,15 +50,13 @@ export default {
     },
 
     mounted() {
-      this.$parent.title = "dos Eventos";
+      this.$parent.title = "Eventos";
     },
 
     methods: {
         getBack(photo) {
             let background = `background: url('../images/gallery/gallery-studio-${photo}.jpg')`;
             return background;
-
-            //console.log('background: url(../public/images/gallery/gallery-studio-1.jpg)')
         }
     }
 };
