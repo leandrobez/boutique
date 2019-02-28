@@ -1,11 +1,20 @@
-.il-section--home .il-icons {
-  margin: 0.45rem;
-  & a {
-    padding: 0.15rem;
-    margin: 0.25rem;
-    &:hover {
-      color: $thirtyColor;
-      @include easeOut();
+.il-section--home {
+  
+  & p {
+    text-align: left;
+    & i {
+      margin-right: .35rem;
+    }
+  }
+  & .il-icons {
+    display: flex;
+    justify-content: flex-end;
+    & a {
+      display: block;
+      &:hover {
+        color: $thirtyColor;
+        @include easeOut();
+      }
     }
   }
 }

@@ -9549,7 +9549,7 @@ background-color: #183026;
 
 /** BACKGROUND IMAGES*/
 #app.big-img-home {
-  background-image: url("../../public/images/banners/big-img-home.png");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9557,7 +9557,7 @@ background-color: #183026;
 }
 
 #app.big-img-curriculum {
-  background-image: url("../../public/images/banners/big-img-curriculum.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9565,7 +9565,7 @@ background-color: #183026;
 }
 
 #app.big-img-about {
-  background-image: url("../../public/images/banners/big-img-about.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9573,7 +9573,7 @@ background-color: #183026;
 }
 
 #app.big-img-studio {
-  background-image: url("../../public/images/banners/big-img-space.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9581,7 +9581,7 @@ background-color: #183026;
 }
 
 #app.big-img-instructor {
-  background-image: url("../../public/images/banners/big-img-teacher.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9589,7 +9589,7 @@ background-color: #183026;
 }
 
 #app.big-img-class {
-  background-image: url("../../public/images/banners/big-img-class.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9597,7 +9597,7 @@ background-color: #183026;
 }
 
 #app.big-img-student {
-  background-image: url("../../public/images/banners/big-img-student.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9605,7 +9605,7 @@ background-color: #183026;
 }
 
 #app.big-img-advantage {
-  background-image: url("../../public/images/banners/big-img-advantage.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9613,7 +9613,7 @@ background-color: #183026;
 }
 
 #app.big-img-video {
-  background-image: url("../../public/images/banners/big-img-video.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9621,7 +9621,7 @@ background-color: #183026;
 }
 
 #app.big-img-email {
-  background-image: url("../../public/images/banners/big-img-email.jpg");
+  background-image: url("../../public/images/banners/big-img-home.jpg");
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10073,15 +10073,21 @@ i.il-pilates-icon {
   line-height: 2.4rem;
   border: 1px solid #CACACA;
   border-radius: 50%;
+  color: #FCFAF1;
 }
 
 .il-box--items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-column-gap: 0.95rem;
   grid-row-gap: 0.45rem;
+}
+
+.il-box--items.one-item {
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
 }
 
 .il-box--items.il-box--vert {
@@ -10140,6 +10146,12 @@ i.il-pilates-icon {
   text-align: justify;
   padding: 0 0.45rem;
   width: 100%;
+}
+
+@media screen and (min-width: 361px) and (max-width: 500px) {
+  .il-box--items .il-item.il-box p {
+    font-size: 1rem;
+  }
 }
 
 .il-intructors--cards {
@@ -10255,16 +10267,28 @@ i.il-pilates-icon {
   display: flex;
 }
 
-/* flex container */
 .il-pricing--grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   max-width: 986px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+}
+
+@media screen and (min-width: 600px) {
+  .il-pricing--grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .il-pricing--grid .il-plan {
@@ -10275,12 +10299,12 @@ i.il-pilates-icon {
   margin: 5px;
   padding: 10px;
   text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-transition: all 450ms ease-in;
@@ -10829,7 +10853,13 @@ $brand-vsw: 92px;
 $brand-vsh: 47px;
 $brand-sw: 183px;
 $brand-sh: 93px; */
-  /**logo 6 */
+  /* 
+logo 4 */
+  /**logo 6 
+$brand-vsw: 79px;
+$brand-vsh: 49px;
+$brand-sw: 158px;
+$brand-sh: 98px; */
 }
 
 .il-header.active {
@@ -10918,10 +10948,10 @@ $brand-sh: 93px; */
 
 .il-header .il-header--brand {
   position: relative;
-  width: 63px;
-  height: 31px;
-  left: calc(100% - 63px);
-  background-image: url("../../public/images/theme/logo6very-small.png");
+  width: 107px;
+  height: 57px;
+  left: calc(100% - 107px);
+  background-image: url("../../public/images/theme/logo4very-small.png");
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
   background-position: center;
@@ -10933,10 +10963,10 @@ $brand-sh: 93px; */
   .il-header .il-header--brand {
     -webkit-transition: all 650ms ease-out;
     transition: all 650ms ease-out;
-    width: 126px;
-    height: 62px;
-    left: calc(100% - 126px);
-    background-image: url("../../public/images/theme/logo6small.png");
+    width: 149px;
+    height: 80px;
+    left: calc(100% - 149px);
+    background-image: url("../../public/images/theme/logo4small.png");
   }
 }
 
@@ -11008,6 +11038,7 @@ $brand-sh: 93px; */
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
+  background: currentColor;
 }
 
 .il-header .il-header--content .il-content--portrait .il-avatar--portrait {
@@ -11031,8 +11062,8 @@ $brand-sh: 93px; */
 
 @media screen and (min-width: 768px) {
   .il-header .il-header--content .il-content--portrait .il-avatar--portrait {
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     border: 3px solid #CACACA;
   }
 }
@@ -11159,16 +11190,23 @@ $brand-sh: 93px; */
 
 .il-header .il-header--content nav.il-content--nav:after {
   content: '';
-  background: #4d3902;
+  background: currentColor;
   width: 50%;
   height: 100%;
   position: absolute;
   z-index: -1;
   top: 0;
   left: 50%;
-  opacity: 0.4;
+  opacity: 0.8;
   background-position: top center;
   background-repeat: repeat;
+}
+
+@media screen and (min-width: 361px) and (max-width: 500px) {
+  .il-header .il-header--content nav.il-content--nav:after {
+    left: 0;
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes slider {
@@ -11189,13 +11227,25 @@ $brand-sh: 93px; */
   }
 }
 
+.il-section--home p {
+  text-align: left;
+}
+
+.il-section--home p i {
+  margin-right: .35rem;
+}
+
 .il-section--home .il-icons {
-  margin: 0.45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .il-section--home .il-icons a {
-  padding: 0.15rem;
-  margin: 0.25rem;
+  display: block;
 }
 
 .il-section--home .il-icons a:hover {

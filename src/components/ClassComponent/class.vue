@@ -8,8 +8,8 @@
             <h2 class="il-section--sub-title il-color--text__very-light text-right">Venha fazer uma aula com a gente.</h2>
 
             <div class="il-class--content">
-                <div class="il-box--items il-box--vert  one-vert">
-                    <div class="il-item il-box">
+                <div class="il-box--items one-item">
+                    <div class="il-item il-box il-color--background__modal">
                         <i class="il-pilates-icon flaticon-side-bend-posture"></i>
                         <span>Por quê?</span>
                         <p class="il-color--text__very-light">Porque aqui na <b>{{$parent.title}}</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui o foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>

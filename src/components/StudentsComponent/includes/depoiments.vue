@@ -7,8 +7,7 @@
             <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--text__alt" @click.prevent="move('right')"></i>
         </div>
         <div class="il-depoiments--content">
-            <h3 class="il-section--title__small il-color--text__dark">Com a palavra os alunos:</h3>
-
+           
             <div class="il-depoiments--slider">
                 <div class="il-depoiment--item" v-for="(item,index) in students" :key="index">
                     <div class="il-item--caption il-color--text__dark">

@@ -13,13 +13,13 @@
         </div>-->
         <h2 class="il-section--sub-title il-color--text__very-light text-right">Temos como missão:</h2>
         <div class="il-about--content">
-            <div class="il-box--items il-box--vert">
-                <div class="il-item il-box">
+            <div class="il-box--items">
+                <div class="il-item il-box il-color--background__modal">
                     <i class="il-pilates-icon flaticon-exercises-with-body-arc"></i>
                     <p class="il-color--text__very-light">Potencializar as qualidades físicas individuais do aluno tendo como base os princípios do pilates.
                     </p>
                 </div>
-                <div class="il-item il-box">
+                <div class="il-item il-box il-color--background__modal">
                     <i class="il-pilates-icon flaticon-breath-position"></i>
                     <p class="il-color--text__very-light">
                         

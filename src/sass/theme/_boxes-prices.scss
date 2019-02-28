@@ -1,17 +1,21 @@
-/* flex container */
 .il-pricing--grid {
   display: flex;
   margin: 0 auto;
   max-width: 986px;
+  flex-direction: column;
   align-items: stretch;
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+  }
+
   & .il-plan {
     border: 2px solid $colorBorder;
     justify-content: center;
     margin: 5px;
     padding: 10px;
-    text-align: center;
-    flex: 1;
+    text-align: center;    
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
     transition: all 450ms ease-in;
     cursor: pointer;

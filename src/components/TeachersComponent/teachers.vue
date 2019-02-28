@@ -4,7 +4,7 @@
         <h1 class="il-section--title il-title--full">Os <span class="il-color--text__very-light">Instrutores</span></h1>
         <h2 class="il-section--sub-title il-color--text__very-light text-right">Professores da {{$parent.title}}</h2>
         <div class="il-instructor--content">
-            <div class="il-intructors--cards il-cards--vert">
+            <div class="il-intructors--cards">
                 <div class="il-cards il-color--background__clean">
                     <div class="il-cards--avatar">
                         <img class="img-circle" :src="teachers.number1" alt="client1.jpg" />
