@@ -5,17 +5,18 @@ $primaryColor: #FCFAF1;
 $primaryAccent: darken($primaryColor, 15%);
 $secondColor: #CACACA;
 $secondColorAccent: darken($secondColor, 15%);
-$thirtyColor: #E6B31E;
+$thirtyColor: #e6dcab;
 $fortyColor: #343434;
 $thirtyColorAccent: darken($thirtyColor, 15%);
 $fortyColorAccent: darken($fortyColor, 15%);
 $textColor: #343434;
-$textColorGold: #d6b212;
+$textColorGold: #e6dcab;
 $textColorAlt: darken($textColor, 5%);
 $textColorAccent: darken($textColor, 15%);
 $textColorLight: $secondColor;
 $textColorVeryLight: $primaryColor;
 $textColorDark: darken($textColor, 15%);
+$textColorLightGray: lighten($fortyColor, 25%);
 
 //body
 $colorBg: $primaryColor;
@@ -43,7 +44,7 @@ $header-height: 17vh;
 /*app*/
 $opacity-overlay: .6;
 $overlay-img: '../../public/images/theme/overlay.png';
-$app-overlay: #74817C; // $thirtyColorAccent; // $primaryColor;
+$app-overlay: rgba(132, 130, 75,.9); // $thirtyColorAccent; // $primaryColor;
 
 /*Other elements*/
 $back-body: #eee;

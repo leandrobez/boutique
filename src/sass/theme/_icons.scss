@@ -6,7 +6,14 @@ i.il-pilates-icon {
   height: 2.5rem;
   font-size: 1.7rem;
   line-height: 2.4rem;
-  border: 1px solid $secondColor;
   border-radius: 50%;
-  color: $primaryColor;
+  border: 1px solid $thirtyColor;
+  &.light {
+    border: 1px solid $thirtyColor;
+    color: $thirtyColor;
+  }
+  &.dark {
+    border: 2px solid $fortyColor;
+    color: $fortyColor;
+  }
 }

@@ -59,7 +59,6 @@ export default {
   },
 
   methods: {
-
     getClass() {
       let routeName = this.$route.name;
       let currentFooter = '';
@@ -117,10 +116,9 @@ export default {
       return currentFooter;
     },
 
-    activeModal(){
-      this.$parent.showModal = true
+    activeModal() {
+      this.$parent.showModal = true;
     }
-
   }
 };
 </script>

@@ -18,7 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     &.il-box {
-        border: 2px solid $secondColor;
+        border: 1px solid rgb(247, 246, 242);
         padding: 0.45rem;
         display: flex;
         flex-wrap: wrap;
@@ -38,8 +38,9 @@
         }
         & p {
           text-align: justify;
-          padding: 0 0.45rem;
           width: 100%;
+          margin: 0;
+          min-height: 140px;
           @media screen and (min-width: 361px) and (max-width: 500px) {
             font-size: 1rem;
           }

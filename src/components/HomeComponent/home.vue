@@ -4,10 +4,17 @@
     <div class="il-container--wrapper">
         <h1 class="il-section--title">Bem <span class="il-color--text__very-light">Vindo!</span></h1>
         <h2 class="il-section--sub-title">Somos a <b>{{$parent.title}}</b></h2>
-        <p class="il-color--text__very-light"><i class="mdi mdi-phone mdi-12px"></i>{{phone.ddd}} {{phone.number}}</p>
-        <p class="il-color--text__very-light"><i class="mdi mdi-map mdi-12px"></i>Rua Lavras 334 - sala 702</p>
-        <p class="il-color--text__very-light"><i class="mdi mdi-earth mdi-12px"></i>Porto Alegre - RS</p>
-        <p class="il-color--text__very-light"><i class="mdi mdi-email-variant mdi-12px"></i>contato@kaizenpilates.com</p>
+        <div class="il-home--content">
+            <div class="il-home--address">
+                <p class="il-color--text__very-light"><i class="mdi mdi-phone mdi-12px"></i>{{phone.ddd}} {{phone.number}}</p>
+                <p class="il-color--text__very-light"><i class="mdi mdi-map mdi-12px"></i>Rua Lavras 334 - sala 702</p>
+                <p class="il-color--text__very-light"><i class="mdi mdi-earth mdi-12px"></i>Porto Alegre - RS</p>
+                <p class="il-color--text__very-light"><i class="mdi mdi-email-variant mdi-12px"></i>contato@kaizenpilates.com</p>
+            </div>
+            <div class="il-home--slide il-absolute">
+                <!--<img src="images/banners/banner-class2.png" alt="">-->
+            </div>
+        </div>
         <div class="il-icons">
             <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('fb')"><i class="mdi mdi-facebook mdi-48px"></i></a>
             <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('in')"><i class="mdi mdi-instagram mdi-48px"></i></a>

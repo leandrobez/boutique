@@ -7,7 +7,8 @@
     </div>
     <div class="il-container il-header--container">
         <div class="il-container--wrapper">
-            <div class="il-header--brand"></div>
+            <!--<div class="il-header--brand"></div>-->
+            <h1 class="il-title--brand">Kaizen</h1>
         </div>
     </div>
     <div class="il-header--content">

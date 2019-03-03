@@ -48,7 +48,9 @@
 .il-color--background__default{
   background: $primaryAccent;
 }
-
+.il-color--background__lighten{
+  background: white;
+}
 .il-color--background__light{
   background: $secondColor;
 }
@@ -58,11 +60,11 @@
 }
 
 .il-color--background__clean{
-  background: lighten($secondColor,40%);
+  background: #d0d1ab; ///lighten($secondColor,40%);
 }
 
 .il-color--background__modal{
-  background: lighten($fortyColor, 25%);
+  background: rgba(255, 242, 231, 1); // rgb(180, 180, 137); // lighten($fortyColor, 25%);
 }
 
 .il-color--background__modal-content{
@@ -71,4 +73,8 @@
 
 .il-color--background__dark{
   background: $fortyColor;
+}
+
+.il-color--background__darken{
+  background: #343434; // #3a3939;
 }

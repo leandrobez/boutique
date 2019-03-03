@@ -5,12 +5,6 @@ $heading-font: 'Nunito', sans-serif; // only 400 and 400i
 $h3-font: 'Oswald', sans-serif;
 $body-font: 'News Cycle', sans-serif;
 
-/*body {
-  background: $primaryColor;
-  color: $textColor;
-  font-family: $body-font;
-  line-height: 1.5;
-}*/
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
@@ -137,13 +131,10 @@ h3 {
 }
 p {
   font-family: $body-font;
-  font-size: .85rem;
+  font-size: .95rem;
   text-align: right;
-  @media screen and (max-width: 360px) {
-    font-size: .9rem;
-  }
-  @media screen and (min-width: 361px) and (max-width: 480px) {
-    font-size: .95rem;
+  @media screen and (min-width: 480px) {
+    font-size: .98rem;
   }
 }
 p.il-content--description{

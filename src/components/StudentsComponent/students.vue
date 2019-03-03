@@ -6,10 +6,10 @@
             <h2 class="il-section--sub-title il-color--text__very-light text-right">Tudo isso é para vocês</h2>
             <div class="il-students--content">
                 <div class="il-box--items one-item">
-                    <div class="il-item il-box il-color--background__modal">
-                        <i class="il-pilates-icon flaticon-bicycle-position"></i>
+                    <div class="il-item il-box il-color--background__dark">
+                        <i class="il-pilates-icon flaticon-bicycle-position light"></i>
                         <span>Os protagonistas.</span>
-                        <p class="il-color--text__very-light">Contamos com professores com formação em Educação Física e Fisioterapia, além de possuirem vários cursos de epecialização. Nosso diferencial reside nos fundamentos estabelecidos pela POLESTAR EDUCATION® - referência em pilates no mundo - e nas bases científicas que regem a ginástica postural; a ginástica localizada; a musculação e o condicionamento cardiovascular.</p>
+                        <p class="il-color--text__gold">Contamos com professores com formação em Educação Física e Fisioterapia, além de possuirem vários cursos de epecialização. Nosso diferencial reside nos fundamentos estabelecidos pela POLESTAR EDUCATION® - referência em pilates no mundo - e nas bases científicas que regem a ginástica postural; a ginástica localizada; a musculação e o condicionamento cardiovascular.</p>
                     </div>
                 </div>
             </div>
