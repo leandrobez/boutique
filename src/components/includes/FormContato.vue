@@ -9,6 +9,7 @@
             <input type="email" id="email" class="il-input" v-model="contact.email" placeholder="Seu email">
             <input type="tel" id="phone" class="il-input" v-model="contact.phone" data-phone="mask-phone" placeholder="(xx) xxxx-xxxx">
             <input type="tel" data-mobil="mask-mobile" id="mobil" class="il-input" v-model="contact.mobil" placeholder="(xx) xxxx-xxxx">
+            <textarea v-model="contact.message"></textarea>
             <select v-model="contact.frowhere" id="frowhere" class="il-select">
               <option value="" selected>Como nos achou</option>
               <option value="fromfriends">Meus amigos me indicaram</option>
@@ -38,7 +39,8 @@ export default {
                 email: '',
                 phone: '',
                 mobil: '',
-                frowhere: ''
+                frowhere: '',
+                message: 'Deixe sua mensagem'
             }
         }
     },
@@ -77,20 +79,14 @@ export default {
             this.$router.push({path: 'email/fails'})
           }) 
         },
-        makeMask(e) {
-
+        makeMask (e) {
             const maskPhone = (phone) => {
-                
                 let res =  phone.replace(/\D/g, '')
-
                     .replace(/^(\d)/, '($1')
-
                     .replace(/^(\(\d{2})(\d)/, '$1) $2')
-
                     .replace(/(\d{5})(\d{1,6})/, '$1-$2')
-
                     .replace(/(-\d{6})\d+?$/, '$1');
-                
+
                 return res
 
             }

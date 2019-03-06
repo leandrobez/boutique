@@ -9943,7 +9943,8 @@ form.il-form .il-form--fields.il-flex {
 
 form.il-form input[type='text'],
 form.il-form input[type='email'],
-form.il-form input[type='tel'] {
+form.il-form input[type='tel'],
+form.il-form textarea {
   border: 1px solid #CACACA;
   background-color: #FCFAF1;
   font-size: 0.85rem;
@@ -9960,8 +9961,13 @@ form.il-form input[type='tel'] {
 
 form.il-form input[type='text']:focus,
 form.il-form input[type='email']:focus,
-form.il-form input[type='tel']:focus {
+form.il-form input[type='tel']:focus,
+form.il-form textarea:focus {
   background: #efe4b2;
+}
+
+form.il-form textarea {
+  height: 4rem;
 }
 
 form.il-form select.il-select {
@@ -10970,13 +10976,14 @@ $brand-vsh: 32px; */
 
 .il-header h1.il-title--brand {
   text-align: right;
+  font-family: 'Pi Sheng', serif;
 }
 
 .il-header .il-header--brand {
   position: relative;
-  width: 154px;
-  height: 88px;
-  left: calc(100% - 154px);
+  width: 115.3px;
+  height: 66.2px;
+  left: calc(100% - 115.3px);
   background-image: url("../../public/images/theme/logokayzen.png");
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
@@ -11101,6 +11108,7 @@ $brand-vsh: 32px; */
 .il-header .il-header--content nav.il-content--nav {
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
+  height: 50%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -11114,6 +11122,14 @@ $brand-vsh: 32px; */
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .il-header .il-header--content nav.il-content--nav {
+    height: 100%;
+    height: 100%;
+    background: #5a5a5a;
+  }
 }
 
 .il-header .il-header--content nav.il-content--nav ul.il-menu--list {
@@ -11223,21 +11239,21 @@ $brand-vsh: 32px; */
 .il-header .il-header--content nav.il-content--nav:after {
   content: '';
   background: currentColor;
-  width: 50%;
+  width: 100%;
   height: 100%;
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 50%;
+  left: 0;
   opacity: 0.8;
   background-position: top center;
   background-repeat: repeat;
 }
 
-@media screen and (min-width: 361px) and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   .il-header .il-header--content nav.il-content--nav:after {
-    left: 0;
-    width: 100%;
+    left: -50%;
+    width: 50%;
   }
 }
 
@@ -11321,8 +11337,185 @@ $brand-vsh: 32px; */
 
 .il-instructor--content {
   padding: 0.45rem 0;
-  max-width: 986px;
-  margin: auto;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.il-instructor--content .il-card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0.25rem;
+}
+
+.il-instructor--content .il-card .il-card--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 140px;
+  max-height: 140px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 0.45rem 0.35rem;
+}
+
+.il-instructor--content .il-card .il-card--header h4.il-card--header__title {
+  margin: 0;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.il-instructor--content .il-card .il-card--header img {
+  display: block;
+  max-width: 90px;
+  border-radius: 50%;
+}
+
+.il-instructor--content .il-card:nth-child(1) {
+  background-color: #647588;
+}
+
+.il-instructor--content .il-card:nth-child(1) .il-card--header {
+  background-color: #7088a1;
+}
+
+.il-instructor--content .il-card:nth-child(2) {
+  background-color: #516880;
+}
+
+.il-instructor--content .il-card:nth-child(2) .il-card--header {
+  background-color: #5e758d;
+}
+
+.il-instructor--content .il-card:nth-child(3) {
+  background-color: #34495e;
+}
+
+.il-instructor--content .il-card:nth-child(3) .il-card--header {
+  background-color: #475e75;
+}
+
+.il-instructor--content .il-card .il-card--content {
+  padding: 0;
+}
+
+.il-instructor--content .il-card .il-card--content p.il-card--description {
+  padding: 0.45rem 0.35rem;
+  font-size: 0.85rem;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+.il-instructor--content .il-card .il-card--footer {
+  height: 2.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.il-instructor--content .il-card .il-card--footer i {
+  text-align: center;
+  position: relative;
+  right: 1rem;
+  border: 1px solid #FCFAF1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 29px;
+  cursor: pointer;
+}
+
+.il-instructor--content .il-card .il-card--footer i:hover {
+  background: #e6dcab;
+  color: #343434;
+}
+
+.il-instructor--content .il-card .il-card--footer i.moveRight {
+  -webkit-animation-name: moveRight;
+          animation-name: moveRight;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes moveRight {
+  from {
+    right: 20px;
+  }
+  to {
+    right: 15px;
+  }
+}
+
+@keyframes moveRight {
+  from {
+    right: 20px;
+  }
+  to {
+    right: 15px;
+  }
+}
+
+.il-instructor--content .il-card .il-card--footer i.moveLeft {
+  -webkit-animation-name: moveLeft;
+          animation-name: moveLeft;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes moveLeft {
+  from {
+    right: 15px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    right: 15px;
+  }
+  to {
+    right: 20px;
+  }
 }
 
 .il-students--content {
@@ -11850,6 +12043,35 @@ footer.il-footer .il-footer--content .il-footer--top .il-footer--cols .il-footer
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+footer.il-footer .il-footer--content .il-footer--top .il-footer--cols .il-footer--col h4.il-footer--title {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 .15rem;
+}
+
+@media screen and (min-width: 680px) {
+  footer.il-footer .il-footer--content .il-footer--top .il-footer--cols .il-footer--col h4.il-footer--title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+footer.il-footer .il-footer--content .il-footer--top .il-footer--cols .il-footer--col h4.il-footer--title a {
+  font-size: .85rem;
 }
 
 footer.il-footer .il-footer--content .il-footer--top.il-home {

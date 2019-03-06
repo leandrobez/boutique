@@ -36,6 +36,21 @@ footer.il-footer {
         justify-content: center;
         & .il-footer--col {
           flex: 1;
+          & h4.il-footer--title{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            @media screen and (min-width: 680px){
+              flex-direction: row;
+            }
+            line-height: 24px;
+            justify-content: center;
+            padding: 0 .15rem;
+            & a {
+              font-size: .85rem;
+              
+            }
+          }
         }
       }
       &.il-home {

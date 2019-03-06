@@ -22,7 +22,6 @@
 
     <!--MODAL-->
     <ilModal :check="checkActive" />
-
 </div>
 </template>
 
@@ -31,7 +30,6 @@ import ilVideoBack from './components/VideosComponent/includes/videoBackground.v
 import ilHeader from './components/includes/HeaderComponent.vue';
 import ilFooter from './components/includes/FooterComponent.vue';
 import ilModal from './components/includes/ModalComponent.vue';
-
 export default {
     name: 'App',
 

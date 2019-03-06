@@ -60,6 +60,12 @@
 
   & nav.il-content--nav {
     @include easeOut;
+    height: 50%;
+    @media screen and(min-width: 768px){
+      height: 100%;
+      height: 100%;
+      background: lighten(#343434, 15%);
+    }
     flex: 1;
     display: flex;
     justify-content: center;
@@ -135,15 +141,15 @@
     &:after {
       content: '';
       background: currentColor;
-      width: 50%;
+      width: 100%;
       height: 100%;
       position: absolute;
       z-index: -1;
       top: 0;
-      left: 50%;
-      @media screen and (min-width: 361px) and (max-width: 500px) {
-        left: 0;
-        width: 100%;
+      left: 0;
+      @media screen and (min-width: 500px) {
+        left: -50%;
+        width: 50%;
       }
       opacity: 0.8;
       background-position: top center;

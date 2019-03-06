@@ -31,9 +31,14 @@
       <input type="email" name="email">
       <input type="tel" name="phone">
       <input type="tel" name="mobil">
+      <textarea v-model="contact.message" rows="10"></textarea>
       <select name="frowhere"
       >
-      <option value=""></option>
+      <option value="" selected>Como nos achou</option>
+      <option value="fromfriends">Meus amigos me indicaram</option>
+      <option value="fromface">Conheci a página no facebook</option>
+      <option value="fromemail">Recebi um email convidando</option>
+      <option value="fromcards">Li num encarte</option>
       </select>
     </form>
     <div id="app"></div>

@@ -16,7 +16,8 @@ form.il-form {
   }
   & input[type='text'],
   & input[type='email'],
-  & input[type='tel'] {
+  & input[type='tel'],
+  & textarea {
     border: 1px solid $secondColor;
     background-color: $primaryColor;
     font-size: 0.85rem;
@@ -31,6 +32,9 @@ form.il-form {
     &:focus {
       background: $primaryAccent;
     }
+  }
+  & textarea {
+    height: 4rem;
   }
   & select.il-select {
     border: 1px solid $secondColor;

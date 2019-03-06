@@ -9,28 +9,28 @@
 		</div>
 
 		<div class="il-footer--cols il-color--text__very-light">
-			<div class="il-footer-col">
+			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-iris"></i>
           <router-link :to="{name:'galleryStudio'}" class="il-footer--list il-color--text__very-light" title="Veja fotos do studio">studio</router-link>
 				</h4>
 			</div>
 
-			<div class="il-footer-col">
+			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-rear"></i>
           <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__very-light" title="Veja fotos de eventos">eventos</router-link>
 				</h4>
 			</div>
 
-			<div class="il-footer-col">
+			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-party-mode"></i>
 					<a href="#!" class="il-footer--list il-color--text__very-light"  title="Veja fotos do studio">cursos</a>
 				</h4>
 			</div>
 
-			<div class="il-footer-col">
+			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-email"></i>
 					<a href="#!" class="il-footer--list il-color--text__very-light" @click.prevent="activeModal()" title="Faça contato com a gente">contato</a>
