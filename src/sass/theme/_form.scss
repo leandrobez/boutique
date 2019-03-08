@@ -1,7 +1,5 @@
 form.il-form {
-  padding: 0.45rem;
   max-width: 700px;
-  padding: 20px;
   border-radius: 3px;
   display: flex;
   & .il-form--fields {
@@ -62,7 +60,9 @@ form.il-form {
       border: 1px solid $fortyColor;
       padding: .25rem 1.4rem;
       margin-left: 50%;
+      @media screen and (min-width: 1171px) {
       width: 300px;
+      }
       transform: translateX(-50%);
       outline: none;
     }

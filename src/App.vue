@@ -4,9 +4,7 @@
     <ilVideoBack v-if="hasVideoBackground" />
 
     <!--HEADER-->
-    <header id="il-header" class="il-header" :class="isActive()">
-        <ilHeader />
-    </header>
+    <ilHeader :class="isActive()" />
 
     <!--MAIN-->
     <main>
