@@ -1,80 +1,155 @@
 <template>
-<div class="il-cv">
-    <section class="il-cv--header">
-        <h1>Curriculum Vitae</h1>
-        <div class="profile"></div>
-        <div class="name">
-            <ul>
-                <li>Candy (Chih-Ching) Tsai</li>
-                <li>Educadora Física</li>
-            </ul>
+<section class="il-cv">
+    <div class="il-container--wrapper">
+        <div class="il-cv--content" v-for="(cv,index) in curriculum" :key="index" :class="showOrhidden(index)">
+            <div class="il-cv--profile"></div>
+            <div class="il-cv--name">
+                <ul>
+                    <li class="il-color--text__gold">{{cv.profile.name}}</li>
+                    <li class="il-cv--sm-name">{{cv.profile.formation}}</li>
+                    <li class="il-cv--sm-name">{{cv.profile.cref}}</li>
+                </ul>
+            </div>
+            <div class="il-cv--info">
+                <ul>
+                    <li class="il-color--text__gold">Informações profissionais</li>
+                    <li class="il-cv--sm-name">{{cv.info.email}}</li>
+                    <li class="il-cv--sm-name">{{cv.info.address}}</li>
+                    <li class="il-cv--sm-name">{{cv.info.fone}}</li>
+                </ul>
+            </div>
+            <div class="il-cv--edu">
+                <ul>
+                    <li class="il-color--text__gold">Formação</li>
+                    <li class="il-cv--sm-name">{{cv.graduation.colege}}</li>
+                    <li class="il-color--text__gold">Outras</li>
+                    <li class="il-cv--sm-name" v-for="(other,o) in cv.details.others" :key="`others${o}`">{{other}}</li>
+                    <li class="il-color--text__gold">Cursos</li>
+                    <li class="il-cv--sm-name" v-for="(curse,c) in cv.details.curses" :key="`curses${c}`">{{curse}}</li>
+                </ul>
+            </div>
+            <div class="il-cv--social">
+                <ul>
+                    <li><a href="https://goo.gl/NqkodQ" target="_blank"><i class="mdi mdi-24px mdi-facebook"></i></a></li>
+                    <li><a href="https://goo.gl/4P9h6M" target="_blank"><i class="mdi mdi-24px mdi-facebook"></i></a></li>
+                    <li><a href="https://goo.gl/5cLXe7" target="_blank"><i class="mdi mdi-24px mdi-facebook"></i></a></li>
+                </ul>
+            </div>
         </div>
-        <h2 class="sm-name">Candy (Chih-Ching) Tsai<br>CREF - 12334</h2>
-            <div class="social">
-                <ul>
-                    <li><a href="https://goo.gl/NqkodQ" target="_blank"><i class="mdi mdi-12px mdi-facebook"></i></a></li>
-                    <li><a href="https://goo.gl/4P9h6M" target="_blank"><i class="mdi mdi-12px mdi-facebook"></i></a></li>
-                    <li><a href="https://goo.gl/5cLXe7" target="_blank"><i class="mdi mdi-12px mdi-facebook"></i></a></li>
-                </ul>
-            </div>
-    </section>
-    <div class="wrapper">
-        <section class="block info">
-            <h2>Personal Information</h2>
-            <ul>
-                <li>E-mail: <span class="email"></span></li>
-                <li>Location: New Taipei City, Taiwan</li>
-            </ul>
-        </section>
-        <section class="block edu">
-            <h2>Education</h2>
-            <div class="degree">
-                <h3>M.S. Graduate Institute of Biomedical Electronics and Bioinformatics</h3>
-                <p class="research">Research Topic: Computer Aided Diagnosis for Breast Ultrasound based on Deep Learning</p>
-                <p>National Taiwan University<br> 2015-Present
-      </p>
-            </div>
-            <div class="degree">
-                <h3>B.S. Bachelor Program of Biotechnology, B.B.A. Dept. of Marketing</h3>
-                <p>National Chung Hsing University<br> 2010-2015
-      </p>
-            </div>
-        </section>
-        <section class="block exp">
-            <h2>Experience</h2>
-            <div class="exp-item">
-                <h3>Software Development Intern</h3>
-                <p><a href="https://www.yoctol.com/" target="_blank" rel="noopener noreferrer">Yoctol Info</a>
-                </p>
-                <p>2016/06 - 2017/03</p>
-                <ul>
-                    <li><a href="https://ptter.yoctol.com" target="_blank" rel="noopener noreferrer">Ptter</a> (Website and LINE bot) - Visualization tool for PTT</li>
-                    <li><a href="https://www.yoctol.com/" target="_blank" rel="noopener noreferrer">Company Website</a></li>
-                </ul>
-            </div>
-        </section>
-        <footer>Last Updated: 2017-05-12. Designed by Candy Tsai.</footer>
     </div>
-</div>
+</section>
 </template>
 
 <script>
 export default {
-    name: 'cv'
-}
+    name: 'cv',
+    data() {
+        return {
+            curriculum: [{
+                    profile: {
+                        name: 'Claudia Muraguti Bezerra',
+                        formation: 'Educadora Física',
+                        cref: 'CREF: 0838-G/RS'
+                    },
+                    info: {
+                        email: 'email: muraguti@kaizenpilates.com.br',
+                        address: 'endereço: Rua Lavras 334/702 - Porto Alegre/RS',
+                        fone: 'tel: 3333-33333'
+                    },
+                    graduation: {
+                        colege: 'Graduada em Educação Física - UEL 1986'
+                    },
+                    details: {
+                        others: [
+                            'Pós-graduação em Educação Física Escolar pela Universidade Estadual de Maringá/PR',
+                            'Pós-graduação em Personal Training pela PUC/RS - 2000',
+                            'Pós-graduação em Reestruturação Corporal Global pela Universidade Gama Filho/RJ - 2005'
+                        ],
+                        curses: [
+                            'Curso Avançado de Osteoporose Physio Pilates - Polestar - 2008',
+                            'Curso de Coluna Avançada Physio Pilates - Polestar - 2008',
+                            'Curso de Formação de Professores da Escola de Postura da Universidade Federal do Rio Grande do Sul - 2001',
+                            'Curso prático intensivo de massagem - SESI/RS - 2000',
+                            'Curso de Flymoon Physio Pilates - Polestar - 2009'
+                        ]
+                    }
+                },
+                {
+                    profile: {
+                        name: 'Claudia Muraguti Bezerra1',
+                        formation: 'Educadora Física',
+                        cref: 'CREF: 0838-G/RS'
+                    },
+                    info: {
+                        email: 'email: muraguti@kaizenpilates.com.br',
+                        address: 'endereço: Rua Lavras 334/702 - Porto Alegre/RS',
+                        fone: 'tel: 3333-33333'
+                    },
+                    graduation: {
+                        colege: 'Graduada em Educação Física - UEL 1986'
+                    },
+                    details: {
+                        others: [
+                            'Pós-graduação em Educação Física Escolar pela Universidade Estadual de Maringá/PR',
+                            'Pós-graduação em Personal Training pela PUC/RS - 2000',
+                            'Pós-graduação em Reestruturação Corporal Global pela Universidade Gama Filho/RJ - 2005'
+                        ],
+                        curses: [
+                            'Curso Avançado de Osteoporose Physio Pilates - Polestar - 2008',
+                            'Curso de Coluna Avançada Physio Pilates - Polestar - 2008',
+                            'Curso de Formação de Professores da Escola de Postura da Universidade Federal do Rio Grande do Sul - 2001',
+                            'Curso prático intensivo de massagem - SESI/RS - 2000',
+                            'Curso de Flymoon Physio Pilates - Polestar - 2009'
+                        ]
+                    }
+                },
+                {
+                    profile: {
+                        name: 'Claudia Muraguti Bezerra2',
+                        formation: 'Educadora Física',
+                        cref: 'CREF: 0838-G/RS'
+                    },
+                    info: {
+                        email: 'email: muraguti@kaizenpilates.com.br',
+                        address: 'endereço: Rua Lavras 334/702 - Porto Alegre/RS',
+                        fone: 'tel: 3333-33333'
+                    },
+                    graduation: {
+                        colege: 'Graduada em Educação Física - UEL 1986'
+                    },
+                    details: {
+                        others: [
+                            'Pós-graduação em Educação Física Escolar pela Universidade Estadual de Maringá/PR',
+                            'Pós-graduação em Personal Training pela PUC/RS - 2000',
+                            'Pós-graduação em Reestruturação Corporal Global pela Universidade Gama Filho/RJ - 2005'
+                        ],
+                        curses: [
+                            'Curso Avançado de Osteoporose Physio Pilates - Polestar - 2008',
+                            'Curso de Coluna Avançada Physio Pilates - Polestar - 2008',
+                            'Curso de Formação de Professores da Escola de Postura da Universidade Federal do Rio Grande do Sul - 2001',
+                            'Curso prático intensivo de massagem - SESI/RS - 2000',
+                            'Curso de Flymoon Physio Pilates - Polestar - 2009'
+                        ]
+                    }
+                }
+            ]
+        };
+    },
+    props: {
+        active: Number
+    },
+    methods: {
+        showOrhidden (k) {
+            
+            if (this.active === k) {
+                let CV = document.querySelector('.il-cv')
+                CV.style.left = '50%'
+                CV.style.transition = 'left 500ms'
+                CV.style.transform = 'translateX(-50%)'
+                return 'cv-show'
+            }
+            return 'cv-hidden'
+        }
+    }
+};
 </script>
-
-<style scoped>
-.il-cv{
-    border: 2px solid #b8b6a3;
-    padding: .45rem 1rem;
-}
-.il-cv--header{
-    text-align: center;
-    padding: 5%;
-}
-.il-cv--header h1 {
-    white-space: nowrap;
-    overflow: hidden;
-}
-</style>

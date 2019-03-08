@@ -20,7 +20,7 @@
       padding: 0.45rem 0.35rem;
       & h4.il-card--header__title {
         margin: 0;
-        color: white;
+        color: $primaryColor;
         font-weight: 400;
         text-transform: uppercase;
       }
@@ -31,21 +31,21 @@
       }
     }
     &:nth-child(1) {
-      background-color: #647588;
+      background-color: darken($back-cards, 5%);
       & .il-card--header {
-        background-color: #7088a1;
+        background-color:lighten($back-cards, 12%);
       }
     }
     &:nth-child(2) {
-      background-color: #516880;
+      background-color: darken($back-cards, 7%);
       & .il-card--header {
-        background-color: #5e758d;
+        background-color:lighten($back-cards, 15%);
       }
     }
     &:nth-child(3) {
-      background-color: #34495e;
+      background-color: darken($back-cards, 9%);
       & .il-card--header {
-        background-color: #475e75;
+        background-color:lighten($back-cards, 20%);
       }
     }
     & .il-card--content {

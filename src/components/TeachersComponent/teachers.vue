@@ -1,17 +1,19 @@
 <template>
-<section id="il-instructor" class="il-section il-section--instructor">
-    <div class="il-container--wrapper">
-        <h1 class="il-section--title il-title--full">Os <span class="il-color--text__very-light">Instrutores</span></h1>
-        <h2 class="il-section--sub-title il-color--text__very-light text-right">Professores da {{$parent.title}}</h2>
-        
-        <div class="il-instructor--content">
-            <ilCards v-for="(instructor,index) in instructors" :key="index" :id="index"
-            :title="instructor.title" :message="instructor.message" 
-            :picture="instructor.picture" />
+<div>
+    <section id="il-instructor" class="il-section il-section--instructor">
+        <div class="il-container--wrapper">
+            <h1 class="il-section--title il-title--full">Os <span class="il-color--text__very-light">Instrutores</span></h1>
+            <h2 class="il-section--sub-title il-color--text__very-light text-right">Professores da {{$parent.title}}</h2>
+            
+            <div class="il-instructor--content">
+                <ilCards v-for="instructor in instructors" :key="instructor.id" :id="instructor.cv"
+                :title="instructor.title" :message="instructor.message" 
+                :picture="instructor.picture" />
+            </div>
         </div>
-        <ilCv v-show="CV.show" />
-    </div>
-</section>
+    </section>
+    <ilCv v-show="CV.show" :active="CV.id"/>
+</div>
 </template>
 
 <script>
@@ -35,19 +37,22 @@ export default {
                     id: '1',
                     title: 'NhaNhann',
                     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-                    picture: 'images/pictures/teacher1.jpg'
+                    picture: 'images/pictures/teacher1.jpg',
+                    cv: 0
                 },
                 {
                     id: '2',
                     title: 'Blublue',
                     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-                    picture: 'images/pictures/teacher2.jpg'
+                    picture: 'images/pictures/teacher2.jpg',
+                    cv: 1
                 },
                 {
                     id: '3',
                     title: 'RamiRami',
                     message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-                    picture: 'images/pictures/teacher3.jpg'
+                    picture: 'images/pictures/teacher3.jpg',
+                    cv: 2
                 }
             ]
         }

@@ -10182,6 +10182,142 @@ i.il-pilates-icon.dark {
   }
 }
 
+div {
+  position: relative;
+}
+
+div section.il-cv {
+  -webkit-transition: max-width 450ms;
+  transition: max-width 450ms;
+  width: 100%;
+  position: absolute;
+  top: -15vh;
+  left: -100%;
+  opacity: 0.87;
+  margin: auto;
+}
+
+@media screen and (max-width: 1023px) {
+  div section.il-cv {
+    max-width: 90%;
+    -webkit-transition: max-width 450ms;
+    transition: max-width 450ms;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  div section.il-cv {
+    max-width: 70%;
+    -webkit-transition: max-width 450ms;
+    transition: max-width 450ms;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  div section.il-cv {
+    max-width: 60%;
+    -webkit-transition: max-width 450ms;
+    transition: max-width 450ms;
+  }
+}
+
+div section.il-cv .il-cv--content {
+  border: 2px solid #FCFAF1;
+  padding: 0 1rem;
+  position: relative;
+  text-align: center;
+  color: #FCFAF1;
+  opacity: 0;
+  height: 0;
+  background: rgba(51, 50, 29, 0.9);
+}
+
+div section.il-cv .il-cv--content.cv-show {
+  left: 0;
+  opacity: 1;
+  height: auto;
+}
+
+div section.il-cv .il-cv--content.cv-hidden {
+  left: -100%;
+  opacity: 0;
+  height: 0;
+}
+
+div section.il-cv .il-cv--content .il-cv--profile {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #0e0e0e;
+  border-radius: 50%;
+  background: #CACACA;
+  margin: auto;
+  padding: 1% 0;
+}
+
+div section.il-cv .il-cv--content .il-cv--name ul,
+div section.il-cv .il-cv--content .il-cv--info ul,
+div section.il-cv .il-cv--content .il-cv--edu ul {
+  margin: 0.45rem;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+div section.il-cv .il-cv--content .il-cv--name ul li:first-child,
+div section.il-cv .il-cv--content .il-cv--info ul li:first-child,
+div section.il-cv .il-cv--content .il-cv--edu ul li:first-child {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+div section.il-cv .il-cv--content .il-cv--name ul:after,
+div section.il-cv .il-cv--content .il-cv--info ul:after,
+div section.il-cv .il-cv--content .il-cv--edu ul:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  margin: 0.15rem 0;
+  background: #bcbcbc;
+}
+
+div section.il-cv .il-cv--content .il-cv--sm-name {
+  font-size: 0.9rem;
+}
+
+div section.il-cv .il-cv--content .il-cv--edu ul li.il-cv--sm-name {
+  list-style: disc;
+  text-align: left;
+  margin-left: 0.15rem;
+  font-size: 0.85rem;
+}
+
+div section.il-cv .il-cv--content .il-cv--social {
+  max-width: 360px;
+  margin: 0.5rem auto;
+}
+
+div section.il-cv .il-cv--content .il-cv--social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-beatwen;
+      -ms-flex-align: space-beatwen;
+          align-items: space-beatwen;
+}
+
+div section.il-cv .il-cv--content .il-cv--social ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+div section.il-cv .il-cv--content .il-cv--social ul li a {
+  display: block;
+  color: #45cddd;
+}
+
 .il-intructors--cards {
   display: -ms-grid;
   display: grid;
@@ -11385,7 +11521,7 @@ $brand-vsh: 32px; */
 
 .il-instructor--content .il-card .il-card--header h4.il-card--header__title {
   margin: 0;
-  color: white;
+  color: #FCFAF1;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -11397,27 +11533,27 @@ $brand-vsh: 32px; */
 }
 
 .il-instructor--content .il-card:nth-child(1) {
-  background-color: #647588;
+  background-color: rgba(116, 114, 66, 0.9);
 }
 
 .il-instructor--content .il-card:nth-child(1) .il-card--header {
-  background-color: #7088a1;
+  background-color: rgba(167, 165, 101, 0.9);
 }
 
 .il-instructor--content .il-card:nth-child(2) {
-  background-color: #516880;
+  background-color: rgba(109, 108, 62, 0.9);
 }
 
 .il-instructor--content .il-card:nth-child(2) .il-card--header {
-  background-color: #5e758d;
+  background-color: rgba(173, 171, 111, 0.9);
 }
 
 .il-instructor--content .il-card:nth-child(3) {
-  background-color: #34495e;
+  background-color: rgba(103, 101, 58, 0.9);
 }
 
 .il-instructor--content .il-card:nth-child(3) .il-card--header {
-  background-color: #475e75;
+  background-color: rgba(182, 180, 127, 0.9);
 }
 
 .il-instructor--content .il-card .il-card--content {
