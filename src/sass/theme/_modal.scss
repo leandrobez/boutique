@@ -49,13 +49,13 @@ section.il-section--modal {
       transition: width height $modal-delay cubic-bezier(0.23, 1, 0.32, 1);
     }
     @media screen and (min-width: 501px) and (max-width: 768px) {
-      top: 40%;
+      top: 41%;
       width: $width-modal + ($width-modal/2.5);
       height: $width-modal + ($width-modal/2.5);
       transition: width height $modal-delay cubic-bezier(0.23, 1, 0.32, 1);
     }
     @media screen and (min-width: 769px) and (max-width: 1170px) {
-      top: 40%;
+      // top: 40%;
       width: $width-modal * 2;
       height: $width-modal * 2;
       transition: width height $modal-delay cubic-bezier(0.23, 1, 0.32, 1);

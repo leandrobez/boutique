@@ -3,7 +3,7 @@ form.il-form {
   border-radius: 3px;
   display: flex;
   & .il-form--fields {
-    padding: 0.35rem 0.5rem;
+    //padding: 0.35rem 0.5rem;
     width: 90%;
     margin: 0 5%;
     &.il-flex {
@@ -19,6 +19,10 @@ form.il-form {
     border: 1px solid $secondColor;
     background-color: $primaryColor;
     font-size: 0.85rem;
+    @media screen and (max-width: 768px) {
+      height: 1.6rem;
+      margin: 0.2rem 0;
+    }
     padding: 4px 4px;
     border-radius: 3px;
     transition: border 0.3s;
@@ -58,10 +62,10 @@ form.il-form {
       color: $primaryColor;
       font-size: 1.1rem;
       border: 1px solid $fortyColor;
-      padding: .25rem 1.4rem;
+      margin-bottom: 0.4rem;
       margin-left: 50%;
       @media screen and (min-width: 1171px) {
-      width: 300px;
+        width: 300px;
       }
       transform: translateX(-50%);
       outline: none;

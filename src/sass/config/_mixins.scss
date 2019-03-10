@@ -1,25 +1,33 @@
+@function getLeft($w) {
+  @return calc(100% - #{$w});
+}
+
+@function getHeaderHeight() {
+  @return calc(100% - #{$height-footer});
+}
+
 @mixin easeOut {
   transition: all 650ms ease-out;
 }
 
-@mixin big-img($img, $url){
+@mixin big-img($img, $url) {
   @if $img {
     background-image: $url;
     background-position: bottom center;
     background-size: cover;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     background-attachment: fixed;
   }
 }
 
-@mixin overlay($cl,$url-dott,$opacity){
-  content: "";
+@mixin overlay($cl, $url-dott, $opacity) {
+  content: '';
   background: $cl;
   width: 100%;
   height: 100%;
-  position:absolute;
-  top:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: $opacity;
   @if ($url-dott) {
     background-image: url($url-dott);

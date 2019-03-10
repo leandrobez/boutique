@@ -8,12 +8,12 @@
   & .il-content--portrait,
   & nav.il-content--nav {
     @include easeOut;
-    opacity: .5;
+    opacity: 0.5;
   }
-  &.il-show--header {    
+  &.il-show--header {
     @include easeOut;
     width: 100%;
-    height: 100%;
+    height: getHeaderHeight();
     left: 0;
     top: 0;
     & .il-content--portrait {
@@ -37,18 +37,18 @@
     opacity: 0;
     background: currentColor;
     & .il-avatar--portrait {
-      height: 140px;
-      width: 140px;
+      height: $avataSmall;
+      width: $avataSmall;
       border-radius: 50%;
       border: 1px solid $secondColor;
       @media screen and (min-width: 501px) {
-        height: 160px;
-        width: 160px;
+        height: $avatarMedium;
+        width: $avatarMedium;
         border: 2px solid $secondColor;
       }
       @media screen and (min-width: 768px) {
-        height: 170px;
-        width: 170px;
+        height: $avatarBig;
+        width: $avatarBig;
         border: 3px solid $secondColor;
       }
       background-image: $avatar-url;
@@ -59,13 +59,9 @@
   }
 
   & nav.il-content--nav {
-    @include easeOut;
-    height: 50%;
-    @media screen and(min-width: 768px){
-      height: 100%;
-      height: 100%;
-      background: lighten(#343434, 15%);
-    }
+    width: 100%;
+    height: 100%;
+    background: lighten(#343434, 15%);
     flex: 1;
     display: flex;
     justify-content: center;
@@ -83,7 +79,7 @@
           color: #f6cc8b;
           font-weight: bolder;
           font-family: 'Oswald', sans-serif;
-          font-size: 0.95rem;          
+          font-size: 0.95rem;
           @include easeOut;
           @media screen and (min-width: 501px) and (max-width: 768px) {
             font-size: 1.2rem;
@@ -140,17 +136,13 @@
     }
     &:after {
       content: '';
-      background: currentColor;
+      background: #3a372c;
       width: 100%;
       height: 100%;
       position: absolute;
       z-index: -1;
       top: 0;
       left: 0;
-      @media screen and (min-width: 500px) {
-        left: -50%;
-        width: 50%;
-      }
       opacity: 0.8;
       background-position: top center;
       background-repeat: repeat;

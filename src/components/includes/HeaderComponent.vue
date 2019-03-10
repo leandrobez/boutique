@@ -7,8 +7,8 @@
     </div>
     <div class="il-container il-header--container">
         <div class="il-container--wrapper">
-            <!--<div class="il-header--brand"></div>-->
-            <h1 class="il-title--brand il-color--text__very-dark">Kaizen</h1>
+            <div class="il-header--brand"></div>
+            <!--<h1 class="il-title--brand il-color--text__very-dark">Kaizen</h1>-->
         </div>
     </div>
     <div class="il-header--content">
@@ -17,7 +17,6 @@
                 <div class="il-avatar"></div>
             </div>
         </div>
-
         <nav class="il-content--nav">
             <ul class="il-menu--list">
                 <li class="il-menu--list__item" v-for="m in menu" :key="m.id">
@@ -27,7 +26,6 @@
                 </li>
             </ul>
         </nav>
-        
     </div>
 </header>
 </template>

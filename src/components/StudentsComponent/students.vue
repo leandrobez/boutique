@@ -8,7 +8,7 @@
                 <div class="il-box--items one-item">
                     <div class="il-item il-box il-color--background__dark">
                         <i class="il-pilates-icon flaticon-bicycle-position light"></i>
-                        <span>Os protagonistas.</span>
+                        <span class="il-color--text__very-light">Os protagonistas.</span>
                         <p class="il-color--text__gold">Contamos com professores com formação em Educação Física e Fisioterapia, além de possuirem vários cursos de epecialização. Nosso diferencial reside nos fundamentos estabelecidos pela POLESTAR EDUCATION® - referência em pilates no mundo - e nas bases científicas que regem a ginástica postural; a ginástica localizada; a musculação e o condicionamento cardiovascular.</p>
                     </div>
                 </div>
@@ -23,25 +23,20 @@
 </template>
 
 <script>
-import ilDepoiment from "./includes/depoiments.vue";
+import ilDepoiment from './includes/depoiments.vue';
 export default {
-    name: 'Student',
+  name: 'Student',
 
-    components: {
-        ilDepoiment
-    },
+  components: {
+    ilDepoiment
+  },
 
-    data() {
-        return {
-            whatIcon: 'il-pilates-icon flaticon-exercises-with-reformer',
-            
-        };
-    },
+  data() {
+    return {
+      whatIcon: 'il-pilates-icon flaticon-exercises-with-reformer'
+    };
+  },
 
-    
-
-    methods: {
-
-    }
+  methods: {}
 };
 </script>
