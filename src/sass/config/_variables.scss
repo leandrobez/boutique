@@ -2,9 +2,9 @@
 
 /*colors*/
 
-$primaryColor: #FCFAF1;
+$primaryColor: #fcfaf1;
 $primaryAccent: darken($primaryColor, 15%);
-$secondColor: #CACACA;
+$secondColor: #cacaca;
 $secondColorAccent: darken($secondColor, 15%);
 $thirtyColor: #e6dcab;
 $fortyColor: #52481f;
@@ -20,10 +20,10 @@ $textColorDark: darken($textColor, 15%);
 $textColorLightGray: lighten($fortyColor, 25%);
 
 //body
-
+$dark: #332f20;
 $colorBg: $primaryColor;
 $lines-bg: $secondColor;
-$colorBorder: #99823a;
+$colorBorder: rgb(224, 222, 195);
 
 /*STRUCTUE*/
 $max-width: 1344px;
@@ -41,13 +41,13 @@ $header-height: 17vh;
 $brandUrl: '../../public/images/theme/logokaizen189x88.png';
 $brandUrlSmall: '../../public/images/theme/logokaizen151x70.png';
 /*app*/
-$opacity-overlay: .6;
+$opacity-overlay: 0.5;
 $overlay-img: '../../public/images/theme/overlay.png';
-$app-overlay: rgba(132, 130, 75,.9);
+$app-overlay: rgba(138, 108, 43, 0.9);
 
 /*Other elements*/
 $back-body: #eee;
-$back-cards: rgba(132, 130, 75,.9);
+$back-cards: rgba(132, 130, 75, 0.9);
 
 /*footer*/
 $height-footer: 150px;
@@ -65,7 +65,7 @@ $back-footer-curriculum: lighten($back-footer, 10%);
 $back-footer-video: lighten($back-footer, 12%);
 $back-footer-bottom: $fortyColor;
 
-$back-header: rgba(darken($fortyColor, 0.85), .75);
+$back-header: rgba(darken($fortyColor, 0.85), 0.75);
 $back-portrait: $thirtyColor;
 $back-nav: $secondColor;
 $show-img-home: true;
@@ -125,4 +125,4 @@ $bck-alert-success: #6cb94d;
 $btn-background-color: $fortyColor;
 $btn-border-color: $primaryColor;
 $btn-border-color-hover: $fortyColorAccent;
-$btn-cards-background-color-hoover: lighten($btn-border-color-hover,20%);
+$btn-cards-background-color-hoover: lighten($btn-border-color-hover, 20%);

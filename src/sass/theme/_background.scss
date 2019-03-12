@@ -45,36 +45,46 @@
 }
 
 /**Backgrounds*/
-.il-color--background__default{
+.il-color--background__default {
   background: $primaryAccent;
 }
-.il-color--background__lighten{
+.il-color--background__lighten {
   background: white;
 }
-.il-color--background__light{
+.il-color--background__light {
   background: $secondColor;
 }
 
-.il-color--background__verylight{
+.il-color--background__verylight {
   background: $secondColorAccent;
 }
 
-.il-color--background__clean{
+.il-color--background__clean {
   background: #d0d1ab; ///lighten($secondColor,40%);
 }
 
-.il-color--background__modal{
-  background: rgba(255, 242, 231, 1); // rgb(180, 180, 137); // lighten($fortyColor, 25%);
+.il-color--background__modal {
+  background: rgba(
+    255,
+    242,
+    231,
+    1
+  ); // rgb(180, 180, 137); // lighten($fortyColor, 25%);
 }
 
-.il-color--background__modal-content{
+.il-color--background__modal-content {
   background: $thirtyColor;
 }
 
-.il-color--background__dark{
-  background: $fortyColor;
+.il-color--background__dark {
+  background: $dark;
 }
 
-.il-color--background__darken{
-  background: #343434; // #3a3939;
+.il-color--background__darken {
+  background: #110f08; // #3a3939;
 }
+/*.il-section--about:after {
+  content: '';
+
+  background: rgba(222, 222, 222, 0.1);
+}*/

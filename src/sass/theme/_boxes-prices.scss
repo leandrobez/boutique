@@ -9,11 +9,12 @@
   }
 
   & .il-plan {
-    border: 2px solid $colorBorder;
+    border: 2px solid $fortyColorAccent;
+    border-radius: 3px;
     justify-content: center;
     margin: 5px;
     padding: 10px;
-    text-align: center;    
+    text-align: center;
     display: flex;
     flex: 1;
     flex-wrap: wrap;

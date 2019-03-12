@@ -1,4 +1,4 @@
-.il-intructors--cards {
+/*.il-intructors--cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 0.95rem;
@@ -11,6 +11,7 @@
   & .il-cards {
     border: 2px solid $thirtyColorAccent;
     padding: 0.45rem;
+    border-radius: 3px;
     position: relative;
     & .il-cards--avatar {
       position: absolute;
@@ -74,4 +75,4 @@
       }
     }
   }
-}
+}*/

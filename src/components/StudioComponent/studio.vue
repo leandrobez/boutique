@@ -7,26 +7,16 @@
             <div class="il-box--items">
                 <div class="il-item il-box il-color--background__dark">
                   <i class="il-pilates-icon flaticon-exercises-with-body-arc light"></i>
-                  <p class="il-color--text__gold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum sint esse culpa repudiandae earum vero. A, magnam voluptatibus. Sunt, ex laboriosam maxime ratione, eligendi reiciendis similique aliquam voluptas qui ad aliquid. Debitis voluptatibus accusantium praesentium rem pariatur quasi. Error at dicta enim asperiores vero.</p>
+                  <p class="il-content--description il-color--text__gold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum sint esse culpa repudiandae earum vero. A, magnam voluptatibus. Sunt, ex laboriosam maxime ratione, eligendi reiciendis similique aliquam voluptas qui ad aliquid. Debitis voluptatibus accusantium praesentium rem pariatur quasi. Error at dicta enim asperiores vero.</p>
                 </div>
-                <!--<div class="il-item il-box il-color--background__modal">
-                  <img src="images/banners/banner-class2.png" alt="">
-                </div>-->
             </div>
         </div>
-        <!--<div class="il-space--content il-color--background__dark il-box">
-            <div class="il-header--box">
-                <i class="il-pilates-icon flaticon-exercises-with-chair"></i>--
-                <h4 class="il-section--sub-title il-color--text__light text-right">{{$parent.title}}</h4>
-            </div>
-            <p class="il-color--text__alt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-            </p>
-        </div>-->
     </div>
 </section>
 </template>
 
 <script>
+import anime from 'animejs';
 export default {
   name: 'Studio',
 
@@ -34,6 +24,21 @@ export default {
     return {
       whatIcon: 'il-pilates-icon flaticon-pilates-reformer'
     };
+  },
+  mounted() {
+    this.startAnime();
+  },
+  methods: {
+    startAnime() {
+      let showAnime = anime.timeline({
+        targets: '.il-item',
+        easing: 'easeInOutQuad'
+      });
+      showAnime.add({
+        opacity: ['0', '1'],
+        duration: 2000
+      });
+    }
   }
 };
 </script>

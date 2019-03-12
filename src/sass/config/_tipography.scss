@@ -1,12 +1,12 @@
 //Import fonts google
-@import url('https://fonts.googleapis.com/css?family=News+Cycle|Nunito:400,600|Oswald');
-
+@import url('https://fonts.googleapis.com/css?family=Dosis|Nunito:400,600|Oswald');
+//News+Cycle
 $heading-font: 'Nunito', sans-serif; // only 400 and 400i
 $h3-font: 'Oswald', sans-serif;
-$body-font: 'News Cycle', sans-serif;
+$body-font: 'Dosis', sans-serif;
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
@@ -31,18 +31,18 @@ h6 {
   margin: 0;
   &.il-section--title {
     @media screen and (max-width: 360px) {
-      font-size: 2.2rem;
+      font-size: 1.9rem;
       margin: 0;
       padding: 0;
       font-weight: 400;
     }
     @media screen and (min-width: 361px) and (max-width: 480px) {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin: 0;
       padding: 0;
     }
     @media screen and (min-width: 481px) and (max-width: 1024px) {
-      font-size: 3rem;
+      font-size: 2.7rem;
       margin: 0;
       padding: 0;
     }
@@ -130,42 +130,46 @@ h3 {
   font-family: $h3-font;
 }
 p {
-  font-family: $body-font;
-  font-size: .95rem;
+  //font-family: $heading-font;
+  font-size: 0.95rem;
   text-align: right;
   @media screen and (min-width: 480px) {
-    font-size: .98rem;
+    font-size: 0.98rem;
   }
-}
-p.il-content--description{
-  text-align: justify;
-  font-size: 1rem;
-}
-p.il-section--description {
-  font-size: 1.1rem;
-  width: 50%;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 4px;
-  position: relative;
-  text-align: right;
-  @media screen and (max-width: 360px) {
-    font-size: 1.2rem;
+  &.il-content--description {
+    text-align: justify;
+    font-size: 1.1rem;
+    height: 80%;
+    line-height: 1.2;
+    transition: font-size 400ms ease-in-out;
+    @media screen and (min-width: 501px) {
+      transition: font-size 400ms ease-in-out;
+      font-size: 1rem;
+    }
+    min-height: 140px;
   }
-  @media screen and (min-width: 361px) and (max-width: 480px) {
-    font-size: 1.3rem;
+  &.il-section--description {
+    font-size: 1.1rem;
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+    position: relative;
+    text-align: right;
+    @media screen and (max-width: 360px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (min-width: 361px) and (max-width: 480px) {
+      font-size: 1.3rem;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 1.45rem;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      border-bottom: 2px solid white;
+    }
   }
-  &:after {
-    content: '';
-    position: absolute;
-    top: 1.45rem;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    border-bottom: 2px solid white;
-  }
-}
-a {
-  color: $primaryColor;
-  text-decoration: none;
 }

@@ -1,13 +1,18 @@
 .il-instructor--content {
   padding: 0.45rem 0;
-  margin: 2rem auto;
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
   justify-content: center;
   & .il-card {
     flex: 1;
     display: flex;
     flex-direction: column;
     margin: 0 0.25rem;
+    border: 2px solid $thirtyColorAccent;
+    border-radius: 3px;
     & .il-card--header {
       display: flex;
       width: 100%;
@@ -33,19 +38,19 @@
     &:nth-child(1) {
       background-color: darken($back-cards, 5%);
       & .il-card--header {
-        background-color:lighten($back-cards, 12%);
+        background-color: lighten($back-cards, 12%);
       }
     }
     &:nth-child(2) {
       background-color: darken($back-cards, 7%);
       & .il-card--header {
-        background-color:lighten($back-cards, 15%);
+        background-color: lighten($back-cards, 15%);
       }
     }
     &:nth-child(3) {
       background-color: darken($back-cards, 9%);
       & .il-card--header {
-        background-color:lighten($back-cards, 20%);
+        background-color: lighten($back-cards, 20%);
       }
     }
     & .il-card--content {
