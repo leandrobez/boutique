@@ -1,43 +1,80 @@
 .il-videos--content {
   position: relative;
-  &.il-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 110px));
-    grid-column-gap: 4px;
-    @media screen and (min-width: 501px) and (max-width: 768px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
-      grid-column-gap: 6px;
-    }
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
-      grid-column-gap: 8px;
-    }
-    @media screen and (min-width: 1171px) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 170px));
-      grid-column-gap: 9px;
-    }
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
   }
-
-  & .il-videos--cards {
-    padding: 0.15rem;
+  justify-content: center;
+  & .il-card--video {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    & .il-cards--caption {
-      padding: 0.35rem 0;
-      color: #533606;
-      min-height: 4rem;
-      font-size: .75rem;
-      @media screen and (min-width: 501px) and (max-width: 768px) {
-        font-size: .85rem;
+    margin: 0 0.25rem;
+    border: 2px solid $thirtyColorAccent;
+    border-radius: 3px;
+    & .il-card--header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      flex: 1 0 auto;
+      //padding: 0.45rem 0.35rem;
+      & h4.il-card--header__title {
+        margin: 0;
+        color: $primaryColor;
+        font-weight: 400;
+        text-transform: uppercase;
       }
-      @media screen and (min-width: 1171px) {
-        font-size: .9rem;
+      & img {
+        display: block;
       }
     }
-    & .il-cards--bottom {
-      padding-bottom: 0.45rem;
-      text-align: center;
+    &:nth-child(1) {
+      background-color: darken($back-cards, 5%);
+      & .il-card--header {
+        background-color: lighten($back-cards, 12%);
+      }
+    }
+    &:nth-child(2) {
+      background-color: darken($back-cards, 7%);
+      & .il-card--header {
+        background-color: lighten($back-cards, 15%);
+      }
+    }
+    &:nth-child(3) {
+      background-color: darken($back-cards, 9%);
+      & .il-card--header {
+        background-color: lighten($back-cards, 20%);
+      }
+    }
+    &:nth-child(4) {
+      background-color: darken($back-cards, 11%);
+      & .il-card--header {
+        background-color: lighten($back-cards, 23%);
+      }
+    }
+    &:nth-child(5) {
+      background-color: darken($back-cards, 14%);
+      & .il-card--header {
+        background-color: lighten($back-cards, 25%);
+      }
+    }
+    & .il-card--content {
+      padding: 0;
+      p.il-card--description {
+        padding: 0 0.35rem;
+        font-size: 0.85rem;
+        text-align: justify;
+        letter-spacing: 1px;
+      }
+    }
+    & .il-card--footer {
+      padding: 0.35rem 0;
+      display: flex;
+      justify-content: flex-end;
+      flex-shrink: 0;
       & span.il-btn--video {
         margin: auto;
         width: 40px;
@@ -56,8 +93,74 @@
           transform: scale(1.1);
         }
       }
+      & i {
+        text-align: center;
+        position: relative;
+        right: 1rem;
+        border: 1px solid $textColorVeryLight;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 29px;
+        cursor: pointer;
+        &:hover {
+          background: $textColorGold;
+          color: $textColor;
+        }
+        &.moveRight {
+          animation-name: moveRight;
+          animation-duration: 0.2s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in;
+        }
+
+        @keyframes moveRight {
+          from {
+            right: 20px;
+          }
+          to {
+            right: 15px;
+          }
+        }
+
+        &.moveLeft {
+          animation-name: moveLeft;
+          animation-duration: 0.4s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out;
+        }
+
+        @keyframes moveLeft {
+          from {
+            right: 15px;
+          }
+          to {
+            right: 20px;
+          }
+        }
+      }
     }
   }
+
+  /*position: relative;
+  &.il-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 110px));
+    grid-column-gap: 4px;
+    @media screen and (min-width: 501px) and (max-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 120px));
+      grid-column-gap: 6px;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
+      grid-column-gap: 8px;
+    }
+    @media screen and (min-width: 1171px) {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 170px));
+      grid-column-gap: 9px;
+    }
+    justify-content: center;
+  }*/
 }
 .il-player {
   position: absolute;
@@ -105,6 +208,30 @@
     transition: width 0.15s ease;
   }
 }
+/* & .il-videos--cards {
+    padding: 0.15rem;
+    display: flex;
+    flex-direction: column;
+    & .il-cards--caption {
+      padding: 0.35rem 0;
+      color: #533606;
+      min-height: 4rem;
+      font-size: .75rem;
+      @media screen and (min-width: 501px) and (max-width: 768px) {
+        font-size: .85rem;
+      }
+      @media screen and (min-width: 1171px) {
+        font-size: .9rem;
+      }
+    }
+    & .il-cards--bottom {
+      padding-bottom: 0.45rem;
+      text-align: center;
+      
+    }
+  }
+}
+ */
 
 @keyframes pulse {
   0% {

@@ -9,10 +9,10 @@
 
             <div class="il-class--content">
                 <div class="il-box--items one-item">
-                    <div class="il-item il-box il-color--background__dark">
+                    <div class="il-item il-box il-color--background__lighten">
                         <i class="il-pilates-icon flaticon-side-bend-posture light"></i>
-                        <span>Por quê?</span>
-                        <p class="il-content--description il-color--text__gold">Porque aqui na <b>{{$parent.title}}</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui o foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>
+                        <span class="il-color--text">Por quê?</span>
+                        <p class="il-content--description il-color--text">Porque aqui na <b>{{$parent.title}}</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui o foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>
                     </div>
                 </div>
             </div>
@@ -22,26 +22,9 @@
         <div class="il-container--wrapper">
             <h2 class="il-section--sub-title il-color--text__very-light text-right">Escolha um plano de aula:</h2>
             <div class="il-pricing--grid">
-                <div class="il-plan il-color--background__lighten plan1">
-                    <h2 class="il-color--text__dark">1 X Semana</h2>
-                    <p class="il-price il-color--text__accent">R$ 250,00 <span>por mês</span></p>
-                    <p class="il-description il-color--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita molestiae nisi vel placeat, corrupti fuga assumenda non dolor cupiditate aperiam.</p>
-
-                    <a href="#" class="il-btn il-btn--cards button">Inscreva-se</a>
-                </div>
-                <div class="il-plan il-color--background__lighten plan2">
-                    <h2 class="il-color--text__dark">2 X Semana</h2>
-                    <p class="il-price il-color--text__accent">R$ 480,00 <span>por mês</span></p>
-                    <p class="il-description il-color--text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, natus voluptas. Reiciendis, qui voluptas? Nostrum officia quod enim labore pariatur.</p>
-                    <a href="#" class="il-btn il-btn--cards button">Inscreva-se</a>
-                </div>
-
-                <div class="il-plan il-color--background__lighten plan3">
-                    <h2 class="il-color--text__dark">3 X Semana</h2>
-                    <p class="il-price il-color--text__accent">R$ 720,00 <span>por mês</span></p>
-                    <p class="il-description il-color--text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, modi? Adipisci corporis laborum odit aliquam dolores quasi neque, distinctio harum.</p>
-                    <a href="#" class="il-btn il-btn--cards button">Inscreva-se</a>
-                </div>
+              <ilCards v-for="plan in plans" :key="plan.key" :id="plan.id"
+                :condicions="plan.condicions" :price="plan.value" 
+                :text="plan.text" />
             </div>
         </div>
     </section>
@@ -49,47 +32,39 @@
 </template>
 
 <script>
-import anime from 'animejs';
+import ilCards from './includes/cards.vue';
 export default {
   name: 'Class',
-
+  components: {
+    ilCards
+  },
   data() {
     return {
-      whatIcon: 'il-pilates-icon flaticon-exercises-with-chair'
+      whatIcon: 'il-pilates-icon flaticon-exercises-with-chair',
+      plans: [
+        {
+          id: '1',
+          key: 0,
+          condicions: 1,
+          value: 250,
+          message: ''
+        },
+        {
+          id: '2',
+          key: 1,
+          condicions: 2,
+          value: 480,
+          message: ''
+        },
+        {
+          id: '3',
+          key: 2,
+          condicions: 3,
+          value: 720,
+          message: ''
+        }
+      ]
     };
-  },
-  mounted() {
-    this.startAnime();
-  },
-  methods: {
-    startAnime() {
-      let init = 2000;
-      let include = 250;
-      let showAnimeItem = anime.timeline({
-        targets: '.il-item',
-        easing: 'easeInOutQuad'
-      });
-      showAnimeItem.add({
-        opacity: ['0', '1'],
-        duration: init
-      });
-      let showAnime = anime.timeline({
-        targets: '.plan1',
-        opacity: ['0', '1'],
-        duration: 2500
-      });
-      showAnime
-        .add({
-          targets: '.plan2',
-          opacity: ['0', '1'],
-          delay: include
-        })
-        .add({
-          targets: '.plan3',
-          opacity: ['0', '1'],
-          delay: 2 * include
-        });
-    }
   }
 };
 </script>

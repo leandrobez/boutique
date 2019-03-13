@@ -8,12 +8,26 @@ i.il-pilates-icon {
   line-height: 2.4rem;
   border-radius: 50%;
   border: 1px solid $thirtyColor;
+  cursor: pointer;
+  transition: all 750ms ease;
+  opacity: 1;
+  &:hover {
+    transition: all 750ms ease;
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  &.no-border {
+    border: none !important;
+    border-radius: 0;
+  }
   &.light {
-    border: 1px solid $thirtyColor;
-    color: $thirtyColor;
+    //border: 2px solid $fortyColorAccent;
+    color: $textColor;
+    background: $colorBorder !important;
   }
   &.dark {
-    border: 2px solid $fortyColor;
-    color: $fortyColor;
+    //border: 2px solid $thirtyColor;
+    color: $primaryAccent;
+    background: $fortyColorAccent !important;
   }
 }

@@ -32,10 +32,9 @@ export default {
     this.startAnime();
   },
   methods: {
-      
     startAnime() {
-        let init = 400
-      let include = 100
+      let init = 400;
+      let include = 100;
       let showAnime = anime.timeline({
         targets: '.il-card--0',
         easing: 'easeInOutQuad'
@@ -52,7 +51,7 @@ export default {
       showAnime.add({
         targets: '.il-card--2',
         opacity: ['0', '1'],
-        duration: init + 2*include
+        duration: init + 2 * include
       });
     },
     animateRight() {
