@@ -1,0 +1,71 @@
+{
+  "studio": [
+    {
+      "type": "",
+      "caption": "foto 1",
+      "photo": "1"
+    },
+    {
+      "type": "il-item--large",
+      "caption": "foto 2",
+      "photo": "2"
+    },
+    {
+      "type": "",
+      "caption": "foto 3",
+      "photo": "3"
+    },
+    {
+      "type": "il-item--large",
+      "caption": "foto 4",
+      "photo": "4"
+    },
+    {
+      "type": "il-item--medium",
+      "caption": "foto 5",
+      "photo": "5"
+    },
+    {
+      "type": "il-item--large",
+      "caption": "foto 6",
+      "photo": "6"
+    },
+    {
+      "type": "il-item--medium",
+      "caption": "foto 7",
+      "photo": "7"
+    }
+  ],
+  "eventos": [
+    {
+      "type": "",
+      "caption": "evento nr 1",
+      "photo": "1"
+    },
+    {
+      "type": "il-item--large",
+      "caption": "evento nr 2",
+      "photo": "2"
+    },
+    {
+      "type": "il-item--large",
+      "caption": "evento nr 3",
+      "photo": "3"
+    },
+    {
+      "type": "",
+      "caption": "evento nr 4",
+      "photo": "4"
+    },
+    {
+      "type": "il-item--medium",
+      "caption": "evento nr 5",
+      "photo": "5"
+    },
+    {
+      "type": "",
+      "caption": "evento nr 6",
+      "photo": "6"
+    }
+  ]
+}

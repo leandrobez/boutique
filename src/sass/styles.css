@@ -11286,30 +11286,27 @@ a {
 
 .il-header .il-header--brand {
   position: absolute;
-  width: 189px;
-  height: 88px;
+  width: 172px;
+  height: 83px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 70px;
-  background-image: url("../../public/images/theme/logokaizen189x88.png");
+  top: 42px;
+  background-image: url("../../public/images/theme/logokaizen172x83.png");
+  /*@media screen and(min-width: 768px) {
+    position: relative;
+    width: $brand-swsmall;
+    height: $brand-shsmall;
+    left: getLeft($brand-swsmall);
+    top: 0;
+    background-image: url($brandUrlSmall);
+  }*/
   cursor: pointer;
   -webkit-transition: all 650ms ease-out;
   transition: all 650ms ease-out;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-@media screen and (min-width: 768px) {
-  .il-header .il-header--brand {
-    position: relative;
-    width: 151px;
-    height: 70px;
-    left: calc(100% - 151px);
-    top: 0;
-    background-image: url("../../public/images/theme/logokaizen151x70.png");
-  }
 }
 
 .il-header .il-header--brand:hover {
@@ -12254,122 +12251,230 @@ section.il-section--videos .il-player.show .il-video--youtube i {
   }
 }
 
-section.il-section--gallery h4 {
-  width: 100%;
-  border-bottom: 1px solid #e0dec3;
-}
-
-.il-gallery {
-  padding: 0.45rem .25rem;
-  max-width: 986px;
-  margin: auto;
+.il-photos {
   display: -ms-grid;
   display: grid;
-  grid-gap: 15px;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 150px;
-  grid-auto-flow: row dense;
-  opacity: .7;
+  height: calc(100vh - 10px);
+  -ms-grid-rows: (1fr)[6];
+  -ms-grid-columns: (1fr)[6];
+      grid-template: repeat(6, 1fr)/repeat(6, 1fr);
+  grid-gap: 0.5rem;
 }
 
-.il-gallery--item {
+@media (max-width: 800px) {
+  .il-photos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .il-photos > div {
+    width: 48%;
+    margin: 1%;
+  }
+}
+
+@media (max-width: 800px) and (max-width: 350px) {
+  .il-photos > div {
+    width: 98%;
+  }
+}
+
+.il-photos > div:nth-child(6n + 1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.il-photos > div:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.il-photos > div:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.il-photos > div > a {
+  opacity: 0;
+  position: absolute;
+  color: #000;
+  background-color: #000;
+  font: bold 4em 'Helvetica';
+  text-shadow: 0 -1px 5px #fff, -1px 0px 5px #fff, 0 1px 5px #fff, 1px 0px 5px #fff;
+  padding: 2rem;
+  mix-blend-mode: difference;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.il-photos > div > img {
+  width: 100%;
+  min-height: 100%;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.il-photos > div:hover img {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+.il-photos > div:hover a {
+  opacity: 1;
+}
+
+.il-photos > div {
+  overflow: hidden;
   position: relative;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.il-photos div,
+.il-photos a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: #0c9a9a;
-  -ms-grid-column: auto;
-      grid-column-start: auto;
-  -ms-grid-row: auto;
-      grid-row-start: auto;
-  background-size: cover;
-  background-position: center center;
-  -webkit-box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
-          box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  cursor: pointer;
-  counter-increment: item-counter;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
 }
 
-.il-gallery--item__details {
+div > [id^="lightbox-"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-transition: opacity 450ms ease-in-out;
+  transition: opacity 450ms ease-in-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+}
+
+div > [id^="lightbox-"]:target {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+div > [id^="lightbox-"]:target img {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+div > [id^="lightbox-"] .content {
+  max-width: 60%;
   position: relative;
-  z-index: 1;
-  padding: 15px;
-  color: #271a1a;
-  background: #e9c074;
-  text-transform: lowercase;
-  letter-spacing: 1px;
+  color: #fff;
 }
 
-.il-gallery--item__details:before {
-  content: counter(item-counter);
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding-right: 0.5em;
-  color: #ca7411;
+div > [id^="lightbox-"] .content:hover > a.close {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
-.il-gallery--item:before {
-  content: counter(item-counter);
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding-right: 0.5em;
-  color: #ca7411;
+div > [id^="lightbox-"] .content:hover > .title {
+  opacity: 1;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
-.il-gallery--item:after {
-  content: '';
+div > [id^="lightbox-"] .content:hover > .title::after {
+  opacity: 1;
+}
+
+div > [id^="lightbox-"] .content > * {
+  -webkit-transition: all 450ms ease-in-out;
+  transition: all 450ms ease-in-out;
+}
+
+div > [id^="lightbox-"] .title {
+  display: block;
+  margin: 0;
+  padding: 1em;
   position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.3;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.il-gallery--item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.il-gallery--item:hover:after {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  font-size: 1.5em;
   opacity: 0;
 }
 
-.il-gallery--item.il-item--medium {
-  -ms-grid-row-span: 2;
-      grid-row-end: span 2;
+div > [id^="lightbox-"] .title::after {
+  content: ' ';
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all 350ms ease-in-out 250ms;
+  transition: all 350ms ease-in-out 250ms;
+  opacity: 0;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  mix-blend-mode: soft-light;
 }
 
-.il-gallery--item.il-item--large {
-  -ms-grid-row-span: 3;
-      grid-row-end: span 3;
+div > [id^="lightbox-"] img {
+  max-height: 90vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
 }
 
-.il-gallery--item.il-item--full {
-  grid-column-end: auto;
+div > [id^="lightbox-"] a.close {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  opacity: 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  text-decoration: none;
+  color: #fff;
 }
 
-@media screen and (min-width: 768px) {
-  .il-gallery--item.il-item--full {
-    grid-column: 1/-1;
-    -ms-grid-row-span: 2;
-        grid-row-end: span 2;
-  }
+div > [id^="lightbox-"] a.close::after {
+  content: 'X';
 }
 
 section.il-section--submission {

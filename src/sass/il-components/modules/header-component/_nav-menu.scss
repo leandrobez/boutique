@@ -47,11 +47,11 @@
 }
 
 /* logo*/
-$brand-sw: 189px;
-$brand-sh: 88px;
+$brand-sw: 172px;
+$brand-sh: 83px;
 /* logo*/
-$brand-swsmall: 151px;
-$brand-shsmall: 70px;
+$brand-swsmall: 86px;
+$brand-shsmall: 42px;
 .il-header--brand {
   position: absolute;
   width: $brand-sw;
@@ -60,14 +60,14 @@ $brand-shsmall: 70px;
   transform: translateX(-50%);
   top: $brand-shsmall;
   background-image: url($brandUrl);
-  @media screen and(min-width: 768px) {
+  /*@media screen and(min-width: 768px) {
     position: relative;
     width: $brand-swsmall;
     height: $brand-shsmall;
     left: getLeft($brand-swsmall);
     top: 0;
     background-image: url($brandUrlSmall);
-  }
+  }*/
   cursor: pointer;
   @include easeOut;
   background-position: center;

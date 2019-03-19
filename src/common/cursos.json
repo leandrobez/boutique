@@ -1,0 +1,92 @@
+[
+  {
+    "data": "30 a 31 de Março",
+    "name": "Equipamentos",
+    "id": "1",
+    "local": "Curitiba - PR"
+  },
+  {
+    "data": "06 a 07 de Abril",
+    "name": "CoreAlign Fundações",
+    "id": "2",
+    "local": "São Paulo - SP"
+  },
+  {
+    "data": "27 e 28 de Abril",
+    "name": "CoreAlign Fundações",
+    "id": "3",
+    "local": "Londrina - PR"
+  },
+  {
+    "data": "25 e 26 de Maio",
+    "name": "CoreAlign Fundações",
+    "id": "4",
+    "local": "Porto Alegre - RS"
+  },
+  {
+    "data": "15 a 16 de Julho",
+    "name": "CoreAlign Fundações",
+    "id": "5",
+    "local": "Rio de Janeiro - RJ"
+  },
+  {
+    "data": "29 e 30 de Junho",
+    "name": "CoreAlign Progressões",
+    "id": "6",
+    "local": "São Paulo - SP"
+  },
+  {
+    "data": "20 a 21 de Julho",
+    "name": "CoreAlign Progressões",
+    "id": "7",
+    "local": "Londrina - PR"
+  },
+  {
+    "data": "03 a 04 de Agosto",
+    "name": "CoreAlign Fundações",
+    "id": "8",
+    "local": "Recife - PE"
+  },
+  {
+    "data": "09 a 10 de Agosto",
+    "name": "CoreAlign Fundações",
+    "id": "9",
+    "local": "Salvador - BA"
+  },
+  {
+    "data": "31 de Agosto a 01 de Setembro",
+    "name": "CoreAlign Progressões",
+    "id": "10",
+    "local": "Porto Alegre - RS"
+  },
+  {
+    "data": "13 a 15 de Setembro",
+    "name": "Conferência",
+    "id": "11",
+    "local": "Salvador - BA"
+  },
+  {
+    "data": "28 a 29 de Setembro",
+    "name": "Exame de CoreAlign",
+    "id": "12",
+    "local": "São Paulo - SP"
+  },
+  {
+    "data": "19 a 20 de Outubro",
+    "name": "CoreAlign Progressões",
+    "id": "13",
+    "local": "Rio de Janeiro - RJ"
+  },
+  {
+    "data": "09 a 10 de Novembro",
+    "name": "Exame de CoreAlign",
+    "id": "14",
+    "local": "Londrina - PR"
+  },
+  {
+    "data": "23 a 24 de Novembro",
+    "name": "Exame de CoreAlign",
+    "id": "15",
+    "local": "Porto Alegre - RS"
+  }
+]

@@ -12,7 +12,7 @@
 export default {
     name: 'StudioGallery',
 
-    data() {
+    data () {
         return {
             gallery: [{
                     type: '',
@@ -53,7 +53,7 @@ export default {
         };
     },
 
-    mounted() {
+    mounted () {
       this.$parent.title = "do Studio";
     },
 
