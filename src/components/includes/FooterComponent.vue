@@ -26,7 +26,7 @@
 			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-party-mode"></i>
-					<a href="#!" class="il-footer--list il-color--text__very-light"  title="Veja fotos do studio">cursos</a>
+					<router-link :to="{name: 'curse'}" class="il-footer--list il-color--text__very-light" title="Calendário de cursos">cursos</router-link>
 				</h4>
 			</div>
 
@@ -41,7 +41,7 @@
 
 	<div class="il-footer--bottom">
 		<div class="il-footer--copy">
-			<span class="il-color--text__light">design by <a href="http://www.internetlojas.com" target="_blank" class="il-color--text__very-light">www.internetlojas.com</a></span>
+			<span class="il-color--text">design by <a href="http://www.internetlojas.com" target="_blank" class="il-color--text__very-dark">www.internetlojas.com</a></span>
 		</div>
 	</div>
 </div>
@@ -101,6 +101,11 @@ export default {
         case 'advantage':
           currentFooter = 'il-advantage';
           this.whereIAm = 'vantagens';
+          this.whatIcon = 'il-pilates-icon flaticon-pilates-equipment';
+          break;
+        case 'curse':
+          currentFooter = 'il-curse';
+          this.whereIAm = 'Cursos';
           this.whatIcon = 'il-pilates-icon flaticon-pilates-equipment';
           break;
         case 'video':

@@ -23,21 +23,7 @@ export default {
     },
     methods: {
         runVideo(i) {
-            let movie = this.$parent.videos[i];
-            console.log(movie);
-            let playerSetup = {
-                size: movie.youtube.width,
-                height: movie.youtube.width * 0.5625,
-                controls: 'controls',
-                allowfullscreen: 'allowfullscreen',
-                autoplay: false,
-                preload: 'auto',
-                techOrder: ['youtube'],
-                sources: [{
-                    type: 'video/youtube',
-                    src: 'https://www.youtube.com/embed/' + movie.youtube.cod
-                }]
-            };
+            this.$parent.setTrailer(i)
         }
     }
 };

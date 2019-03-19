@@ -1,7 +1,7 @@
 <template>
 <div id="app" :class="getBigImg()">
-    <!--VIDEO BACK-->
-    <ilVideoBack v-if="hasVideoBackground" />
+    <!--VIDEO BACK--
+    <ilVideoBack v-if="hasVideoBackground" />-->
 
     <!--HEADER-->
     <ilHeader :class="isActive()" />

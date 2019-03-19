@@ -16,6 +16,7 @@ import Gallery from './components/GalleryComponent/GalleryComponent.vue';
 import studioGallery from './components/GalleryComponent/includes/studioGallery.vue';
 import eventsGallery from './components/GalleryComponent/includes/eventsGallery.vue';
 import formSubmission from './components/includes/SubmissionForms.vue';
+import Curses from './components/includes/cursosComponent.vue';
 Vue.use(Router);
 
 export default new Router({
@@ -66,6 +67,11 @@ export default new Router({
       path: '/videos',
       name: 'video',
       component: Video
+    },
+    {
+      path: '/cursos',
+      name: 'curse',
+      component: Curses
     },
     {
       path: '/albuns',

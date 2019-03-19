@@ -22,7 +22,7 @@ footer.il-footer {
         max-width: 200px;
         height: 70px;
         display: grid;
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
         & span {
           display: block;
           text-transform: uppercase;
@@ -36,19 +36,18 @@ footer.il-footer {
         justify-content: center;
         & .il-footer--col {
           flex: 1;
-          & h4.il-footer--title{
+          & h4.il-footer--title {
             text-align: center;
             display: flex;
             flex-direction: column;
-            @media screen and (min-width: 680px){
+            @media screen and (min-width: 680px) {
               flex-direction: row;
             }
             line-height: 24px;
             justify-content: center;
-            padding: 0 .15rem;
+            padding: 0 0.15rem;
             & a {
-              font-size: .85rem;
-              
+              font-size: 0.85rem;
             }
           }
         }
@@ -56,19 +55,21 @@ footer.il-footer {
       &.il-home {
         background: $back-footer-home;
       }
-
+      &.il-curse {
+        background: $back-footer-curse;
+      }
       &.il-curriculum {
         background: $back-footer-curriculum;
       }
-    
+
       &.il-about {
         background: $back-footer-about;
       }
-    
+
       &.il-studio {
         background: $back-footer-studio;
       }
-    
+
       &.il-class {
         background: $back-footer-class;
       }
@@ -93,11 +94,15 @@ footer.il-footer {
       text-align: center;
       height: 100%;
       background: $back-footer-bottom;
-      border-top: 1px solid darken($back-footer,10%);
+      border-top: 1px solid darken($back-footer, 10%);
+      font-weight: bolder;
       & .il-footer--copy {
         line-height: 29px;
-        & a {
-          font-weight: 100;
+        & span {
+          margin-right: 0.35rem;
+          & a {
+            text-transform: uppercase;
+          }
         }
       }
     }
