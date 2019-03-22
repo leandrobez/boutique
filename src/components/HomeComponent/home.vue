@@ -11,9 +11,9 @@
                 <p class="il-color--text__very-light"><i class="mdi mdi-earth mdi-12px"></i>Porto Alegre - RS</p>
                 <p class="il-color--text__very-light"><i class="mdi mdi-email-variant mdi-12px"></i>contato@kaizenpilates.com</p>
             </div>
-            <div class="il-home--slide il-absolute">
-                <!--<img src="images/banners/banner-class2.png" alt="">-->
-            </div>
+            <!--<div class="il-home--slide il-absolute">
+                <img src="images/banners/banner-class2.png" alt="">--
+            </div>-->
         </div>
         <div class="il-icons">
             <a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('fb')"><i class="mdi mdi-facebook mdi-48px"></i></a>
@@ -26,37 +26,46 @@
 
 <script>
 export default {
-    name: "Home",
-    
-    data() {
-        return {
-            whatIcon: "il-pilates-icon flaticon-precision-posture",
-            phone: {
-                ddd: '51',
-                number: '99999-9999'
-            }
-        }
-    },
+  name: 'Home',
 
-    methods: {
-        socialNetOpen (path) {
-            let w = 626, h = 436;
-            let urlFb = 'https://www.facebook.com/BusqueFilme/?ref=bookmarks'
-            let urlFbShare = 'https://www.facebook.com/sharer/sharer.php?u='
-            let urlIn = 'http://instagram.com/claumuraguti?ref=badge'
-            let urlGo = 'https://plus.google.com/u/0/114144280855980132006'
-            switch(path){
-                case 'fb':
-                    window.open(urlFbShare + encodeURIComponent(urlFb),"fb-follow",`"width=${w},height=${h}"`)
-                    break
-                case 'in':
-                    window.open(urlIn,"instagram-share-dialog",`"width=${w},height=${h}"`)
-                    break
-                case 'go':
-                    window.open(urlGo,"google-share-dialog",`"width=${w},height=${h}"`)
-                    break
-            }
-        }
+  data() {
+    return {
+      whatIcon: 'il-pilates-icon flaticon-precision-posture',
+      phone: {
+        ddd: '51',
+        number: '99999-9999'
+      }
+    };
+  },
+
+  methods: {
+    socialNetOpen(path) {
+      let w = 626,
+        h = 436;
+      let urlFb = 'https://www.facebook.com/BusqueFilme/?ref=bookmarks';
+      let urlFbShare = 'https://www.facebook.com/sharer/sharer.php?u=';
+      let urlIn = 'http://instagram.com/claumuraguti?ref=badge';
+      let urlGo = 'https://plus.google.com/u/0/114144280855980132006';
+      switch (path) {
+        case 'fb':
+          window.open(
+            urlFbShare + encodeURIComponent(urlFb),
+            'fb-follow',
+            `"width=${w},height=${h}"`
+          );
+          break;
+        case 'in':
+          window.open(
+            urlIn,
+            'instagram-share-dialog',
+            `"width=${w},height=${h}"`
+          );
+          break;
+        case 'go':
+          window.open(urlGo, 'google-share-dialog', `"width=${w},height=${h}"`);
+          break;
+      }
     }
-}
+  }
+};
 </script>

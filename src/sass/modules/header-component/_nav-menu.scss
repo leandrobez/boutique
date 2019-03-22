@@ -9,7 +9,12 @@
   border: 1px solid $primaryColor;
   padding: 7px 0;
   cursor: pointer;
+  border-radius: 3px;
   @include easeOut;
+  &:hover {
+    @include easeOut;
+    background: $fortyColor;
+  }
   &.radius {
     border-radius: 50%;
     background: $secondColorAccent;
@@ -46,35 +51,38 @@
   }
 }
 
-/* logo*/
-$brand-sw: 172px;
-$brand-sh: 83px;
-/* logo*/
-$brand-swsmall: 86px;
-$brand-shsmall: 42px;
 .il-header--brand {
   position: absolute;
   width: $brand-sw;
   height: $brand-sh;
   left: 50%;
   transform: translateX(-50%);
-  top: $brand-shsmall;
+  top: 50px;
   background-image: url($brandUrl);
-  /*@media screen and(min-width: 768px) {
-    position: relative;
-    width: $brand-swsmall;
-    height: $brand-shsmall;
-    left: getLeft($brand-swsmall);
-    top: 0;
-    background-image: url($brandUrlSmall);
-  }*/
   cursor: pointer;
-  @include easeOut;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  @include easeOut;
+  //animation: breathe infinite 3000ms;
   &:hover {
     @include easeOut;
-    opacity: 0.9;
+    @media screen and(max-width:480px) {
+      transform: scale(0.8);
+      left: 28%;
+    }
+  }
+}
+
+@keyframes breathe {
+  0% {
+    @include easeOut;
+    transform: scale(1);
+    left: 50%;
+  }
+  100% {
+    @include easeOut;
+    transform: scale(0.8);
+    left: 38%;
   }
 }

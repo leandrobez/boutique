@@ -2,64 +2,58 @@
 =            Boutique Pilates - ESTILOS            =
 ==================================================*/
 
-@import 'il-components/base/normalize';
+@import 'base/normalize';
 @include normalize();
 /*<!--===============================
 =            ICONS            =
 ================================-->*/
-@import './mdi/materialdesignicons';
-@import './fi/flaticon';
-/*<!--===============================
-=            VARIABLES            =
-================================-->*/
-@import './config/variables';
-/*<!--===============================
-=            MIXINS            =
-================================-->*/
-@import 'config/mixins';
-
-/*<!--===============================
-=            THEMES            =
-================================-->*/
-@import 'theme/alert';
-@import 'theme/colors';
-@import 'theme/background';
-@import 'theme/buttons';
-@import 'theme/modal';
-@import 'theme/form';
-@import 'theme/table';
-@import 'theme/video';
-@import 'theme/images';
-@import 'theme/icons';
-@import 'theme/boxes';
-@import 'theme/cv';
-@import 'theme/cards';
-@import 'theme/boxes-prices';
-/*<!--===============================
-=            GRID            =
-================================-->*/
-@import 'il-components/grid/main';
+@import 'mdi/materialdesignicons';
+@import 'fi/flaticon';
 /*<!--===============================
 =            CONFIG            =
 ================================-->*/
+@import 'config/variables';
+@import 'config/mixins';
 @import 'config/tipography';
 /*<!--===============================
-=            LAYOUT            =
+=            LAYOUT                 =
 ================================-->*/
 @import 'layout/geral';
 /*<!--===============================
+=            GRID            =
+================================-->*/
+@import 'grid/main';
+/*<!--===============================
+=            THEMES                 =
+================================-->*/
+@import 'theme/background';
+@import 'theme/colors';
+@import 'theme/modal';
+@import 'theme/boxes';
+@import 'theme/boxes-prices';
+@import 'theme/buttons';
+@import 'theme/icons';
+@import 'theme/table';
+@import 'theme/form';
+@import 'theme/alert';
+//@import 'theme/cards';
+/*
+@import 'theme/images';
+@import 'theme/cv';;*/
+/*<!--===============================
 =            MODULES            =
 ================================-->*/
-@import 'il-components/modules/header';
-@import 'il-components/modules/home';
-@import 'il-components/modules/space';
-@import 'il-components/modules/about';
-@import 'il-components/modules/curses';
-@import 'il-components/modules/instructor';
-@import 'il-components/modules/students';
-@import 'il-components/modules/class';
-@import 'il-components/modules/depoiments';
-@import 'il-components/modules/videos';
-@import 'il-components/modules/gallery';
-@import 'il-components/modules/email';
-@import 'il-components/modules/footer';
+@import 'modules/header';
+@import 'modules/home';
+@import 'modules/footer';
+@import 'modules/about';
+@import 'modules/space';
+@import 'modules/instructor';
+@import 'modules/class';
+@import 'modules/students';
+@import 'modules/advantage';
+@import 'modules/videos';
+@import 'modules/gallery';
+@import 'modules/curses';
+/*
+@import 'il-components/modules/email';*/

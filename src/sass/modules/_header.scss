@@ -3,13 +3,18 @@
   position: absolute;
   height: $header-height;
   top: 0;
-  z-index: 100;
+  z-index: 2;
+  display: block;
   @include easeOut;
   &.active {
-    height: 100vh;
     @include easeOut;
+    height: 100%;
     &:after {
-      @include overlay($primaryColor,'../../public/images/theme/dott.png',.5);
+      @include overlay(
+        $thirtyColorAccent,
+        '../public/images/theme/overlay.png',
+        0.5
+      );
     }
   }
   @import 'header-component/nav-menu';

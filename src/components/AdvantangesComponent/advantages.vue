@@ -3,7 +3,7 @@
      <div class="il-container--wrapper">
          <h1 class="il-section--title">As <span class="il-color--text__very-light">Vantagens</span></h1>
          <h2 class="il-section--sub-title il-color--text__very-light text-right">Nossos diferencias falam por si só</h2>
-         <div class="il-class--content">
+         <div class="il-advantage--content">
              <div class="il-box--items">
                  <div class="il-item il-item--0 il-box il-color--background__lighten">
                      <i class="il-pilates-icon flaticon-side-kick-kneeling light"></i><span class="il-color--text__darken">Pilates</span>

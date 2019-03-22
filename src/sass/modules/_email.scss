@@ -1,0 +1,13 @@
+.il-section--email {
+  text-align: center;
+  @media screen and (min-width: 500px) {
+    text-align: left;
+  }
+  & .il-email--content {
+    display: block;
+    @media screen and (min-width: 500px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

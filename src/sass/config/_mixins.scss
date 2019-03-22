@@ -1,7 +1,14 @@
 @function getLeft($w) {
   @return calc(100% - #{$w});
 }
-
+@function getPixels() {
+    @return '130px';
+  //@return calc(100% - #{$w});
+}
+@function calcPX() {
+  $result: 100vh - $header-height;
+  @return $result;
+}
 @function getHeaderHeight() {
   @return calc(100% - #{$height-footer});
 }

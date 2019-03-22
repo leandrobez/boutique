@@ -1,0 +1,19 @@
+.il-section--student,
+.il-section--depoiments {
+  margin-bottom: 1rem;
+  text-align: center;
+  @media screen and (min-width: 500px) {
+    text-align: left;
+  }
+  & .il-student--content {
+    display: block;
+    @media screen and (min-width: 780px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.il-section--depoiments {
+  position: relative;
+  @import '../theme/depoiments';
+}

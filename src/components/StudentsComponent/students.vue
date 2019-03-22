@@ -14,11 +14,8 @@
                 </div>
             </div>
         </div>
-       
     </section>
-
     <il-depoiment />
-
 </div>
 </template>
 

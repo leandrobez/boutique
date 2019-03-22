@@ -1,7 +1,7 @@
 <template>
 <section id="il-curse" class="il-section il-section--curse">
     <div class="il-container--wrapper">
-        <h1 class="il-section--title">Cursos e eventos <span class="il-color--text__very-light">CoreAlign</span>
+        <h1 class="il-section--title">Cursos e  <span class="il-color--text__very-light">eventos</span>
         </h1>
         <h2 class="il-section--sub-title il-color--text__very-light text-right">Calendário de Curso - 2019.</h2>
         <div class="il-curse--content">
@@ -26,17 +26,16 @@
 </section>
 </template>
 <script>
-
 import cursos from '../../common/cursos.json';
 export default {
-    name: 'cursos',
-    data () {
-        return {
-            cursos: []
-        }
-    },
-    mounted () {
-        this.cursos = cursos;
-    },
-}
+  name: 'cursos',
+  data() {
+    return {
+      cursos: []
+    };
+  },
+  mounted() {
+    this.cursos = cursos;
+  }
+};
 </script>

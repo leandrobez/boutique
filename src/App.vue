@@ -1,13 +1,11 @@
 <template>
 <div id="app" :class="getBigImg()">
-    <!--VIDEO BACK--
-    <ilVideoBack v-if="hasVideoBackground" />-->
 
     <!--HEADER-->
     <ilHeader :class="isActive()" />
 
     <!--MAIN-->
-    <main>
+    <main class="il-main" :class="getHomeClass()">
         <div class="il-container">
             <RouterView />
         </div>
@@ -24,132 +22,141 @@
 </template>
 
 <script>
-import ilVideoBack from './components/VideosComponent/includes/videoBackground.vue';
 import ilHeader from './components/includes/HeaderComponent.vue';
 import ilFooter from './components/includes/FooterComponent.vue';
 import ilModal from './components/includes/ModalComponent.vue';
 export default {
-    name: 'App',
-
-    components: {
-        ilVideoBack,
-        ilHeader,
-        ilFooter,
-        ilModal
-    },
-
-    data() {
-        return {
-            title: 'Kaizen Pilates',
-            titleCompost: {
-                title: 'Kaizen',
-                subTitle: 'Pilates'
-            },
-            headerActive: false,
-            showModal: false,
-            whatClass: ''
-        };
-    },
-    mounted () {
-        setTimeout( () => {
-            this.showModal = true
-        }, 4000)
-    },
-    computed: {
-        hasVideoBackground () {
-            let rota = this.$route.name;
-            if (rota == 'video') {
-                return true;
-            }
-            return false;
-        },
-        checkActive () {
-            if (this.showModal) {
-                return true
-            }
-            return false
-        }
-    },
-
-    methods: {
-        closeModal () {
-            this.showModal = false
-        },
-        isActive () {
-            if (this.headerActive) {
-                return 'active';
-            }
-            return;
-        },
-
-        getBigImg () {
-            let rota = this.$route.name;
-            let currentImg = null;
-            switch (rota) {
-                case 'home':
-                    // this.showModal = true
-                    currentImg     = 'big-img-home';
-                    this.whatClass = 'il-footer--home';
-                    break;
-                case 'curriculum':
-                    currentImg     = 'big-img-curriculum';
-                    this.whatClass = 'il-footer--curriculum';
-                    break;
-                case 'about':
-                    currentImg     = 'big-img-about';
-                    this.whatClass = 'il-footer--about';
-                    break;
-                case 'studio':
-                    currentImg     = 'big-img-studio';
-                    this.whatClass = 'il-footer--studio';
-                    break;
-                case 'teachers':
-                    currentImg     = 'big-img-instructor';
-                    this.whatClass = 'il-footer--teacher';
-                    break;
-                case 'class':
-                    currentImg     = 'big-img-class';
-                    this.whatClass = 'il-footer--class';
-                    break;
-                case 'student':
-                    currentImg     = 'big-img-student';
-                    this.whatClass = 'il-footer--student';
-                    break;
-                case 'advantage':
-                    currentImg     = 'big-img-advantage';
-                    this.whatClass = 'il-footer--advantage';
-                    break;
-                case 'video':
-                    currentImg     = '';
-                    this.whatClass = 'il-footer--video';
-                    break;
-                case 'gallery':
-                    currentImg     = 'big-img-gallery';
-                    this.whatClass = 'il-footer--gallery';
-                    break;
-                case 'email':
-                    currentImg     = 'big-img-email';
-                    this.whatClass = 'il-footer--email';
-                    break;
-                default :
-                    // this.showModal = false
-                    currentImg     = 'big-img-home';
-                    this.whatClass = 'il-footer--home';
-            }
-
-            return currentImg;
-        },
-
-        showFooter () {
-            setTimeout( () => {
-                const showClass = document.getElementById('il-footer');
-                showClass.classList.add('il-footer--show');
-            }, 1200);
-        }
+  name: 'App',
+  components: {
+    ilHeader,
+    ilFooter,
+    ilModal
+  },
+  data() {
+    return {
+      title: 'Kaizen Pilates',
+      titleCompost: {
+        title: 'Kaizen',
+        subTitle: 'Pilates'
+      },
+      headerActive: false,
+      showModal: false,
+      whatClass: ''
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.showModal = true;
+    }, 4000);
+  },
+  computed: {
+    checkActive() {
+      if (this.showModal) {
+        return true;
+      }
+      return false;
     }
+  },
+  methods: {
+    closeModal() {
+      this.showModal = false;
+    },
+    isActive() {
+      if (this.headerActive) {
+        return 'active';
+      }
+      return;
+    },
+    getHomeClass() {
+      if (
+        this.$route.name == 'teachers' ||
+        this.$route.name == 'class' ||
+        this.$route.name == 'student' ||
+        this.$route.name == 'advantage' ||
+        this.$route.name == 'curse' ||
+        this.$route.name == 'video'
+      ) {
+        return 'il-main--perc';
+      }
+    },
+    getBigImg() {
+      let rota = this.$route.name;
+      let currentImg = 'big-img-home';
+      let heighPerc;
+      switch (rota) {
+        case 'home':
+          heighPerc = '';
+          this.whatClass = 'il-footer--home';
+          break;
+        case 'curriculum':
+          heighPerc = '';
+          this.whatClass = 'il-footer--curriculum';
+          break;
+        case 'about':
+          heighPerc = '';
+          this.whatClass = 'il-footer--about';
+          break;
+        case 'studio':
+          heighPerc = '';
+          this.whatClass = 'il-footer--studio';
+          break;
+        case 'teachers':
+          heighPerc = '';
+          this.whatClass = 'il-footer--teacher';
+          break;
+        case 'class':
+          heighPerc = 'il-app--perc';
+          this.whatClass = 'il-footer--class';
+          break;
+        case 'student':
+          heighPerc = 'il-app--perc';
+          this.whatClass = 'il-footer--student';
+          break;
+        case 'advantage':
+          heighPerc = '';
+          this.whatClass = 'il-footer--advantage';
+          break;
+        case 'video':
+          heighPerc = '';
+          this.whatClass = 'il-footer--video';
+          break;
+        case 'gallery':
+          heighPerc = '';
+          this.whatClass = 'il-footer--gallery';
+          break;
+        case 'galleryStudio':
+          heighPerc = '';
+          this.whatClass = 'il-footer--gallery';
+          break;
+        case 'galleryEvents':
+          heighPerc = '';
+          this.whatClass = 'il-footer--gallery';
+          break;
+        case 'curse':
+          heighPerc = 'il-app--perc';
+          this.whatClass = 'il-footer--gallery';
+          break;
+        case 'email':
+          heighPerc = '';
+          this.whatClass = 'il-footer--email';
+          break;
+        default:
+          heighPerc = '';
+          this.whatClass = 'il-footer--home';
+      }
+
+      return currentImg + ' ' + heighPerc;
+    },
+    showFooter() {
+      setTimeout(() => {
+        const showClass = document.getElementById('il-footer');
+        showClass.classList.add('il-footer--show');
+      }, 1200);
+    }
+  }
 };
 </script>
 
-<style>
-@import './sass/styles.css';
+<style lang="scss">
+@import './sass/styles.scss';
 </style>

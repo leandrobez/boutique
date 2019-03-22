@@ -3,26 +3,44 @@
   flex-direction: column;
   width: 100%;
   padding: 0.45rem 0;
-  
+  &--info,
+  &--success,
+  &--warning {
+    border-radius: 3px;
+    padding: 5px;
+    background: rgba(236, 191, 95, 0.671);
+    text-align: center;
+  }
+  &--info {
+    border: 3px solid $bck-alert-info;
+    & i {
+      color: $bck-alert-info;
+      font-weight: bolder;
+    }
+  }
+  &--success {
+    border: 3px solid $bck-alert-success;
+    & i {
+      color: $bck-alert-success;
+      font-weight: bolder;
+    }
+  }
+  &--warning {
+    border: 3px solid $bck-alert-warning;
+    & i {
+      color: $bck-alert-warning;
+      font-weight: bolder;
+    }
+  }
   & i {
     margin: 0.4rem auto;
   }
- 
+
   & p {
     text-align: center;
     font-weight: 500;
     font-size: 1rem;
     color: $fortyColor;
     text-transform: uppercase;
-  }
-
-  &--info {
-    background: $bck-alert-info;
-  }
-  &--success {
-    background: $bck-alert-success;
-  }
-  &--warning {
-    background: $bck-alert-warning;
   }
 }

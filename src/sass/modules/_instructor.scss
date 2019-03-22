@@ -1,0 +1,15 @@
+.il-section--instructor {
+  margin-bottom: 1rem;
+  text-align: center;
+  @media screen and (min-width: 500px) {
+    text-align: left;
+  }
+  & .il-instructor--content {
+    display: block;
+    @media screen and (min-width: 780px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @import '../theme/cards';
+}

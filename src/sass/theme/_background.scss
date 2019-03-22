@@ -3,7 +3,7 @@
 #app.big-img-home {
   @include big-img($show-img-home, $big-img-url-home);
 }
-
+/*
 #app.big-img-curriculum {
   @include big-img($show-img-home, $big-img-url-curriculum);
 }
@@ -42,7 +42,7 @@
 
 #app.big-img-email {
   @include big-img($show-img-email, $big-img-url-email);
-}
+}*/
 
 /**Backgrounds*/
 .il-color--background__default {

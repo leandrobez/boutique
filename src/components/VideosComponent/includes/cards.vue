@@ -1,12 +1,12 @@
 <template>
 <div :class="`il-card--video il-card--${video}`">
-    <div class="il-card--header">
+    <div class="il-card-video--header">
         <img :src="thumbnail" :alt="name" />
     </div>
-    <div class="il-card--content">
-        <p class="il-content--description il-card--description il-color--text__very-light">{{description}}</p>
+    <div class="il-card-video--content">
+        <p class="il-card-video--description il-card--description il-color--text__very-light">{{description}}</p>
     </div>
-    <div class="il-card--footer">
+    <div class="il-card-video--footer">
         <span class="il-btn--video" @click.prevent="runVideo(video)" :title="`Assistir ${name}`"></span>
     </div>
 </div>
@@ -14,17 +14,17 @@
 
 <script>
 export default {
-    name: 'cardsVideos',
-    props: {
-        thumbnail: String,
-        description: String,
-        name: String,
-        video: Number
-    },
-    methods: {
-        runVideo(i) {
-            this.$parent.setTrailer(i)
-        }
+  name: 'cardsVideos',
+  props: {
+    thumbnail: String,
+    description: String,
+    name: String,
+    video: Number
+  },
+  methods: {
+    runVideo(i) {
+      this.$parent.setTrailer(i);
     }
+  }
 };
 </script>

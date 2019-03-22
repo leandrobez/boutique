@@ -1,0 +1,13 @@
+.il-section--curse {
+  text-align: center;
+  @media screen and (min-width: 500px) {
+    text-align: left;
+  }
+  & .il-curse--content {
+    display: block;
+    @media screen and (min-width: 500px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

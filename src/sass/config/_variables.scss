@@ -29,20 +29,26 @@ $colorBorder: rgb(224, 222, 195);
 $max-width: 1344px;
 
 /*modal*/
-
+$modal-delay: 400ms;
 $width-modal: 300px;
 
 /*header*/
+/* logo*/
+$brand-sw: 160px;
+$brand-sh: 97px;
+/* logo*/
+$brand-swsmall: 86px;
+$brand-shsmall: 42px;
 $pos-top: 1vh;
 $pos-bottom: 2rem;
 $m-w: 40px;
 $m-h: 40px;
-$header-height: 17vh;
-$brandUrl: '../../public/images/theme/logokaizen172x83.png';
-$brandUrlSmall: '../../public/images/theme/logokaizen86x42.png';
+$header-height: $brand-sh + $m-h;
+$brandUrl: '../public/images/theme/logokaizen160x97.png';
+$brandUrlSmall: '../public/images/theme/logokaizen86x42.png';
 /*app*/
 $opacity-overlay: 0.5;
-$overlay-img: '../../public/images/theme/overlay.png';
+$overlay-img: '../public/images/theme/overlay.png';
 $app-overlay: rgba(138, 108, 43, 0.9);
 
 /*Other elements*/
@@ -64,18 +70,19 @@ $back-footer-albuns: darken($back-footer, 9.5%);
 $back-footer-curse: darken($back-footer, 10%);
 $back-footer-curriculum: darken($back-footer, 10.5%);
 $back-footer-video: darken($back-footer, 11%);
-$back-footer-bottom: #afb3b9;//lighten($back-footer, 12%);
+$back-footer-bottom: #afb3b9; //lighten($back-footer, 12%);
 
 $back-header: rgba(darken($fortyColor, 0.85), 0.75);
 $back-portrait: $thirtyColor;
 $back-nav: $secondColor;
 $show-img-home: true;
-$big-img-url-home: url('../../public/images/banners/big-img-home.jpg');
+$big-img-url-home: url('../public/images/banners/big-img-home.jpg');
 $avataSmall: 100px;
 $avatarMedium: 120px;
 $avatarBig: 140px;
-
-$big-img-url-curriculum: $big-img-url-home; // url('../../public/images/banners/big-img-curriculum.jpg');
+$show-avatar: true;
+$avatar-url: url('../public/images/pictures/img-muraguti.jpg');
+/*$big-img-url-curriculum: $big-img-url-home; // url('../../public/images/banners/big-img-curriculum.jpg');
 
 $show-img-space: true;
 $big-img-url-space: $big-img-url-home; // url('../../public/images/banners/big-img-space.jpg');
@@ -108,8 +115,7 @@ $show-img-email: true;
 $big-img-url-email: $big-img-url-home; //url('../../public/images/banners/big-img-email.jpg');
 // big-img-email.jpg
 
-$show-avatar: true;
-$avatar-url: url('../../public/images/pictures/img-muraguti.jpg');
+*/
 
 /** depoiments*/
 $height-slider: 400px;
@@ -118,9 +124,9 @@ $background-opacity: 0.5;
 
 /**alerts**/
 
-$bck-alert-info: #ececcf;
-$bck-alert-warning: #d88865;
-$bck-alert-success: #6cb94d;
+$bck-alert-info: #3b3b39;
+$bck-alert-warning: #3a302c;
+$bck-alert-success: #0c1808;
 /**buttons*/
 
 $btn-background-color: $fortyColor;

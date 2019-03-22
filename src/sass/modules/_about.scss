@@ -1,0 +1,13 @@
+.il-section--about {
+  text-align: center;
+  @media screen and (min-width: 500px) {
+    text-align: left;
+  }
+  & .il-about--content {
+    display: block;
+    @media screen and (min-width: 500px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

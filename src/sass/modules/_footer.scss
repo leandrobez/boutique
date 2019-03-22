@@ -1,7 +1,8 @@
 footer.il-footer {
   width: 100%;
-  z-index: 101;
+  z-index: 2;
   position: relative;
+  bottom: 0;
   height: $height-footer;
   & .il-footer--content {
     display: flex;

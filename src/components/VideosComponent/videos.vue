@@ -7,84 +7,75 @@
         </div>
     </div>
     <div class="il-player" :class="getClass()" :width="getSize()" v-if="hasPlayer">
-        <ilYoutube :player="player" />`
+        <ilYoutube :player="player" />
     </div>
 </section>
 </template>
 
 <script>
-import ilCards from './includes/cards.vue';
 import videos from '../../common/videos.json';
+import ilCards from './includes/cards.vue';
 import ilYoutube from './includes/youtube.vue';
 export default {
-    name: 'Videos',
-    components: {
-        ilCards,
-        ilYoutube
-    },
-    mounted () {
-        this.videos = videos;
-    },
-    computed: {
-      hasPlayer () {
-        if (this.player.size) {
-          return true
-        }
-        return false
+  name: 'Videos',
+  components: {
+    ilCards,
+    ilYoutube
+  },
+  mounted() {
+    this.videos = videos;
+  },
+  computed: {
+    hasPlayer() {
+      if (this.player.size) {
+        return true;
       }
-    },
-    data () {
-        return {
-            whatIcon: 'il-pilates-icon flaticon-exercise-bands',
-            player: {},
-            show: false,
-            trailer: null,
-            videos: []
-        };
-    },
-
-    methods: {
-        getSize () {
-          let size = +this.player.size + 6
-          console.log(size)
-          return size
-        },
-        getClass () {
-            let theClass = this.show ? 'show' : '';
-            return theClass;
-        },
-        setTrailer (key) {
-            let movie = this.videos[key];
-            this.player = {
-                size: movie.youtube.width,
-                height: movie.youtube.width * 0.5625,
-                controls: 'controls',
-                allowfullscreen: 'allowfullscreen',
-                autoplay: false,
-                preload: 'auto',
-                poster: 'http://video-js.zencoder.com/oceans-clip.jpg',
-                aspectRatio: '640:267',
-                playbackRates: [1, 1.5, 2],
-                techOrder: ['youtube'],
-                sources: [{
-                    type: 'video/youtube',
-                    src: 'https://www.youtube.com/embed/' + movie.youtube.cod
-                }]
-            };
-
-            this.show = true;
-            /*var player = videojs('#il-video', playerSetup, function onPlayerReady() {
-              videojs.log('Your player is ready!');
-
-              // In this context, `this` is the player that was created by Video.js.
-              this.play();
-
-              // How about an event listener?
-              this.on('ended', function() {
-                videojs.log('Awww...over so soon?!');
-              });
-            });*/
-        }
+      return false;
     }
+  },
+  data() {
+    return {
+      whatIcon: 'il-pilates-icon flaticon-exercise-bands',
+      player: {},
+      show: false,
+      trailer: null,
+      videos: []
+    };
+  },
+
+  methods: {
+    getSize() {
+      let size = +this.player.size + 6;
+      console.log(size);
+      return size;
+    },
+    getClass() {
+      let theClass = this.show ? 'show' : '';
+      return theClass;
+    },
+    setTrailer(key) {
+      let movie = this.videos[key];
+      this.player = {
+        size: movie.youtube.width,
+        height: movie.youtube.width * 0.5625,
+        controls: 'controls',
+        allowfullscreen: 'allowfullscreen',
+        autoplay: false,
+        preload: 'auto',
+        poster: 'http://video-js.zencoder.com/oceans-clip.jpg',
+        aspectRatio: '640:267',
+        playbackRates: [1, 1.5, 2],
+        techOrder: ['youtube'],
+        sources: [
+          {
+            type: 'video/youtube',
+            src: 'https://www.youtube.com/embed/' + movie.youtube.cod
+          }
+        ]
+      };
+
+      this.show = true;
+    }
+  }
 };
 </script>

@@ -1,64 +1,61 @@
-.il-card {
-  flex: 1;
+.il-card--video {
+  width: 186px;
+  position: relative;
+  background: lighten($secondColor, 10%);
+  @media screen and (min-width: 768px) {
+    width: auto;
+  }
   display: flex;
   flex-direction: column;
-  margin: 0 0.25rem;
-  border: 2px solid $thirtyColor;
+  border: 2px solid $dark;
   border-radius: 3px;
-  & .il-card--header {
-    display: flex;
+  & .il-card-video--header {
     width: 100%;
-    height: 140px;
-    max-height: 140px;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    flex: 1 0 auto;
-    padding: 0.45rem 0.35rem;
-    & h4.il-card--header__title {
-      margin: 0;
-      color: $primaryColor;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
+    height: 110px;
     & img {
       display: block;
-      max-width: 90px;
-      border-radius: 50%;
     }
   }
-  &:nth-child(1) {
-    background-color: darken($back-cards, 5%);
-    & .il-card--header {
-      background-color: lighten($back-cards, 12%);
-    }
-  }
-  &:nth-child(2) {
-    background-color: darken($back-cards, 7%);
-    & .il-card--header {
-      background-color: lighten($back-cards, 15%);
-    }
-  }
-  &:nth-child(3) {
-    background-color: darken($back-cards, 9%);
-    & .il-card--header {
-      background-color: lighten($back-cards, 20%);
-    }
-  }
-  & .il-card--content {
+  & .il-card-video--content {
+    position: absolute;
+    height: 100px;
+    opacity: 0;
+    background: white;
     padding: 0;
-    p.il-card--description {
-      padding: 0.45rem 0.35rem;
+    p.il-card-video--description {
+      padding: 0 0.35rem;
       font-size: 0.85rem;
       text-align: justify;
       letter-spacing: 1px;
+
+      color: black;
     }
   }
-  & .il-card--footer {
-    height: 2.2rem;
+  & .il-card-video--footer {
+    //position: relative;
+    background: $secondColor;
+    padding: 0.35rem 0;
     display: flex;
     justify-content: flex-end;
     flex-shrink: 0;
+    & span.il-btn--video {
+      margin: auto;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: transparent;
+      background-image: url('../public/images/theme/youtube-play.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      cursor: pointer;
+      transition: 450ms;
+      animation: pulse infinite 3s;
+      &:hover {
+        transition: 450ms;
+        transform: scale(1.1);
+      }
+    }
     & i {
       text-align: center;
       position: relative;
@@ -105,5 +102,14 @@
         }
       }
     }
+  }
+  &:hover {
+    transition: all 550ms;
+    height: 268px;
+  }
+  &:hover .il-card--content {
+    transition: all 650ms;
+    opacity: 1;
+    bottom: 0;
   }
 }
