@@ -7,10 +7,10 @@ i.il-pilates-icon {
   font-size: 1.7rem;
   line-height: 2.4rem;
   border-radius: 50%;
-  border: 1px solid $thirtyColor;
   cursor: pointer;
   transition: all 750ms ease;
   opacity: 1;
+  border: 1px solid $thirtyColor;
   &:hover {
     transition: all 750ms ease;
     opacity: 0.9;
@@ -21,12 +21,13 @@ i.il-pilates-icon {
     border-radius: 0;
   }
   &.light {
-    //border: 2px solid $fortyColorAccent;
-    color: $textColor;
-    background: $colorBorder !important;
+    border: none !important;
+    color: $secondColorAccent;
+    background: $primaryAccent !important;
   }
   &.dark {
     //border: 2px solid $thirtyColor;
+    border: 1px solid $thirtyColor;
     color: $primaryAccent;
     background: $fortyColorAccent !important;
   }

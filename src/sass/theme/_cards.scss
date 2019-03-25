@@ -17,7 +17,7 @@
     padding: 0.45rem 0.35rem;
     & h4.il-card--header__title {
       margin: 0;
-      color: $primaryColor;
+      color: $thirtyColor;
       font-weight: 400;
       text-transform: uppercase;
     }
@@ -63,7 +63,7 @@
       text-align: center;
       position: relative;
       right: 1rem;
-      border: 1px solid $textColorVeryLight;
+      border: 1px solid $colorBorder;
       width: 30px;
       height: 30px;
       border-radius: 50%;

@@ -78,7 +78,7 @@ section.il-section--modal {
         display: block;
         width: 30px;
         height: 30px;
-        background: $fortyColor;
+        background: $secondColor;
         z-index: 1000;
         cursor: pointer;
         position: absolute;
@@ -92,7 +92,7 @@ section.il-section--modal {
         transition: background color 450ms ease;
         &:hover {
           transition: background color 450ms ease;
-          background: $primaryColor;
+          background: $primaryAccent;
           color: $secondColorAccent;
         }
         & i {

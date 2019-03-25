@@ -9,13 +9,12 @@
             <div class="il-box--items">
                 <div class="il-item il-item--0 il-box il-color--background__lighten">
                     <i class="il-pilates-icon flaticon-exercises-with-body-arc light"></i>
-                    <p class="il-content--description il-color--text">Potencializar as qualidades físicas individuais do aluno tendo como base os princípios do pilates.
+                    <p class="il-content--description il-color--text">Transformar sistematicamenta o cotidiando de alunos/clientes na busca constante do bem estar, através de um atendimento de elevado nível técnico e ao mesmo tempo acolhedor, proporcionando dessa maneira alívio de dores, disposição física e facilitação nas atividades de vida diária.
                     </p>
                 </div>
                 <div class="il-item il-item--1 il-box il-color--background__lighten">
                     <i class="il-pilates-icon flaticon-breath-position light"></i>
-                    <p class="il-content--description il-color--text">
-                        Primar pela busca de uma postura mais equilibrada através do fortalecimento da musculatura profunda com a finalidade precípua de melhorar a qualidade de vida do indivíduo.
+                    <p class="il-content--description il-color--text">Estimular o movimento inteligente de forma repetida e com persistência, criando as condições ideais para uma vida plena e saudavel.
                     </p>
                 </div>
             </div>

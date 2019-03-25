@@ -5,7 +5,7 @@
         <img :src="picture" alt="">
         </div>
         <div class="il-card--content">
-            <p class="il-content--description il-card--description il-color--text__very-light">{{message}}</p>
+            <p class="il-content--description il-card--description il-color--text__gold">{{message}}</p>
         </div>
         <div class="il-card--footer">
             <i @mouseover = "animateRight" @mouseleave = "animateLeft" class="mdi mdi-24px mdi-check il-color--text__light" title="Veja meu currículo" @click="showCV(id)"></i>

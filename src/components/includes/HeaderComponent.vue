@@ -7,18 +7,19 @@
     </div>
     <div class="il-container--wrapper">
         <div class="il-header--brand"></div>
-        <!--<h1 class="il-title--brand il-color--text__very-dark">Kaizen</h1>-->
+        
     </div>
     <div class="il-header--content">
         <div class="il-content--portrait">
             <div class="il-avatar--portrait">
                 <div class="il-avatar"></div>
             </div>
+            <span class="il-authenticated il-color--text__light" v-if="checkAuthenticated">Você está logado</span>
         </div>
         <nav class="il-content--nav">
             <ul class="il-menu--list">
                 <li class="il-menu--list__item" v-for="m in menu" :key="m.id">
-                    <router-link class="il-menu--link" :to="{name:m.link}" :class="isActive(m.id)" :title="m.title">
+                    <router-link class="il-menu--link il-color--text__yellow" :to="{name:m.link}" :class="isActive(m.id)" :title="m.title">
                         <span @click="hiddenMenu()">{{m.label}}</span>
                     </router-link>
                 </li>
@@ -108,10 +109,28 @@ export default {
           icon: 'il-pilates-icon flaticon-centering-position',
           show: true
         }
+        /*{
+          id: 9,
+          link: 'login',
+          title: 'Área Administrativa',
+          label: 'Login',
+          icon: 'il-pilates-icon flaticon-bosu-ball',
+          show: true
+        }*/
       ]
     };
   },
-
+  props: {
+    authenticated: Boolean
+  },
+  computed: {
+    checkAuthenticated() {
+      if (this.authenticated) {
+        return true;
+      }
+      return false;
+    }
+  },
   methods: {
     hasActive() {
       if (this.showMenu) {

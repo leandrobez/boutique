@@ -2,38 +2,38 @@
 <div class="il-footer--content">
 	<div class="il-footer--top" :class="getClass()">
 		<div class="il-container--wrapper">
-			<div class="il-footer--breadcrumb il-color--text__very-light">
+			<div class="il-footer--breadcrumb il-color--text__light">
 				<i :class="whatIcon"></i>
 				<span class="il-path">{{whereIAm}}</span>
 			</div>
 		</div>
 
-		<div class="il-footer--cols il-color--text__very-light">
+		<div class="il-footer--cols il-color--text__light">
 			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-iris"></i>
-          <router-link :to="{name:'galleryStudio'}" class="il-footer--list il-color--text__very-light" title="Veja fotos do studio">studio</router-link>
+          <router-link :to="{name:'galleryStudio'}" class="il-footer--list il-color--text__light" title="Veja fotos do studio">studio</router-link>
 				</h4>
 			</div>
 
 			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-rear"></i>
-          <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__very-light" title="Veja fotos de eventos">eventos</router-link>
+          <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__light" title="Veja fotos de eventos">eventos</router-link>
 				</h4>
 			</div>
 
 			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-camera-party-mode"></i>
-					<router-link :to="{name: 'curse'}" class="il-footer--list il-color--text__very-light" title="Calendário de cursos">cursos</router-link>
+					<router-link :to="{name: 'curse'}" class="il-footer--list il-color--text__light" title="Calendário de cursos">cursos</router-link>
 				</h4>
 			</div>
 
 			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-email"></i>
-					<a href="#!" class="il-footer--list il-color--text__very-light" @click.prevent="activeModal()" title="Faça contato com a gente">contato</a>
+					<a href="#!" class="il-footer--list il-color--text__light" @click.prevent="activeModal()" title="Faça contato com a gente">contato</a>
 				</h4>
 			</div>
 		</div>

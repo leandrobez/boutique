@@ -2,11 +2,13 @@
 <div id="app" :class="getBigImg()">
 
     <!--HEADER-->
-    <ilHeader :class="isActive()" />
-
+    <ilHeader :class="isActive()" :authenticated="authenticated" />
     <!--MAIN-->
     <main class="il-main" :class="getHomeClass()">
         <div class="il-container">
+            <div class="il-container--wrapper">
+                <ilWarning :message="warning" v-show="checkWarning" />
+            </div>
             <RouterView />
         </div>
     </main>
@@ -24,12 +26,16 @@
 <script>
 import ilHeader from './components/includes/HeaderComponent.vue';
 import ilFooter from './components/includes/FooterComponent.vue';
+import ilWarning from './components/includes/warningsComponent.vue';
 import ilModal from './components/includes/ModalComponent.vue';
+/**https://github.com/sqreen/vue-authentication-example */
+import axios from 'axios';
 export default {
   name: 'App',
   components: {
     ilHeader,
     ilFooter,
+    ilWarning,
     ilModal
   },
   data() {
@@ -39,10 +45,16 @@ export default {
         title: 'Kaizen',
         subTitle: 'Pilates'
       },
+      hasWarning: false,
+      warning: {},
+      authenticated: false,
       headerActive: false,
       showModal: false,
       whatClass: ''
     };
+  },
+  created() {
+    this.intercepter();
   },
   mounted() {
     setTimeout(() => {
@@ -55,9 +67,45 @@ export default {
         return true;
       }
       return false;
+    },
+    checkWarning() {
+      if (this.warning.check) {
+        this.closeWarning();
+        return true;
+      }
+      return false;
     }
   },
   methods: {
+    intercepter() {
+      axios.interceptors.response.use(undefined, function(err) {
+        return new Promise(function(resolve, reject) {
+          if (
+            err.status === 401 &&
+            err.config &&
+            !err.config.__isRetryRequest
+          ) {
+            // if you ever get an unauthorized, logout the user
+            this.$store.dispatch(AUTH_LOGOUT);
+            // you can also redirect to /login if needed !
+          }
+          throw err;
+        });
+      });
+    },
+    closeWarning() {
+      let time = 4000;
+      setTimeout(() => {
+        this.warning = {};
+      }, time);
+    },
+
+    checkAuthenticated() {
+      if (this.authenticated) {
+        return true;
+      }
+      return false;
+    },
     closeModal() {
       this.showModal = false;
     },

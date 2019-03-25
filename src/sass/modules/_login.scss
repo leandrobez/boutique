@@ -1,0 +1,14 @@
+.il-section--login {
+  text-align: center;
+  @media screen and (min-width: 500px) {
+    text-align: left;
+  }
+  & .il-login--content {
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    @media screen and (min-width: 600px) {
+      max-width: 500px;
+    }
+  }
+}

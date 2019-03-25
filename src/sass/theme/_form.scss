@@ -3,7 +3,6 @@ form.il-form {
   border-radius: 3px;
   display: flex;
   & .il-form--fields {
-    //padding: 0.35rem 0.5rem;
     width: 90%;
     margin: 0 5%;
     &.il-flex {
@@ -14,10 +13,11 @@ form.il-form {
   }
   & input[type='text'],
   & input[type='email'],
+  & input[type='password'],
   & input[type='tel'],
   & textarea {
     border: 1px solid $secondColor;
-    background-color: $primaryColor;
+    background-color: $thirtyColor;
     font-size: 0.85rem;
     @media screen and (max-width: 768px) {
       height: 1.6rem;
@@ -32,7 +32,7 @@ form.il-form {
     outline: none;
     color: $textColor;
     &:focus {
-      background: $primaryAccent;
+      background: $textColorLight;
     }
   }
   & textarea {
@@ -40,8 +40,8 @@ form.il-form {
   }
   & select.il-select {
     border: 1px solid $secondColor;
+    background-color: $thirtyColor;
     font-size: 0.85rem;
-    background-color: $primaryColor;
     font-weight: 300;
     transition: border 0.3s;
     height: 2rem;
@@ -50,16 +50,16 @@ form.il-form {
     outline: none;
     color: $textColor;
     &:focus {
-      background: $primaryAccent;
+      background: $textColorLightGray;
     }
   }
   & button.il-btn {
-    background: #5d3c09;
+    background: $primaryColor;
     display: inline-block;
     text-align: center;
     transition: all 0.15s ease;
     &.il-btn--submit {
-      color: $primaryColor;
+      color: $thirtyColor;
       font-size: 1.1rem;
       border: 1px solid $fortyColor;
       margin-bottom: 0.4rem;

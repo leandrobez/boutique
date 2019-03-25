@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "animejs": "^3.0.1",
-    "axios": "^0.18.0",
+    "gn-api-sdk-node": "0.0.23",
+    "stringify-clone": "^2.0.1",
     "video.js": "^7.4.1",
     "vue": "^2.5.21",
     "vue-router": "^3.0.1",
@@ -19,6 +20,7 @@
     "@vue/cli-plugin-babel": "^3.3.0",
     "@vue/cli-plugin-eslint": "^3.3.0",
     "@vue/cli-service": "^3.3.0",
+    "axios": "^0.18.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",

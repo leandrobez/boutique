@@ -6,14 +6,14 @@
   transform: translateX(-50%);
   width: $m-w;
   height: $m-h;
-  border: 1px solid $primaryColor;
+  border: 1px solid $thirtyColor;
   padding: 7px 0;
   cursor: pointer;
   border-radius: 3px;
   @include easeOut;
   &:hover {
     @include easeOut;
-    background: $fortyColor;
+    background: $secondColor;
   }
   &.radius {
     border-radius: 50%;
