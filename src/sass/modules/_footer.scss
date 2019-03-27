@@ -1,109 +1,103 @@
-footer.il-footer {
-  width: 100%;
-  z-index: 2;
-  position: relative;
-  bottom: 0;
-  height: $height-footer;
-  & .il-footer--content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    & .il-footer--top,
-    & .il-footer--bottom {
-      width: 100%;
-      color: $primaryColor;
-    }
+.il-footer--content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  & .il-footer--top,
+  & .il-footer--bottom {
+    width: 100%;
+    color: $primaryColor;
+  }
 
-    & .il-footer--top {
-      height: $height-footer-top;
-      & .il-footer--breadcrumb {
-        margin: auto;
-        font-weight: 800;
-        max-width: 200px;
-        height: 70px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        & span {
-          display: block;
-          text-transform: uppercase;
+  & .il-footer--top {
+    height: $height-footer-top;
+    & .il-footer--breadcrumb {
+      margin: auto;
+      font-weight: 800;
+      max-width: 200px;
+      height: 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      & span {
+        display: block;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 70px;
+      }
+    }
+    & .il-footer--cols {
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      & .il-footer--col {
+        flex: 1;
+        & h4.il-footer--title {
           text-align: center;
-          line-height: 70px;
-        }
-      }
-      & .il-footer--cols {
-        display: flex;
-        height: 100%;
-        justify-content: center;
-        & .il-footer--col {
-          flex: 1;
-          & h4.il-footer--title {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            @media screen and (min-width: 680px) {
-              flex-direction: row;
-            }
-            line-height: 24px;
-            justify-content: center;
-            padding: 0 0.15rem;
-            & a {
-              font-size: 0.85rem;
-            }
+          display: flex;
+          flex-direction: column;
+          @media screen and (min-width: 680px) {
+            flex-direction: row;
+          }
+          line-height: 24px;
+          justify-content: center;
+          padding: 0 0.15rem;
+          & a {
+            font-size: 0.85rem;
           }
         }
-      }
-      &.il-home {
-        background: $back-footer-home;
-      }
-      &.il-curse {
-        background: $back-footer-curse;
-      }
-      &.il-curriculum {
-        background: $back-footer-curriculum;
-      }
-
-      &.il-about {
-        background: $back-footer-about;
-      }
-
-      &.il-studio {
-        background: $back-footer-studio;
-      }
-
-      &.il-class {
-        background: $back-footer-class;
-      }
-      &.il-teacher {
-        background: $back-footer-teacher;
-      }
-      &.il-student {
-        background: $back-footer-student;
-      }
-      &.il-advantage {
-        background: $back-footer-advantage;
-      }
-      &.il-video {
-        background: $back-footer-video;
-      }
-      & li.il-footer--item a.il-footer--link {
-        color: $colorBorder;
       }
     }
-    & .il-footer--bottom {
-      padding: 0;
-      text-align: center;
-      height: 100%;
-      background: $back-footer-bottom;
-      border-top: 1px solid darken($back-footer, 10%);
-      font-weight: bolder;
-      & .il-footer--copy {
-        line-height: 29px;
-        & span {
-          margin-right: 0.35rem;
-          & a {
-            text-transform: uppercase;
-          }
+    &.il-home {
+      background: $back-footer-home;
+    }
+    &.il-curse {
+      background: $back-footer-curse;
+    }
+    &.il-curriculum {
+      background: $back-footer-curriculum;
+    }
+
+    &.il-about {
+      background: $back-footer-about;
+    }
+
+    &.il-studio {
+      background: $back-footer-studio;
+    }
+
+    &.il-class {
+      background: $back-footer-class;
+    }
+    &.il-teacher {
+      background: $back-footer-teacher;
+    }
+    &.il-student {
+      background: $back-footer-student;
+    }
+    &.il-advantage {
+      background: $back-footer-advantage;
+    }
+    &.il-video {
+      background: $back-footer-video;
+    }
+    & li.il-footer--item a.il-footer--link {
+      color: $colorBorder;
+    }
+  }
+  & .il-footer--bottom {
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    background: $back-footer-bottom;
+    border-top: 1px solid darken($back-footer, 10%);
+    font-weight: bolder;
+    & .il-footer--copy {
+      line-height: 29px;
+      & span {
+        margin-right: 0.35rem;
+        & a {
+          text-transform: uppercase;
         }
       }
     }

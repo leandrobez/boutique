@@ -27,24 +27,23 @@ $colorBorder: rgb(224, 222, 195);
 
 /*STRUCTUE*/
 $max-width: 1344px;
-
 /*modal*/
 $modal-delay: 400ms;
 $width-modal: 300px;
 
 /*header*/
 /* logo*/
-$brand-sw: 160px;
-$brand-sh: 97px;
+$brand-sw: 161px;
+$brand-sh: 57px;
 /* logo*/
 $brand-swsmall: 86px;
 $brand-shsmall: 42px;
-$pos-top: 1vh;
+$pos-top: 5px;
 $pos-bottom: 2rem;
 $m-w: 40px;
 $m-h: 40px;
-$header-height: $brand-sh + $m-h;
-$brandUrl: '../public/images/theme/logokaizen160x97.png';
+$header-height: $brand-sh + $m-h + $pos-top + 4px;
+$brandUrl: '../public/images/theme/logokaizen191x65.png';
 $brandUrlSmall: '../public/images/theme/logokaizen86x42.png';
 /*app*/
 $opacity-overlay: 0.5;
@@ -82,40 +81,6 @@ $avatarMedium: 120px;
 $avatarBig: 140px;
 $show-avatar: true;
 $avatar-url: url('../public/images/pictures/img-muraguti.jpg');
-/*$big-img-url-curriculum: $big-img-url-home; // url('../../public/images/banners/big-img-curriculum.jpg');
-
-$show-img-space: true;
-$big-img-url-space: $big-img-url-home; // url('../../public/images/banners/big-img-space.jpg');
-
-$show-img-instructor: true;
-$big-img-url-instructor: $big-img-url-home; // url('../../public/images/banners/big-img-teacher.jpg');
-
-$show-img-class: true;
-$big-img-url-class: $big-img-url-home; // url('../../public/images/banners/big-img-class.jpg');
-
-$show-img-about: true;
-$big-img-url-about: $big-img-url-home; // url('../../public/images/banners/big-img-about.jpg');
-
-$show-img-advantage: true;
-$big-img-url-advantage: $big-img-url-home; // url('../../public/images/banners/big-img-advantage.jpg');
-
-$show-img-student: true;
-$big-img-url-student: $big-img-url-home; // url('../../public/images/banners/big-img-student.jpg');
-
-$show-img-video: true;
-$big-img-url-video: $big-img-url-home; // url('../../public/images/banners/big-img-video.jpg');
-
-$show-avatar-space: true;
-$avatar-space: url('../../public/images/pictures/img-muraguti-space.jpg');
-
-$show-img-gallery: false;
-$big-img-url-gallery: $big-img-url-home; //url('../../public/images/banners/big-img-home.png');
-
-$show-img-email: true;
-$big-img-url-email: $big-img-url-home; //url('../../public/images/banners/big-img-email.jpg');
-// big-img-email.jpg
-
-*/
 
 /** depoiments*/
 $height-slider: 400px;

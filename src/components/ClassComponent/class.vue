@@ -32,11 +32,15 @@
 </template>
 
 <script>
+import { animeBox } from '../../common/animation';
 import ilCards from './includes/cards.vue';
 export default {
   name: 'Class',
   components: {
     ilCards
+  },
+  mounted() {
+    this.startAnime();
   },
   data() {
     return {
@@ -65,6 +69,7 @@ export default {
         }
       ]
     };
-  }
+  },
+  mixins: [animeBox]
 };
 </script>

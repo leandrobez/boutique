@@ -5,9 +5,8 @@
         <div class="il-menu--line"></div>
         <div class="il-menu--line"></div>
     </div>
-    <div class="il-container--wrapper">
-        <div class="il-header--brand"></div>
-        
+    <div class="il-header--brand">
+      <img src="images/theme/logokaizen161x57.png">
     </div>
     <div class="il-header--content">
         <div class="il-content--portrait">

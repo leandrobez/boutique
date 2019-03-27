@@ -17,48 +17,49 @@
 </template>
 
 <script>
-import ilCards from './includes/cards.vue'
-import ilCv from './includes/cv.vue'
+import ilCards from './includes/cards.vue';
+import ilCv from './includes/cv.vue';
 export default {
-    name: 'Teachers',
-    components: {
-        ilCards,
-        ilCv
-    },
-    data () {
-        return {
-            whatIcon: "il-pilates-icon flaticon-twisting-arms",
-            CV: {
-                id: null,
-                teacher: null,
-                show: false
-            },
-            instructors: [{
-                    id: '1',
-                    title: 'NhaNhann',
-                    message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-                    picture: 'images/pictures/teacher1.jpg',
-                    cv: 0
-                },
-                {
-                    id: '2',
-                    title: 'Blublue',
-                    message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-                    picture: 'images/pictures/teacher2.jpg',
-                    cv: 1
-                },
-                {
-                    id: '3',
-                    title: 'RamiRami',
-                    message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-                    picture: 'images/pictures/teacher3.jpg',
-                    cv: 2
-                }
-            ]
+  name: 'Teachers',
+  components: {
+    ilCards,
+    ilCv
+  },
+  data() {
+    return {
+      whatIcon: 'il-pilates-icon flaticon-twisting-arms',
+      CV: {
+        id: null,
+        teacher: null,
+        show: false
+      },
+      instructors: [
+        {
+          id: '1',
+          title: 'NhaNhann',
+          message:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+          picture: 'images/pictures/teacher1.jpg',
+          cv: 0
+        },
+        {
+          id: '2',
+          title: 'Blublue',
+          message:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+          picture: 'images/pictures/teacher2.jpg',
+          cv: 1
+        },
+        {
+          id: '3',
+          title: 'RamiRami',
+          message:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+          picture: 'images/pictures/teacher3.jpg',
+          cv: 2
         }
-    },
-    computed: {
-        
-    },
-}
+      ]
+    };
+  }
+};
 </script>

@@ -3,36 +3,33 @@
   @media screen and (min-width: 500px) {
     text-align: left;
   }
+
   & .il-home--content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-content: center;
-    & .il-home--slide {
-      opacity: 0.9;
-      &.il-absolute {
-        position: absolute;
-        top: 0;
-        opacity: 0.5;
-      }
-    }
-    & p {
-      text-align: left;
-      & i {
-        margin-right: 0.35rem;
-      }
-    }
-    & .il-icons {
+    display: block;
+    @media screen and (min-width: 500px) {
       display: flex;
-      justify-content: center;
-      @media screen and (min-width: 500px) {
-        justify-content: flex-end;
-      }
-      & a {
-        display: block;
-        &:hover {
-          color: $thirtyColor;
-          @include easeOut();
+    }
+    & .il-home--address {
+      margin: 0;
+      & p {
+        text-align: left;
+        & i {
+          margin-right: 0.35rem;
         }
+      }
+    }
+  }
+  & .il-icons {
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: 500px) {
+      justify-content: flex-end;
+    }
+    & a {
+      display: block;
+      &:hover {
+        color: $thirtyColor;
+        @include easeOut();
       }
     }
   }

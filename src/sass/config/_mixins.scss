@@ -2,7 +2,7 @@
   @return calc(100% - #{$w});
 }
 @function getPixels() {
-    @return '130px';
+  @return '130px';
   //@return calc(100% - #{$w});
 }
 @function calcPX() {
@@ -20,7 +20,7 @@
 @mixin big-img($img, $url) {
   @if $img {
     background-image: $url;
-    background-position: bottom center;
+    background-position: right bottom;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -1,35 +1,46 @@
 #app {
   position: relative;
-  display: flex;
-  flex-direction: column;
   height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr $height-footer;
   &.il-app--perc {
     height: 100%;
   }
-  //overflow-y: hidden;
+
   &:before {
     content: '';
     position: absolute;
-    background: rgba(252, 250, 250, 0.9);
-    top: 0;
-    left: 0;
+    background: rgba(232, 240, 240, 0.87);
     width: 100%;
     height: 100%;
     background-image: url('../public/images/theme/dott.png');
-    background-position: center top;
+    background-position: center center;
     background-repeat: repeat;
-    background-attachment: fixed;
-    opacity: 0.3;
+    opacity: 0.8;
+  }
+  .il-container {
+    padding-top: $header-height;
+  }
+  section.il-section {
+    height: 100%;
   }
   & main.il-main {
     position: relative;
-    padding-top: $header-height;
+    /*padding-top: $header-height;
     height: calc(100vh - #{$header-height});
     @include easeOut;
     &.il-main--perc {
       @include easeOut;
       height: calc(100% - #{$header-height});
-    }
+    }*/
+  }
+  footer.il-footer {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    bottom: 0;
+    height: $height-footer;
+    @import '../modules/footer';
   }
   & .il-container--wrapper {
     max-width: $max-width;

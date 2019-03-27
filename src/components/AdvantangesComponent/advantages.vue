@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import anime from 'animejs';
+import { animeAbout } from '../../common/animation';
 export default {
   name: 'Advantage',
   mounted() {
@@ -31,26 +31,6 @@ export default {
       whatIcon: 'il-pilates-icon flaticon-pilates-equipment'
     };
   },
-  methods: {
-    startAnime() {
-      let showAnime = anime.timeline({
-        targets: '.il-item.il-item--0',
-        easing: 'easeInOutQuad'
-      });
-      showAnime.add({
-        opacity: ['0', '1'],
-        duration: 500
-      });
-      let showAnime1 = anime.timeline({
-        targets: '.il-item.il-item--1',
-        easing: 'easeInOutQuad'
-      });
-      showAnime1.add({
-        opacity: ['0', '1'],
-        delay: 500,
-        duration: 800
-      });
-    }
-  }
+  mixins: [animeAbout]
 };
 </script>

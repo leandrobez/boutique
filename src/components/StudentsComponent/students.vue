@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { animeBox } from '../../common/animation';
 import ilDepoiment from './includes/depoiments.vue';
 export default {
   name: 'Student',
@@ -27,13 +28,15 @@ export default {
   components: {
     ilDepoiment
   },
-
+  mounted() {
+    this.startAnime();
+  },
   data() {
     return {
       whatIcon: 'il-pilates-icon flaticon-exercises-with-reformer'
     };
   },
 
-  methods: {}
+  mixins: [animeBox]
 };
 </script>

@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { animeCardVideos } from '../../../common/animation';
 export default {
   name: 'cardsVideos',
   props: {
@@ -21,6 +22,10 @@ export default {
     name: String,
     video: Number
   },
+  mounted() {
+    this.startAnime();
+  },
+  mixins: [animeCardVideos],
   methods: {
     runVideo(i) {
       this.$parent.setTrailer(i);

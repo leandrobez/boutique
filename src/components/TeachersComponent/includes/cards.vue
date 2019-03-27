@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import anime from 'animejs';
+import { animeCards } from '../../../common/animation';
 export default {
   name: 'cards',
   props: {
@@ -31,29 +31,9 @@ export default {
   mounted() {
     this.startAnime();
   },
+
+  mixins: [animeCards],
   methods: {
-    startAnime() {
-      let init = 400;
-      let include = 100;
-      let showAnime = anime.timeline({
-        targets: '.il-card--0',
-        easing: 'easeInOutQuad'
-      });
-      showAnime.add({
-        opacity: ['0', '1'],
-        duration: init
-      });
-      showAnime.add({
-        targets: '.il-card--1',
-        opacity: ['0', '1'],
-        duration: init + include
-      });
-      showAnime.add({
-        targets: '.il-card--2',
-        opacity: ['0', '1'],
-        duration: init + 2 * include
-      });
-    },
     animateRight() {
       var ele = event.currentTarget;
       ele.classList.add('moveRight');

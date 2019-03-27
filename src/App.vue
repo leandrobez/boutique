@@ -4,7 +4,7 @@
     <!--HEADER-->
     <ilHeader :class="isActive()" :authenticated="authenticated" />
     <!--MAIN-->
-    <main class="il-main" :class="getHomeClass()">
+    <main class="il-main">
         <div class="il-container">
             <div class="il-container--wrapper">
                 <ilWarning :message="warning" v-show="checkWarning" />
@@ -29,7 +29,7 @@ import ilFooter from './components/includes/FooterComponent.vue';
 import ilWarning from './components/includes/warningsComponent.vue';
 import ilModal from './components/includes/ModalComponent.vue';
 /**https://github.com/sqreen/vue-authentication-example */
-import axios from 'axios';
+//import axios from 'axios';
 export default {
   name: 'App',
   components: {
@@ -54,7 +54,7 @@ export default {
     };
   },
   created() {
-    this.intercepter();
+    //this.intercepter();
   },
   mounted() {
     setTimeout(() => {
@@ -77,7 +77,7 @@ export default {
     }
   },
   methods: {
-    intercepter() {
+    /*intercepter() {
       axios.interceptors.response.use(undefined, function(err) {
         return new Promise(function(resolve, reject) {
           if (
@@ -92,7 +92,7 @@ export default {
           throw err;
         });
       });
-    },
+    },*/
     closeWarning() {
       let time = 4000;
       setTimeout(() => {

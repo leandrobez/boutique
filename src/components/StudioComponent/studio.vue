@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import anime from 'animejs';
+import { animeStudio } from '../../common/animation';
 export default {
   name: 'Studio',
 
@@ -28,17 +28,6 @@ export default {
   mounted() {
     this.startAnime();
   },
-  methods: {
-    startAnime() {
-      let showAnime = anime.timeline({
-        targets: '.il-item',
-        easing: 'easeInOutQuad'
-      });
-      showAnime.add({
-        opacity: ['0', '1'],
-        duration: 2000
-      });
-    }
-  }
+  mixins: [animeStudio]
 };
 </script>

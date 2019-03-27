@@ -4,6 +4,7 @@ section.il-section--modal {
   width: 100%;
   height: 100%;
   opacity: 0;
+  top: 0;
   &:after {
     content: '';
     position: absolute;

@@ -9,12 +9,12 @@
             <div class="il-box--items">
                 <div class="il-item il-item--0 il-box il-color--background__lighten">
                     <i class="il-pilates-icon flaticon-exercises-with-body-arc light"></i>
-                    <p class="il-content--description il-color--text">Transformar sistematicamenta o cotidiando de alunos/clientes na busca constante do bem estar, através de um atendimento de elevado nível técnico e ao mesmo tempo acolhedor, proporcionando dessa maneira alívio de dores, disposição física e facilitação nas atividades de vida diária.
+                    <p class="il-content--description il-color--text">Transformar as atividades cotidianas de alunos/clientes em uma experiência contemplada pelo bem estar, através de um atendimento acolhedor e de qualidade, canalizando recursos e conhecimentos técnicos de alto nível a fim de proporcionar alívio de dores, mais disposição física e facilitação nas atividades de vida diária.
                     </p>
                 </div>
                 <div class="il-item il-item--1 il-box il-color--background__lighten">
                     <i class="il-pilates-icon flaticon-breath-position light"></i>
-                    <p class="il-content--description il-color--text">Estimular o movimento inteligente de forma repetida e com persistência, criando as condições ideais para uma vida plena e saudavel.
+                    <p class="il-content--description il-color--text">Estimular o movimento inteligente de forma sistemática e persistente, criando as condições ideais para uma vida plena e saudável.
                     </p>
                 </div>
             </div>
@@ -24,37 +24,17 @@
 </template>
 
 <script>
-import anime from 'animejs';
+import { animeAbout } from '../../common/animation';
 export default {
   name: 'About',
+  mounted() {
+    this.startAnime();
+  },
   data() {
     return {
       whatIcon: 'il-pilates-icon flaticon-side-bending-posture'
     };
   },
-  mounted() {
-    this.startAnime();
-  },
-  methods: {
-    startAnime() {
-      let showAnime = anime.timeline({
-        targets: '.il-item.il-item--0',
-        easing: 'easeInOutQuad'
-      });
-      showAnime.add({
-        opacity: ['0', '1'],
-        duration: 500
-      });
-      let showAnime1 = anime.timeline({
-        targets: '.il-item.il-item--1',
-        easing: 'easeInOutQuad'
-      });
-      showAnime1.add({
-        opacity: ['0', '1'],
-        delay: 500,
-        duration: 800
-      });
-    }
-  }
+  mixins: [animeAbout]
 };
 </script>
