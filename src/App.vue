@@ -1,10 +1,10 @@
 <template>
-<div id="app" :class="getBigImg()">
+<div id="app" >
 
     <!--HEADER-->
     <ilHeader :class="isActive()" :authenticated="authenticated" />
     <!--MAIN-->
-    <main class="il-main">
+    <main class="il-main" :class="getHeightClass">
         <div class="il-container">
             <div class="il-container--wrapper">
                 <ilWarning :message="warning" v-show="checkWarning" />
@@ -24,14 +24,14 @@
 </template>
 
 <script>
-import ilHeader from './components/includes/HeaderComponent.vue';
-import ilFooter from './components/includes/FooterComponent.vue';
-import ilWarning from './components/includes/warningsComponent.vue';
-import ilModal from './components/includes/ModalComponent.vue';
+import ilHeader from "./components/includes/HeaderComponent.vue";
+import ilFooter from "./components/includes/FooterComponent.vue";
+import ilWarning from "./components/includes/warningsComponent.vue";
+import ilModal from "./components/includes/ModalComponent.vue";
 /**https://github.com/sqreen/vue-authentication-example */
 //import axios from 'axios';
 export default {
-  name: 'App',
+  name: "App",
   components: {
     ilHeader,
     ilFooter,
@@ -40,21 +40,18 @@ export default {
   },
   data() {
     return {
-      title: 'Kaizen Pilates',
+      title: "Kaizen Pilates",
       titleCompost: {
-        title: 'Kaizen',
-        subTitle: 'Pilates'
+        title: "Kaizen",
+        subTitle: "Pilates"
       },
       hasWarning: false,
       warning: {},
       authenticated: false,
       headerActive: false,
       showModal: false,
-      whatClass: ''
+      whatClass: ""
     };
-  },
-  created() {
-    //this.intercepter();
   },
   mounted() {
     setTimeout(() => {
@@ -74,6 +71,17 @@ export default {
         return true;
       }
       return false;
+    },
+    getHeightClass() {
+      if (
+        this.$route.name == "class" ||
+        this.$route.name == "student" ||
+        this.$route.name == "curse"
+      ) {
+        return "il-main--perc";
+      } else {
+        return "il-app-vh";
+      }
     }
   },
   methods: {
@@ -111,94 +119,95 @@ export default {
     },
     isActive() {
       if (this.headerActive) {
-        return 'active';
+        return "active";
       }
       return;
     },
     getHomeClass() {
       if (
-        this.$route.name == 'teachers' ||
-        this.$route.name == 'class' ||
-        this.$route.name == 'student' ||
-        this.$route.name == 'advantage' ||
-        this.$route.name == 'curse' ||
-        this.$route.name == 'video'
+        this.$route.name == "teachers" ||
+        this.$route.name == "class" ||
+        this.$route.name == "student" ||
+        this.$route.name == "advantage" ||
+        this.$route.name == "curse" ||
+        this.$route.name == "video"
       ) {
-        return 'il-main--perc';
+        return "il-main--perc";
       }
     },
-    getBigImg() {
+    /*getBigImg() {
       let rota = this.$route.name;
-      let currentImg = 'big-img-home';
+      //let currentImg = "big-img-home";
       let heighPerc;
       switch (rota) {
-        case 'home':
-          heighPerc = '';
-          this.whatClass = 'il-footer--home';
+        case "home":
+          heighPerc = "";
+          this.whatClass = "il-footer--home";
           break;
-        case 'curriculum':
-          heighPerc = '';
-          this.whatClass = 'il-footer--curriculum';
+        case "curriculum":
+          heighPerc = "";
+          this.whatClass = "il-footer--curriculum";
           break;
-        case 'about':
-          heighPerc = '';
-          this.whatClass = 'il-footer--about';
+        case "about":
+          heighPerc = "";
+          this.whatClass = "il-footer--about";
           break;
-        case 'studio':
-          heighPerc = '';
-          this.whatClass = 'il-footer--studio';
+        case "studio":
+          heighPerc = "";
+          this.whatClass = "il-footer--studio";
           break;
-        case 'teachers':
-          heighPerc = '';
-          this.whatClass = 'il-footer--teacher';
+        case "teachers":
+          heighPerc = "";
+          this.whatClass = "il-footer--teacher";
           break;
-        case 'class':
-          heighPerc = 'il-app--perc';
-          this.whatClass = 'il-footer--class';
+        case "class":
+          heighPerc = "il-app--perc";
+          this.whatClass = "il-footer--class";
           break;
-        case 'student':
-          heighPerc = 'il-app--perc';
-          this.whatClass = 'il-footer--student';
+        case "student":
+          heighPerc = "il-app--perc";
+          this.whatClass = "il-footer--student";
           break;
-        case 'advantage':
-          heighPerc = '';
-          this.whatClass = 'il-footer--advantage';
+        case "advantage":
+          heighPerc = "";
+          this.whatClass = "il-footer--advantage";
           break;
-        case 'video':
-          heighPerc = '';
-          this.whatClass = 'il-footer--video';
+        case "video":
+          heighPerc = "";
+          this.whatClass = "il-footer--video";
           break;
-        case 'gallery':
-          heighPerc = '';
-          this.whatClass = 'il-footer--gallery';
+        case "gallery":
+          heighPerc = "";
+          this.whatClass = "il-footer--gallery";
           break;
-        case 'galleryStudio':
-          heighPerc = '';
-          this.whatClass = 'il-footer--gallery';
+        case "galleryStudio":
+          heighPerc = "";
+          this.whatClass = "il-footer--gallery";
           break;
-        case 'galleryEvents':
-          heighPerc = '';
-          this.whatClass = 'il-footer--gallery';
+        case "galleryEvents":
+          heighPerc = "";
+          this.whatClass = "il-footer--gallery";
           break;
-        case 'curse':
-          heighPerc = 'il-app--perc';
-          this.whatClass = 'il-footer--gallery';
+        case "curse":
+          heighPerc = "il-app--perc";
+          this.whatClass = "il-footer--gallery";
           break;
-        case 'email':
-          heighPerc = '';
-          this.whatClass = 'il-footer--email';
+        case "email":
+          heighPerc = "";
+          this.whatClass = "il-footer--email";
           break;
         default:
-          heighPerc = '';
-          this.whatClass = 'il-footer--home';
+          heighPerc = "";
+          this.whatClass = "il-footer--home";
       }
-
-      return currentImg + ' ' + heighPerc;
-    },
+      console.log(heighPerc);
+      return "";
+      //return currentImg + ' ' + heighPerc;
+    },*/
     showFooter() {
       setTimeout(() => {
-        const showClass = document.getElementById('il-footer');
-        showClass.classList.add('il-footer--show');
+        const showClass = document.getElementById("il-footer");
+        showClass.classList.add("il-footer--show");
       }, 1200);
     }
   }
@@ -206,5 +215,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import './sass/styles.scss';
+@import "./sass/styles.scss";
 </style>

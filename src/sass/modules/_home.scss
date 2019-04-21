@@ -3,18 +3,18 @@
   @media screen and (min-width: 500px) {
     text-align: left;
   }
-
   & .il-home--content {
     display: block;
-    @media screen and (min-width: 500px) {
-      display: flex;
+    & p {
+      text-align: justify;
     }
     & .il-home--address {
-      margin: 0;
+      margin-right: 0;
       & p {
         text-align: left;
         & i {
           margin-right: 0.35rem;
+          cursor: pointer;
         }
       }
     }

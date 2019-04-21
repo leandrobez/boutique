@@ -3,7 +3,6 @@
 }
 @function getPixels() {
   @return '130px';
-  //@return calc(100% - #{$w});
 }
 @function calcPX() {
   $result: 100vh - $header-height;
@@ -22,8 +21,56 @@
     background-image: $url;
     background-position: right bottom;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-attachment: fixed;
+  }
+}
+@mixin backappcl() {
+  position: relative;
+  background-image: url('../public/images/banners/big-img-home.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ececdc;
+    background-image: url('../public/images/theme/overlay.png');
+    background-repeat: repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    opacity: 0.9;
+    z-index: -1;
+  }
+}
+@mixin backapp() {
+  position: relative;
+  background-image: url('../public/images/banners/corealign.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+  background-attachment: fixed;
+  height: 100vh;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #454343;
+    background-image: url('../public/images/theme/dott.png');
+    background-repeat: repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    opacity: 0.8;
+    z-index: -1;
   }
 }
 
@@ -43,11 +90,3 @@
     background-attachment: fixed;
   }
 }
-/*
-background-color: #183026;
-  background-image: url("../../public/images/theme/overlay.png");
-  background-repeat: repeat, no-repeat;
-  background-size: auto, cover;
-  background-position: top left, center 0;
-  background-attachment: fixed, fixed;
-*/

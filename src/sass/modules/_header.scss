@@ -2,7 +2,9 @@
   width: 100%;
   position: absolute;
   height: $header-height;
-  top: $pos-top;
+  border-bottom: 2px solid lighten(#454343, 40%);
+  //top: $pos-top;
+  padding-top: $pos-top;
   z-index: 2;
   @include easeOut;
   &.active {

@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@google/maps": "^0.5.5",
     "animejs": "^3.0.1",
     "gn-api-sdk-node": "0.0.23",
     "stringify-clone": "^2.0.1",

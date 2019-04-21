@@ -130,11 +130,13 @@ h3 {
   font-family: $h3-font;
 }
 p {
-  //font-family: $heading-font;
   font-size: 0.95rem;
   text-align: right;
   @media screen and (min-width: 480px) {
     font-size: 0.98rem;
+  }
+  &.il-weight {
+    font-weight: 500;
   }
   &.il-content--description {
     text-align: justify;

@@ -3,46 +3,6 @@
 #app.big-img-home {
   @include big-img($show-img-home, $big-img-url-home);
 }
-/*
-#app.big-img-curriculum {
-  @include big-img($show-img-home, $big-img-url-curriculum);
-}
-
-#app.big-img-about {
-  @include big-img($show-img-about, $big-img-url-about);
-}
-
-#app.big-img-studio {
-  @include big-img($show-img-space, $big-img-url-space);
-}
-
-#app.big-img-instructor {
-  @include big-img($show-img-instructor, $big-img-url-instructor);
-}
-
-#app.big-img-class {
-  @include big-img($show-img-class, $big-img-url-class);
-}
-
-#app.big-img-student {
-  @include big-img($show-img-student, $big-img-url-student);
-}
-
-#app.big-img-advantage {
-  @include big-img($show-img-advantage, $big-img-url-advantage);
-}
-
-#app.big-img-gallery {
-  @include big-img($show-img-gallery, $big-img-url-gallery);
-}
-
-#app.big-img-video {
-  @include big-img($show-img-video, $big-img-url-video);
-}
-
-#app.big-img-email {
-  @include big-img($show-img-email, $big-img-url-email);
-}*/
 
 /**Backgrounds*/
 .il-color--background__default {
@@ -60,18 +20,18 @@
 }
 
 .il-color--background__clean {
-  background: #d0d1ab; ///lighten($secondColor,40%);
+  background: #d0d1ab;
 }
 
 .il-color--background__modal {
-  background: rgba(
-    255,
-    242,
-    231,
-    1
-  ); // rgb(180, 180, 137); // lighten($fortyColor, 25%);
+  background: rgba(255, 242, 231, 1);
 }
-
+.il-color--background__header {
+  background: #454343;
+}
+.il-color--background__lighten {
+  background: #f0ecdd;
+}
 .il-color--background__modal-content {
   background: $thirtyColor;
 }
@@ -81,10 +41,5 @@
 }
 
 .il-color--background__darken {
-  background: #110f08; // #3a3939;
+  background: #110f08;
 }
-/*.il-section--about:after {
-  content: '';
-
-  background: rgba(222, 222, 222, 0.1);
-}*/
