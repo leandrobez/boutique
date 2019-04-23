@@ -16,8 +16,8 @@ form.il-form {
   & input[type='password'],
   & input[type='tel'],
   & textarea {
-    border: 1px solid $secondColor;
-    background-color: $thirtyColor;
+    border: 1px solid #bcb;
+    background-color: $secondColor;
     font-size: 0.85rem;
     @media screen and (max-width: 768px) {
       height: 1.6rem;
@@ -39,8 +39,10 @@ form.il-form {
     height: 4rem;
   }
   & select.il-select {
-    border: 1px solid $secondColor;
-    background-color: $thirtyColor;
+    padding: 4px 4px;
+    border-radius: 3px;
+    border: 1px solid #bcb;
+    background-color: $secondColor;
     font-size: 0.85rem;
     font-weight: 300;
     transition: border 0.3s;
@@ -50,11 +52,11 @@ form.il-form {
     outline: none;
     color: $textColor;
     &:focus {
-      background: $textColorLightGray;
+      background: $textColorLight;
     }
   }
   & button.il-btn {
-    background: $primaryColor;
+    background: $textColorLightGray;
     display: inline-block;
     text-align: center;
     transition: all 0.15s ease;

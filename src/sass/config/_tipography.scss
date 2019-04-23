@@ -11,7 +11,7 @@ body {
   line-height: 1.5;
   font-weight: 300;
   letter-spacing: 1px;
-  color: #3a3939;
+  color: $textColor;
   text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
 }
 
@@ -30,6 +30,7 @@ h6 {
   letter-spacing: 0.2rem;
   margin: 0;
   &.il-section--title {
+    color: #576274;
     @media screen and (max-width: 360px) {
       font-size: 1.9rem;
       margin: 0;

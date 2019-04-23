@@ -6,7 +6,8 @@
         <div class="il-menu--line"></div>
     </div>
     <div class="il-header--brand">
-      <img src="images/theme/logokaizenvertical.png">
+      <!--<img src="images/theme/logo234x80.png">-->
+      <h1 class="il-color--text__gold">LOGO</h1>
     </div>
     <div class="il-header--content">
         <div class="il-content--portrait">

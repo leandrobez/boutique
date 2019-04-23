@@ -6,23 +6,24 @@
   transform: translateX(-50%);
   width: $m-w;
   height: $m-h;
-  border: 1px solid $textColorGold;
+  border: 1px solid $secondColorAccent;
   padding: 7px 0;
   cursor: pointer;
   border-radius: 3px;
+  background: $fortyColor;
   @include easeOut;
   &:hover {
     @include easeOut;
-    background: $fortyColorAccent;
+    background: #5f5d44;
   }
   &.radius {
     border-radius: 50%;
-    background: $secondColorAccent;
+    background: $secondColor;
     @include easeOut;
   }
   & .il-menu--line {
     height: 3px;
-    background: $textColorGold;
+    background: $secondColorAccent;
     padding: 2px 0;
     margin: 3px 4px;
     opacity: 1;

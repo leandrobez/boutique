@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'access',
+  name: "access",
   data() {
     return {
       access: {
@@ -23,15 +23,17 @@ export default {
   },
   methods: {
     login() {
-      if (this.access.email == '' || this.access.password == '') {
+      if (this.access.email == "" || this.access.password == "") {
         let res = {
           check: true,
-          type: 'warning',
-          msg: 'Preencha todos os campos para verificação.'
+          type: "warning",
+          msg: "Preencha todos os campos para verificação."
         };
         this.$parent.doError(res);
       } else {
-        this.$parent.doLogin(this.access);
+        this.$parent.credencials.username = this.access.email;
+        this.$parent.credencials.password = this.access.password;
+        this.$parent.doLogin();
       }
     }
   }

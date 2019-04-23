@@ -1,8 +1,7 @@
 /*---------------VARIABLES----------------*/
 
 /*colors*/
-
-$primaryColor: #b44e13; //#fcf5f1
+$primaryColor: #312424; //#fcf5f1
 $primaryAccent: darken($primaryColor, 15%);
 $secondColor: #f3efd5;
 $secondColorAccent: darken($secondColor, 15%);
@@ -10,7 +9,7 @@ $thirtyColor: #f7f6f1; //#e6dcab;
 $fortyColor: #454343;
 $thirtyColorAccent: darken($thirtyColor, 15%);
 $fortyColorAccent: darken($fortyColor, 15%);
-$textColor: #343434;
+$textColor: #454343;
 $textColorGold: #f8da30;
 $textColorAlt: darken($textColor, 5%);
 $textColorAccent: darken($textColor, 15%);
@@ -33,8 +32,8 @@ $width-modal: 300px;
 
 /*header*/
 /* logo*/
-$brand-sw: 91px;
-$brand-sh: 116px;
+$brand-sw: 234px;
+$brand-sh: 80px;
 /* logo*/
 $brand-swsmall: 86px;
 $brand-shsmall: 42px;
@@ -44,7 +43,7 @@ $m-w: 40px;
 $m-h: 40px;
 $header-height: $brand-sh + $pos-top + 14px;
 //$header-height: $brand-sh + $m-h + $pos-top;
-$brandUrl: '../public/images/theme/logokaizenvertical.png';
+$brandUrl: '../public/images/theme/logonegative234x80.png';
 $brandUrlSmall: '../public/images/theme/logokaizen86x42.png';
 /*app*/
 $opacity-overlay: 0.5;

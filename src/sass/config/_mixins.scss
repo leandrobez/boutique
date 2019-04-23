@@ -27,13 +27,13 @@
 }
 @mixin backappcl() {
   position: relative;
-  background-image: url('../public/images/banners/big-img-home.jpg');
+  background-image: url('../public/images/banners/big-img-home.svg');
   background-repeat: repeat-y;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 100%;
-  &:after {
+  /*&:after {
     content: '';
     position: absolute;
     left: 0;
@@ -47,7 +47,7 @@
     background-attachment: fixed;
     opacity: 0.9;
     z-index: -1;
-  }
+  }*/
 }
 @mixin backapp() {
   position: relative;

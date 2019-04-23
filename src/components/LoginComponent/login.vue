@@ -10,26 +10,34 @@
 </template>
 
 <script>
-import ilAccess from './includes/accessComponent.vue';
+import { mapState, mapActions } from "vuex";
+import ilAccess from "./includes/accessComponent.vue";
 export default {
-  name: 'login',
+  name: "login",
   data() {
     return {
       authenticated: false,
       credencials: {
-        login: '',
-        pwd: ''
+        username: "",
+        password: ""
       },
       submitted: false,
       loading: false,
-      returnUrl: ''
+      returnUrl: ""
     };
   },
   components: {
     ilAccess
   },
+  computed: {
+    ...mapState("account", ["status"])
+  },
   methods: {
-    doLogin (data) {
+    ...mapActions("account", ["login", "logout"]),
+    doLogin() {
+      this.submitted = true;
+      //const { username, password } = this.credencials;
+      this.login(this.credencials);
       /* this.submitted = true;
       this.credencials = data;
       userService.login(data).then(
@@ -45,10 +53,10 @@ export default {
         type: 'success',
         msg: 'Correct login. Got to secure area'
       }; */
-      console.log(data)
-      return
+      //console.log(data);
+      //return;
     },
-    doError (data) {
+    doError(data) {
       this.$parent.authenticated = false;
       this.$parent.warning = data;
     }

@@ -1,36 +1,37 @@
-div {
+.il-cv--contents {
   position: relative;
-  section.il-cv {
-    transition: max-width 450ms;
+  height: 100%;
+  & .il-cv {
+    transition: all 450ms;
     width: 100%;
-    position: absolute;
-    top: -15vh;
-    left: -100%;
-    opacity: 0.87;
+    position: relative;
+    top: -12vh;
+    //left: -100%;
+    //opacity: 0.87;
     @media screen and (max-width: 1023px) {
       max-width: 90%;
-      transition: max-width 450ms;
+      transition: all 450ms;
     }
     @media screen and (min-width: 1024px) {
       max-width: 70%;
-      transition: max-width 450ms;
+      transition: all 450ms;
     }
     @media screen and (min-width: 1200px) {
       max-width: 60%;
-      transition: max-width 450ms;
+      transition: all 450ms;
     }
     margin: auto;
-    & .il-cv--content {
-      border: 2px solid $primaryColor;
+    & .il-cv--items {
+      border: 2px solid $fortyColor;
       padding: 0 1rem;
       position: relative;
       text-align: center;
-      color: $primaryColor;
       opacity: 0;
       height: 0;
-      background: darken($app-overlay, 25%); //$fortyColor;
+      background: #bdb4b4; //$fortyColor;
       &.cv-show {
         left: 0;
+        position: absolute;
         opacity: 1;
         height: auto;
       }
@@ -43,11 +44,14 @@ div {
       & .il-cv--profile {
         width: 80px;
         height: 80px;
-        border: 2px solid $fortyColorAccent;
         border-radius: 50%;
-        background: $secondColor;
         margin: auto;
-        padding: 1% 0;
+        & img {
+          display: block;
+          max-width: 80px;
+          border-radius: 50%;
+          border: 2px solid $thirtyColor;
+        }
       }
       & .il-cv--name,
       & .il-cv--info,
@@ -91,7 +95,7 @@ div {
             flex: 1;
             & a {
               display: block;
-              color: #45cddd;
+              color: $primaryColor;
             }
           }
         }
