@@ -23,7 +23,6 @@ export const animeAbout = {
     }
   }
 };
-
 export const animeStudio = {
   methods: {
     startAnime() {

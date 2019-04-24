@@ -6,67 +6,70 @@
             <h2 class="il-section--sub-title il-color--text__very-light text-right">Professores da {{$parent.title}}</h2>
 
             <div class="il-instructor--content">
-                <ilCards v-for="instructor in instructors" :key="instructor.id" :id="instructor.cv" :title="instructor.title" :message="instructor.message" :picture="instructor.picture" />
+                <ilCards v-for="(instructor, index) in instructors" :key="instructor.id" :title="instructor.title" :message="instructor.message" :picture="instructor.picture" :id="index" />
             </div>
         </div>
-        
+
     </section>
-    <ilCv v-for="cv in instructors" v-show="cv.show" :key="`${cv.id}_cv`" :id="`cv_${cv.id}`" />
+    <div class="il-container--wrapper">
+      <ilCv v-if="checkCV" :curriculum="getCurriculum()" :status="CV.show" :picture="CV.picture" />
+    </div>
 </div>
 </template>
 
 <script>
+import instructors from '../../common/instructors'
 import ilCards from "./includes/cards.vue";
 import ilCv from "./includes/cv.vue";
 export default {
-  name: "Teachers",
-  components: {
-    ilCards,
-    ilCv
-  },
-  data() {
-    return {
-      whatIcon: "il-pilates-icon flaticon-twisting-arms",
-      CV: {
-        id: null,
-        teacher: null,
-        show: false
-      },
-      instructors: [
-        {
-          id: "1",
-          title: "NhaNhann",
-          message:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-          picture: "images/pictures/teacher1.jpg",
-          show: false,
-          cv: 0
-        },
-        {
-          id: "2",
-          title: "Blublue",
-          message:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-          picture: "images/pictures/teacher2.jpg",
-          show: false,
-          cv: 1
-        },
-        {
-          id: "3",
-          title: "RamiRami",
-          message:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-          picture: "images/pictures/teacher3.jpg",
-          show: false,
-          cv: 2
+    name: "Teachers",
+    components: {
+        ilCards,
+        ilCv
+    },
+    data() {
+        return {
+            whatIcon: "il-pilates-icon flaticon-twisting-arms",
+            CV: {
+                index: 0,
+                id: null,
+                teacher: null,
+                picture: null,
+                show: false
+            },
+            instructors: []
+        };
+    },
+    mounted() {
+        this.instructors = instructors
+    },
+    computed: {
+        checkCV() {
+            if (this.CV.show) {
+                return true;
+            }
+            return false;
         }
-      ]
-    };
-  },
-  methods: {
-    showCV(index) {
-      this.instructors[index].show = true;
+    },
+    methods: {
+        getCurriculum() {
+            let index = this.CV.index
+            return instructors[index].cv
+        },
+        showCV(index) {
+            this.CV.index = index
+            this.CV.id = this.instructors[index].id;
+            this.CV.teacher = this.instructors[index].title;
+            this.CV.picture = this.instructors[index].picture;
+            this.CV.show = true;
+        },
+        closeModal() {
+            this.CV.index = 0
+            this.CV.id = null
+            this.CV.teacher = null
+            this.CV.picture = null
+            this.CV.show = false
+        }
     }
-  }
 };
 </script>

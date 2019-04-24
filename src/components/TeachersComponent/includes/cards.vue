@@ -49,21 +49,6 @@ export default {
     },
     showCV(key) {
       this.$parent.showCV(key);
-
-      /*if (!this.clicked) {
-        this.$parent.CV = {
-          id: key,
-          teacher: this.$parent.instructors[key].title,
-          show: true
-        };
-      } else {
-        this.$parent.CV = {
-          id: null,
-          teacher: null,
-          show: false
-        };
-      }
-      this.clicked = !this.clicked;*/
     }
   }
 };

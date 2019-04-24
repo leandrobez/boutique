@@ -1,13 +1,16 @@
 .il-cv--contents {
-  position: relative;
   height: 100%;
+  position: relative;
+
   & .il-cv {
     transition: all 450ms;
     width: 100%;
-    position: relative;
-    top: -12vh;
-    //left: -100%;
-    //opacity: 0.87;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    opacity: 0;
+    margin: auto;
+    background: #7e8285;
     @media screen and (max-width: 1023px) {
       max-width: 90%;
       transition: all 450ms;
@@ -20,86 +23,57 @@
       max-width: 60%;
       transition: all 450ms;
     }
-    margin: auto;
-    & .il-cv--items {
-      border: 2px solid $fortyColor;
-      padding: 0 1rem;
-      position: relative;
+    a.il-modal--close {
+      color: rgb(238, 101, 101);
       text-align: center;
-      opacity: 0;
-      height: 0;
-      background: #bdb4b4; //$fortyColor;
-      &.cv-show {
-        left: 0;
-        position: absolute;
-        opacity: 1;
-        height: auto;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin-right: 12px;
+      display: block;
+      position: relative;
+      left: 95%;
+      top: 10px;
+      background: yellow;
+      &:hover {
+        color: rgb(17, 17, 14);
+        border-color: white;
       }
-      &.cv-hidden {
-        left: -100%;
-        opacity: 0;
-        height: 0;
+      & i {
+        display: block;
+        line-height: 30px;
       }
-
-      & .il-cv--profile {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        margin: auto;
-        & img {
-          display: block;
-          max-width: 80px;
-          border-radius: 50%;
-          border: 2px solid $thirtyColor;
-        }
-      }
+    }
+    & .il-cv--items {
+      padding: 1rem;
+      & .il-cv--profile,
       & .il-cv--name,
       & .il-cv--info,
       & .il-cv--edu {
-        & ul {
-          margin: 0.45rem;
-          font-size: 0.8rem;
-          position: relative;
-          & li:first-child {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            font-weight: bolder;
-          }
-          &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            left: 0;
-            margin: 0.15rem 0;
-            background: #bcbcbc;
-          }
+        margin-bottom: 0.45rem;
+        & ul li:first-child {
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          font-weight: 500;
         }
       }
-      & .il-cv--sm-name {
-        font-size: 0.9rem;
+      .il-cv--profile img {
+        max-width: 80px;
+        margin: 0 auto;
+        border: 2px solid white;
+        border-radius: 50%;
       }
-      & .il-cv--edu ul li.il-cv--sm-name {
-        list-style: disc;
-        text-align: left;
-        margin-left: 0.15rem;
-        font-size: 0.85rem;
+      & .il-cv--social ul {
+        display: flex;
+        justify-content: space-between;
       }
-      & .il-cv--social {
-        max-width: 360px;
-        margin: 0.5rem auto;
-        & ul {
-          display: flex;
-          align-items: space-beatwen;
-          & li {
-            flex: 1;
-            & a {
-              display: block;
-              color: $primaryColor;
-            }
-          }
-        }
-      }
+    }
+    &.cv-show {
+      transition: all 450ms;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 1;
+      height: auto;
     }
   }
 }
