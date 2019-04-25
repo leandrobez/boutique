@@ -22,9 +22,7 @@
         <div class="il-container--wrapper">
             <h2 class="il-section--sub-title il-color--text__very-light text-right">Escolha um plano de aula:</h2>
             <div class="il-pricing--grid">
-              <ilCards v-for="plan in plans" :key="plan.key" :id="plan.id"
-                :condicions="plan.condicions" :price="plan.value" 
-                :text="plan.text" />
+                <ilCards v-for="plan in plans" :key="plan.key" :id="plan.id" :condicions="plan.condicions" :price="plan.value" :text="plan.text" />
             </div>
         </div>
     </section>
@@ -32,44 +30,45 @@
 </template>
 
 <script>
-import { animeBox } from '../../common/animation';
+import {
+    animeBox
+} from '../../common/animation';
 import ilCards from './includes/cards.vue';
 export default {
-  name: 'Class',
-  components: {
-    ilCards
-  },
-  mounted() {
-    this.startAnime();
-  },
-  data() {
-    return {
-      whatIcon: 'il-pilates-icon flaticon-exercises-with-chair',
-      plans: [
-        {
-          id: '1',
-          key: 0,
-          condicions: 1,
-          value: 250,
-          message: ''
-        },
-        {
-          id: '2',
-          key: 1,
-          condicions: 2,
-          value: 480,
-          message: ''
-        },
-        {
-          id: '3',
-          key: 2,
-          condicions: 3,
-          value: 720,
-          message: ''
-        }
-      ]
-    };
-  },
-  mixins: [animeBox]
+    name: 'Class',
+    components: {
+        ilCards
+    },
+    mounted() {
+        this.startAnime();
+    },
+    data() {
+        return {
+            whatIcon: 'il-pilates-icon flaticon-exercises-with-chair',
+            plans: [{
+                    id: '1',
+                    key: 0,
+                    condicions: 1,
+                    value: 250,
+                    message: ''
+                },
+                {
+                    id: '2',
+                    key: 1,
+                    condicions: 2,
+                    value: 480,
+                    message: ''
+                },
+                {
+                    id: '3',
+                    key: 2,
+                    condicions: 3,
+                    value: 720,
+                    message: ''
+                }
+            ]
+        };
+    },
+    mixins: [animeBox]
 };
 </script>

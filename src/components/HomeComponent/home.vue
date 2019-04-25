@@ -1,6 +1,6 @@
 <template>
 <!--SECTION HOME-->
-<section id="il-home" class="il-section il-section--home">
+<section class="il-section il-section--home">
     <div class="il-container--wrapper">
         <h1 class="il-section--title">Bem <span class="il-color--text__very-light">Vindo! a  <b>{{$parent.title}}</b></span></h1>
         <h2 class="il-section--sub-title">Somos especialistas em Pilates e CoreAlign.</h2>

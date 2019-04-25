@@ -4,7 +4,8 @@
     text-align: left;
   }
   & .il-home--content {
-    display: block;
+    display: flex;
+    flex-direction: column;
     & p {
       text-align: justify;
     }

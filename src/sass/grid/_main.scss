@@ -2,13 +2,11 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr $height-footer;
+
   .il-container {
     padding-top: $header-height;
     height: 100%;
     margin: auto;
-  }
-  section.il-section {
-    height: 100%;
   }
   & main.il-main {
     @include backappcl;
@@ -29,6 +27,7 @@
   }
   & .il-container--wrapper {
     max-width: $max-width;
+    //height: 100%;
     margin: 0 auto;
     @media screen and (max-width: 360px) {
       width: 100%;

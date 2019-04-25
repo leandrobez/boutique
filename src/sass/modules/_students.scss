@@ -11,6 +11,9 @@
       display: flex;
       justify-content: center;
     }
+    & p {
+      text-align: justify;
+    }
   }
 }
 .il-section--depoiments {

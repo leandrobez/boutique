@@ -6,7 +6,7 @@
     transition: all 450ms;
     width: 100%;
     position: absolute;
-    top: 70px;
+    top: 0;
     left: -100%;
     opacity: 0;
     margin: auto;
@@ -45,20 +45,38 @@
       }
     }
     & .il-cv--items {
-      padding: 1rem;
+      padding: 0.5rem;
+      @media screen and (min-width: 768px) {
+        padding: 1rem;
+      }
       & .il-cv--profile,
       & .il-cv--name,
       & .il-cv--info,
       & .il-cv--edu {
-        margin-bottom: 0.45rem;
+        margin-bottom: 0.25rem;
+        @media screen and (min-width: 768px) {
+          margin-bottom: 0.35rem;
+        }
+        & ul li {
+          font-size: 0.8rem;
+          @media screen and (min-width: 768px) {
+            font-size: 0.85rem;
+          }
+        }
         & ul li:first-child {
-          font-size: 1.2rem;
+          font-size: 0.85rem;
+          @media screen and (min-width: 768px) {
+            font-size: 1rem;
+          }
           text-transform: uppercase;
           font-weight: 500;
         }
       }
       .il-cv--profile img {
-        max-width: 80px;
+        max-width: 60px;
+        @media screen and (min-width: 768px) {
+          max-width: 70px;
+        }
         margin: 0 auto;
         border: 2px solid white;
         border-radius: 50%;

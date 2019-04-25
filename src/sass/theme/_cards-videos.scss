@@ -1,13 +1,13 @@
 .il-card--video {
   width: 186px;
   position: relative;
-  background: lighten($secondColor, 10%);
+  background: rgb(230, 213, 189);
   @media screen and (min-width: 768px) {
     width: auto;
   }
   display: flex;
   flex-direction: column;
-  border: 2px solid $dark;
+  border: 2px solid #beb5b5;
   border-radius: 3px;
   & .il-card-video--header {
     width: 100%;
@@ -20,20 +20,18 @@
     position: absolute;
     height: 100px;
     opacity: 0;
-    background: white;
     padding: 0;
+    top: 150px;
     p.il-card-video--description {
       padding: 0 0.35rem;
       font-size: 0.85rem;
-      text-align: justify;
-      letter-spacing: 1px;
-
+      text-align: left;
       color: black;
     }
   }
   & .il-card-video--footer {
     //position: relative;
-    background: $secondColor;
+    background: rgb(230, 213, 189);
     padding: 0.35rem 0;
     display: flex;
     justify-content: flex-end;
@@ -107,9 +105,8 @@
     transition: all 550ms;
     height: 268px;
   }
-  &:hover .il-card--content {
+  &:hover .il-card-video--content {
     transition: all 650ms;
     opacity: 1;
-    bottom: 0;
   }
 }

@@ -1,5 +1,6 @@
 <template>
-<section id="il-advantage" class="il-section il-section--advantage">
+<!--SECTION ADVANTAGE-->
+<section class="il-section il-section--advantage">
      <div class="il-container--wrapper">
          <h1 class="il-section--title">As <span class="il-color--text__very-light">Vantagens</span></h1>
          <h2 class="il-section--sub-title il-color--text__very-light text-right">Nossos diferencias falam por si só</h2>

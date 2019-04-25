@@ -39,6 +39,7 @@ input[type='submit']:hover {
 }
 a.il-btn--cards,
 button.il-btn--cards {
+  color: $secondColor;
   background-color: rgb(51, 12, 12);
   &:focus,
   &:hover {

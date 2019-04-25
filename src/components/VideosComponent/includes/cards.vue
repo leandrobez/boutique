@@ -4,7 +4,7 @@
         <img :src="thumbnail" :alt="name" />
     </div>
     <div class="il-card-video--content">
-        <p class="il-card-video--description il-card--description il-color--text__very-light">{{description}}</p>
+        <p class="il-card-video--description il-card--description il-color--text">{{description}}</p>
     </div>
     <div class="il-card-video--footer">
         <span class="il-btn--video" @click.prevent="runVideo(video)" :title="`Assistir ${name}`"></span>

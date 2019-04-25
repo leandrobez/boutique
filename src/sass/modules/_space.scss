@@ -1,13 +1,13 @@
 .il-section--space {
   text-align: center;
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 680px) {
     text-align: left;
   }
   & .il-space--content {
-    display: block;
-    @media screen and (min-width: 500px) {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    height: 100%;
+    & p {
+      text-align: justify;
     }
   }
 }

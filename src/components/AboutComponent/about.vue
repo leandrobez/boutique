@@ -1,4 +1,5 @@
 <template>
+<!--SECTION ABOUT-->
 <section class="il-section il-section--about">
     <div class="il-container--wrapper">
         <h1 class="il-section--title il-title--full">{{$parent.titleCompost.title}}
