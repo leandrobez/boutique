@@ -13,7 +13,9 @@ i.il-pilates-icon {
   border: 1px solid $thirtyColor;
   &:hover {
     transition: all 750ms ease;
-    opacity: 0.9;
+    border: 1px solid $textColorVeryLight;
+    background: $fortyColorAccent !important;
+    opacity: 0.95;
     transform: scale(0.9);
   }
   &.no-border {
@@ -21,9 +23,9 @@ i.il-pilates-icon {
     border-radius: 0;
   }
   &.light {
-    border: none !important;
-    color: $secondColorAccent;
-    background: $primaryAccent !important;
+    //border: none !important;
+    color: $textColorGold;
+    background: $textColorLight !important;
   }
   &.dark {
     //border: 2px solid $thirtyColor;

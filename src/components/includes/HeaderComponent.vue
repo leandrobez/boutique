@@ -1,5 +1,5 @@
 <template>
-<header id="il-header" class="il-header il-color--background__header" >
+<header id="il-header" class="il-header">
     <div class="il-header--menu" @click.prevent="activeMenu" :class="hasActive()">
         <div class="il-menu--line"></div>
         <div class="il-menu--line"></div>
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "HeaderComponent",
+  name: 'HeaderComponent',
 
   data() {
     return {
@@ -39,10 +39,10 @@ export default {
       menu: [
         {
           id: 1,
-          link: "home",
-          title: "Comece por aqui",
-          label: "Home",
-          icon: "il-pilates-icon flaticon-precision-posture",
+          link: 'home',
+          title: 'Comece por aqui',
+          label: 'Home',
+          icon: 'il-pilates-icon flaticon-precision-posture',
           show: true
         },
         /* {
@@ -55,58 +55,58 @@ export default {
                 }, */
         {
           id: 2,
-          link: "about",
-          title: "Saiba mais",
-          label: "Sobre",
-          icon: "il-pilates-icon flaticon-side-bending-posture",
+          link: 'about',
+          title: 'Saiba mais',
+          label: 'Sobre',
+          icon: 'il-pilates-icon flaticon-side-bending-posture',
           show: true
         },
         {
           id: 3,
-          link: "studio",
-          title: "Esse é o nosso studio",
-          label: "O Studio",
-          icon: "il-pilates-icon flaticon-pilates-reformer",
+          link: 'studio',
+          title: 'Esse é o nosso studio',
+          label: 'O Studio',
+          icon: 'il-pilates-icon flaticon-pilates-reformer',
           show: true
         },
         {
           id: 4,
-          link: "teachers",
-          title: "Sem eles não existiriamos",
-          label: "Os Intrutores",
-          icon: "il-pilates-icon flaticon-twisting-arms",
+          link: 'teachers',
+          title: 'Sem eles não existiriamos',
+          label: 'Os Intrutores',
+          icon: 'il-pilates-icon flaticon-twisting-arms',
           show: true
         },
         {
           id: 5,
-          link: "class",
-          title: "E para isso existimos",
-          label: "As Aulas",
-          icon: "il-pilates-icon flaticon-pilates-chair",
+          link: 'class',
+          title: 'E para isso existimos',
+          label: 'As Aulas',
+          icon: 'il-pilates-icon flaticon-pilates-chair',
           show: true
         },
         {
           id: 6,
-          link: "student",
-          title: "Tudo isso para vocês",
-          label: "Os Alunos",
-          icon: "il-pilates-icon flaticon-exercises-with-reformer",
+          link: 'student',
+          title: 'Tudo isso para vocês',
+          label: 'Os Alunos',
+          icon: 'il-pilates-icon flaticon-exercises-with-reformer',
           show: true
         },
         {
           id: 7,
-          link: "advantage",
-          title: "Como ganhamos sua confiança",
-          label: "Vantagens",
-          icon: "il-pilates-icon flaticon-pilates-equipment",
+          link: 'advantage',
+          title: 'Como ganhamos sua confiança',
+          label: 'Vantagens',
+          icon: 'il-pilates-icon flaticon-pilates-equipment',
           show: true
         },
         {
           id: 8,
-          link: "video",
-          title: "Para conhecer mais",
-          label: "Vídeos",
-          icon: "il-pilates-icon flaticon-centering-position",
+          link: 'video',
+          title: 'Para conhecer mais',
+          label: 'Vídeos',
+          icon: 'il-pilates-icon flaticon-centering-position',
           show: true
         }
         /*{
@@ -134,7 +134,7 @@ export default {
   methods: {
     hasActive() {
       if (this.showMenu) {
-        return "radius";
+        return 'radius';
       }
       return;
     },
@@ -143,64 +143,64 @@ export default {
       let rota = this.$route.name;
       let index = i - 1;
       if (rota == this.menu[index].link) {
-        return ["current"];
+        return ['current'];
       }
     },
 
     hiddenMenu() {
-      const menuLine = document.querySelectorAll(".il-menu--line");
-      const header = document.getElementById("il-header");
-      const headerContent = document.querySelector(".il-header--content");
-      const headerPortrait = document.querySelector(".il-content--portrait");
-      const headerNav = document.querySelector(".il-content--nav");
-      const headerNavList = document.querySelectorAll(".il-menu--list__item");
+      const menuLine = document.querySelectorAll('.il-menu--line');
+      const header = document.getElementById('il-header');
+      const headerContent = document.querySelector('.il-header--content');
+      const headerPortrait = document.querySelector('.il-content--portrait');
+      const headerNav = document.querySelector('.il-content--nav');
+      const headerNavList = document.querySelectorAll('.il-menu--list__item');
       menuLine.forEach(item => {
-        item.classList.remove("deform");
+        item.classList.remove('deform');
       });
-      header.classList.remove("active");
-      headerContent.classList.remove("il-show--header");
-      headerPortrait.classList.remove("show");
-      headerNav.classList.remove("show");
+      header.classList.remove('active');
+      headerContent.classList.remove('il-show--header');
+      headerPortrait.classList.remove('show');
+      headerNav.classList.remove('show');
       headerNavList.forEach((item, k) => {
         let child = item.children[0];
-        child.classList.remove("show-me" + (k + 1));
+        child.classList.remove('show-me' + (k + 1));
       });
       this.showMenu = false;
       this.$parent.headerActive = false;
     },
 
     activeMenu() {
-      const headerContent = document.querySelector(".il-header--content");
-      const headerPortrait = document.querySelector(".il-content--portrait");
-      const header = document.getElementById("il-header");
-      const headerNav = document.querySelector(".il-content--nav");
-      const headerNavList = document.querySelectorAll(".il-menu--list__item");
-      const menuLine = document.querySelectorAll(".il-menu--line");
+      const headerContent = document.querySelector('.il-header--content');
+      const headerPortrait = document.querySelector('.il-content--portrait');
+      const header = document.getElementById('il-header');
+      const headerNav = document.querySelector('.il-content--nav');
+      const headerNavList = document.querySelectorAll('.il-menu--list__item');
+      const menuLine = document.querySelectorAll('.il-menu--line');
 
       if (!this.showMenu) {
         menuLine.forEach(item => {
-          item.classList.add("deform");
+          item.classList.add('deform');
         });
-        header.classList.add("active");
-        headerContent.classList.add("il-show--header");
-        headerPortrait.classList.add("show");
-        headerNav.classList.add("show");
+        header.classList.add('active');
+        headerContent.classList.add('il-show--header');
+        headerPortrait.classList.add('show');
+        headerNav.classList.add('show');
         headerNavList.forEach((item, k) => {
           let child = item.children[0];
-          child.classList.add("show-me" + (k + 1));
+          child.classList.add('show-me' + (k + 1));
         });
         this.showMenu = true;
         this.$parent.headerActive = true;
       } else {
         menuLine.forEach(item => {
-          item.classList.remove("deform");
+          item.classList.remove('deform');
         });
-        header.classList.remove("active");
-        headerContent.classList.remove("il-show--header");
-        headerPortrait.classList.remove("show");
-        headerNav.classList.remove("show");
+        header.classList.remove('active');
+        headerContent.classList.remove('il-show--header');
+        headerPortrait.classList.remove('show');
+        headerNav.classList.remove('show');
         headerNavList.forEach(item => {
-          item.classList.remove("show-me");
+          item.classList.remove('show-me');
         });
         this.showMenu = false;
         this.$parent.headerActive = false;

@@ -21,69 +21,59 @@
 </template>
 
 <script>
-import ilAddress from "./includes/address.vue";
-//import ilLanding from "./includes/landing.vue";
+import ilAddress from './includes/address.vue';
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     ilAddress
   },
   data() {
     return {
-      whatIcon: "il-pilates-icon flaticon-precision-posture",
-
-      geometry: {}
+      whatIcon: 'il-pilates-icon flaticon-precision-posture'
     };
   },
 
   methods: {
-    openMap() {
-      //let address = "Av Lavras 334, Bairro Petrópolis, Porto Alegre - RS";
-      /*map.create.geocode({ address }, (err, response) => {
-                    if (!err) {
-                      //console.log(response.json);
-                      this.geometry = response.json.results[0].geometry;
-                      this.load();
-                    }
-                  });*/
-      //var map = map.load();
-      //console.log(map.load());
-    },
     socialNetOpen(path) {
       let w = 626,
         h = 436;
-      let urlFb = "https://www.facebook.com/BusqueFilme/?ref=bookmarks";
-      let urlFbShare = "https://www.facebook.com/sharer/sharer.php?u=";
-      let urlIn = "http://instagram.com/claumuraguti?ref=badge";
-      let urlGo = "https://plus.google.com/u/0/114144280855980132006";
-      let urlWap = "https://api.whatsapp.com/send?phone=5551999767179";
+      let urlFb = 'https://www.facebook.com/BusqueFilme/?ref=bookmarks';
+      let urlFbShare = 'https://www.facebook.com/sharer/sharer.php?u=';
+      let urlIn = 'http://instagram.com/claumuraguti?ref=badge';
+      let urlGo = 'https://plus.google.com/u/0/114144280855980132006';
+      let urlWap = 'https://api.whatsapp.com/send?phone=5551999767179';
       switch (path) {
-        case "wap":
+        case 'wap':
           window.open(
             urlWap,
-            "whatsapp-share-dialog",
+            'whatsapp-share-dialog',
             `"width=${w},height=${h}"`
           );
           break;
-        case "fb":
+        case 'fb':
           window.open(
             urlFbShare + encodeURIComponent(urlFb),
-            "fb-follow",
+            'fb-follow',
             `"width=${w},height=${h}"`
           );
           break;
-        case "in":
+        case 'in':
           window.open(
             urlIn,
-            "instagram-share-dialog",
+            'instagram-share-dialog',
             `"width=${w},height=${h}"`
           );
           break;
-        case "go":
-          window.open(urlGo, "google-share-dialog", `"width=${w},height=${h}"`);
+        case 'go':
+          window.open(urlGo, 'google-share-dialog', `"width=${w},height=${h}"`);
           break;
       }
     }
   }
 };
 </script>
+<style scoped>
+section.il-section--home {
+  position: relative;
+}
+</style>

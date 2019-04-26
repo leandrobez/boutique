@@ -24,14 +24,15 @@
 </template>
 
 <script>
-import ilHeader from "./components/includes/HeaderComponent.vue";
-import ilFooter from "./components/includes/FooterComponent.vue";
-import ilWarning from "./components/includes/warningsComponent.vue";
-import ilModal from "./components/includes/ModalComponent.vue";
+import ilHeader from './components/includes/HeaderComponent.vue';
+import ilFooter from './components/includes/FooterComponent.vue';
+import ilWarning from './components/includes/warningsComponent.vue';
+import ilModal from './components/includes/ModalComponent.vue';
+
 /**https://github.com/sqreen/vue-authentication-example */
 //import axios from 'axios';
 export default {
-  name: "App",
+  name: 'App',
   components: {
     ilHeader,
     ilFooter,
@@ -40,17 +41,17 @@ export default {
   },
   data() {
     return {
-      title: "Kaizen Pilates",
+      title: 'Kaizen Pilates',
       titleCompost: {
-        title: "Kaizen",
-        subTitle: "Pilates"
+        title: 'Kaizen',
+        subTitle: 'Pilates'
       },
       hasWarning: false,
       warning: {},
       authenticated: false,
       headerActive: false,
       showModal: false,
-      whatClass: ""
+      whatClass: ''
     };
   },
   mounted() {
@@ -74,13 +75,13 @@ export default {
     },
     getHeightClass() {
       if (
-        this.$route.name == "class" ||
-        this.$route.name == "student" ||
-        this.$route.name == "curse"
+        this.$route.name == 'class' ||
+        this.$route.name == 'student' ||
+        this.$route.name == 'curse'
       ) {
-        return "il-main--perc";
+        return 'il-main--perc';
       } else {
-        return "il-app-vh";
+        return 'il-app-vh';
       }
     }
   },
@@ -119,26 +120,26 @@ export default {
     },
     isActive() {
       if (this.headerActive) {
-        return "active";
+        return 'active';
       }
       return;
     },
     getHomeClass() {
       if (
-        this.$route.name == "teachers" ||
-        this.$route.name == "class" ||
-        this.$route.name == "student" ||
-        this.$route.name == "advantage" ||
-        this.$route.name == "curse" ||
-        this.$route.name == "video"
+        this.$route.name == 'teachers' ||
+        this.$route.name == 'class' ||
+        this.$route.name == 'student' ||
+        this.$route.name == 'advantage' ||
+        this.$route.name == 'curse' ||
+        this.$route.name == 'video'
       ) {
-        return "il-main--perc";
+        return 'il-main--perc';
       }
     },
     showFooter() {
       setTimeout(() => {
-        const showClass = document.getElementById("il-footer");
-        showClass.classList.add("il-footer--show");
+        const showClass = document.getElementById('il-footer');
+        showClass.classList.add('il-footer--show');
       }, 1200);
     }
   }
@@ -146,5 +147,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./sass/styles.scss";
+@import './sass/styles.scss';
 </style>
