@@ -29,15 +29,16 @@
       border-radius: 50%;
       width: 30px;
       height: 30px;
-      margin-right: 12px;
       display: block;
       position: relative;
       left: 95%;
       top: 10px;
       background: yellow;
+      transition: 450ms all ease;
       &:hover {
         color: rgb(17, 17, 14);
-        border-color: white;
+        background: white;
+        transition: 450ms all ease;
       }
       & i {
         display: block;
@@ -87,6 +88,7 @@
       }
     }
     &.cv-show {
+      top: -50px;
       transition: all 450ms;
       left: 50%;
       transform: translateX(-50%);

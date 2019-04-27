@@ -11,9 +11,11 @@
   & main.il-main {
     @include backappcl;
     &.il-app--perc {
-      height: 100%;
+      //height: 100%;
+      height: auto;
     }
     &.il-app-vh {
+      //height: 100vh;
       height: 100vh;
     }
   }

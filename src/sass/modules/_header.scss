@@ -2,14 +2,13 @@
   width: 100%;
   position: absolute;
   height: $header-height;
-  //border-bottom: 2px solid lighten(#454343, 40%);
-  //top: $pos-top;
   padding-top: $pos-top;
-  z-index: 2;
+  //z-index: 2;
   @include easeOut;
   &.active {
     @include easeOut;
     height: 100%;
+    z-index: 2;
     &:after {
       @include overlay(
         $thirtyColorAccent,

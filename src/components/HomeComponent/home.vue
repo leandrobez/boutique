@@ -5,7 +5,7 @@
         <h1 class="il-section--title">Bem <span class="il-color--text__very-light">Vindo! a  <b>{{$parent.title}}</b></span></h1>
         <h2 class="il-section--sub-title">Somos especialistas em Pilates e CoreAlign.</h2>
         <div class="il-home--content">
-            <p class="il-weight">Seu rendimento nas atividades diárias é prejudicado por dores musculares?<br>Percebe que sua postura não é como você gostaria que fosse?<br> Gostaria de fazer atividade física mas não consegue criar um vínculo?<br> Então conheça nosso principal método que será seu aliado permanente na busca por uma melhor qualidade de vida, eliminando assim essas dores inconvenientes.<br>Quer saber mais? Não perca tempo faça contato agora ou use o nosso whatsApp.</p>
+            <p class="il-content--description">Seu rendimento nas atividades diárias é prejudicado por dores musculares?<br>Percebe que sua postura não é como você gostaria que fosse?<br> Gostaria de fazer atividade física mas não consegue criar um vínculo?<br> Então conheça nosso principal método que será seu aliado permanente na busca por uma melhor qualidade de vida, eliminando assim essas dores inconvenientes.<br>Quer saber mais? Não perca tempo faça contato agora ou use o nosso whatsApp.</p>
             <!--<ilLanding />-->
             <h3>Nossa Localização</h3>
             <ilAddress />

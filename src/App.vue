@@ -75,9 +75,11 @@ export default {
     },
     getHeightClass() {
       if (
+        this.$route.name == 'home' ||
         this.$route.name == 'class' ||
         this.$route.name == 'student' ||
-        this.$route.name == 'curse'
+        this.$route.name == 'curse' ||
+        this.$route.name == 'advantage'
       ) {
         return 'il-main--perc';
       } else {
@@ -124,8 +126,9 @@ export default {
       }
       return;
     },
-    getHomeClass() {
+    /*getHomeClass() {
       if (
+        this.$route.name == 'home' ||
         this.$route.name == 'teachers' ||
         this.$route.name == 'class' ||
         this.$route.name == 'student' ||
@@ -135,7 +138,7 @@ export default {
       ) {
         return 'il-main--perc';
       }
-    },
+    },*/
     showFooter() {
       setTimeout(() => {
         const showClass = document.getElementById('il-footer');

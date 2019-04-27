@@ -133,6 +133,7 @@ h3 {
 p {
   font-size: 0.95rem;
   text-align: right;
+  font-family: $heading-font;
   @media screen and (min-width: 480px) {
     font-size: 0.98rem;
   }
@@ -141,12 +142,13 @@ p {
   }
   &.il-content--description {
     text-align: justify;
-    //font-size: 1.1rem;
-    //height: 70%;
-    //line-height: 1.2;
+    font-size: 1.1rem;
+    //line-height: 1.1;
+    font-weight: 300;
     transition: font-size 400ms ease-in-out;
     @media screen and (min-width: 501px) {
       transition: font-size 400ms ease-in-out;
+      //line-height: 1.15;
       font-size: 1rem;
     }
   }

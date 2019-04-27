@@ -5,7 +5,8 @@
     <p class="il-weight il-color--text__dark"><i class="mdi mdi-map mdi-12px"></i>{{kayzenAddress}}</p>
     <p class="il-weight il-color--text__dark"><i class="mdi mdi-earth mdi-12px"></i>Porto Alegre - RS</p>
     <p class="il-weight il-color--text__dark"><i class="mdi mdi-email-variant mdi-12px"></i>contato@kaizenpilates.com</p>
-    <p class="il-weight il-color--text__dark"><i class="mdi mdi-map-marker-radius mdi-12px" ></i><a href="#!" @click.prevent="loadMap()">veja o mapa</a></p>
+    <p class="il-weight il-color--text__dark"><i class="mdi mdi-map-marker-radius mdi-12px" ></i><a href="#!" @click.prevent="loadMap()" :class="isDisabled" >veja o mapa</a></p>
+    <div class="il-clock" v-show="showLoad"></div>
 </div>
 <ilMap v-if="checkShowMap" :show="showMap" />
 </div>
@@ -28,7 +29,8 @@ export default {
         ddd: '51',
         number: '99999-9999'
       },
-      showMap: false
+      showMap: false,
+      showLoad: false
     };
   },
   computed: {
@@ -37,6 +39,13 @@ export default {
         return true;
       }
       return false;
+    },
+    isDisabled() {
+      if (this.showMap) {
+        return 'isDisabled';
+      } else {
+        return '';
+      }
     }
   },
   methods: {
@@ -94,7 +103,9 @@ export default {
       document.body.appendChild(googleMapScript);
     },
     loadMap() {
+      this.showLoad = true;
       setTimeout(() => {
+        this.showLoad = false;
         this.showMap = true;
       }, 3000);
     }

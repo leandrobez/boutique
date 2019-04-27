@@ -111,19 +111,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-#google-map {
-  position: absolute;
-  top: 3vh;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#map-canvas {
-  height: 400px;
-  width: 98%;
-  max-width: 800px;
-  margin: 0 auto;
-  border: 2px solid gray;
-}
-</style>

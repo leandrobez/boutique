@@ -2,10 +2,13 @@
   position: absolute;
   z-index: 99;
   left: -50%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  max-height: 450px;
   @include easeOut;
   @media screen and (min-width: 501px) {
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
   &.il-show--header {

@@ -13,20 +13,51 @@
       margin-right: 0;
       & p {
         text-align: left;
-        line-height: 0.9;
+        //line-height: 0.9;
+        @media screen and (min-width: 501px) {
+          font-size: 0.85rem !important;
+        }
         & i {
           margin-right: 0.35rem;
           cursor: pointer;
         }
+        & a {
+          color: $app-overlay;
+          @include easeOut();
+          &:hover {
+            color: $textColorLight;
+            @include easeOut();
+          }
+          &.isDisabled {
+            color: currentColor;
+            cursor: not-allowed;
+            opacity: 0.5;
+            text-decoration: none;
+          }
+        }
       }
+    }
+    #google-map {
+      //position: absolute;
+      //top: 3vh;
+      //left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #map-canvas {
+      height: 400px;
+      //width: 98%;
+      max-width: 800px;
+      margin: 0 auto;
+      border: 2px solid gray;
     }
   }
   & .il-icons {
     display: flex;
     justify-content: space-between;
-
     & a {
       display: block;
+      @include easeOut();
       &:hover {
         color: $textColorLightGray;
         @include easeOut();
