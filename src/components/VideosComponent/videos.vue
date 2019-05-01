@@ -1,7 +1,7 @@
 <template>
 <section id="il-videos" class="il-section il-section--videos">
     <div class="il-container--wrapper">
-        <h1 class="il-section--title il-title--full">Assita esses <span class="il-color--text__very-light">Vídeos</span></h1>
+        <h1 class="il-section--title">Alguns <span class="il-color--text__very-light">Vídeos</span></h1>
         <div class="il-videos--content">
             <ilCards v-for="(video,index) in videos" :key="video.id" :thumbnail="video.youtube.thumbnail" :name="video.name" :description="video.description" :video="index" />
         </div>

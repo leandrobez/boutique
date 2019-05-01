@@ -2,7 +2,7 @@
 <!--SECTION ABOUT-->
 <section class="il-section il-section--about">
     <div class="il-container--wrapper">
-        <h1 class="il-section--title il-title--full">{{$parent.titleCompost.title}}
+        <h1 class="il-section--title">{{$parent.titleCompost.title}}
             <span class="il-color--text__very-light">{{$parent.titleCompost.subTitle}}</span>
         </h1>
         <h2 class="il-section--sub-title il-color--text__very-light text-right">Temos como missão:</h2>
