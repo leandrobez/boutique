@@ -24,7 +24,8 @@ export default {
   },
   data() {
     return {
-      kayzenAddress: 'Av Lavras 334, Bairro Petrópolis, Porto Alegre - RS',
+      kayzenAddress:
+        'Av Lavras 334, Bairro Petrópolis, CEP - 90460-040, Porto Alegre - RS',
       phone: {
         ddd: '51',
         number: '99999-9999'

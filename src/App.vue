@@ -18,8 +18,8 @@
         <ilFooter />
     </footer>
 
-    <!--MODAL-->
-    <ilModal :check="checkActive" />
+    <!--MODAL--
+    <ilModal :check="checkActive" />-->
 </div>
 </template>
 
@@ -27,7 +27,7 @@
 import ilHeader from './components/includes/HeaderComponent.vue';
 import ilFooter from './components/includes/FooterComponent.vue';
 import ilWarning from './components/includes/warningsComponent.vue';
-import ilModal from './components/includes/ModalComponent.vue';
+//import ilModal from './components/includes/ModalComponent.vue';
 
 /**https://github.com/sqreen/vue-authentication-example */
 //import axios from 'axios';
@@ -36,8 +36,8 @@ export default {
   components: {
     ilHeader,
     ilFooter,
-    ilWarning,
-    ilModal
+    ilWarning
+    //ilModal
   },
   data() {
     return {
@@ -50,22 +50,22 @@ export default {
       warning: {},
       authenticated: false,
       headerActive: false,
-      showModal: false,
+      //showModal: false,
       whatClass: ''
     };
   },
   mounted() {
-    setTimeout(() => {
+    /*setTimeout(() => {
       this.showModal = true;
-    }, 4000);
+    }, 4000);*/
   },
   computed: {
-    checkActive() {
+    /* checkActive() {
       if (this.showModal) {
         return true;
       }
       return false;
-    },
+    },*/
     checkWarning() {
       if (this.warning.check) {
         this.closeWarning();
@@ -117,9 +117,9 @@ export default {
       }
       return false;
     },
-    closeModal() {
+    /*closeModal() {
       this.showModal = false;
-    },
+    },*/
     isActive() {
       if (this.headerActive) {
         return 'active';

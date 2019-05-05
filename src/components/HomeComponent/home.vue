@@ -5,10 +5,10 @@
         <h1 class="il-section--title">Bem <span class="il-color--text__very-light">Vindo! a  <b>{{$parent.title}}</b></span></h1>
         <h2 class="il-section--sub-title">Somos especialistas em Pilates e CoreAlign.</h2>
         <div class="il-home--content">
-            <p class="il-content--description">Seu rendimento nas atividades diárias é prejudicado por dores musculares?<br>Percebe que sua postura não é como você gostaria que fosse?<br> Gostaria de fazer atividade física mas não consegue criar um vínculo?<br> Então conheça nosso principal método que será seu aliado permanente na busca por uma melhor qualidade de vida, eliminando assim essas dores inconvenientes.<br>Quer saber mais? Não perca tempo faça contato agora ou use o nosso whatsApp.</p>
-            <!--<ilLanding />-->
-            <h3>Nossa Localização</h3>
-            <ilAddress />
+            <p class="il-content--description">Seu rendimento nas atividades diárias é prejudicado por dores musculares?<br>Percebe que sua postura não é como você gostaria que fosse?<br> Gostaria de fazer atividade física mas não consegue criar um vínculo?<br> Então conheça nosso principal método que será seu aliado permanente na busca por uma melhor qualidade de vida, eliminando assim essas dores inconvenientes.<br>Quer saber mais? Não perca tempo faça contato agora ou use o nosso <a class="il-color--text__gold" href="#!" @click.prevent="socialNetOpen('wap')" title="Entra em contato através do whatsApp">whatsApp</a>.</p>
+                <!--<ilLanding />-->
+                <h3>Nossa Localização</h3>
+                <ilAddress />
         </div>
         <div class="il-icons">
             <a href="#" class="il-icons--link il-color--text__alt" title="Contate pelo whatsapp" @click="socialNetOpen('wap')"><i class="mdi mdi-whatsapp mdi-36px"></i></a>
@@ -17,15 +17,18 @@
             <!--<a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('go')"><i class="mdi mdi-git mdi-48px"></i></a>-->
         </div>
     </div>
+    <ilPopUp />
 </section>
 </template>
 
 <script>
 import ilAddress from './includes/address.vue';
+import ilPopUp from './includes/popup.vue';
 export default {
   name: 'Home',
   components: {
-    ilAddress
+    ilAddress,
+    ilPopUp
   },
   data() {
     return {
@@ -72,6 +75,7 @@ export default {
   }
 };
 </script>
+
 <style scoped>
 section.il-section--home {
   position: relative;

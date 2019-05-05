@@ -19,6 +19,7 @@ import eventsGallery from '../components/GalleryComponent/includes/eventsGallery
 import formSubmission from '../components/includes/SubmissionForms.vue';
 import Curses from '../components/includes/cursosComponent.vue';
 import Account from '../components/includes/accountComponent.vue';
+import Contact from '../components/ContactForm/contact.vue';
 
 Vue.use(VueRouter);
 
@@ -107,6 +108,11 @@ const router = new VueRouter({
       path: 'login',
       name: 'login',
       component: Login
+    },
+    {
+      path: 'contact',
+      name: 'contact',
+      component: Contact
     },
     {
       path: 'account',

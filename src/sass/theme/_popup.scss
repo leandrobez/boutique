@@ -1,0 +1,208 @@
+.popScroll {
+  display: table;
+  text-align: center;
+}
+.popScroll.hidden {
+  transition: 450ms ease-in-out;
+  position: relative;
+  z-index: -1;
+  left: -100%;
+  width: 0;
+  height: 0;
+  transition: all 750ms ease-in-out;
+}
+.popScroll.show {
+  transition: all 750ms ease-in-out;
+  position: fixed;
+  top: 5vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.popup {
+  z-index: 10;
+  width: 450px;
+  height: 480px;
+  position: relative;
+  margin: 1.5rem auto;
+  display: block;
+  text-align: center;
+  background-clip: padding-box; /* prevents bg color from leaking outside the border */
+  background-color: #fff; /* layer fill content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.18); /* drop shadow */
+  transform-origin: top center;
+  animation: iconosani 1.2s forwards;
+}
+.video-wrapper {
+  position: relative;
+  top: 1rem;
+}
+@keyframes iconosani {
+  0% {
+    transform: perspective(800px) rotateX(-90deg);
+    opacity: 1;
+  }
+  40% {
+    transform: perspective(800px) rotateX(30deg);
+    opacity: 1;
+  }
+  70% {
+    transform: perspective(800px) rotateX(-10deg);
+  }
+  100% {
+    transform: perspective(800px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.popScroll h1 {
+  height: 60px;
+  position: relative;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #434545;
+}
+.popScroll form {
+  margin: 0.7rem auto;
+}
+
+.popScroll p {
+  text-align: center;
+  padding: 7px 0;
+  font-size: 0.8rem;
+  margin: 3px auto;
+}
+
+#option {
+  position: relative;
+}
+
+.boxi {
+  display: inline-block;
+  width: 169px;
+  line-height: 42px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s linear;
+}
+
+#agendar {
+  background: #303c3f;
+}
+
+#close {
+  background: #5a686b;
+}
+
+.popScroll em {
+  width: 42px;
+  display: inline-block;
+  position: relative;
+  margin: 0 -20px;
+  line-height: 42px;
+  background: #fff;
+  color: rgb(41, 35, 35);
+  text-align: center;
+  border-radius: 50px;
+}
+
+#agendar:hover {
+  background: #464a4b;
+}
+#close:hover {
+  background: #222a2c;
+}
+
+.ribbon {
+  position: absolute;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.ribbon.top-left {
+  top: -2.6px;
+  left: -5px;
+}
+
+.ribbon.top-left.ribbon-primary > small {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF428BCA', endColorstr='#FF2A6496');
+  background-image: linear-gradient(to bottom, #535658 0%, #2d2e30 100%);
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 65%;
+  color: white;
+  background-color: #3c454d;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.5);
+  top: 16px;
+  left: -27px;
+}
+.ribbon.top-left.ribbon-primary > small:before,
+.ribbon.top-left.ribbon-primary > small:after {
+  position: absolute;
+  content: ' ';
+}
+.ribbon.top-left.ribbon-primary > small:before {
+  left: 0;
+}
+.ribbon.top-left.ribbon-primary > small:after {
+  right: 0;
+}
+.ribbon.top-left.ribbon-primary > small:before,
+.ribbon.top-left.ribbon-primary > small:after {
+  bottom: -3px;
+  border-top: 3px solid #0e2132;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .popup {
+    width: 370px;
+    height: 480px;
+  }
+
+  .popScroll h1 {
+    height: 40px;
+    font: 18px/40px sans-serif;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .popup {
+    width: 350px;
+    height: 480px;
+  }
+
+  .popScroll h1 {
+    height: 40px;
+    font: 18px/40px sans-serif;
+  }
+}
+
+@keyframes fade {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  66% {
+    box-shadow: 0 0 0 10px #3d79d0, 0 0 0 12px white;
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px transparent, 0 0 0 22px transparent;
+  }
+}

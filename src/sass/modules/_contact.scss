@@ -1,0 +1,17 @@
+.il-section--contact {
+  text-align: center;
+  @media screen and (min-width: 500px) {
+    text-align: left;
+  }
+  & .il-contact--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & p {
+      text-align: justify;
+      &.il-contact--info {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

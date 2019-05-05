@@ -7,7 +7,7 @@
     </div>
     <div class="il-header--brand">
       <!--<img src="images/theme/logo234x80.png">-->
-      <h1 class="il-color--text__gold">LOGO</h1>
+      <h1 class="il-color--text__gold">KAIZEN</h1>
     </div>
     <div class="il-header--content">
         <div class="il-content--portrait">
@@ -106,6 +106,14 @@ export default {
           link: 'video',
           title: 'Para conhecer mais',
           label: 'Vídeos',
+          icon: 'il-pilates-icon flaticon-centering-position',
+          show: true
+        },
+        {
+          id: 9,
+          link: 'contact',
+          title: 'Quer enviar uma mensagem?',
+          label: 'Contato',
           icon: 'il-pilates-icon flaticon-centering-position',
           show: true
         }
