@@ -14,13 +14,13 @@
                 </form>
                 -- end form-->
             <!--</div>-->
-            <p>Agende uma aula experimental agora!</p>
+            <p>Agende uma aula experimental grátis!</p>
             <div id="option">
                 <router-link id="agendar" class="boxi" :to="{name:'contact'}" title="Agendar uma aula experimental">Agendar</router-link>
                 <em>ou</em>
                 <a href="#" id="close" class="boxi closei" @click.prevent="closePop">Fechar</a>
-                
                 <div class='video-wrapper'>
+                  <p>Aceite meu convite abaixo.</p>
                     <div class='video'>
                         <iframe id="player" width="290" height="200" src="https://www.youtube.com/embed/pT7I4afnrTo" frameborder="0" allowfullscreen></iframe>
                     </div>

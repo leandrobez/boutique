@@ -9,14 +9,16 @@
     margin: auto;
   }
   & main.il-main {
-    @include backappcl;
     &.il-app--perc {
-      //height: 100%;
+      @include backappvga;
       height: auto;
     }
     &.il-app-vh {
-      //height: 100vh;
+      @include backappvga;
       height: 100vh;
+    }
+    &.il-main--back {
+      @include backapp;
     }
   }
   footer.il-footer {

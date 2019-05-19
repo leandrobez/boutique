@@ -5,7 +5,7 @@
         <img :src="picture" :alt="`professor ${title}`" :title="`Professor ${title}`">
         </div>
         <div class="il-card--content">
-            <p class="il-content--description il-card--description il-color--text__light">{{message}}</p>
+            <p class="il-content--description il-card--description il-color--text__gold">{{message}}</p>
         </div>
         <div class="il-card--footer">
             <i @mouseover = "animateRight" @mouseleave = "animateLeft" class="mdi mdi-24px mdi-check il-color--text__light" title="Veja meu currículo" @click="showCV(id)"></i>
@@ -14,42 +14,44 @@
 </template>
 
 <script>
-import { animeCards } from "../../../common/animation";
+import {
+    animeCards
+} from '../../../common/animation';
 export default {
-  name: "cards",
-  props: {
-    id: Number,
-    title: String,
-    message: String,
-    picture: String
-  },
-  data() {
-    return {
-      clicked: false
-    };
-  },
-  mounted() {
-    this.startAnime();
-  },
-
-  mixins: [animeCards],
-  methods: {
-    animateRight() {
-      var ele = event.currentTarget;
-      ele.classList.add("moveRight");
+    name: 'cards',
+    props: {
+        id: Number,
+        title: String,
+        message: String,
+        picture: String
     },
-    animateLeft() {
-      var ele = event.currentTarget;
-      ele.classList.add("moveLeft");
-
-      setTimeout(function() {
-        ele.classList.remove("moveRight");
-        ele.classList.remove("moveLeft");
-      }, 500);
+    data() {
+        return {
+            clicked: false
+        };
     },
-    showCV(key) {
-      this.$parent.showCV(key);
+    mounted() {
+        this.startAnime();
+    },
+
+    mixins: [animeCards],
+    methods: {
+        animateRight() {
+            var ele = event.currentTarget;
+            ele.classList.add('moveRight');
+        },
+        animateLeft() {
+            var ele = event.currentTarget;
+            ele.classList.add('moveLeft');
+
+            setTimeout(function () {
+                ele.classList.remove('moveRight');
+                ele.classList.remove('moveLeft');
+            }, 500);
+        },
+        showCV(key) {
+            this.$parent.showCV(key);
+        }
     }
-  }
 };
 </script>

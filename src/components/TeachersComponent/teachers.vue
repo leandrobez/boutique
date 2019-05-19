@@ -3,13 +3,10 @@
     <section id="il-instructor" class="il-section il-section--instructor">
         <div class="il-container--wrapper">
             <h1 class="il-section--title">Os <span class="il-color--text__very-light">Instrutores</span></h1>
-            <h2 class="il-section--sub-title il-color--text__very-light text-right">Professores da {{$parent.title}}</h2>
-
             <div class="il-instructor--content">
                 <ilCards v-for="(instructor, index) in instructors" :key="instructor.id" :title="instructor.title" :message="instructor.message" :picture="instructor.picture" :id="index" />
             </div>
         </div>
-
     </section>
     <div class="il-container--wrapper">
       <ilCv v-if="checkCV" :curriculum="getCurriculum()" :status="CV.show" :picture="CV.picture" />

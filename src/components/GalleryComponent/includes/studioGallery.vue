@@ -1,131 +1,140 @@
 <template>
 <div class="il-gallery">
     <figure :class="`il-gallery--item il-gallery--item__${item.photo}`" v-for="item in gallery" :key="item.photo">
-        <img :src="`${item.thumbnail}/kaizen${item.photo}.jpg`" class="il-gallery--img" :alt="`Image${item.photo}`">
+        <img :src="`${item.thumbnail}/kaizen${item.photo}.jpg`" class="il-gallery--img" :title="item.description" :alt="`kaizen${item.photo}.jpg`">
   </figure>
 </div>
 </template>
 
 <script>
 export default {
-    name: 'StudioGallery',
+  name: 'StudioGallery',
 
-    data() {
-        return {
-            gallery: [{
-                    type: '',
-                    caption: 'Kaizen Foto 1',
-                    thumbnail: '/images/gallery/studio',
-                    original: 'images/gallery/studio/big',
-                    name: 'kaizen',
-                    photo: '1'
-                },
-                {
-                    type: 'il-item--large',
-                    caption: 'Kaizen Foto 2',
-                    thumbnail: '/images/gallery/studio',
-                    original: 'images/gallery/studio/big',
-                    name: 'kaizen',
-                    photo: '2'
-                },
-                {
-                    type: '',
-                    caption: 'Kaizen Foto3',
-                    thumbnail: '/images/gallery/studio',
-                    original: 'images/gallery/studio/big',
-                    name: 'kaizen',
-                    photo: '3'
-                },
-                {
-                    type: 'il-item--large',
-                    caption: 'Kaizen Foto 4',
-                    thumbnail: '/images/gallery/studio',
-                    original: 'images/gallery/studio/big',
-                    name: 'kaizen',
-                    photo: '4'
-                },
-                {
-                    type: 'il-item--medium',
-                    caption: 'Kaizen Foto 5',
-                    thumbnail: '/images/gallery/studio',
-                    original: 'images/gallery/studio/big',
-                    name: 'kaizen',
-                    photo: '5'
-                },
-                {
-                    type: 'il-item--large',
-                    caption: 'Kaizen Foto 6',
-                    thumbnail: '/images/gallery/studio',
-                    original: 'images/gallery/studio/big',
-                    name: 'kaizen',
-                    photo: '6'
-                },
-                {
-                    type: 'il-item--medium',
-                    caption: 'Kaizen Foto 7',
-                    thumbnail: '/images/gallery/studio',
-                    original: 'images/gallery/studio/big',
-                    name: 'kaizen',
-                    photo: '7'
-                },
-                {
-                    type: 'il-item--medium',
-                    caption: 'Kaizen Foto 8',
-                    thumbnail: '/images/gallery/studio',
-                    original: 'images/gallery/studio/big',
-                    name: 'kaizen',
-                    photo: '8'
-                }
-            ]
-        };
-    },
-
-    mounted() {
-        this.$parent.title = 'do Studio';
-    },
-
-    methods: {
-        getBack(photo) {
-            let background = `background: url('../images/gallery/studio/gallery-studio-${photo}.jpg')`;
-            return background;
-
-            //console.log('background: url(../public/images/gallery/gallery-studio-1.jpg)')
+  data() {
+    return {
+      gallery: [
+        {
+          type: '',
+          caption: 'Kaizen Foto 1',
+          thumbnail: '/images/gallery/studio',
+          original: 'images/gallery/studio/big',
+          name: 'kaizen',
+          description: 'vista sala de Pilates',
+          photo: '1'
+        },
+        {
+          type: 'il-item--large',
+          caption: 'Kaizen Foto 2',
+          thumbnail: '/images/gallery/studio',
+          original: 'images/gallery/studio/big',
+          name: 'kaizen',
+          description: 'vista sala CoreAlign',
+          photo: '2'
+        },
+        {
+          type: '',
+          caption: 'Kaizen Foto3',
+          thumbnail: '/images/gallery/studio',
+          original: 'images/gallery/studio/big',
+          name: 'kaizen',
+          description: 'Molas',
+          photo: '3'
+        },
+        {
+          type: 'il-item--large',
+          caption: 'Kaizen Foto 4',
+          thumbnail: '/images/gallery/studio',
+          original: 'images/gallery/studio/big',
+          name: 'kaizen',
+          description: 'CoreAlign',
+          photo: '4'
+        },
+        {
+          type: 'il-item--medium',
+          caption: 'Kaizen Foto 5',
+          thumbnail: '/images/gallery/studio',
+          original: 'images/gallery/studio/big',
+          name: 'kaizen',
+          description: 'Reformers e Konnectors',
+          photo: '5'
+        },
+        {
+          type: 'il-item--large',
+          caption: 'Kaizen Foto 6',
+          thumbnail: '/images/gallery/studio',
+          original: 'images/gallery/studio/big',
+          name: 'kaizen',
+          description: 'CoreAlign',
+          photo: '6'
+        },
+        {
+          type: 'il-item--medium',
+          caption: 'Kaizen Foto 7',
+          thumbnail: '/images/gallery/studio',
+          original: 'images/gallery/studio/big',
+          name: 'kaizen',
+          description: 'Molas',
+          photo: '7'
+        },
+        {
+          type: 'il-item--medium',
+          caption: 'Kaizen Foto 8',
+          thumbnail: '/images/gallery/studio',
+          original: 'images/gallery/studio/big',
+          name: 'kaizen',
+          description: 'Trapézio',
+          photo: '8'
         }
+      ]
+    };
+  },
+
+  mounted() {
+    this.$parent.title = 'do Studio';
+  },
+
+  methods: {
+    getBack(photo) {
+      let background = `background: url('../images/gallery/studio/gallery-studio-${photo}.jpg')`;
+      return background;
+
+      //console.log('background: url(../public/images/gallery/gallery-studio-1.jpg)')
     }
+  }
 };
 </script>
 
 <style lang="scss">
 .il-gallery {
-    display: grid;
-    grid-template-columns: repeat(1, 240px);
-    grid-template-rows: repeat(8, 320px);
-    justify-content: center;
-    grid-gap: 1px;
+  display: grid;
+  grid-template-columns: repeat(1, 360px);
+  grid-template-rows: repeat(8, 270px);
+  justify-content: center;
+  grid-gap: 1px;
 
-    @media screen and (min-width: 680px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-gap: 2px;
-    }
+  @media screen and (min-width: 680px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2px;
+  }
 
-    @media screen and(min-width: 1024px) {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 5px;
-    }
+  @media screen and(min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+  }
 }
 
 .il-gallery--img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-    &:hover {
-        transform: scale(.97);
-        border: 4px solid #debbaa;
-        opacity: .9
-    }
+  &:hover {
+    transform: scale(0.97);
+    border: 4px solid #debbaa;
+    opacity: 0.9;
+  }
 }
 
 /*.il-gallery--item__1 {

@@ -1,11 +1,12 @@
 <template>
 <div>
   <div class="il-home--address">
+    <p class="il-weight il-color--text__dark"><i class="mdi mdi-map mdi-12px"></i>{{kayzenAddress}}, {{kayzenCity}}</p>    
     <p class="il-weight il-color--text__dark"><i class="mdi mdi-phone mdi-12px"></i>{{phone.ddd}} {{phone.number}}</p>
-    <p class="il-weight il-color--text__dark"><i class="mdi mdi-map mdi-12px"></i>{{kayzenAddress}}, {{kayzenCity}}</p>
+    <p class="il-weight il-color--text__dark"><i class="mdi mdi-cellphone-iphone mdi-12px"></i>{{mobil.ddd}} {{mobil.number}}</p>
     <p class="il-weight il-color--text__dark"><i class="mdi mdi-earth mdi-12px"></i>{{kayzenCity}}</p>
     <p class="il-weight il-color--text__dark"><i class="mdi mdi-email-variant mdi-12px"></i>{{kayzenEmail}}</p>
-    <p class="il-weight il-color--text__dark"><i class="mdi mdi-map-marker-radius mdi-12px" ></i><a href="#!" @click.prevent="loadMap()" :class="isDisabled" >veja o mapa</a></p>
+    <p class="il-weight il-color--text__dark"><i class="mdi mdi-map-marker-radius mdi-12px" ></i><a href="#!" class="il-color--text__red" @click.prevent="loadMap()" :class="isDisabled" >veja o mapa</a></p>
     <div class="il-clock" v-show="showLoad"></div>
 </div>
 <ilMap v-if="checkShowMap" :show="showMap" />
@@ -30,7 +31,11 @@ export default {
       kayzenEmail: 'contato@kaizenpilates.com',
       phone: {
         ddd: '51',
-        number: '99999-9999'
+        number: '3519-3339'
+      },
+      mobil: {
+        ddd: '51',
+        number: '99301-5930'
       },
       showMap: false,
       showLoad: false

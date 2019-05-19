@@ -10,7 +10,7 @@ $fortyColor: #454343;
 $thirtyColorAccent: darken($thirtyColor, 15%);
 $fortyColorAccent: darken($fortyColor, 15%);
 $textColor: #454343;
-$textColorGold: #dbb35c;
+$textColorGold: #f5a021;
 $textColorAlt: darken($textColor, 5%);
 $textColorAccent: darken($textColor, 15%);
 $textColorLight: lighten($secondColor, 30%);
@@ -79,11 +79,11 @@ $back-portrait: $thirtyColor;
 $back-nav: $secondColor;
 $show-img-home: true;
 $big-img-url-home: url('../public/images/banners/big-img-home.png');
-$avataSmall: 100px;
-$avatarMedium: 120px;
-$avatarBig: 140px;
+$avataSmall: 128px;
+$avatarMedium: 148px;
+$avatarBig: 168px;
 $show-avatar: true;
-$avatar-url: url('../public/images/pictures/img-muraguti.jpg');
+$avatar-url: url('../public/images/pictures/avatar-muraguti.jpg');
 
 /** depoiments*/
 $height-slider: 400px;

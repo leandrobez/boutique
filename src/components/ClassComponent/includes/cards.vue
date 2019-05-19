@@ -2,7 +2,9 @@
 <div :class="`il-plan il-plan--${id} il-color--background__lightgray`">
     <h2 class="il-color--text__dark">{{condicions}} X Semana</h2>
     <p class="il-price il-color--text__accent">R$ {{price}},00 <span>por mês</span></p>
-    <p class="il-description il-color--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita molestiae nisi vel placeat, corrupti fuga assumenda non dolor cupiditate aperiam.</p>
+    <!--
+      <p class="il-description il-color--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita molestiae nisi vel placeat, corrupti fuga assumenda non dolor cupiditate aperiam.</p>
+    -->
     <a href="#!" @click.prevent="newPlan(id)" class="il-btn il-btn--cards button">Inscreva-se</a>
 </div>
 </template>

@@ -2,11 +2,12 @@
 <!--SECTION HOME-->
 <section class="il-section il-section--home">
     <div class="il-container--wrapper">
-        <h1 class="il-section--title">Bem <span class="il-color--text__very-light">Vindo! a  <b>{{$parent.title}}</b></span></h1>
-        <h2 class="il-section--sub-title">Somos especialistas em Pilates e CoreAlign.</h2>
+        <h1 class="il-section--title">Bem Vindo a <br>{{$parent.titleCompost.title}}
+          <span class="il-color--text__dark">{{$parent.titleCompost.title1}} e </span>            <span class="il-color--text__red">{{$parent.titleCompost.subTitle}}</span>
+        </h1>
+        <h2 class="il-section--sub-title">Somos especialistas em Pilates e <span class="il-color--text__red">CoreAlign</span>.</h2>
         <div class="il-home--content">
-            <p class="il-content--description">Seu rendimento nas atividades diárias é prejudicado por dores musculares?<br>Percebe que sua postura não é como você gostaria que fosse?<br> Gostaria de fazer atividade física mas não consegue criar um vínculo?<br> Então conheça nosso principal método que será seu aliado permanente na busca por uma melhor qualidade de vida, trazendo como resultado a melhora de sua postura, o aumento da força, equilíbrio e flexibilidade, eliminando assim essas dores inconvenientes.<br><b>Quer saber mais</b> ? Não perca tempo faça contato agora ou use o nosso <a class="il-color--text__gold" href="#!" @click.prevent="socialNetOpen('wap')" title="Entra em contato através do whatsApp">whatsApp</a>.</p>
-                <!--<ilLanding />-->
+            <p class="il-content--description il-color--text__very-dark">Você quer melhorar sua saúde reduzindo dores musculares?<br>Com a melhora da postura você pode alcançar esse objetivo.<br>Gostaria de fazer uma atividade física apaixonante que queime muitas calorias?<br>Então conheça as novidades que a {{$parent.title}} trouxe para o pilates <!--colocar link sobr konnector--> e o corealign <!--colocar link sobr video corealign-->.<br><b>Quer saber mais</b> ? Entre em contato através do nosso <a class="il-color--text__light" href="#!" @click.prevent="socialNetOpen('wap')" title="Entra em contato através do whatsApp">whatsApp</a> ou mande uma <router-link :to="{name:'contact'}" class="il-color--text__light">mensagem</router-link>.</p>
                 <h3>Nossa Localização</h3>
                 <ilAddress />
         </div>
@@ -14,7 +15,6 @@
             <a href="#" class="il-icons--link il-color--text__alt" title="Contate pelo whatsapp" @click="socialNetOpen('wap')"><i class="mdi mdi-whatsapp mdi-36px"></i></a>
             <a href="#" class="il-icons--link il-color--text__alt" title="Visite a rede social" @click="socialNetOpen('fb')"><i class="mdi mdi-facebook mdi-36px"></i></a>
             <a href="#" class="il-icons--link il-color--text__alt" title="Visite a rede social" @click="socialNetOpen('in')"><i class="mdi mdi-instagram mdi-36px"></i></a>
-            <!--<a href="#" class="il-icons--link" title="Visite a rede social" @click="socialNetOpen('go')"><i class="mdi mdi-git mdi-48px"></i></a>-->
         </div>
     </div>
     <ilPopUp />
@@ -40,7 +40,8 @@ export default {
     socialNetOpen(path) {
       let w = 626,
         h = 436;
-      let urlFb = 'https://www.facebook.com/kaizenpilatescorealign/?ref=bookmarks';
+      let urlFb =
+        'https://www.facebook.com/kaizenpilatescorealign/?ref=bookmarks';
       let urlFbShare = 'https://www.facebook.com/sharer/sharer.php?u=';
       let urlIn = 'http://instagram.com/pilateskaizen?ref=badge';
       let urlGo = 'https://plus.google.com/u/0/114144280855980132006';

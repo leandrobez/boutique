@@ -2,9 +2,8 @@ const teachers = [
   {
     id: '1',
     title: 'Muraguti',
-    message:
-      'Pra frente sempre, sem esmorecer! Por isso aqui na Kaizen, Pilates e CoreAlign estão na minha pauta do dia.',
-    picture: 'images/pictures/teacher01.jpg',
+    message: 'Paixão pelo movimento.',
+    picture: '/images/pictures/teacher01.jpg',
     show: false,
     cv: {
       profile: {
@@ -35,8 +34,8 @@ const teachers = [
         ]
       }
     }
-  },
-  {
+  }
+  /*{
     id: '2',
     title: 'Eduardo',
     message:
@@ -72,7 +71,7 @@ const teachers = [
         ]
       }
     }
-  }
+  }*/
 ];
 
 export default teachers;

@@ -13,20 +13,23 @@
       margin-right: 0;
       & p {
         text-align: left;
-        padding: 0 0.4rem;
-        font-size: 0.85rem;
+        line-height: 0.9rem;
+        padding: 0;
+        font-size: 0.8rem;
+        font-weight: bolder;
+        font-family: 'Assistant', sans-serif;
         @media screen and (min-width: 501px) {
-          font-size: 0.9rem !important;
+          font-size: 0.85rem !important;
         }
         & i {
           margin-right: 0.35rem;
           cursor: pointer;
         }
         & a {
-          color: $app-overlay;
+          color: white;
           @include easeOut();
           &:hover {
-            color: $textColorLight;
+            color: $textColor;
             @include easeOut();
           }
           &.isDisabled {

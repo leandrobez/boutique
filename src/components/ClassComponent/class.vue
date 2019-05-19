@@ -12,7 +12,7 @@
                     <div class="il-item il-box il-color--background__lighten">
                         <i class="il-pilates-icon flaticon-side-bend-posture light"></i>
                         <span class="il-color--text">Por quê?</span>
-                        <p class="il-content--description il-color--text">Porque aqui na <b>{{$parent.title}}</b> oferecemos um ambiente climatizado com cerca de 90 m², onde equipamentos de excelente qualidade estão a sua disposição.<br>Aqui o foco sempre está na individualidade do aluno para que você receba toda a atenção que lhe é devida.</p>
+                        <p class="il-content--description il-color--text">Porque aqui na <strong class="il-color--text__gold">{{$parent.title}}</strong> você terá aulas vigorosas e inovadoras que te motivarão a retornar para a próxima.</p>
                     </div>
                 </div>
             </div>
@@ -24,6 +24,7 @@
             <div class="il-pricing--grid">
                 <ilCards v-for="plan in plans" :key="plan.key" :id="plan.id" :condicions="plan.condicions" :price="plan.value" :text="plan.text" />
             </div>
+            <p class="il-obs">Aula avulsa - R$ 70,00</p>
         </div>
     </section>
 </div>
@@ -48,21 +49,21 @@ export default {
           id: '1',
           key: 0,
           condicions: 1,
-          value: 250,
+          value: 245,
           message: ''
         },
         {
           id: '2',
           key: 1,
           condicions: 2,
-          value: 480,
+          value: 460,
           message: ''
         },
         {
           id: '3',
           key: 2,
           condicions: 3,
-          value: 720,
+          value: 595,
           message: ''
         }
       ]

@@ -18,7 +18,7 @@
                         <a :href="iconNet.address" class="il-styles--social__link" v-for="(iconNet,key) in item.social" :key="key" target="_blank"><i class="mdi mdi-24px il-color--text__dark" :class="iconNet.icon"></i></a>
                     </div>
                     <div class="il-item--info il-color--text__dark">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi repellat, odio nulla expedita sequi beatae.</p>
+                        <p>Ha 20 anos atrás, eu afirmava com convicção que odiava ginástica até conhecer a profissional Claudia Muraguti. Hoje, aos 66 anos, estou feliz porque ela me ensinou a amar Pilates e CoreAlign. A academiz KAIZEN é a realização deste trabalho sério com o objetivo de oferecer profissionais competentes em uma área física clean, agradável e espaçosa onde os alunos se reunem em uma convivência alegre e saudável! Parabéns KAIZEN: seja bem vinda a Porto Alegre.</p>
                     </div>
                 </div>
             </div>
@@ -37,8 +37,8 @@ export default {
       time: 8000,
       students: [
         {
-          name: 'Aluno 1',
-          picture: 'images/pictures/student1.jpg',
+          name: 'Janice Kruse',
+          picture: '/images/pictures/student1.jpg',
           social: [
             {
               icon: 'mdi-facebook',
@@ -56,7 +56,7 @@ export default {
         },
         {
           name: 'Aluno 2',
-          picture: 'images/pictures/student2.jpg',
+          picture: '/images/pictures/student2.jpg',
           social: [
             {
               icon: 'mdi-facebook',
@@ -74,7 +74,7 @@ export default {
         },
         {
           name: 'Aluno 3',
-          picture: 'images/pictures/student3.jpg',
+          picture: '/images/pictures/student3.jpg',
           social: [
             {
               icon: 'mdi-facebook',
@@ -92,7 +92,7 @@ export default {
         },
         {
           name: 'Aluno 4',
-          picture: 'images/pictures/student4.jpg',
+          picture: '/images/pictures/student4.jpg',
           social: [
             {
               icon: 'mdi-facebook',

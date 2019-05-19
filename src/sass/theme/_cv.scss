@@ -66,11 +66,12 @@
         }
         & ul li:first-child {
           font-size: 0.85rem;
+          color: #f5a021;
           @media screen and (min-width: 768px) {
             font-size: 1rem;
           }
           text-transform: uppercase;
-          font-weight: 500;
+          font-weight: bolder;
         }
       }
       .il-cv--profile img {
