@@ -23,8 +23,8 @@
     position: relative;
     & img {
       @include easeOut;
-      width: $brand-sw;
-      height: $brand-sh;
+      width: $brand-swsmall;
+      height: $brand-shsmall;
       margin-top: 2 * $pos-top + $m-h;
       margin-left: auto;
       margin-right: auto;
@@ -35,12 +35,12 @@
       margin: 0;
     }
     @media screen and (min-width: 361px) and (max-width: 500px) {
-      $container: 96%;
+      /*$container: 96%;*/
       width: $container;
       margin: 0 auto;
     }
     @media screen and (min-width: 501px) and (max-width: 768px) {
-      $container: 92%;
+      /*$container: 92%;*/
       width: $container;
       margin: 0 auto;
       & img {
@@ -50,7 +50,7 @@
       }
     }
     @media screen and (min-width: 769px) and (max-width: 1170px) {
-      $container: 88%;
+      /*$container: 88%;*/
       width: $container;
       margin: 0 auto;
       & img {
@@ -60,7 +60,7 @@
       }
     }
     @media screen and (min-width: 1171px) {
-      $container: 80%;
+      /*$container: 80%;*/
       width: $container;
       margin: 0 auto;
       & img {

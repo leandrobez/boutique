@@ -32,19 +32,19 @@ $width-modal: 300px;
 
 /*header*/
 /* logo*/
-$brand-sw: 234px;
-$brand-sh: 80px;
+$brand-sw: 160px;
+$brand-sh: 108px;
 /* logo*/
-$brand-swsmall: 86px;
-$brand-shsmall: 42px;
+$brand-swsmall: 122px;
+$brand-shsmall: 83px;
 $pos-top: 5px;
 $pos-bottom: 2rem;
 $m-w: 40px;
 $m-h: 40px;
 $header-height: $brand-sh + $pos-top + 14px;
 //$header-height: $brand-sh + $m-h + $pos-top;
-$brandUrl: '../public/images/theme/logonegative234x80.png';
-$brandUrlSmall: '../public/images/theme/logokaizen86x42.png';
+$brandUrl: '../public/images/theme/logokaizen.png';
+$brandUrlSmall: '../public/images/theme/logokaizensmall.png';
 /*app*/
 $opacity-overlay: 0.5;
 $overlay-img: '../public/images/theme/overlay.png';

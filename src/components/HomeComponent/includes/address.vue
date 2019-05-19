@@ -2,9 +2,9 @@
 <div>
   <div class="il-home--address">
     <p class="il-weight il-color--text__dark"><i class="mdi mdi-phone mdi-12px"></i>{{phone.ddd}} {{phone.number}}</p>
-    <p class="il-weight il-color--text__dark"><i class="mdi mdi-map mdi-12px"></i>{{kayzenAddress}}</p>
-    <p class="il-weight il-color--text__dark"><i class="mdi mdi-earth mdi-12px"></i>Porto Alegre - RS</p>
-    <p class="il-weight il-color--text__dark"><i class="mdi mdi-email-variant mdi-12px"></i>contato@kaizenpilates.com</p>
+    <p class="il-weight il-color--text__dark"><i class="mdi mdi-map mdi-12px"></i>{{kayzenAddress}}, {{kayzenCity}}</p>
+    <p class="il-weight il-color--text__dark"><i class="mdi mdi-earth mdi-12px"></i>{{kayzenCity}}</p>
+    <p class="il-weight il-color--text__dark"><i class="mdi mdi-email-variant mdi-12px"></i>{{kayzenEmail}}</p>
     <p class="il-weight il-color--text__dark"><i class="mdi mdi-map-marker-radius mdi-12px" ></i><a href="#!" @click.prevent="loadMap()" :class="isDisabled" >veja o mapa</a></p>
     <div class="il-clock" v-show="showLoad"></div>
 </div>
@@ -25,7 +25,9 @@ export default {
   data() {
     return {
       kayzenAddress:
-        'Av Lavras 334, Bairro Petrópolis, CEP - 90460-040, Porto Alegre - RS',
+        'Av Lavras 334, Bairro Petrópolis, Sala 702, CEP - 90460-040',
+      kayzenCity: 'Porto Alegre - RS',
+      kayzenEmail: 'contato@kaizenpilates.com',
       phone: {
         ddd: '51',
         number: '99999-9999'

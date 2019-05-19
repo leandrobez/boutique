@@ -89,12 +89,12 @@ const router = new VueRouter({
       children: [
         {
           path: 'studio',
-          name: 'galleryStudio',
+          name: 'gallery.studio',
           component: studioGallery
         },
         {
           path: 'events',
-          name: 'galleryEvents',
+          name: 'gallery.events',
           component: eventsGallery
         }
       ]

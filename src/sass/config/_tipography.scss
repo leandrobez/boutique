@@ -1,5 +1,5 @@
 //Import fonts google
-@import url('https://fonts.googleapis.com/css?family=Dosis|Nunito:400,600|Oswald');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Nunito:400,600|Oswald|Assistant&display=swap');
 //News+Cycle
 $heading-font: 'Nunito', sans-serif; // only 400 and 400i
 $h3-font: 'Oswald', sans-serif;
@@ -31,7 +31,7 @@ h6 {
   margin: 0;
   &.il-section--title {
     color: $textColorGold;
-    font-size: 4rem;
+    font-size: 3.1rem;
 
     @media screen and (max-width: 360px) {
       font-size: 1.9rem;
@@ -144,16 +144,20 @@ p {
     font-weight: 500;
   }
   &.il-content--description {
+    font-family: 'Assistant', sans-serif;
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    padding: 0 0.4rem;
     font-weight: 300;
     transition: font-size 400ms ease-in-out;
+    //color: #020202;
     @media screen and (min-width: 501px) {
       transition: font-size 400ms ease-in-out;
       font-size: 1rem;
     }
   }
   &.il-section--description {
+    font-family: 'Assistant', sans-serif;
     font-size: 1.1rem;
     width: 50%;
     text-transform: uppercase;

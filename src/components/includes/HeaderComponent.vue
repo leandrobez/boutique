@@ -1,30 +1,32 @@
 <template>
 <header id="il-header" class="il-header">
-    <div class="il-header--menu" @click.prevent="activeMenu" :class="hasActive()">
-        <div class="il-menu--line"></div>
-        <div class="il-menu--line"></div>
-        <div class="il-menu--line"></div>
-    </div>
-    <div class="il-header--brand">
-      <!--<img src="images/theme/logo234x80.png">-->
-      <h1 class="il-color--text__gold">KAIZEN</h1>
-    </div>
-    <div class="il-header--content">
-        <div class="il-content--portrait">
-            <div class="il-avatar--portrait">
-                <div class="il-avatar"></div>
-            </div>
-            <span class="il-authenticated il-color--text__light" v-if="checkAuthenticated">Você está logado</span>
+    <div class="il-container--wrapper">
+        <div class="il-header--menu" @click.prevent="activeMenu" :class="hasActive()">
+            <div class="il-menu--line"></div>
+            <div class="il-menu--line"></div>
+            <div class="il-menu--line"></div>
         </div>
-        <nav class="il-content--nav">
-            <ul class="il-menu--list">
-                <li class="il-menu--list__item" v-for="m in menu" :key="m.id">
-                    <router-link class="il-menu--link il-color--text__yellow" :to="{name:m.link}" :class="isActive(m.id)" :title="m.title">
-                        <span @click="hiddenMenu()">{{m.label}}</span>
-                    </router-link>
-                </li>
-            </ul>
-        </nav>
+        <div class="il-header--brand">
+            <!---->
+            <h1 class="il-color--text__gold"><img :src="logo" alt="logo da kaizen" title="Logo da Kaizen"></h1>
+        </div>
+        <div class="il-header--content">
+            <div class="il-content--portrait">
+                <div class="il-avatar--portrait">
+                    <div class="il-avatar"></div>
+                </div>
+                <span class="il-authenticated il-color--text__light" v-if="checkAuthenticated">Você está logado</span>
+            </div>
+            <nav class="il-content--nav">
+                <ul class="il-menu--list">
+                    <li class="il-menu--list__item" v-for="m in menu" :key="m.id">
+                        <router-link class="il-menu--link il-color--text__yellow" :to="{name:m.link}" :class="isActive(m.id)" :title="m.title">
+                            <span @click="hiddenMenu()">{{m.label}}</span>
+                        </router-link>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
 </template>
@@ -36,6 +38,7 @@ export default {
   data() {
     return {
       showMenu: false,
+      logo: '/images/theme/logokaizen.png',
       menu: [
         {
           id: 1,
@@ -46,13 +49,13 @@ export default {
           show: true
         },
         /* {
-                    id: 2,
-                    link: 'curriculum',
-                    title: 'Informações sobre a proprietária',
-                    label: 'Currículo',
-                    icon: 'il-pilates-icon flaticon-precision-posture',
-                    show: true
-                }, */
+                            id: 2,
+                            link: 'curriculum',
+                            title: 'Informações sobre a proprietária',
+                            label: 'Currículo',
+                            icon: 'il-pilates-icon flaticon-precision-posture',
+                            show: true
+                        }, */
         {
           id: 2,
           link: 'about',
@@ -118,13 +121,13 @@ export default {
           show: true
         }
         /*{
-          id: 9,
-          link: 'login',
-          title: 'Área Administrativa',
-          label: 'Login',
-          icon: 'il-pilates-icon flaticon-bosu-ball',
-          show: true
-        }*/
+                  id: 9,
+                  link: 'login',
+                  title: 'Área Administrativa',
+                  label: 'Login',
+                  icon: 'il-pilates-icon flaticon-bosu-ball',
+                  show: true
+                }*/
       ]
     };
   },

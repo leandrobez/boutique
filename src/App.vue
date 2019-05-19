@@ -79,7 +79,8 @@ export default {
         this.$route.name == 'class' ||
         this.$route.name == 'student' ||
         this.$route.name == 'curse' ||
-        this.$route.name == 'advantage'
+        this.$route.name == 'advantage' ||
+        this.$route.name == 'gallery.studio'
       ) {
         return 'il-main--perc';
       } else {

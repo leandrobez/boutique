@@ -7,10 +7,11 @@
             <div class="il-box--items">
                 <div class="il-item il-box il-color--background__lighten">
                   <i class="il-pilates-icon flaticon-exercises-with-body-arc light"></i>
-                  <p class="il-content--description il-color--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum sint esse culpa repudiandae earum vero. A, magnam voluptatibus. Sunt, ex laboriosam maxime ratione, eligendi reiciendis similique aliquam voluptas qui ad aliquid. Debitis voluptatibus accusantium praesentium rem pariatur quasi. Error at dicta enim asperiores vero.</p>
+                  <p class="il-content--description il-color--text">Oferecemos um ambiente preparado para a prática de pilates e corealign com um espaço amplo, climatizado, arejado e estruturado com equipamentos de última geração, além de uma equipe de professores extremamente competentes e experientes. Trabalhamos com turmas reduzidas e também com atendimento personalizado.</p>
                 </div>
             </div>
         </div>
+        <router-link class="il-btn" :to="{name: 'gallery.studio'}" title="Veja fotos do studio">Acesse o álbum</router-link>
     </div>
 </section>
 </template>

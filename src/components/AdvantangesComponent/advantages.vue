@@ -12,7 +12,12 @@
                  </div>
                  <div class="il-item il-item--1 il-box il-color--background__lighten">
                      <i class="il-pilates-icon flaticon-elongation-posture light"></i><span class="il-color--text__darken">CoreAlign</span>
-                     <p class="il-content--description il-color--text">CoreAlign é um ótimo complemento para o seu programa já existente, sendo uma ferramenta essencial para reabilitação e excelente para o equilíbrio e readaptação neuromuscular. Devido a sua versatilidade incrível permite o uso de adução, alongamento, aquecimento, resfriamento, ou para simplesmente se exercitar.</p>          
+                     <p class="il-content--description il-color--text">CoreAlign é um ótimo complemento para o seu programa já existente, sendo uma ferramenta essencial para reabilitação e excelente para o equilíbrio e readaptação neuromuscular. Devido a sua versatilidade incrível permite o uso de adução, alongamento, aquecimento, resfriamento, ou para simplesmente se exercitar. Fornece uma experiência de exercício única, que combina o trabalho cardiovascular com os exercício de pilates.
+</p>          
+                 </div>
+                 <div class="il-item il-item--2 il-box il-color--background__lighten">
+                     <i class="il-pilates-icon flaticon-elongation-posture light"></i><span class="il-color--text__darken">Konnector</span>
+                     <p class="il-content--description il-color--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tenetur ad alias, soluta aut facilis minus? Tempore eligendi beatae, nisi repellat aliquam assumenda. Temporibus quas rerum consectetur ducimus aliquam rem quos excepturi officiis aspernatur quod.</p>          
                  </div>
              </div>
          </div>
