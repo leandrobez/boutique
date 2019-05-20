@@ -9,11 +9,11 @@
     margin: auto;
   }
   & main.il-main {
-    &.il-app--perc {
+    &.il-main--perc {
       @include backappvga;
       height: auto;
     }
-    &.il-app-vh {
+    &.il-main--vh {
       @include backappvga;
       height: 100vh;
     }

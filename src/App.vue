@@ -67,11 +67,13 @@ export default {
         this.$route.name == 'gallery.studio'
       ) {
         if (this.$route.name == 'home') {
-          return 'il-main--perc il-main--back';
+          return 'il-main--back';
         }
-        return 'il-main--perc';
+        else {
+          return 'il-main--perc';
+        }
       } else {
-        return 'il-app-vh';
+        return 'il-main--vh';
       }
     }
   },

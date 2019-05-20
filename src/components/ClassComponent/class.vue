@@ -9,7 +9,7 @@
 
             <div class="il-class--content">
                 <div class="il-box--items one-item">
-                    <div class="il-item il-box il-color--background__lighten">
+                    <div class="il-item il-box ">
                         <i class="il-pilates-icon flaticon-side-bend-posture light"></i>
                         <span class="il-color--text">Por quê?</span>
                         <p class="il-content--description il-color--text">Porque aqui na <strong class="il-color--text__gold">{{$parent.title}}</strong> você terá aulas vigorosas e inovadoras que te motivarão a retornar para a próxima.</p>

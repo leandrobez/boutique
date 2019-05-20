@@ -1,10 +1,10 @@
 input[type='submit'],
 a.il-btn,
 button.il-btn {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   word-spacing: 2px;
   font-weight: 700;
-  padding: 0.5em 1.3em;
+  padding: 0.5rem 1.3rem;
   background-color: $btn-background-color;
   text-transform: uppercase;
   border: 1px solid $btn-border-color;
@@ -45,6 +45,25 @@ button.il-btn--cards {
   &:hover {
     background-color: $btn-cards-background-color-hoover;
     border: none;
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+}
+a.il-btn--cards__price,
+button.il-btn--cards__price {
+  padding: 0.3rem 0.4rem;
+  //border-radius: 60% 0 60% 0;
+  color: #434545;
+  background: none !important;
+  //background-color: rgb(145, 233, 189);
+  max-width: 140px;
+  margin-right: 60px;
+  font-size: 0.75rem;
+  border: none;
+  &:focus,
+  &:hover {
+    background-color: $btn-cards-background-color-hoover;
   }
   &:active {
     transform: scale(1.1);

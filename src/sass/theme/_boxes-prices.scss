@@ -1,23 +1,32 @@
 .il-pricing--grid {
   display: flex;
-  margin: 0 auto;
-  max-width: 986px;
   flex-direction: column;
   align-items: stretch;
+  justify-content: center;
   @media screen and (min-width: 600px) {
     flex-direction: row;
   }
-
   & .il-plan {
-    border: 2px solid $primaryColor;
-    //background: transparent !important;
-    border-radius: 3px;
-    justify-content: center;
-    margin: 5px;
+    @include pricesGradient();
+    border-radius: 75% 0 75% 0; //3px;
+    max-width: 250px;
+    margin: 0 auto;
+    @media screen and (min-width: 600px) {
+      margin: 5px;
+      border-radius: 65% 0 65% 0; //3px;
+    }
+    @media screen and (min-width: 800px) {
+      margin: 7px;
+      border-radius: 60% 0 60% 0; //3px;
+    }
+    @media screen and (min-width: 1024px) {
+      margin: 10px;
+      border-radius: 50% 0 50% 0; //3px;
+    }
+
     padding: 10px;
     text-align: center;
     display: flex;
-    flex: 1;
     flex-wrap: wrap;
     transition: all 450ms ease-in;
     cursor: pointer;
@@ -36,8 +45,11 @@
     }
     & h2 {
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: 0.88rem;
       font-weight: 500;
+      margin-top: 10px;
+      margin-left: 70px;
+      //color: gold;
     }
     & p {
       text-align: center;

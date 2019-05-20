@@ -31,7 +31,6 @@ $modal-delay: 400ms;
 $width-modal: 300px;
 
 /*header*/
-/* logo*/
 $brand-sw: 160px;
 $brand-sh: 108px;
 /* logo*/
@@ -42,7 +41,6 @@ $pos-bottom: 2rem;
 $m-w: 40px;
 $m-h: 40px;
 $header-height: $brand-sh + $pos-top + 14px;
-//$header-height: $brand-sh + $m-h + $pos-top;
 $brandUrl: '../public/images/theme/logokaizen.png';
 $brandUrlSmall: '../public/images/theme/logokaizensmall.png';
 /*app*/
@@ -52,7 +50,7 @@ $app-overlay: rgba(228, 100, 26, 0.9);
 
 /*Other elements*/
 $back-body: #eee;
-$back-cards: rgba(85, 85, 88, 0.87); //rgba(170, 61, 11, 0.87);
+$back-cards: rgba(85, 85, 88, 0.87);
 
 /*footer*/
 $height-footer: 150px;
@@ -69,12 +67,9 @@ $back-footer-albuns: darken($back-footer, 9.5%);
 $back-footer-curse: darken($back-footer, 10%);
 $back-footer-curriculum: darken($back-footer, 10.5%);
 $back-footer-video: darken($back-footer, 11%);
-$back-footer-bottom: lighten(
-  $fortyColorAccent,
-  75%
-); // #afb3b9; //lighten($back-footer, 12%);
+$back-footer-bottom: lighten($fortyColorAccent, 75%);
 
-$back-header: lighten(#5c5656, 30%); //rgba(darken($secondColor, 0.85), 0.65);
+$back-header: lighten(#5c5656, 30%);
 $back-portrait: $thirtyColor;
 $back-nav: $secondColor;
 $show-img-home: true;
