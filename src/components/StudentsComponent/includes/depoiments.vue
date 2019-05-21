@@ -16,7 +16,7 @@
                     </div>
                        
                         <div class="il-item--info">
-                            <p class="il-color--text__gold"><em>{{item.text}}</em>.</p>
+                            <p class="il-color--text__accent"><em>{{item.text}}</em>.</p>
                         </div>
                     </div>
                 </div>
