@@ -9,7 +9,7 @@
                     <div class="il-item il-box il-color--background__lighten">
                         <i class="il-pilates-icon flaticon-bicycle-position light"></i>
                         <span class="il-color--text__darken">Os protagonistas.</span>
-                        <p class="il-content--description il-color--text">Contamos com professores com formação em Educação Física e Fisioterapia, além de possuirem vários cursos de epecialização. Nosso diferencial reside nos fundamentos estabelecidos pela POLESTAR EDUCATION® - referência em pilates no mundo - e nas bases científicas que regem a ginástica postural; a ginástica localizada; a musculação e o condicionamento cardiovascular.</p>
+                       <!-- <p class="il-content--description il-color--text">Contamos com professores com formação em Educação Física e Fisioterapia, além de possuirem vários cursos de epecialização. Nosso diferencial reside nos fundamentos estabelecidos pela POLESTAR EDUCATION® - referência em pilates no mundo - e nas bases científicas que regem a ginástica postural; a ginástica localizada; a musculação e o condicionamento cardiovascular.</p>-->
                     </div>
                 </div>
             </div>
