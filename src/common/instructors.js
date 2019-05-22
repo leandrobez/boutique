@@ -12,9 +12,10 @@ const teachers = [
         cref: 'CREF: 0838-G/RS'
       },
       info: {
-        email: 'email: muraguti@kaizenpilates.com.br',
-        address: 'endereço: Rua Lavras 334/702 - Porto Alegre/RS',
-        fone: 'tel: 3333-33333'
+        email: 'email: contato@kaizenpilates.com',
+        address:
+          'endereço: Rua Lavras 334/702 - Bairro Petrópolis - Porto Alegre/RS',
+        fone: 'tel: 51 3519-3339'
       },
       graduation: {
         colege: 'Graduada em Educação Física - UEL 1986'

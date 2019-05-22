@@ -7,9 +7,12 @@
   position: absolute;
   display: flex;
   justify-content: space-between;
-  & i:hover {
-    color: #3f3e39;
-    opacity: 0.9;
+  & i {
+    cursor: pointer;
+    @include easeOut;
+    &:hover {
+      color: #88bcdf;
+    }
   }
 }
 .il-depoiments--content {
@@ -31,8 +34,10 @@
       transition: all 2s ease-out;
       & .il-item--caption {
         text-align: center;
-        font-weight: 400;
+        font-weight: bolder;
         padding: 0.15rem 0;
+        text-transform: uppercase;
+        font-size: 1rem;
       }
       & .il-item--picture {
         max-width: $portrait-width;

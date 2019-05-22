@@ -8,13 +8,47 @@
     flex-direction: column;
     & p {
       text-align: justify;
-      & a.il-link--decoration {
-        text-decoration-color: #d00001;
-        text-decoration-line: underline;
+      a.il-link--decoration {
+        border-bottom: 1px dotted black;
         @include easeOut();
         &:hover {
-          color: $textColorGold;
+          color: #767aaa;
           @include easeOut();
+        }
+      }
+      & span.tooltip {
+        position: relative;
+        display: inline-block;
+        & a.il-hints {
+          border-bottom: 1px dotted black;
+          @include easeOut();
+          &:hover {
+            color: #767aaa;
+            @include easeOut();
+          }
+        }
+        & .tooltiptext {
+          transition: 550ms all ease-out;
+          visibility: hidden;
+          width: 242px;
+          height: 363px;
+          /* Position the tooltip */
+          position: absolute;
+          z-index: 1;
+          & picture {
+            position: relative;
+            top: 30px;
+            left: -50%;
+            & img {
+              border-radius: 4px;
+              max-width: 60%;
+            }
+          }
+        }
+        &:hover .tooltiptext {
+          transition: 550ms all ease-in;
+          opacity: 1;
+          visibility: visible;
         }
       }
     }

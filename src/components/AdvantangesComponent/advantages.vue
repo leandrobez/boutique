@@ -7,7 +7,7 @@
          <div class="il-advantage--content">
              <div class="il-box--items">
                  <div class="il-item il-item--0 il-box il-color--background__lighten">
-                     <i class="il-pilates-icon flaticon-side-kick-kneeling light"></i><span class="il-color--text__darken">Pilates</span>
+                     <i class="il-pilates-icon flaticon-pilates-cadillac light"></i><span class="il-color--text__darken">Pilates</span>
                      <p class="il-content--description il-color--text">O Método foca no movimento natural do corpo com base na anatomia e biomecânica. Tem como objetivo fortalecer e alongar os músculos de forma equilibrada gerando saúde articular. É atualmente uma técnica reconhecida para tratamento e prevenção de problemas na coluna vertebral.</p>
                  </div>
                  <div class="il-item il-item--1 il-box il-color--background__lighten">
@@ -16,7 +16,7 @@
 </p>          
                  </div>
                  <div class="il-item il-item--2 il-box il-color--background__lighten">
-                     <i class="il-pilates-icon flaticon-elongation-posture light"></i><span class="il-color--text__darken">Konnector</span>
+                     <i class="il-pilates-icon flaticon-pilates-reformer light"></i><span class="il-color--text__darken">Konnector</span>
                      <p class="il-content--description il-color--text">A versatilidade do konnector multiplicou a intensidade do reformer <em>(equipamento utilizado no pilates</em>). Através de quatro alças conectadas entre si o aluno é estimulado a utilizar todo corpo de forma desafiadora aumentando assim o gasto energético a cada movimento.</p>          
                  </div>
              </div>

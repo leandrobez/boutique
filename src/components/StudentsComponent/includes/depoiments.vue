@@ -2,13 +2,13 @@
 <div class="il-container--wrapper">
     <section class="il-section il-section--depoiments">
         <div class="il-depoiments--navigation">
-            <i id="nav-left" class="mdi mdi-24px mdi-arrow-left-drop-circle il-color--text__alt" @click.prevent="move('left')" ></i>
-            <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--text__alt" @click.prevent="move('right')"></i>
+            <i id="nav-left" class="mdi mdi-24px mdi-arrow-left-drop-circle il-color--text__alt" @click.prevent="move('left')" title="Retroceder"></i>
+            <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--text__alt" @click.prevent="move('right')" title="Avançar"></i>
         </div>
         <div class="il-depoiments--content">
             <div class="il-depoiments--slider">
                 <div class="il-depoiment--item" v-for="(item,index) in students" :key="index">
-                    <div class="il-item--caption il-color--text__dark">
+                    <div class="il-item--caption il-color--text__gold">
                         {{item.name}}
                     </div>
                     <div class="il-item--picture">
@@ -56,7 +56,7 @@ export default {
         },
         {
           name: 'Cesar Burmann',
-          picture: '/images/pictures/student2.jpg',
+          picture: '/images/pictures/burmann.png',
           text:
             'Registro aqui meus cumprimentos à Claudia pelo novo espaço/estúdio de pilates/corealign - Kaizen, com design clean e muito bom gosto, que oportuniza a continuidade do excelente e reconhecidíssimo trabalho da nossa querida profe, nos entregando qualidade de vida. Parabéns e muito sucesso',
           social: [
@@ -76,7 +76,7 @@ export default {
         },
         {
           name: 'Terezinha Milanesi',
-          picture: '/images/pictures/student3.jpg',
+          picture: '/images/pictures/teka.png',
           text: 'lklklklkl',
           social: [
             {
