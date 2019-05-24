@@ -6,25 +6,16 @@
                 <small>KAIZEN</small>
             </span>
             <h1>Seja Bem Vindo!</h1>
-           <!-- <div class="subscribe-widget">-->
-                <!-- form --
-                <form id="subscribe-form">
-                    <input type="email" name="email" placeholder="Inform seu email" class="email-form" required>
-                    <button type="submit" class="button">Subscribe</button>
-                </form>
-                -- end form-->
-            <!--</div>-->
             <p>Agende uma aula experimental grátis!</p>
             <div id="option">
+                
+                <div class='il-picture'>
+                  <img id="slider" src="images/gallery/studio/kaizen1.jpg" alt="kaizen1.jpg" title="Espaço Kaizen">
+                </div>
+
                 <router-link id="agendar" class="boxi" :to="{name:'contact'}" title="Agendar uma aula experimental">Agendar</router-link>
                 <em>ou</em>
                 <a href="#" id="close" class="boxi closei" @click.prevent="closePop">Fechar</a>
-                <div class='video-wrapper'>
-                  <p>Aceite meu convite abaixo.</p>
-                    <div class='video'>
-                        <iframe id="player" width="290" height="200" src="https://www.youtube.com/embed/pT7I4afnrTo" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -35,8 +26,21 @@ export default {
   name: 'popup',
   data() {
     return {
+      slider: [
+        'kaizen1',
+        'kaizen2',
+        'kaizen3',
+        'kaizen4',
+        'kaizen5',
+        'kaizen6',
+        'kaizen7',
+        'kaizen8'
+      ],
       closed: false
     };
+  },
+  mounted() {
+    this.rotateSlider();
   },
   methods: {
     closePop() {
@@ -48,6 +52,21 @@ export default {
       } else {
         return 'hidden';
       }
+    },
+    rotateSlider() {
+      const sliders = document.getElementById('slider');
+      let init = 0;
+      let end = 7;
+      setInterval(() => {
+        let current = init;
+        sliders.src = 'images/gallery/studio/' + this.slider[current] + '.jpg';
+
+        if (init <= end) {
+          init++;
+        } else {
+          init = 0;
+        }
+      }, 4000);
     }
   }
 };

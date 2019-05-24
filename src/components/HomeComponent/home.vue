@@ -7,7 +7,7 @@
         </h1>
         <h2 class="il-section--sub-title">Somos especialistas em Pilates e <span class="il-color--text__red">CoreAlign</span>.</h2>
         <div class="il-home--content">
-            <p class="il-content--description il-color--text__alt">Olá! Você quer melhorar sua saúde reduzindo dores musculares?<br>Sabia que com a melhora da postura você pode alcançar esse objetivo?<br>Gostaria de fazer uma atividade física apaixonante que queime muitas calorias?<br>Então conheça as novidades que a {{$parent.title}} trouxe para o <span class="tooltip">
+            <p class="il-content--description il-color--text__alt">Olá! Você quer melhorar sua saúde reduzindo dores musculares?<br>Você sabia que com a melhora da postura pode-se alcançar esse objetivo?<br>Gostaria de fazer uma atividade física apaixonante que queime muitas calorias?<br>Então conheça as novidades que a {{$parent.title}} trouxe para o <span class="tooltip">
               <a class="il-hints" id="konnector-picture" href="#!" >pilates</a>
             <span class="tooltiptext">
               <picture id="konnector">

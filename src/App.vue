@@ -61,15 +61,13 @@ export default {
       if (
         this.$route.name == 'home' ||
         this.$route.name == 'class' ||
-        this.$route.name == 'student' ||
         this.$route.name == 'curse' ||
         this.$route.name == 'advantage' ||
         this.$route.name == 'gallery.studio'
       ) {
         if (this.$route.name == 'home') {
           return 'il-main--back';
-        }
-        else {
+        } else {
           return 'il-main--perc';
         }
       } else {

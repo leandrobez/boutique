@@ -1,6 +1,6 @@
 <template>
 <div class="il-container--wrapper">
-    <section class="il-section il-section--depoiments">
+    <section class="il-section il-section--depoiments il-color--background__dark">
         <div class="il-depoiments--navigation">
             <i id="nav-left" class="mdi mdi-24px mdi-arrow-left-drop-circle il-color--text__alt" @click.prevent="move('left')" title="Retroceder"></i>
             <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--text__alt" @click.prevent="move('right')" title="Avançar"></i>
@@ -16,7 +16,7 @@
                     </div>
                        
                         <div class="il-item--info">
-                            <p class="il-color--text__accent"><em>{{item.text}}</em>.</p>
+                            <p class="il-color--text__light"><em>{{item.text}}</em>.</p>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ export default {
       students: [
         {
           name: 'Janice Kruse',
-          picture: '/images/pictures/student1.jpg',
+          picture: '/images/pictures/janice.png',
           text:
             'Ha 20 anos atrás, eu afirmava com convicção que odiava ginástica até conhecer a profissional Claudia Muraguti. Hoje, aos 66 anos, estou feliz porque ela me ensinou a amar Pilates e CoreAlign. A academiz KAIZEN é a realização deste trabalho sério com o objetivo de oferecer profissionais competentes em uma área física clean, agradável e espaçosa onde os alunos se reunem em uma convivência alegre e saudável! Parabéns KAIZEN: seja bem vinda a Porto Alegre',
           social: [
@@ -95,8 +95,9 @@ export default {
         },
         {
           name: 'Aluno 4',
-          picture: '/images/pictures/student4.jpg',
-          text: 'klklklkk',
+          picture: '/images/pictures/vera.png',
+          text:
+            'Pilates corealign me desafia e me alicia. É um convite para suspender minha idade e implodir as travas que o peso do automatismo cravou no meu corpo. Aventura muito prazerosa porque a conquista de maior equilíbrio, tônus, agilidade e flexibilidade traz uma consciência inusitada. E então já não sabemos se o corpo anima a alma ou o contrário. Integrados, corpo e alma levitam. Integração é a chave e o bônus. Parabéns profe Claudia Muraguti!!!',
           social: [
             {
               icon: 'mdi-facebook',

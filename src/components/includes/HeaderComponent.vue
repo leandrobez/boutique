@@ -2,7 +2,7 @@
 <header id="il-header" class="il-header">
     <div class="il-container--wrapper">
         <div class="il-header--menu" @click.prevent="activeMenu" :class="hasActive()">
-            <div class="il-menu--line"></div>
+             <div class="il-menu--line"></div>
             <div class="il-menu--line"></div>
             <div class="il-menu--line"></div>
         </div>

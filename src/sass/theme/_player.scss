@@ -1,49 +1,48 @@
 .il-player {
-    position: absolute;
-    top: -50%;
-    transition: top 0.15s ease;
-    & .il-video--youtube {
-      position: relative;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      padding: 3px;
-      & i {
-        visibility: hidden;
-        color: $primaryColor;
-        position: absolute;
-        text-align: center;
-        left: 50%;
-        transform: translate(-50%);
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        background: #45222a;
-        border-radius: 50%;
-      }
-      & iframe {
-        border: 0;
-        position: relative;
-      }
-    }
-    &.show {
-      top: 0;
-      transition: top 650ms ease;
-      left: 50%;
-      height: 100%;
-      transform: translateX(-50%);
+  position: absolute;
+  top: -50%;
+  transition: top 0.15s ease;
+  & .il-video--youtube {
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    padding: 3px;
+    & i {
+      visibility: hidden;
+      color: $primaryColor;
+      position: absolute;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: $primaryColor;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15),
-        0 0 25px rgba(0, 0, 0, 0.3);
-      transition: width 450ms ease;
-      & .il-video--youtube i {
-        cursor: pointer;
-        visibility: visible;
-        top: -30px;
-      }
+      left: 50%;
+      transform: translate(-50%);
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      background: #45222a;
+      border-radius: 50%;
+    }
+    & iframe {
+      border: 0;
+      position: relative;
     }
   }
+  &.show {
+    top: 0;
+    transition: top 650ms ease;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $primaryColor;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 25px rgba(0, 0, 0, 0.3);
+    transition: width 450ms ease;
+    & .il-video--youtube i {
+      cursor: pointer;
+      visibility: visible;
+      top: -30px;
+    }
+  }
+}

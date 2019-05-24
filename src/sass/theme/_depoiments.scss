@@ -1,7 +1,10 @@
 .il-depoiments--navigation {
   width: 100%;
   height: 1.5rem;
-  top: 50%;
+  top: 35%;
+  @media screen and(min-width:480px) {
+    top: 40%;
+  }
   transform: translateY(-50%);
   padding: 0 1rem;
   position: absolute;
@@ -15,8 +18,16 @@
     }
   }
 }
+$fator: 0.7;
 .il-depoiments--content {
-  height: $height-slider;
+  height: 100%;
+  min-height: ($height-slider * 0.75);
+  @media screen and(min-width:480px) {
+    min-height: ($height-slider * 0.82);
+  }
+  @media screen and(min-width:600px) {
+    min-height: $height-slider;
+  }
   padding: 0.45rem;
   & .il-depoiments--slider {
     display: grid;
@@ -27,7 +38,13 @@
       position: absolute;
       display: flex;
       flex-direction: column;
-      width: 80%;
+      width: 99%;
+      @media screen and(min-width:480px) {
+        width: 87%;
+      }
+      @media screen and(min-width:600px) {
+        width: 80%;
+      }
       left: -50%;
       opacity: 0;
       transform: translateX(-50%);
@@ -40,7 +57,13 @@
         font-size: 1rem;
       }
       & .il-item--picture {
-        max-width: $portrait-width;
+        max-width: ($portrait-width * 0.6);
+        @media screen and(min-width:480px) {
+          max-width: ($portrait-width * $fator);
+        }
+        @media screen and(min-width:600px) {
+          max-width: $portrait-width;
+        }
         margin: auto;
       }
       & .il-item--info {
@@ -48,14 +71,18 @@
         text-align: center;
         width: 100%;
         & p {
-          font-family: 'Assistant', sans-serif;
+          margin-top: 0.35rem;
+          font-family: 'Roboto', sans-serif;
           text-align: justify;
-          //line-height: 0.95rem;
-          margin: 0;
+          font-weight: 500;
+          //margin: 0;
           padding-bottom: 0.45rem;
-          font-size: 0.75rem;
-          @media screen and (min-width: 500px) {
-            font-size: 0.85rem;
+          font-size: 0.6rem;
+          @media screen and (min-width: 600px) {
+            font-size: 0.65rem;
+          }
+          @media screen and (min-width: 800px) {
+            font-size: 0.75rem;
           }
         }
       }

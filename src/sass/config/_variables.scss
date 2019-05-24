@@ -36,6 +36,8 @@ $brand-sh: 108px;
 /* logo*/
 $brand-swsmall: 122px;
 $brand-shsmall: 83px;
+$brand-vswsmall: 110px;
+$brand-vshsmall: 75px;
 $pos-top: 5px;
 $pos-bottom: 2rem;
 $m-w: 40px;
@@ -74,6 +76,7 @@ $back-portrait: $thirtyColor;
 $back-nav: $secondColor;
 $show-img-home: true;
 $big-img-url-home: url('../public/images/banners/big-img-home.png');
+$avataVerySmall: 93px;
 $avataSmall: 128px;
 $avatarMedium: 148px;
 $avatarBig: 168px;
@@ -81,7 +84,7 @@ $show-avatar: true;
 $avatar-url: url('../public/images/pictures/avatar-muraguti.jpg');
 
 /** depoiments*/
-$height-slider: 440px;
+$height-slider: 450px;
 $portrait-width: 140px;
 $background-opacity: 0.5;
 
