@@ -1,9 +1,9 @@
 <template>
 <div class="il-container--wrapper">
-    <section class="il-section il-section--depoiments il-color--background__dark">
+    <section class="il-section il-section--depoiments il-color--background__header">
         <div class="il-depoiments--navigation">
-            <i id="nav-left" class="mdi mdi-24px mdi-arrow-left-drop-circle il-color--text__alt" @click.prevent="move('left')" title="Retroceder"></i>
-            <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--text__alt" @click.prevent="move('right')" title="Avançar"></i>
+            <i id="nav-left" class="mdi mdi-24px mdi-arrow-left-drop-circle il-color--white" @click.prevent="move('left')" title="Retroceder"></i>
+            <i id="nav-right" class="mdi mdi-24px mdi-arrow-right-drop-circle il-color--white" @click.prevent="move('right')" title="Avançar"></i>
         </div>
         <div class="il-depoiments--content">
             <div class="il-depoiments--slider">
@@ -36,7 +36,7 @@ export default {
       students: [
         {
           name: 'Janice Kruse',
-          picture: '/images/pictures/janice.png',
+          picture: '/images/pictures/janice.jpg',
           text:
             'Ha 20 anos atrás, eu afirmava com convicção que odiava ginástica até conhecer a profissional Claudia Muraguti. Hoje, aos 66 anos, estou feliz porque ela me ensinou a amar Pilates e CoreAlign. A academiz KAIZEN é a realização deste trabalho sério com o objetivo de oferecer profissionais competentes em uma área física clean, agradável e espaçosa onde os alunos se reunem em uma convivência alegre e saudável! Parabéns KAIZEN: seja bem vinda a Porto Alegre',
           social: [
@@ -55,8 +55,8 @@ export default {
           ]
         },
         {
-          name: 'Cesar Burmann',
-          picture: '/images/pictures/burmann.png',
+          name: 'César Terra Burmann',
+          picture: '/images/pictures/burmann.jpg',
           text:
             'Registro aqui meus cumprimentos à Claudia pelo novo espaço/estúdio de pilates/corealign - Kaizen, com design clean e muito bom gosto, que oportuniza a continuidade do excelente e reconhecidíssimo trabalho da nossa querida profe, nos entregando qualidade de vida. Parabéns e muito sucesso',
           social: [
@@ -76,7 +76,7 @@ export default {
         },
         {
           name: 'Terezinha Milanesi',
-          picture: '/images/pictures/teka.png',
+          picture: '/images/pictures/teka.jpg',
           text: 'lklklklkl',
           social: [
             {
@@ -94,8 +94,8 @@ export default {
           ]
         },
         {
-          name: 'Aluno 4',
-          picture: '/images/pictures/vera.png',
+          name: 'Vera Stracke',
+          picture: '/images/pictures/vera.jpg',
           text:
             'Pilates corealign me desafia e me alicia. É um convite para suspender minha idade e implodir as travas que o peso do automatismo cravou no meu corpo. Aventura muito prazerosa porque a conquista de maior equilíbrio, tônus, agilidade e flexibilidade traz uma consciência inusitada. E então já não sabemos se o corpo anima a alma ou o contrário. Integrados, corpo e alma levitam. Integração é a chave e o bônus. Parabéns profe Claudia Muraguti!!!',
           social: [

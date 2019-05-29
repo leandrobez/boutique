@@ -4,6 +4,11 @@
   @include big-img($show-img-home, $big-img-url-home);
 }
 
+/**gradient background**/
+
+.il-color--gradient__eclipse {
+  background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
+}
 /**Backgrounds*/
 .il-color--background__default {
   background: $primaryAccent;
@@ -14,15 +19,12 @@
 .il-color--background__light {
   background: $secondColor;
 }
-
 .il-color--background__verylight {
   background: $secondColorAccent;
 }
-
 .il-color--background__clean {
   background: #d0d1ab;
 }
-
 .il-color--background__modal {
   background: rgb(248, 248, 247);
 }
@@ -35,11 +37,9 @@
 .il-color--background__modal-content {
   background: $thirtyColor;
 }
-
 .il-color--background__dark {
   background: $dark;
 }
-
 .il-color--background__darken {
   background: #110f08;
 }

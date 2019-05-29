@@ -4,6 +4,10 @@
 @function getPixels() {
   @return '130px';
 }
+@function getPixelsPerc($w, $p) {
+  $calc: ($w - ($w * $p));
+  @return $calc * 1px;
+}
 @function calcPX() {
   $result: 100vh - $header-height;
   @return $result;

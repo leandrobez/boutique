@@ -14,7 +14,7 @@
     cursor: pointer;
     @include easeOut;
     &:hover {
-      color: #88bcdf;
+      color: #f7de54;
     }
   }
 }
@@ -57,14 +57,21 @@ $fator: 0.7;
         font-size: 1rem;
       }
       & .il-item--picture {
-        max-width: ($portrait-width * 0.6);
+        max-width: getPixelsPerc(120, 0.3);
+        @include easeOut;
         @media screen and(min-width:480px) {
-          max-width: ($portrait-width * $fator);
+          @include easeOut;
+          max-width: getPixelsPerc(120, 0.1);
         }
         @media screen and(min-width:600px) {
+          @include easeOut;
           max-width: $portrait-width;
         }
         margin: auto;
+        & img.il-img--medium {
+          border-radius: 50%;
+          border: 2px solid #e9bb23;
+        }
       }
       & .il-item--info {
         padding: 0 0.45rem;
