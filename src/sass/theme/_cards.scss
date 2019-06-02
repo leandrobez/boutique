@@ -57,6 +57,7 @@
   }
   & .il-card--content {
     padding: 0;
+    p,
     p.il-card--description {
       padding: 0.25rem 0.15rem;
       font-size: 0.75rem;
@@ -68,6 +69,10 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 1px;
+    }
+    p {
+      text-transform: none;
+      text-align: left;
     }
   }
   & .il-card--footer {

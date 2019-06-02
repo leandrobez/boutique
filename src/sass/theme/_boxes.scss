@@ -22,6 +22,7 @@
   & .il-item {
     display: flex;
     flex-direction: column;
+    position: relative;
     &.il-box {
       background: transparent !important;
       padding: 0.45rem;
@@ -31,6 +32,58 @@
         & p {
           color: #434343;
           text-align: left;
+        }
+      }
+      & ul.il-icons {
+        padding: 1rem 0;
+        font-size: 1.2rem;
+        & li a {
+          color: gold;
+          font-weight: bolder;
+        }
+      }
+      & .il-video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        z-index: 3;
+        & a.il-close {
+          position: relative;
+          display: block;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 5px;
+          width: 30px;
+          height: 30px;
+          background: rgb(34, 17, 17);
+          border-radius: 50%;
+          line-height: 30px;
+          text-align: center;
+        }
+        &.video0 {
+          top: 50%;
+          &.show {
+            visibility: visible;
+          }
+        }
+        &.video1 {
+          top: -50%;
+          &.show {
+            visibility: visible;
+          }
+        }
+        &.video2 {
+          top: -200%;
+          &.show {
+            visibility: visible;
+          }
+        }
+        & iframe {
+          margin-left: 50%;
+          transform: translateX(-50%);
+          width: 500px;
+          height: 500px;
         }
       }
       & .il-header--box {

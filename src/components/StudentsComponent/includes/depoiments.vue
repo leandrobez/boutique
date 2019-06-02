@@ -188,7 +188,7 @@ export default {
         }
       };
       /**temporizador */
-      //
+      
       setInterval(() => {
         nextEl(vm.init, styles, vm);
         vm.init++;

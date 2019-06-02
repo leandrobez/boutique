@@ -8,7 +8,7 @@
               <i class="mdi mdi-12px mdi-close"></i>
             </a>
             <div class="il-modal--body">
-              <ilForm />
+                <ilForm />
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import ilForm from './FormContato.vue'
+import ilForm from './FormContato.vue';
 export default {
   name: 'Modal',
   components: {
@@ -25,17 +25,17 @@ export default {
   props: ['check'],
 
   computed: {
-    checkShow () {
+    checkShow() {
       if (this.check) {
-        return true
+        return true;
       }
-      return false
+      return false;
     }
   },
   methods: {
-    closeModal () {
-      this.$parent.closeModal()
+    closeModal() {
+      this.$parent.closeModal();
     }
   }
-}
+};
 </script>
