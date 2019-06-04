@@ -7,7 +7,7 @@
         </h1>
         <h2 class="il-section--sub-title">Saúde em melhoria <span class="il-color--text__red">continua</span>.</h2>
         <div class="il-home--content">
-            <p class="il-content--description il-color--text__alt">Olá! Você quer melhorar sua saúde reduzindo dores musculares?<br>Você sabia que com a melhora da postura pode-se alcançar esse objetivo?<br>Gostaria de fazer uma atividade física apaixonante que queime muitas calorias?<br>Então conheça as novidades que a {{$parent.title}} trouxe para o <span class="tooltip">
+            <p class="il-content--description il-color--text__alt">Olá! Você quer melhorar sua saúde reduzindo dores musculares?<br>Temos a solução do seu problema através de exercícios que vão melhorar a sua postura e queimar calorias de forma divertida.<br>Então conheça as inovações que a {{$parent.title}} oferece através do <span class="tooltip">
               <a class="il-hints" id="konnector-picture" href="#!" >pilates</a>
             <span class="tooltiptext">
               <picture id="konnector">
@@ -15,8 +15,8 @@
                 </picture>
               </span>
                 </span>
-                <!--colocar link sobr konnector--> e o <span class="tooltip">
-              <a class="il-hints" id="corealign-picture" href="#!" >corealign</a>
+                <!--colocar link sobr konnector--> e doo <span class="tooltip">
+              <a class="il-hints" id="corealign-picture" href="#!" >CoreAlign</a>
               <span class="tooltiptext">
               <picture id="corealign">
                     <img :src="thumbs.corealign" alt="CoreAlign" title="CoreAlign">

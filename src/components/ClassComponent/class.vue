@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="il-class">
     <section id="il-class" class="il-section il-section--class">
         <div class="il-container--wrapper">
             <h1 class="il-section--title">As
@@ -12,7 +12,9 @@
                     <div class="il-item il-box ">
                         <i class="il-pilates-icon flaticon-side-bend-posture light"></i>
                         <span class="il-color--text">Por quê?</span>
-                        <p class="il-content--description il-color--text">Porque aqui na <strong class="il-color--text__gold">{{$parent.title}}</strong> você terá aulas vigorosas e inovadoras que te motivarão a retornar para a próxima.</p>
+                        <p class="il-content--description il-color--text">Porque aqui na <strong class="il-color--text__gold">{{$parent.title}}</strong> você terá aulas vigorosas e inovadoras que te motivarão a retornar para a próxima.<br>Além disso você com certeza irá melhorar sua <b>concentração</b>, <b>controle e coordenação motora</b>, <b>equilíbrio muscular</b>, <b>alinhamento postural</b>, <b>respiração</b> e ganhará mais <b>fluidez</b> em seus movimentos.</p>
+                        <button class="il-btn auto very-bigger il-btn--empty" @click.prevent="showPanel()">Escolha um plano</button>
+                        <button class="il-btn il-close auto very-bigger il-btn--empty" @click.prevent="closePanel()">Fechar</button>
                     </div>
                 </div>
             </div>
@@ -20,11 +22,11 @@
     </section>
     <section class="il-section il-section--prices">
         <div class="il-container--wrapper">
-            <h2 class="il-section--sub-title il-color--text__very-light text-right">Escolha um plano de aula:</h2>
+            <h4 class="il-color--white text-center">Escolha um plano de aula:</h4>
             <div class="il-pricing--grid">
                 <ilCards v-for="plan in plans" :key="plan.key" :id="plan.id" :condicions="plan.condicions" :price="plan.value" :text="plan.text" />
             </div>
-            <p class="il-obs">Aula avulsa - R$ 70,00</p>
+            <p class="il-obs il-color--white">Aula avulsa - R$ 70,00</p>
         </div>
     </section>
 </div>
@@ -68,6 +70,24 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    showPanel(){
+      let btn = document.querySelector('.il-btn')
+      let btnClose = document.querySelector('.il-btn.il-close')
+      let panel = document.querySelector('.il-section.il-section--prices')
+      panel.classList.add('il-show')
+      btn.style.display = 'none'
+      btnClose.style.display = 'block'
+    },
+    closePanel() {
+       let btn = document.querySelector('.il-btn')
+      let btnClose = document.querySelector('.il-btn.il-close')
+      let panel = document.querySelector('.il-section.il-section--prices')
+      panel.classList.remove('il-show')
+      btn.style.display = 'block'
+      btnClose.style.display = 'none'
+    }
   },
   mixins: [animeBox]
 };

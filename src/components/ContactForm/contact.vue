@@ -13,6 +13,7 @@
                         <input type="email" id="email" class="il-input" v-model="contact.email" placeholder="Seu email" required>
                         <input type="tel" id="phone" :onkeydown="maskD('p')" :onkeyup="maskU('p')" class="il-input" v-model="contact.phone" placeholder="Fone (xx) xxxx-xxxx">
                         <input type="tel" id="mobil" class="il-input" :onkeydown="maskD('m')" :onkeyup="maskU('m')" v-model="contact.mobil" placeholder="Clr (xx) xxxx-xxxx">
+                        <input type="hidden" id="plan" v-model="contact.plan">
                         <select v-model="contact.frowhere" id="frowhere" class="il-select">
                             <option value="" selected>Como nos achou</option>
                             <option value="amigos">Meus amigos me indicaram</option>
@@ -47,7 +48,8 @@ export default {
         phone: '',
         mobil: '',
         frowhere: '',
-        message: 'Deixe sua mensagem'
+        message: 'Deixe sua mensagem',
+        plan: ''
       },
       inputs: {
         inputPhone: null,

@@ -33,74 +33,74 @@ const router = new VueRouter({
       component: Home
     },
     {
-      path: 'about',
+      path: '/about',
       name: 'about',
       component: About
     },
     {
-      path: 'curriculum',
+      path: '/curriculum',
       name: 'curriculum',
       component: Curriculum
     },
     {
-      path: 'studio',
+      path: '/studio',
       name: 'studio',
       component: Studio
     },
     {
-      path: 'teachers',
+      path: '/teachers',
       name: 'teachers',
       component: Teacher
     },
     {
-      path: 'class',
+      path: '/class',
       name: 'class',
       component: Class
     },
     {
-      path: 'student',
+      path: '/student',
       name: 'student',
       component: Student
     },
     {
-      path: 'advantage',
+      path: '/advantage',
       name: 'advantage',
       component: Advantage
     },
     {
-      path: 'videos',
+      path: '/videos',
       name: 'video',
       component: Video
     },
     {
-      path: 'cursos',
+      path: '/cursos',
       name: 'curse',
       component: Curses
     },
     {
-      path: 'albuns',
+      path: '/albuns',
       name: 'albuns',
       component: Albuns
     },
     {
-      path: 'gallery',
+      path: '/gallery',
       name: 'gallery',
       component: Gallery,
       children: [
         {
-          path: 'studio',
+          path: '/studio',
           name: 'gallery.studio',
           component: studioGallery
         },
         {
-          path: 'events',
+          path: '/events',
           name: 'gallery.events',
           component: eventsGallery
         }
       ]
     },
     {
-      path: 'contact',
+      path: '/contact',
       name: 'contact',
       component: Contact
     },

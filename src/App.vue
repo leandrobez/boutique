@@ -61,7 +61,6 @@ export default {
       if (
         this.$route.name == 'home' ||
         this.$route.name == 'about' ||
-        this.$route.name == 'class' ||
         this.$route.name == 'curse' ||
         this.$route.name == 'advantage' ||
         this.$route.name == 'gallery.studio'

@@ -11,6 +11,7 @@ button.il-btn {
   transition: all 0.5s;
   max-width: $max-width;
   text-decoration: none;
+  outline: none;
   &.left {
     margin-left: 0;
   }
@@ -19,6 +20,12 @@ button.il-btn {
   }
   &.auto {
     margin: auto;
+  }
+  &.very-bigger {
+    width: 340px;
+    @media screen and (min-width: 1171px) {
+      width: 380px;
+    }
   }
   &.bigger {
     width: 240px;
@@ -64,6 +71,7 @@ button.il-btn--cards__price {
   &:focus,
   &:hover {
     background-color: $btn-cards-background-color-hoover;
+
   }
   &:active {
     transform: scale(1.1);
@@ -76,6 +84,7 @@ button.il-btn--empty {
   &:focus,
   &:hover {
     border: none;
+    color: white;
   }
   &:active {
     transform: scale(1.1);
