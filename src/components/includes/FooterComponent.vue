@@ -33,7 +33,7 @@
 			<div class="il-footer--col">
 				<h4 class="il-footer--title">
 					<i class="mdi mdi-24px mdi-email"></i>
-					<router-link :to="{name:'contact'}" class="il-footer--list il-color--text__light"  title="Faça contato com a gente">contato</router-link>
+					<router-link :to="{name:'contact', params: {plan: 'message'}}" class="il-footer--list il-color--text__light"  title="Faça contato com a gente">contato</router-link>
 				</h4>
 			</div>
 		</div>

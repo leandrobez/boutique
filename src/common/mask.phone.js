@@ -87,7 +87,7 @@ export const MaskUp = (e, msc) => {
         //alert(msc.substr(iCount2,1));
         //Looping para percorrer os caracteres especiais retrocedentes:
         while (msc.substr(iCount1 - nChar, 1) != '#' && nChar <= iCount1) {
-          alert(msc.substr(iCount1 - nChar, 1) + ' -- ' + nChar);
+          //alert(msc.substr(iCount1 - nChar, 1) + ' -- ' + nChar);
           nChar++;
         }
         //Apagando os caracteres retrocedentes, conforme o valor atribuído a nChar:

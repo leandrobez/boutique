@@ -10,13 +10,13 @@ import Teacher from '../components/TeachersComponent/teachers.vue';
 import Class from '../components/ClassComponent/class.vue';
 import Student from '../components/StudentsComponent/students.vue';
 import Advantage from '../components/AdvantangesComponent/advantages.vue';
-import Video from '../components/VideosComponent/videos.vue';
+//import Video from '../components/VideosComponent/videos.vue';
 import Albuns from '../components/AlbunsComponent/albuns.vue';
 //import Login from '../components/LoginComponent/login.vue';
 import Gallery from '../components/GalleryComponent/GalleryComponent.vue';
 import studioGallery from '../components/GalleryComponent/includes/studioGallery.vue';
 import eventsGallery from '../components/GalleryComponent/includes/eventsGallery.vue';
-//import formSubmission from '../components/includes/SubmissionForms.vue';
+import Email from '../components/includes/SubmissionForms.vue';
 import Curses from '../components/includes/cursosComponent.vue';
 //import Account from '../components/includes/accountComponent.vue';
 import Contact from '../components/ContactForm/contact.vue';
@@ -67,11 +67,11 @@ const router = new VueRouter({
       name: 'advantage',
       component: Advantage
     },
-    {
+    /*{
       path: '/videos',
       name: 'video',
       component: Video
-    },
+    },*/
     {
       path: '/cursos',
       name: 'curse',
@@ -100,11 +100,15 @@ const router = new VueRouter({
       ]
     },
     {
-      path: '/contact',
+      path: '/contact/:plan',
       name: 'contact',
       component: Contact
     },
-
+    {
+      path: '/email/:type',
+      name: 'email',
+      component: Email
+    },
     {
       path: '*',
       redirect: '/'

@@ -13,7 +13,7 @@
                   <img id="slider" src="images/gallery/studio/kaizen1.jpg" alt="kaizen1.jpg" title="Espaço Kaizen">
                 </div>
 
-                <router-link id="agendar" class="boxi" :to="{name:'contact'}" title="Agendar uma aula experimental">Agendar</router-link>
+                <router-link id="agendar" class="boxi" :to="{name:'contact', params: {plan:'message'}}" title="Agendar uma aula experimental">Agendar</router-link>
                 <em>ou</em>
                 <a href="#" id="close" class="boxi closei" @click.prevent="closePop">Fechar</a>
             </div>

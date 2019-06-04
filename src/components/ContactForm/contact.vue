@@ -25,7 +25,7 @@
                         <div data-netlify-recaptcha="true"></div>
                         <input type="hidden" name="form-name" value="form-contact" />
                       </div>
-                        <button class="il-btn il-btn--submit">Enviar</button>
+                        <button type="submit" class="il-btn il-btn--submit">Enviar</button>
                 </fieldset>
             </form>
         </div>
@@ -57,8 +57,28 @@ export default {
       }
     };
   },
-  mounted() {},
+  mounted() {
+    this.setPlan();
+  },
   methods: {
+    setPlan() {
+      let plan = '';
+      let path = this.$route.params;
+      switch (path.plan) {
+        case 'plan1':
+          plan = 'plano1';
+          this.contact.plan = plan;
+          break;
+        case 'plan2':
+          plan = 'plano2';
+          this.contact.plan = plan;
+          break;
+        case 'plan3':
+          plan = 'plano3';
+          this.contact.plan = plan;
+          break;
+      }
+    },
     maskD(ele) {
       if (ele == 'm') {
         let mobil = document.getElementById('mobil');
