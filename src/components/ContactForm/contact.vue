@@ -116,13 +116,19 @@ export default {
         .post(url, content, axiosConfig)
         .then(() => {
           this.$router.push({
-            path: 'email/success'
+            name: '/email',
+            params: {
+                type: 'success'
+            }
           });
         })
         .catch(() => {
           //console.log(url)
           this.$router.push({
-            path: 'email/fails'
+             name: '/email',
+            params: {
+                type: 'fails'
+            }
           });
         });
     }

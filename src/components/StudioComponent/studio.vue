@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="il-button--content">
-          <router-link class="il-btn il-btn--cards" :to="{name: 'gallery.studio'}" title="Veja fotos do studio">Acesse o álbum</router-link>
+          <router-link class="il-btn il-btn--cards" :to="{name: 'gallery.studio'}" title="Veja fotos do estúdio">Acesse o álbum</router-link>
         </div>
     </div>
 </section>

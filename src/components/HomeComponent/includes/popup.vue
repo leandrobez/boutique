@@ -10,7 +10,7 @@
             <div id="option">
                 
                 <div class='il-picture'>
-                  <img id="slider" src="images/gallery/studio/kaizen1.jpg" alt="kaizen1.jpg" title="Espaço Kaizen">
+                  <img id="slider" src="/images/gallery/studio/kaizen1.jpg" alt="kaizen1.jpg" title="Espaço Kaizen">
                 </div>
 
                 <router-link id="agendar" class="boxi" :to="{name:'contact', params: {plan:'message'}}" title="Agendar uma aula experimental">Agendar</router-link>
@@ -59,7 +59,7 @@ export default {
       let end = 7;
       setInterval(() => {
         let current = init;
-        sliders.src = 'images/gallery/studio/' + this.slider[current] + '.jpg';
+        sliders.src = '/images/gallery/studio/' + this.slider[current] + '.jpg';
 
         if (init <= end) {
           init++;
