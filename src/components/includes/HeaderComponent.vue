@@ -1,15 +1,17 @@
 <template>
 <header id="il-header" class="il-header">
     <div class="il-container--wrapper">
-        <div class="il-header--menu" @click.prevent="activeMenu" :class="hasActive()">
-            <div class="il-menu--line"></div>
-            <div class="il-menu--line"></div>
-            <div class="il-menu--line"></div>
+        <div class="il-header--main">
+            <div class="il-header--brand">
+                <h1 class="il-color--text__gold"><img :src="logo" alt="logo da kaizen" title="Logo da Kaizen"></h1>
+            </div>
+            <div class="il-header--menu" @click.prevent="activeMenu" :class="hasActive()">
+                <div class="il-menu--line"></div>
+                <div class="il-menu--line"></div>
+                <div class="il-menu--line"></div>
+            </div>
         </div>
-        <div class="il-header--brand">
-            <!---->
-            <h1 class="il-color--text__gold"><img :src="logo" alt="logo da kaizen" title="Logo da Kaizen"></h1>
-        </div>
+
         <div class="il-header--content">
             <div class="il-content--portrait">
                 <div class="il-avatar--portrait">
@@ -26,7 +28,7 @@
                             </router-link>
                         </div>
                         <div v-else>
-                           <router-link class="il-menu--link il-color--text__yellow" :to="{name:m.link, params: {plan: m.params}}" :class="isActive(m.id)" :title="m.title">
+                            <router-link class="il-menu--link il-color--text__yellow" :to="{name:m.link, params: {plan: m.params}}" :class="isActive(m.id)" :title="m.title">
                                 <span @click="hiddenMenu()">{{m.label}}</span>
                             </router-link>
                         </div>

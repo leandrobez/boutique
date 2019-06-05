@@ -1,7 +1,7 @@
 #app {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr $height-footer;
+  grid-template-rows: auto $height-footer;
 
   .il-container {
     padding-top: $header-height;

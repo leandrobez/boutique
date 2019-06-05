@@ -1,6 +1,9 @@
 @function getLeft($w) {
   @return calc(100% - #{$w});
 }
+@function getRigth($w) {
+  @return calc(100% - #{$w});
+}
 @function getPixels() {
   @return '130px';
 }

@@ -60,7 +60,6 @@ export default {
     getCurrentClass() {
       if (
         this.$route.name == 'home' ||
-        this.$route.name == 'about' ||
         this.$route.name == 'curse' ||
         this.$route.name == 'advantage' ||
         this.$route.name == 'gallery.studio'

@@ -1,125 +1,135 @@
 .il-header--content {
-  position: absolute;
-  z-index: 99;
-  left: -50%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  margin-left: -150%;
+  background: #454343;
   display: flex;
   flex-direction: column;
-  max-height: 450px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 2px 13px #584745;
   @include easeOut;
-  @media screen and (min-width: 501px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  @media screen and (min-width: 361px) and (max-width: 500px) {
+    width: 96%;
+    left: 2%;
   }
+  @media screen and (min-width: 501px) and (max-width: 768px) {
+    width: 92%;
+    left: 4%;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    width: 88%;
+    left: 6%;
+  }
+  @media screen and (min-width: 1171px) {
+    width: 80%;
+    left: 10%;
+  }
+  @media screen and (min-width: 501px) {
+    flex-direction: row;
+  }
+  max-width: $max-width;
+  z-index: 3;
   &.il-show--header {
     @include easeOut;
+    opacity: 1;
+    margin-left: 0;
+  }
+  & .il-content--portrait,
+  & nav.il-content--nav {
     width: 100%;
-    height: 50%;
-    left: 0;
-    top: $header-height;
-    & .il-content--portrait,
-    & nav.il-content--nav {
-      @include easeOut;
-      opacity: 0.5;
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      @media screen and (min-width: 501px) {
-        width: 50%;
-      }
-      &.show {
-        @include easeOut;
-        opacity: 1;
-        background: $textColorGold;
-      }
+    min-height: 270px;
+    padding: 1rem;
+    @media screen and (min-width: 501px) {
+      padding: 2rem 1rem;
+      width: 50%;
+      min-height: 440px;
     }
-    span.il-authenticated {
-      display: block;
-      position: relative;
-      text-align: center;
-      padding: 0.15rem 0;
-      font-weight: bold;
-      top: 5px;
-    }
-    & .il-content--portrait {
-      display: flex;
-      flex-direction: column;
-      .il-avatar--portrait {
-        height: $avataVerySmall;
-        width: $avataVerySmall;
-        border-radius: 50%;
-        border: 1px solid $fortyColor;
-        background-image: $avatar-url;
-        background-position: center;
-        background-repeat: none;
-        background-size: cover;
-        @media screen and (min-width: 480px) {
-          height: $avataSmall;
-          width: $avataSmall;
-          border: 2px solid $fortyColor;
-        }
-        @media screen and (min-width: 600px) {
-          height: $avatarMedium;
-          width: $avatarMedium;
-          border: 2px solid $fortyColor;
-        }
-        @media screen and (min-width: 800px) {
-          height: $avatarBig;
-          width: $avatarBig;
-          border: 3px solid $fortyColor;
-        }
+
+    /*@media screen and (min-width: 501px) {
+      width: 50%;
+    }*/
+  }
+  & .il-content--portrait {
+    background: $textColorGold;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .il-avatar--portrait {
+      height: $avataVerySmall;
+      width: $avataVerySmall;
+      border-radius: 50%;
+      border: 1px solid $fortyColor;
+      background-image: $avatar-url;
+      background-position: center;
+      background-repeat: none;
+      background-size: cover;
+      @media screen and (min-width: 480px) {
+        height: $avataSmall;
+        width: $avataSmall;
+        border: 2px solid $fortyColor;
+      }
+      @media screen and (min-width: 600px) {
+        height: $avatarMedium;
+        width: $avatarMedium;
+        border: 2px solid $fortyColor;
+      }
+      @media screen and (min-width: 800px) {
+        height: $avatarBig;
+        width: $avatarBig;
+        border: 3px solid $fortyColor;
       }
     }
-    & nav.il-content--nav.show {
-      background: $fortyColor; //lighten($primaryColor, 5%);
-      & ul.il-menu--list li.il-menu--list__item {
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        & a.il-menu--link {
-          text-transform: uppercase;
-          transform: translate3d(100%, 25%, 0);
-          color: $thirtyColor;
-          font-weight: bolder;
-          font-family: 'Dosis', sans-serif;
-          font-size: 0.95rem;
-          @include easeOut;
-          &.current {
-            color: $textColorGold;
-            text-decoration-line: underline;
-            text-decoration-color: rgb(243, 187, 118);
-            text-decoration-style: solid;
-          }
-          &:hover {
-            color: #eef551;
-          }
-          @media screen and (min-width: 501px) and (max-width: 768px) {
-            font-size: 1.2rem;
-            padding: 0.2rem 0;
-          }
-          @media screen and (min-width: 769px) and (max-width: 1170px) {
-            font-size: 1.4rem;
-            letter-spacing: 5px;
-            padding: 0.3rem 0;
-          }
-          @media screen and (min-width: 1171px) {
-            font-size: 1.5rem;
-            letter-spacing: 7px;
-            padding: 0.35rem 0;
-          }
-        }
+  }
+  & nav.il-content--nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @media screen and (min-width: 501px) {
+      width: 50%;
+    }
+  }
+  & ul.il-menu--list li.il-menu--list__item {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    //flex: 1;
+    & a.il-menu--link {
+      text-transform: uppercase;
+      transform: translate3d(100%, 25%, 0);
+      color: $thirtyColor;
+      font-weight: bolder;
+      font-family: 'Dosis', sans-serif;
+      font-size: 0.95rem;
+      &:hover {
+        color: #eef551;
+        opacity: 0.9;
+      }
+      &.current {
+        color: $textColorGold;
+        text-decoration-line: underline;
+        text-decoration-color: rgb(243, 187, 118);
+        text-decoration-style: solid;
+      }
+      @media screen and (min-width: 501px) and (max-width: 768px) {
+        font-size: 1.2rem;
+        padding: 0.2rem 0;
+      }
+      @media screen and (min-width: 769px) and (max-width: 1170px) {
+        font-size: 1.4rem;
+        letter-spacing: 5px;
+        padding: 0.3rem 0;
+      }
+      @media screen and (min-width: 1171px) {
+        font-size: 1.5rem;
+        letter-spacing: 7px;
+        padding: 0.35rem 0;
       }
     }
   }
 }
-/*
-@keyframes slider {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}*/
