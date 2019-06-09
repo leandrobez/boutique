@@ -1,33 +1,28 @@
 #app {
-  position: relative;
   display: grid;
-  grid-template-rows: auto $height-footer;
-
-  .il-container {
-    padding-top: $header-height;
+  grid-template-rows: 1fr $height-footer;
+  height: 100vh;
+  & main {
+    margin-top: 100px;  
     height: 100%;
-    margin: auto;
-  }
-  & main.il-main {
-    &.il-main--perc {
-      @include backappvga;
-      height: auto;
-    }
-    &.il-main--vh {
-      @include backappvga;
-      height: 100vh;
-    }
+    min-height: calc(100vh - 250px);
     &.il-main--back {
-      @include backapp;
+      @include mainback;
+    }
+    &.il-second--back {
+      @include secondback;
     }
   }
+  /**footer*/
   footer.il-footer {
     width: 100%;
     z-index: 2;
-    position: relative;
-    bottom: 0;
     height: $height-footer;
     @import '../modules/footer';
+  }
+  .il-container {
+    height: 100%;
+    margin: auto;
   }
   & .il-container--wrapper {
     max-width: $max-width;

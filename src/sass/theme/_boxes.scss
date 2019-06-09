@@ -49,17 +49,7 @@
         visibility: hidden;
         z-index: 3;
         & a.il-close {
-          position: relative;
-          display: block;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 5px;
-          width: 30px;
-          height: 30px;
-          background: rgb(34, 17, 17);
-          border-radius: 50%;
-          line-height: 30px;
-          text-align: center;
+          @include btnClose;
         }
         &.video0 {
           top: 50%;
@@ -68,13 +58,13 @@
           }
         }
         &.video1 {
-          top: -50%;
+          top: 10%;
           &.show {
             visibility: visible;
           }
         }
         &.video2 {
-          top: -200%;
+          top: -70%;
           &.show {
             visibility: visible;
           }

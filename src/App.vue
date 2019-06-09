@@ -1,8 +1,8 @@
 <template>
-<div id="app" >
+<div id="app">
 
     <!--HEADER-->
-    <ilHeader :class="isActive()" :authenticated="authenticated" />
+    <ilHeader :class="isActive()" />
     <!--MAIN-->
     <main class="il-main" :class="getCurrentClass">
         <div class="il-container">
@@ -27,80 +27,69 @@ import ilFooter from './components/includes/FooterComponent.vue';
 import ilWarning from './components/includes/warningsComponent.vue';
 
 export default {
-  name: 'App',
-  components: {
-    ilHeader,
-    ilFooter,
-    ilWarning
-  },
-  data() {
-    return {
-      title: 'Kaizen Pilates e CoreAlign',
-      titleCompost: {
-        title: 'Kaizen',
-        title1: 'Pilates',
-        subTitle: 'CoreAlign'
-      },
-      hasWarning: false,
-      warning: {},
-      authenticated: false,
-      headerActive: false,
-      whatClass: ''
-    };
-  },
-
-  computed: {
-    checkWarning() {
-      if (this.warning.check) {
-        this.closeWarning();
-        return true;
-      }
-      return false;
+    name: 'App',
+    components: {
+        ilHeader,
+        ilFooter,
+        ilWarning
     },
-    getCurrentClass() {
-      if (
-        this.$route.name == 'home' ||
-        this.$route.name == 'curse' ||
-        this.$route.name == 'advantage' ||
-        this.$route.name == 'gallery.studio'
-      ) {
-        if (this.$route.name == 'home') {
-          return 'il-main--back';
-        } else {
-          return 'il-main--perc';
+    data() {
+        return {
+            title: 'Kaizen Pilates e CoreAlign',
+            titleCompost: {
+                title: 'Kaizen',
+                title1: 'Pilates',
+                subTitle: 'CoreAlign'
+            },
+            hasWarning: false,
+            warning: {},
+            headerActive: false,
+            whatClass: ''
+        };
+    },
+
+    computed: {
+        checkWarning() {
+            if (this.warning.check) {
+                this.closeWarning();
+                return true;
+            }
+            return false;
+        },
+        getCurrentClass() {
+            if (
+                this.$route.name == 'home') {
+                return 'il-main--back';
+            } else {
+                if (
+                    this.$route.name == 'teachers'|| this.$route.name == 'class') {
+                    return 'il-second--back il-vh';
+                } else {
+                    return 'il-second--back';
+                }
+            }
         }
-      } else {
-        return 'il-main--vh';
-      }
+    },
+    methods: {
+        closeWarning() {
+            let time = 4000;
+            setTimeout(() => {
+                this.warning = {};
+            }, time);
+        },
+        isActive() {
+            if (this.headerActive) {
+                return 'active';
+            }
+            return;
+        },
+        showFooter() {
+            setTimeout(() => {
+                const showClass = document.getElementById('il-footer');
+                showClass.classList.add('il-footer--show');
+            }, 1200);
+        }
     }
-  },
-  methods: {
-    closeWarning() {
-      let time = 4000;
-      setTimeout(() => {
-        this.warning = {};
-      }, time);
-    },
-
-    checkAuthenticated() {
-      if (this.authenticated) {
-        return true;
-      }
-      return false;
-    },
-    isActive() {
-      if (this.headerActive) {
-        return 'active';
-      }
-      return;
-    },
-    showFooter() {
-      setTimeout(() => {
-        const showClass = document.getElementById('il-footer');
-        showClass.classList.add('il-footer--show');
-      }, 1200);
-    }
-  }
 };
 </script>
 

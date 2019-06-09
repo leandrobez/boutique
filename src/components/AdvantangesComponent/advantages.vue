@@ -13,8 +13,9 @@
                         <li>Assista o <a href="#!" @click.prevent="runVideo('video0')" title="Veja um vídeo sobre pilates">vídeo</a></li>
                     </ul>
                     <div class="il-video video0">
+                      <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video0')"><i class="mdi mdi-24px mdi-close"></i></a>
                         <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fkaizenpilatescorealign%2Fvideos%2F629348774197765%2F&width=500&show_text=false&appId=215407862194548&height=893" width="500" height="893" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                        <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video0')"> X </a>
+                        
                     </div>
                 </div>
                 <div class="il-item il-item--1 il-box il-color--background__lighten">
@@ -24,8 +25,9 @@
                             <li>Assista o <a href="#!" @click.prevent="runVideo('video1')" title="Veja um vídeo sobre pilates">vídeo</a></li>
                         </ul>
                         <div class="il-video video1">
+                           <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video1')"><i class="mdi mdi-24px mdi-close"></i></a>
                             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fkaizenpilatescorealign%2Fvideos%2F407667683412187%2F&width=500&show_text=false&appId=215407862194548&height=500" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                            <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video1')"> X </a>
+                           
                         </div>
                 </div>
                 <div class="il-item il-item--2 il-box il-color--background__lighten">
@@ -35,8 +37,9 @@
                         <li>Assista o <a href="#!" @click.prevent="runVideo('video2')" title="Veja um vídeo sobre pilates">vídeo</a></li>
                     </ul>
                     <div class="il-video video2">
+                       <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video2')"><i class="mdi mdi-24px mdi-close"></i></a>
                         <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fkaizenpilatescorealign%2Fvideos%2F455694028566885%2F&width=500&show_text=false&appId=215407862194548&height=500" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                        <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video2')"> X </a>
+                       
                     </div>
                 </div>
             </div>

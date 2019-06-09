@@ -17,7 +17,7 @@
                 <div class="il-avatar--portrait">
                     <div class="il-avatar"></div>
                 </div>
-                <span class="il-authenticated il-color--text__light" v-if="checkAuthenticated">Você está logado</span>
+                <!--<span class="il-authenticated il-color--text__light" v-if="checkAuthenticated">Você está logado</span>-->
             </div>
             <nav class="il-content--nav">
                 <ul class="il-menu--list">
@@ -123,17 +123,6 @@ export default {
             ]
         };
     },
-    props: {
-        authenticated: Boolean
-    },
-    computed: {
-        checkAuthenticated() {
-            if (this.authenticated) {
-                return true;
-            }
-            return false;
-        }
-    },
     methods: {
         hasActive() {
             if (this.showMenu) {
@@ -141,7 +130,6 @@ export default {
             }
             return;
         },
-
         isActive(i) {
             let rota = this.$route.name;
             let index = i - 1;

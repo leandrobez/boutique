@@ -1,9 +1,11 @@
 $container: 100%;
-.il-header {
+.il-header {  
   position: absolute;
   width: $container;
-  background: rgb(224, 222, 189);
   height: 100px;
+  background-color: #DCD9D4; 
+ background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%); 
+ background-blend-mode: soft-light,screen;
   @include easeOut;
   &.active {
     @include easeOut;

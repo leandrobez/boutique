@@ -1,8 +1,9 @@
 .il-class {
   position: relative;
+  display: flex;
+  flex-direction: column;
   .il-section--class,
   .il-section--prices {
-    margin-bottom: 1rem;
     text-align: center;
     @media screen and (min-width: 500px) {
       text-align: left;
@@ -16,42 +17,71 @@
       & p {
         text-align: justify;
       }
-      & button.il-close{
-        display: none
+      & button.il-close {
+        margin-top: 15px;
+        display: none;
       }
     }
   }
   .il-section--prices {
-    margin-bottom: 0;
     position: absolute;
-    width: 100%;
-    padding: 5px 0;
-    height: 330px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-content: center;
+
     z-index: 4;
     left: -100%;
     visibility: hidden;
     transition: all 450ms ease-in;
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      z-index: -1;
-      opacity: 0.95;
-      width: 100%;
-      height: 100%;
-      background: #457877;
+    padding: 0.45rem;
+    & h4,
+    & p {
+      padding: 1rem;
+      margin: 0;
     }
-    
-    &.il-show{
-      
-    transition: all 450ms ease-in;
+    & p {
+      font-size: 0.75rem;
+      color: black;
+    }
+    & p.il-obs {
+      color: rgb(42, 39, 53);
+      padding: 0;
+      margin: 0;
+    }
+    & a.il-close {
+      @include btnClose;
+    }
+    &.il-show {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      transition: all 450ms ease-in;
+      width: 100%;
       left: 0;
-    visibility: visible;
+      top: 50%;
+      transform: translateY(-50%);
+      visibility: visible;
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        opacity: 0.95;
+        width: $max-width;
+        height: 100%;
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(0, 0, 0, 0.15) 100%
+          ),
+          radial-gradient(
+              at top center,
+              rgba(255, 255, 255, 0.4) 0%,
+              rgba(0, 0, 0, 0.4) 120%
+            )
+            #989898;
+        //background: rgb(106, 184, 86);
+        border-radius: 55% 0 0 0;
+        @media screen and(min-width: 600px) {
+          border-radius: 0;
+        }
+      }
     }
   }
 }

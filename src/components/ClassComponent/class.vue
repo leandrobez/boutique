@@ -14,7 +14,6 @@
                         <span class="il-color--text">Por quê?</span>
                         <p class="il-content--description il-color--text">Porque aqui na <strong class="il-color--text__gold">{{$parent.title}}</strong> você terá aulas vigorosas e inovadoras que te motivarão a retornar para a próxima.<br>Além disso você com certeza irá melhorar sua <b>concentração</b>, <b>controle e coordenação motora</b>, <b>equilíbrio muscular</b>, <b>alinhamento postural</b>, <b>respiração</b> e ganhará mais <b>fluidez</b> em seus movimentos.</p>
                         <button class="il-btn auto very-bigger il-btn--empty" @click.prevent="showPanel()">Escolha um plano</button>
-                        <button class="il-btn il-close auto very-bigger il-btn--empty" @click.prevent="closePanel()">Fechar</button>
                     </div>
                 </div>
             </div>
@@ -22,73 +21,67 @@
     </section>
     <section class="il-section il-section--prices">
         <div class="il-container--wrapper">
-            <h4 class="il-color--white text-center">Escolha um plano de aula:</h4>
+           <!-- <h4 class="il-color--accent text-center">Escolha um plano de aula:</h4>-->
             <div class="il-pricing--grid">
                 <ilCards v-for="plan in plans" :key="plan.key" :id="plan.id" :condicions="plan.condicions" :price="plan.value" :text="plan.text" />
             </div>
-            <p class="il-obs il-color--white">Aula avulsa - R$ 70,00</p>
+            <p class="il-obs">Aula avulsa - R$ 70,00</p>
+            <a href="#!" class="il-close il-color--white" @click.prevent="closePanel()"><i class="mdi mdi-24px mdi-close"></i></a>
         </div>
     </section>
 </div>
 </template>
 
 <script>
-import { animeBox } from '../../common/animation';
+import {
+    animeBox
+} from '../../common/animation';
 import ilCards from './includes/cards.vue';
 export default {
-  name: 'Class',
-  components: {
-    ilCards
-  },
-  mounted() {
-    this.startAnime();
-  },
-  data() {
-    return {
-      whatIcon: 'il-pilates-icon flaticon-exercises-with-chair',
-      plans: [
-        {
-          id: '1',
-          key: 0,
-          condicions: 1,
-          value: 245,
-          message: ''
-        },
-        {
-          id: '2',
-          key: 1,
-          condicions: 2,
-          value: 460,
-          message: ''
-        },
-        {
-          id: '3',
-          key: 2,
-          condicions: 3,
-          value: 595,
-          message: ''
-        }
-      ]
-    };
-  },
-  methods: {
-    showPanel(){
-      let btn = document.querySelector('.il-btn')
-      let btnClose = document.querySelector('.il-btn.il-close')
-      let panel = document.querySelector('.il-section.il-section--prices')
-      panel.classList.add('il-show')
-      btn.style.display = 'none'
-      btnClose.style.display = 'block'
+    name: 'Class',
+    components: {
+        ilCards
     },
-    closePanel() {
-       let btn = document.querySelector('.il-btn')
-      let btnClose = document.querySelector('.il-btn.il-close')
-      let panel = document.querySelector('.il-section.il-section--prices')
-      panel.classList.remove('il-show')
-      btn.style.display = 'block'
-      btnClose.style.display = 'none'
-    }
-  },
-  mixins: [animeBox]
+    mounted() {
+        this.startAnime();
+    },
+    data() {
+        return {
+            whatIcon: 'il-pilates-icon flaticon-exercises-with-chair',
+            plans: [{
+                    id: '1',
+                    key: 0,
+                    condicions: 1,
+                    value: 245,
+                    message: ''
+                },
+                {
+                    id: '2',
+                    key: 1,
+                    condicions: 2,
+                    value: 460,
+                    message: ''
+                },
+                {
+                    id: '3',
+                    key: 2,
+                    condicions: 3,
+                    value: 595,
+                    message: ''
+                }
+            ]
+        };
+    },
+    methods: {
+        showPanel() {
+            let panel = document.querySelector('.il-section.il-section--prices')
+            panel.classList.add('il-show')
+        },
+        closePanel() {
+            let panel = document.querySelector('.il-section.il-section--prices')
+            panel.classList.remove('il-show')
+        }
+    },
+    mixins: [animeBox]
 };
 </script>

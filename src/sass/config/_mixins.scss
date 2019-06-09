@@ -18,13 +18,41 @@
 @function getHeaderHeight() {
   @return calc(100% - #{$height-footer});
 }
+@mixin btnClose {
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -15px;
+  background: rgb(34, 17, 17);
+  transition: 450ms all ease;
+  &:hover {
+    color: rgb(17, 17, 14);
+    background: white;
+    transition: 450ms all ease;
+  }
+  & i {
+    display: block;
+    line-height: 30px;
+  }
+}
 
 @mixin easeOut {
   transition: all 650ms ease-out;
 }
 @mixin pricesGradient() {
   border: 1px solid #9af1be;
-  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  background-blend-mode: multiply, multiply;
+  //background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  border-radius: 75% 0 75% 0;
+  border-right: 1px solid #84aca4;
+  border-bottom: 1px solid #84aca4;
 }
 @mixin big-img($img, $url) {
   @if $img {
@@ -35,7 +63,7 @@
     background-attachment: fixed;
   }
 }
-@mixin backappvga() {
+@mixin secondback() {
   position: relative;
   background-image: url('../public/images/banners/big-img-home.svg');
   background-repeat: repeat-y;
@@ -43,6 +71,9 @@
   background-position: center;
   background-attachment: fixed;
   height: 100%;
+  &.il-vh {
+    height: 100vh;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -55,7 +86,7 @@
     z-index: -1;
   }
 }
-@mixin backapp() {
+@mixin mainback() {
   position: relative;
   width: 100%;
   height: 100%;

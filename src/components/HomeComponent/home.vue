@@ -15,7 +15,7 @@
                 </picture>
               </span>
                 </span>
-                <!--colocar link sobr konnector--> e doo <span class="tooltip">
+                <!--colocar link sobr konnector--> e do <span class="tooltip">
               <a class="il-hints" id="corealign-picture" href="#!" >CoreAlign</a>
               <span class="tooltiptext">
               <picture id="corealign">
@@ -32,7 +32,9 @@
             <a href="#" class="il-icons--link il-color--text__alt" title="Visite a rede social" @click="socialNetOpen('in')"><i class="mdi mdi-instagram mdi-36px"></i></a>
         </div>
     </div>
+    <div class="il-container--wrapper">
     <ilPopUp v-if="showThePopup" />
+    </div>
 </section>
 </template>
 

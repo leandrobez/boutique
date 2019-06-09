@@ -74,7 +74,7 @@ export default {
             }
           ]
         },
-        {
+        /*{
           name: 'Terezinha Milanesi',
           picture: '/images/pictures/teka.jpg',
           text: 'lklklklkl',
@@ -92,7 +92,7 @@ export default {
               address: 'https://www.piterest.com/nome-do-site'
             }
           ]
-        },
+        },*/
         {
           name: 'Vera Stracke',
           picture: '/images/pictures/vera.jpg',

@@ -24,29 +24,10 @@
       transition: all 450ms;
     }
     a.il-modal--close {
-      color: rgb(238, 101, 101);
-      text-align: center;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      display: block;
-      position: relative;
-      left: 95%;
-      top: 10px;
-      background: yellow;
-      transition: 450ms all ease;
-      &:hover {
-        color: rgb(17, 17, 14);
-        background: white;
-        transition: 450ms all ease;
-      }
-      & i {
-        display: block;
-        line-height: 30px;
-      }
+      @include btnClose;
     }
     & .il-cv--items {
-      padding: 0.5rem;
+      padding: 0 0.5rem;
       @media screen and (min-width: 768px) {
         padding: 1rem;
       }
@@ -89,7 +70,7 @@
       }
     }
     &.cv-show {
-      top: -50px;
+      top: 0;
       transition: all 450ms;
       left: 50%;
       transform: translateX(-50%);

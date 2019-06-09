@@ -1,7 +1,9 @@
 <template>
 <div :class="`il-plan il-plan--${id}`">
-    <h2 class="il-color--text__accent">{{condicions}} X Semana</h2>
-    <p class="il-price il-color--text__accent">R$ {{price}},00 <span>por mês</span></p>
+    <h2 class="il-color--text__green">{{condicions}} X Semana</h2>
+    <p class="il-price">
+      <span class="il-color--text__alt">R$ {{price}},00 </span>
+      <span class="il-color--text__green">por mês</span></p>
     <router-link :to="{name: 'contact', params:{plan: 'plan'+id}}" class="il-btn il-btn--cards__price ">Inscreva-se</router-link>
 </div>
 </template>
