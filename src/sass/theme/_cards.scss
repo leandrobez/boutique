@@ -73,17 +73,25 @@
     p {
       text-transform: none;
       text-align: left;
+      padding: 0 10px;
     }
   }
   & .il-card--footer {
     display: flex;
+    width: 100%;
     justify-content: center;
-    padding-bottom: 0.25rem;
+    align-content: center;
+    height: 40px;
+    background: white;
+    flex-direction: column;
+    padding: 0.25rem 0;
     & i {
+      display: block;
+      margin: auto;
       text-align: center;
       position: relative;
       right: 0;
-      border: 1px solid $colorBorder;
+      border: 1px solid #454343;
       width: 30px;
       height: 30px;
       border-radius: 50%;
@@ -93,35 +101,19 @@
         background: $textColorGold;
         color: $textColor;
       }
-      &.moveRight {
-        animation-name: moveRight;
-        animation-duration: 0.2s;
+      &.scale {
+        animation-name: scale;
+        animation-duration: 1500ms;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
       }
 
-      @keyframes moveRight {
-        from {
-          right: 0;
+      @keyframes scale {
+        0% {
+          transform: scale(1);
         }
-        to {
-          right: 15px;
-        }
-      }
-
-      &.moveLeft {
-        animation-name: moveLeft;
-        animation-duration: 0.4s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out;
-      }
-
-      @keyframes moveLeft {
-        from {
-          right: 15px;
-        }
-        to {
-          right: 0;
+        100% {
+          transform: scale(1.1);
         }
       }
     }

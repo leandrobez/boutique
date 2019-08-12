@@ -9,7 +9,7 @@
             <p class="il-color--white">Paixão pelo trabalho e dedicação no que for necessário para atingir a excelência no atendimento ao aluno/cliente, é o que define esta profissional que possui 33 anos de experiência, regados por constante atualização.<br>Como educadora de Pilates e Corealign formou inúmeros instrutores, tendo participado como palestrante em vários eventos relacionados a área.<br>Estas características revertem em minuciosa capacidade em avaliar, planejar e executar as ações necessárias para atingir objetivos, trilhando o caminho mais eficaz.</p>
         </div>
         <div class="il-card--footer">
-            <i @mouseover = "animateRight" @mouseleave = "animateLeft" class="mdi mdi-24px mdi-check il-color--text__light" title="Veja meu currículo" @click="showCV(id)"></i>
+            <i @mouseover = "scale" class="mdi mdi-24px mdi-check il-color--text" title="Veja meu currículo" @click="showCV(id)"></i>
         </div>
     </div>
 </template>
@@ -35,19 +35,11 @@ export default {
 
   mixins: [animeCards],
   methods: {
-    animateRight() {
+    scale() {
       var ele = event.currentTarget;
-      ele.classList.add('moveRight');
+      ele.classList.add('scale');
     },
-    animateLeft() {
-      var ele = event.currentTarget;
-      ele.classList.add('moveLeft');
-
-      setTimeout(function() {
-        ele.classList.remove('moveRight');
-        ele.classList.remove('moveLeft');
-      }, 500);
-    },
+    
     showCV(key) {
       this.$parent.showCV(key);
     }

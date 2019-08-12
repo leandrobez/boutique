@@ -10,7 +10,7 @@
                     <i class="il-pilates-icon flaticon-pilates-cadillac light"></i><span class="il-color--text__darken">Pilates</span>
                     <p class="il-content--description il-color--text">O Método foca no movimento natural do corpo com base na anatomia e biomecânica. Tem como objetivo fortalecer e alongar os músculos de forma equilibrada gerando saúde articular. É atualmente uma técnica reconhecida para tratamento e prevenção de problemas na coluna vertebral.</p>
                     <ul class="il-icons">
-                        <li>Assista o <a href="#!" @click.prevent="runVideo('video0')" title="Veja um vídeo sobre pilates">vídeo</a></li>
+                        <li>Assista o <a href="#!" @click.prevent="runVideo('video0')" title="Veja um vídeo sobre pilates" class="il-color--text__gold">vídeo</a></li>
                     </ul>
                     <div class="il-video video0">
                       <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video0')"><i class="mdi mdi-24px mdi-close"></i></a>
@@ -22,7 +22,7 @@
                     <i class="il-pilates-icon flaticon-elongation-posture light"></i><span class="il-color--text__darken">CoreAlign</span>
                     <p class="il-content--description il-color--text">O CoreAlign é uma técnica inovadora que prioriza os movimentos na posição em pé. Criado a partir da reabilitação tornou-se uma vigorosa ferramenta para condicionamento físico aeróbico e neuromuscular.<br>Devido a sua versatilidade incrível as aulas são divertidas, intensas, gerando o aumento do gasto calórico. Fornece uma experiência de exercício única, que combina o trabalho cardiovascular com a melhora da postura através do alogamento axial.</p>
                         <ul class="il-icons">
-                            <li>Assista o <a href="#!" @click.prevent="runVideo('video1')" title="Veja um vídeo sobre pilates">vídeo</a></li>
+                            <li>Assista o <a href="#!" @click.prevent="runVideo('video1')" title="Veja um vídeo sobre pilates" class="il-color--text__gold">vídeo</a></li>
                         </ul>
                         <div class="il-video video1">
                            <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video1')"><i class="mdi mdi-24px mdi-close"></i></a>
@@ -34,7 +34,7 @@
                     <i class="il-pilates-icon flaticon-pilates-reformer light"></i><span class="il-color--text__darken">Konnector</span>
                     <p class="il-content--description il-color--text">A versatilidade do konnector multiplicou a intensidade do reformer <em>(equipamento utilizado no pilates</em>). Através de quatro alças conectadas entre si o aluno é estimulado a utilizar todo corpo de forma desafiadora aumentando assim o gasto energético a cada movimento.</p>
                     <ul class="il-icons">
-                        <li>Assista o <a href="#!" @click.prevent="runVideo('video2')" title="Veja um vídeo sobre pilates">vídeo</a></li>
+                        <li>Assista o <a href="#!" @click.prevent="runVideo('video2')" title="Veja um vídeo sobre pilates" class="il-color--text__gold">vídeo</a></li>
                     </ul>
                     <div class="il-video video2">
                        <a href="#!" class="il-close il-color--white" @click.prevent="closeVideo('video2')"><i class="mdi mdi-24px mdi-close"></i></a>

@@ -7,10 +7,11 @@
                 <ilCards v-for="(instructor, index) in instructors" :key="instructor.id" :title="instructor.title" :message="instructor.message" :picture="instructor.picture" :id="index" />
             </div>
         </div>
+
+        <div class="il-container--wrapper">
+            <ilCv v-if="checkCV" :curriculum="getCurriculum()" :status="CV.show" :picture="CV.picture" />
+        </div>
     </section>
-    <div class="il-container--wrapper">
-      <ilCv v-if="checkCV" :curriculum="getCurriculum()" :status="CV.show" :picture="CV.picture" />
-    </div>
 </div>
 </template>
 
@@ -19,54 +20,54 @@ import instructors from '../../common/instructors';
 import ilCards from './includes/cards.vue';
 import ilCv from './includes/cv.vue';
 export default {
-  name: 'Teachers',
-  components: {
-    ilCards,
-    ilCv
-  },
-  data() {
-    return {
-      whatIcon: 'il-pilates-icon flaticon-twisting-arms',
-      CV: {
-        index: 0,
-        id: null,
-        teacher: null,
-        picture: null,
-        show: false
-      },
-      instructors: []
-    };
-  },
-  mounted() {
-    this.instructors = instructors;
-  },
-  computed: {
-    checkCV() {
-      if (this.CV.show) {
-        return true;
-      }
-      return false;
-    }
-  },
-  methods: {
-    getCurriculum() {
-      let index = this.CV.index;
-      return instructors[index].cv;
+    name: 'Teachers',
+    components: {
+        ilCards,
+        ilCv
     },
-    showCV(index) {
-      this.CV.index = index;
-      this.CV.id = this.instructors[index].id;
-      this.CV.teacher = this.instructors[index].title;
-      this.CV.picture = this.instructors[index].picture;
-      this.CV.show = true;
+    data() {
+        return {
+            whatIcon: 'il-pilates-icon flaticon-twisting-arms',
+            CV: {
+                index: 0,
+                id: null,
+                teacher: null,
+                picture: null,
+                show: false
+            },
+            instructors: []
+        };
     },
-    closeModal() {
-      this.CV.index = 0;
-      this.CV.id = null;
-      this.CV.teacher = null;
-      this.CV.picture = null;
-      this.CV.show = false;
+    mounted() {
+        this.instructors = instructors;
+    },
+    computed: {
+        checkCV() {
+            if (this.CV.show) {
+                return true;
+            }
+            return false;
+        }
+    },
+    methods: {
+        getCurriculum() {
+            let index = this.CV.index;
+            return instructors[index].cv;
+        },
+        showCV(index) {
+            this.CV.index = index;
+            this.CV.id = this.instructors[index].id;
+            this.CV.teacher = this.instructors[index].title;
+            this.CV.picture = this.instructors[index].picture;
+            this.CV.show = true;
+        },
+        closeModal() {
+            this.CV.index = 0;
+            this.CV.id = null;
+            this.CV.teacher = null;
+            this.CV.picture = null;
+            this.CV.show = false;
+        }
     }
-  }
 };
 </script>
