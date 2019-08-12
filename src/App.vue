@@ -57,12 +57,11 @@ export default {
             return false;
         },
         getCurrentClass() {
-            if (
-                this.$route.name == 'home') {
+            if (this.$route.name == 'home') {
                 return 'il-main--back';
             } else {
                 if (
-                    this.$route.name == 'teachers'|| this.$route.name == 'class') {
+                    this.$route.name == 'teachers' || this.$route.name == 'class') {
                     return 'il-second--back il-vh';
                 } else {
                     return 'il-second--back';
