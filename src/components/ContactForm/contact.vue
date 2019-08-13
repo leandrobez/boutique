@@ -5,6 +5,7 @@
         <h1 class="il-section--title">Contate <span class="il-color--text__very-light"> agora.</span></h1>
         <div class="il-contact--content">
             <form name="form-contact" method="post" data-netlify="true" class="il-form" data-netlify-honeypot="bot-field" @submit.prevent="sendData">
+                <input type="hidden" name="form-name" value="form-contact" />
                 <fieldset>
                     <p class="il-contact--info il-color--text__dark">Não se preocupe não compartilharemos seu endereço de e-mail. Ele é importante para podermos entrar em contato com você e entender suas reais necessidades.</p>
                     <div class="il-form--fields">
@@ -24,8 +25,8 @@
                         <textarea v-model="contact.message"></textarea>
                         <div data-netlify-recaptcha="true"></div>
                         <input type="hidden" name="form-name" value="form-contact" />
-                      </div>
-                        <button type="submit" class="il-btn il-btn--submit">Enviar</button>
+                    </div>
+                    <button type="submit" class="il-btn il-btn--submit">Enviar</button>
                 </fieldset>
             </form>
         </div>
@@ -35,103 +36,111 @@
 
 <script>
 import axios from 'axios';
-import { MaskDown, MaskUp } from '../../common/mask.phone.js';
+import {
+    MaskDown,
+    MaskUp
+} from '../../common/mask.phone.js';
 export default {
-  name: 'contact',
-  data() {
-    return {
-      contact: {
-        'form-name': 'form-contact',
-        name: '',
-        lastname: '',
-        email: '',
-        phone: '',
-        mobil: '',
-        frowhere: '',
-        message: 'Deixe sua mensagem',
-        plan: ''
-      },
-      inputs: {
-        inputPhone: null,
-        inputMobil: null
-      }
-    };
-  },
-  mounted() {
-    this.setPlan();
-  },
-  methods: {
-    setPlan() {
-      let plan = '';
-      let path = this.$route.params;
-      switch (path.plan) {
-        case 'plan1':
-          plan = 'plano1';
-          this.contact.plan = plan;
-          break;
-        case 'plan2':
-          plan = 'plano2';
-          this.contact.plan = plan;
-          break;
-        case 'plan3':
-          plan = 'plano3';
-          this.contact.plan = plan;
-          break;
-      }
+    name: 'contact',
+    data() {
+        return {
+            contact: {
+                name: '',
+                lastname: '',
+                email: '',
+                phone: '',
+                mobil: '',
+                frowhere: '',
+                message: 'Deixe sua mensagem',
+                plan: ''
+            },
+            inputs: {
+                inputPhone: null,
+                inputMobil: null
+            }
+        };
     },
-    maskD(ele) {
-      if (ele == 'm') {
-        let mobil = document.getElementById('mobil');
-        MaskDown(mobil);
-      } else if (ele == 'p') {
-        let phone = document.getElementById('phone');
-        MaskDown(phone);
-      }
+    mounted() {
+        this.setPlan();
     },
-    maskU(ele) {
-      if (ele == 'p') {
-        let phone = document.getElementById('phone');
-        MaskUp(phone, '(##) ####-####');
-      } else if (ele == 'm') {
-        let mobil = document.getElementById('mobil');
-        MaskUp(mobil, '(##) ####-####');
-      }
-    },
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&');
-    },
-    sendData() {
-      const axiosConfig = {
-        header: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+    methods: {
+        setPlan() {
+            let plan = '';
+            let path = this.$route.params;
+            switch (path.plan) {
+                case 'plan1':
+                    plan = 'plano1';
+                    this.contact.plan = plan;
+                    break;
+                case 'plan2':
+                    plan = 'plano2';
+                    this.contact.plan = plan;
+                    break;
+                case 'plan3':
+                    plan = 'plano3';
+                    this.contact.plan = plan;
+                    break;
+            }
+        },
+        maskD(ele) {
+            if (ele == 'm') {
+                let mobil = document.getElementById('mobil');
+                MaskDown(mobil);
+            } else if (ele == 'p') {
+                let phone = document.getElementById('phone');
+                MaskDown(phone);
+            }
+        },
+        maskU(ele) {
+            if (ele == 'p') {
+                let phone = document.getElementById('phone');
+                MaskUp(phone, '(##) ####-####');
+            } else if (ele == 'm') {
+                let mobil = document.getElementById('mobil');
+                MaskUp(mobil, '(##) ####-####');
+            }
+        },
+        encode(data) {
+            return Object.keys(data)
+                .map(
+                    key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+                )
+                .join('&');
+        },
+        sendData() {
+            const axiosConfig = {
+                header: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            };
+            let content = this.encode({
+                "form-name": "form-contact",
+                ...this.contact
+            });
+            let url = '/';
+            axios
+                .post(url, content, axiosConfig)
+                .then(() => {
+                    //console.log(res)
+                    setTimeout(() => {
+                        this.$router.push({
+                            name: 'email',
+                            params: {
+                                type: 'success'
+                            }
+                        });
+                    }, 3000)
+                })
+                .catch(() => {
+                    
+                    this.$router.push({
+                        name: 'email',
+                        params: {
+                            type: 'fails'
+                        }
+                    });
+                });
         }
-      };
-      let content = this.encode(this.contact);
-      let url = '/';
-      axios
-        .post(url, content, axiosConfig)
-        .then(() => {
-          this.$router.push({
-            name: '/email',
-            params: {
-                type: 'success'
-            }
-          });
-        })
-        .catch(() => {
-          //console.log(url)
-          this.$router.push({
-             name: '/email',
-            params: {
-                type: 'fails'
-            }
-          });
-        });
     }
-  }
 };
 </script>
