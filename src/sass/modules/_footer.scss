@@ -8,45 +8,65 @@
     width: 100%;
     color: $primaryColor;
   }
-
   & .il-footer--top {
     height: $height-footer-top;
+    font-family: $h3-font;
     & .il-footer--breadcrumb {
-      margin: auto;
       font-weight: 800;
-      max-width: 200px;
-      //height: 70px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      background: #4a4b4d;
+      text-align: center;
       & span {
+        font-size: 1.3rem;
+        letter-spacing: 3px;
         display: block;
         text-transform: uppercase;
         text-align: center;
-        line-height: 70px;
+        line-height: 2rem;
       }
     }
     & .il-footer--cols {
       display: flex;
-      height: 50px;
+      height: 70px;
       justify-content: center;
       & .il-footer--col {
         flex: 1;
         & h4.il-footer--title {
+          margin: 0;
           text-align: center;
           display: flex;
           flex-direction: column;
           @media screen and (min-width: 680px) {
             flex-direction: row;
           }
-          line-height: 24px;
+          line-height: 30px;
           justify-content: center;
-          padding: 0 0.15rem;
+          padding: 20px 0.15rem;
           & a {
             font-size: 0.85rem;
           }
         }
       }
     }
+  }
+  & .il-footer--bottom {
+    text-align: center;
+    height: 100%;
+    border-top: 1px solid #323a3d;
+    font-weight: bolder;
+    & .il-footer--copy {
+      padding: 0.25rem 0;
+      & span {
+        text-align: center;
+        display: block;
+        & a {
+          margin-left: 0.25rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  & .il-footer--top,
+  & .il-footer--bottom {
     &.il-home {
       background: $back-footer-home;
     }
@@ -56,15 +76,15 @@
     &.il-curriculum {
       background: $back-footer-curriculum;
     }
-
     &.il-about {
       background: $back-footer-about;
     }
-
     &.il-studio {
       background: $back-footer-studio;
     }
-
+    &.il-contact {
+      background: $back-footer-contact;
+    }
     &.il-class {
       background: $back-footer-class;
     }
@@ -82,26 +102,6 @@
     }
     & li.il-footer--item a.il-footer--link {
       color: $colorBorder;
-    }
-  }
-  & .il-footer--bottom {
-    //margin: 0.2rem 0;
-    text-align: center;
-    height: 100%;
-    background: $back-footer-bottom;
-    border-top: 1px solid darken($back-footer, 10%);
-    font-weight: bolder;
-    & .il-footer--copy {
-      padding: 0.25rem 0;
-      & span {
-        text-align: center;
-        display: block;
-        & a {
-          margin-left: 0.25rem;
-          font-weight: 300;
-          text-transform: uppercase;
-        }
-      }
     }
   }
 }

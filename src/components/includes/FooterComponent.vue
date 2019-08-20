@@ -1,49 +1,54 @@
 <template>
 <div class="il-footer--content">
-	<div class="il-footer--top" :class="getClass()">
-		<div class="il-container--wrapper">
-			<div class="il-footer--breadcrumb il-color--text__light">
-				<i :class="whatIcon"></i>
-				<span class="il-path">{{whereIAm}}</span>
-			</div>
-		</div>
+    <div class="il-footer--top" :class="getClass()">
 
-		<div class="il-footer--cols il-color--text__light">
-			<div class="il-footer--col">
-				<h4 class="il-footer--title">
-					<i class="mdi mdi-24px mdi-camera-iris"></i>
-          <router-link :to="{name:'gallery.studio'}" class="il-footer--list il-color--text__light" title="Veja fotos do studio">studio</router-link>
-				</h4>
-			</div>
+        <div class="il-footer--breadcrumb">
+            <div class="il-container--wrapper">
+                <!--<i :class="whatIcon"></i>-->
+                <span class="il-path il-color--text__gold">{{whereIAm}}</span>
+            </div>
+        </div>
 
-		<!--	<div class="il-footer--col">
-				<h4 class="il-footer--title">
-					<i class="mdi mdi-24px mdi-camera-rear"></i>
+        <div class="il-footer--cols il-color--text__light">
+            <div class="il-footer--col">
+                <h4 class="il-footer--title">
+                    <i class="mdi mdi-24px mdi-camera-iris"></i>
+                    <router-link :to="{name:'gallery.studio'}" class="il-footer--list il-color--text__light" title="Veja fotos do studio">studio</router-link>
+                </h4>
+            </div>
+
+            <!--	<div class="il-footer--col">
+
+<h4 class="il-footer--title">
+
+<i class="mdi mdi-24px mdi-camera-rear"></i>
           <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__light" title="Veja fotos de eventos">eventos</router-link>
-				</h4>
-			</div>-->
 
-			<div class="il-footer--col">
-				<h4 class="il-footer--title">
-					<i class="mdi mdi-24px mdi-camera-party-mode"></i>
-					<router-link :to="{name: 'curse'}" class="il-footer--list il-color--text__light" title="Calendário de cursos">cursos</router-link>
-				</h4>
-			</div>
+</h4>
 
-			<div class="il-footer--col">
-				<h4 class="il-footer--title">
-					<i class="mdi mdi-24px mdi-email"></i>
-					<router-link :to="{name:'contact', params: {plan: 'message'}}" class="il-footer--list il-color--text__light"  title="Faça contato com a gente">contato</router-link>
-				</h4>
-			</div>
-		</div>
-	</div>
+</div>-->
 
-	<div class="il-footer--bottom">
-		<div class="il-footer--copy">
-			<span class="il-color--text">design by <a href="http://www.internetlojas.com" target="_blank" class="il-color--text__very-dark">www.internetlojas.com</a></span>
-		</div>
-	</div>
+            <div class="il-footer--col">
+                <h4 class="il-footer--title">
+                    <i class="mdi mdi-24px mdi-camera-party-mode"></i>
+                    <router-link :to="{name: 'curse'}" class="il-footer--list il-color--text__light" title="Calendário de cursos">cursos</router-link>
+                </h4>
+            </div>
+
+            <div class="il-footer--col">
+                <h4 class="il-footer--title">
+                    <i class="mdi mdi-24px mdi-email"></i>
+                    <router-link :to="{name:'contact', params: {plan: 'message'}}" class="il-footer--list il-color--text__light" title="Faça contato com a gente">contato</router-link>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="il-footer--bottom" :class="getClass()">
+        <div class="il-footer--copy">
+            <span class="il-color--text__light-grey">design by <a href="http://www.internetlojas.com" target="_blank" class="il-color--text__light-grey">www.internetlojas.com</a></span>
+        </div>
+    </div>
 </div>
 </template>
 
@@ -75,7 +80,7 @@ export default {
           break;
         case 'about':
           currentFooter = 'il-about';
-          this.whereIAm = 'about';
+          this.whereIAm = 'sobre';
           this.whatIcon = 'il-pilates-icon flaticon-side-bending-posture';
           break;
         case 'studio':
@@ -85,7 +90,7 @@ export default {
           break;
         case 'teachers':
           currentFooter = 'il-teacher';
-          this.whereIAm = 'professores';
+          this.whereIAm = 'instrutores';
           this.whatIcon = 'il-pilates-icon flaticon-twisting-arms';
           break;
         case 'class':
@@ -111,6 +116,11 @@ export default {
         case 'video':
           currentFooter = 'il-video';
           this.whereIAm = 'videos';
+          this.whatIcon = 'il-pilates-icon flaticon-exercise-bands';
+          break;
+        case 'contact':
+          currentFooter = 'il-contact';
+          this.whereIAm = 'contato';
           this.whatIcon = 'il-pilates-icon flaticon-exercise-bands';
           break;
         default:

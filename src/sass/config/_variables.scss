@@ -64,6 +64,8 @@ $back-cards: rgba(85, 85, 88, 0.87);
 $height-footer: 150px;
 $height-footer-top: 120px;
 $back-footer: $fortyColor;
+
+$back-footer-contact: darken($back-footer, 2%);
 $back-footer-home: darken($back-footer, 6%);
 $back-footer-about: darken($back-footer, 6.5%);
 $back-footer-studio: darken($back-footer, 7%);
