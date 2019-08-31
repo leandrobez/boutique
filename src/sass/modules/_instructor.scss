@@ -1,22 +1,104 @@
-.il-section--instructor div {
-  //margin-bottom: 1rem;
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: 680px) {
-    text-align: left;
-  }
-  & .il-instructor--content {
-    height: 100%;
-    width: 100%;
+section.il-section--instructor {
+  position: relative;
+  margin: 2rem auto 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  justify-content: center;
+  .il-card--teacher {
+    flex: 1;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    @media screen and (min-width: 680px) {
-      flex-direction: row;
+    border-radius: 3px 75px 0 0;
+    background: #283442;
+    box-shadow: 2px 7px 12px rgba(7, 53, 71, 0.6);
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.45rem;
+      .il-card--image {
+        padding: 0.4rem 0;
+        img {
+          margin: 0 auto;
+          display: block;
+          max-width: 60px;
+          @media screen and (min-width: 680px) {
+            max-width: 90px;
+          }
+          border-radius: 50%;
+        }
+      }
+      h3 {
+        margin: 0;
+        color: $thirtyColor;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+      }
     }
-    
-    @import '../theme/cards';
+    .il-card--body {
+      padding: 0.45rem;
+      height: 100%;
+      min-height: 150px;
+      p {
+        text-align: left;
+        font-size: 1rem;
+        color: white;
+      }
+    }
+    .il-card--footer {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-content: center;
+      height: 40px;
+      flex-direction: column;
+      padding: 0.25rem 0;
+      a.il-btn--vc {
+        background: linear-gradient(to left, #8f8989 3%, #3a4a50 100%);
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+  .il-cv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 66, 90, 0.6);
+    box-shadow: 4px 7px 12px rgba(7, 53, 71, 0.6);
+    .il-cv--content {
+      background: white;
+      position: relative;
+      display: flex;
+      //padding: 1rem 0;
+      justify-content: flex-start;
+      .il-cv--profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 210px;
+        padding: 0 0 0 0.3rem;
+        img {
+          width: 100%;
+          max-width: 198px;
+          height: auto;
+          border: 2px solid #454343;
+        }
+      }
+      .il-cv--info {
+        padding: 0.45rem 1rem;
+        ul {
+          margin: 0;
+          li {
+            font-size: 0.75rem;
+            font-size: 700;
+          }
+        }
+      }
+    }
   }
 }

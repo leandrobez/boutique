@@ -1,13 +1,20 @@
 <template>
-<!--SECTION CONTACT-->
-<section class="il-section il-section--contact">
-    <div class="il-container--wrapper">
-        <h1 class="il-section--title">Contate <span class="il-color--text__very-light"> agora.</span></h1>
-        <div class="il-contact--content">
-            <form name="form-contact" method="post" data-netlify="true" class="il-form" data-netlify-honeypot="bot-field" @submit.prevent="sendData">
-                <input type="hidden" name="form-name" value="form-contact" />
+<div class="container">
+    <p class="il-color--text__dark">Não se preocupe não compartilharemos seu endereço de e-mail. Ele é importante para podermos entrar em contato com você e entender suas reais necessidades.</p>
+    <div class="wrapper animated bounceInLeft">
+        <div class="company-info">
+            <h3>Kaizen Pilates e CoreAlign</h3>
+            <ul>
+                <li><i class="fa fa-road"></i> Av Lavras 334, Bairro Petrópolis</li>
+                <li><i class="fa fa-phone"></i> 3519-3339</li>
+                <li><i class="fa fa-envelope"></i> contato@kaizenpilates.com</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h3>Email Us</h3>
+            {{msg}}
+            <form @submit.prevent="sendData" class="il-form" name="form-contact">
                 <fieldset>
-                    <p class="il-contact--info il-color--text__dark">Não se preocupe não compartilharemos seu endereço de e-mail. Ele é importante para podermos entrar em contato com você e entender suas reais necessidades.</p>
                     <div class="il-form--fields">
                         <input type="text" id="name" class="il-input" v-model="contact.name" placeholder="Seu nome" required>
                         <input type="text" id="lastname" class="il-input" v-model="contact.lastname" placeholder="Seu sobrenome" required>
@@ -30,20 +37,19 @@
                 </fieldset>
             </form>
         </div>
-        <!--<div class="il-contact--form">
-            <ilForm />
-        </div>-->
     </div>
-</section>
+</div>
 </template>
 
 <script>
 import axios from 'axios';
-//import mDown from '../../common/mask.phone.js';
+import { MaskDown, MaskUp } from '../../../common/mask.phone.js';
+//import mail from 'nodemailer';
 export default {
-  name: 'contact',
+  name: 'form-contact',
   data() {
     return {
+      msg: '',
       contact: {
         name: '',
         lastname: '',
@@ -53,16 +59,11 @@ export default {
         frowhere: '',
         message: 'Deixe sua mensagem',
         plan: ''
-      },
-      inputs: {
-        inputPhone: null,
-        inputMobil: null
       }
     };
   },
   mounted() {
     this.setPlan();
-    //console.log(mDown)
   },
   methods: {
     setPlan() {
@@ -86,20 +87,19 @@ export default {
     maskD(ele) {
       if (ele == 'm') {
         let mobil = document.getElementById('mobil');
-        //mask.maskDown(mobil);
-        //console.log(mask.maskDonw);
+        MaskDown(mobil);
       } else if (ele == 'p') {
         let phone = document.getElementById('phone');
-        //mask.maskDown(phone);
+        MaskDown(phone);
       }
     },
     maskU(ele) {
       if (ele == 'p') {
         let phone = document.getElementById('phone');
-        //mask.maskUp(phone, '(##) ####-####');
+        MaskUp(phone, '(##) ####-####');
       } else if (ele == 'm') {
         let mobil = document.getElementById('mobil');
-        //mask.maskUp(mobil, '(##) ####-####');
+        MaskUp(mobil, '(##) ####-####');
       }
     },
     encode(data) {
@@ -145,3 +145,107 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.container {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand span {
+  color: #fff;
+}
+
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+}
+
+.wrapper > * {
+  padding: 1rem;
+}
+
+.company-info {
+  background: #324545;
+}
+
+.company-info h3,
+.company-info ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  color: goldenrod;
+}
+
+.contact {
+  background: #f9feff;
+}
+
+/* FORM STYLES */
+/*.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}*/
+
+.contact form label {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.contact form p {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #c9e6ff;
+}
+
+.contact form button {
+  background: #342312;
+  border: 0;
+  outline: none;
+  color: #fccf00;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+  background: #454343;
+  color: #fff;
+  outline: 0;
+  transition: background-color 2s ease-out;
+}
+
+/* LARGE SCREENS */
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > * {
+    padding: 0.45rem;
+  }
+
+  .company-info h3,
+  .company-info ul,
+  .brand {
+    text-align: left;
+  }
+}
+</style>

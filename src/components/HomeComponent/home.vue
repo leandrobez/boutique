@@ -22,7 +22,7 @@
                     <img :src="thumbs.corealign" alt="CoreAlign" title="CoreAlign">
                 </picture>
               </span>
-                </span>.<br><b>Quer saber mais</b> ? Entre em contato através do nosso <a class="il-color--text__dark il-link--decoration" href="#!" @click.prevent="socialNetOpen('wap')" title="Entra em contato através do whatsApp">whatsApp</a> ou mande uma <router-link :to="{name:'contact',params: {plan: 'message'}}" class="il-color--text__dark il-link--decoration">mensagem</router-link>. Vem pra <strong>Kaizen</strong> !</p>
+                </span>.<br><b>Quer saber mais</b> ? Entre em contato através do nosso <a class="il-color--text__dark il-link--decoration" href="#!" @click.prevent="socialNetOpen('wap')" title="Entra em contato através do whatsApp">whatsApp</a> ou mande uma <router-link :to="{name:'contact',params: {plan: 'message'}}" class="il-color--text__dark il-link--decoration">mensagem</router-link>.<br>Vem pra <strong>Kaizen</strong> !</p>
             <h3>Nossa Localização</h3>
             <ilAddress />
         </div>
