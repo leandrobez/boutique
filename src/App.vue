@@ -3,6 +3,7 @@
 
     <!--HEADER-->
     <ilHeader :class="isActive()" />
+    
     <!--MAIN-->
     <main class="il-main" :class="getCurrentClass">
         <div class="il-container">

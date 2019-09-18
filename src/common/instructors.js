@@ -46,56 +46,50 @@ const teachers = [
     show: false,
     cv: {
       profile: {
-        name: 'Claudia Muraguti Bezerra2',
-        formation: 'Educadora Física',
-        cref: 'CREF: 0838-G/RS',
+        name: 'Eduardo Hans',
+        formation: 'Fisioterapeuta',
+        cref: 'CREFITO5: 65.775-F',
         avatar: '/images/pictures/avatar-muraguti.jpg'
       },
       info: {
-        email: 'email: muraguti@kaizenpilates.com.br',
+        email: 'email: eduardo@kaizenpilates.com.br',
         address: 'endereço: Rua Lavras 334/702 - Porto Alegre/RS',
-        fone: 'tel: 3333-33333'
+        fone: 'tel: 51 3519-3339'
       },
       graduation: {
-        colege: 'Graduada em Educação Física - UEL 1986'
+        colege:
+          'Curso Superior em Fisioterapia pelo Centro Universitário FEEVALE'
       },
       details: {
-        others: [
-          'Pós-graduação em Educação Física Escolar pela Universidade Estadual de Maringá/PR',
-          'Pós-graduação em Personal Training pela PUC/RS - 2000',
-          'Pós-graduação em Reestruturação Corporal Global pela Universidade Gama Filho/RJ - 2005'
-        ],
+        others: [''],
         curses: [
-          'Curso Avançado de Osteoporose Physio Pilates - Polestar - 2008',
-          'Curso de Coluna Avançada Physio Pilates - Polestar - 2008',
-          'Curso de Formação de Professores da Escola de Postura da Universidade Federal do Rio Grande do Sul - 2001',
-          'Curso prático intensivo de massagem - SESI/RS - 2000',
-          'Curso de Flymoon Physio Pilates - Polestar - 2009'
+          'Formação Avançada da Physio Pilates - Polestar',
+          'Formação no método CoreAlign, nível 1'
         ]
       }
     }
   },
   {
     id: '3',
-    title: 'Juliana',
+    title: 'Juliana Vogel',
     message:
-      'Para percorrer grandes distâncias nos finais de semana com a minha bicicleta? Doses diárias de Pilates e CoreAlign como vitaminas.',
-    picture: '/images/pictures/teacher0.jpg',
+      'Vem descobrir suas capacidades corporais, experimentar movimentos conscientes, treinar sua força e flexibilidade!!! Vem treinar e ótima semana!!!.',
+    picture: '/images/pictures/teacher1.jpg',
     show: false,
     cv: {
       profile: {
-        name: 'Juliana',
+        name: 'Juliana Vogel',
         formation: 'Educadora Física',
         cref: 'CREF: 0838-G/RS',
-        avatar: '/images/pictures/avatar-muraguti.jpg'
+        avatar: '/images/pictures/avatar-juliana.jpg'
       },
       info: {
-        email: 'email: muraguti@kaizenpilates.com.br',
+        email: '',
         address: 'endereço: Rua Lavras 334/702 - Porto Alegre/RS',
         fone: 'tel: 3333-33333'
       },
       graduation: {
-        colege: 'Graduada em Educação Física - UEL 1986'
+        colege: 'Graduada em Educação Física - URGS 2002'
       },
       details: {
         others: [
@@ -104,11 +98,7 @@ const teachers = [
           'Pós-graduação em Reestruturação Corporal Global pela Universidade Gama Filho/RJ - 2005'
         ],
         curses: [
-          'Curso Avançado de Osteoporose Physio Pilates - Polestar - 2008',
-          'Curso de Coluna Avançada Physio Pilates - Polestar - 2008',
-          'Curso de Formação de Professores da Escola de Postura da Universidade Federal do Rio Grande do Sul - 2001',
-          'Curso prático intensivo de massagem - SESI/RS - 2000',
-          'Curso de Flymoon Physio Pilates - Polestar - 2009'
+          ''
         ]
       }
     }
