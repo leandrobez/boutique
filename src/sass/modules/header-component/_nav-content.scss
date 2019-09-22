@@ -37,8 +37,8 @@
     opacity: 1;
     margin-left: 0;
   }
-  & .il-content--portrait,
-  & nav.il-content--nav {
+  .il-content--portrait,
+  nav.il-content--nav {
     width: 100%;
     min-height: 270px;
     padding: 1rem;
@@ -47,10 +47,6 @@
       width: 50%;
       min-height: 440px;
     }
-
-    /*@media screen and (min-width: 501px) {
-      width: 50%;
-    }*/
   }
   & .il-content--portrait {
     display: none;
@@ -61,15 +57,16 @@
       justify-content: center;
       align-items: center;
     }
-    & .il-avatar--portrait {
+    .il-avatar--portrait {
       height: $avataVerySmall;
       width: $avataVerySmall;
       border-radius: 50%;
       border: 1px solid $fortyColor;
       background-image: $avatar-url;
       background-position: center;
-      background-repeat: none;
+      background-repeat: no-repeat;
       background-size: cover;
+      box-shadow: 3px 8px 15px rgba(63, 54, 54, 0.7);
       @media screen and (min-width: 501px) {
         height: $avataSmall;
         width: $avataSmall;

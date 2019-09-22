@@ -1,5 +1,5 @@
 $gallery-size: 6;
-.il-photos {
+/*.il-photos {
   display: grid;
   height: calc(100vh - 10px);
   grid-template: repeat($gallery-size, 1fr) / repeat($gallery-size, 1fr);
@@ -163,5 +163,30 @@ div > [id^="lightbox-"] {
     &::after {
       content: 'X';
     }
+  }
+}*/
+
+.il-gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 360px);
+  justify-content: center;
+  @media screen and (min-width: 680px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and(min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.il-gallery--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 2px 3px 5px rgba($color: #4d4848, $alpha: 0.7);
+  cursor: pointer;
+  &:hover {
+    transform: scale(0.97);
+    border: 4px solid #debbaa;
+    opacity: 0.9;
   }
 }

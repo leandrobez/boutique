@@ -14,11 +14,10 @@
             <div class="il-card--footer">
                 <a href="#!" class="il-btn il-btn--vc" @click.prevent="setCv(index)">curriculo</a>
             </div>
-
         </div>
 
         <div class="il-cv" v-if="checkCV">
-          <a href="#!" title="Fechar Currículo" @click.prevent="closeModal">fechar</a>
+            <a href="#!" title="Fechar Currículo" @click.prevent="closeModal">fechar</a>
             <div class="il-cv--content">
                 <div class="il-cv--profile">
                     <img :src="CV.avatar" :alt="`professora ${CV.teacher}`" :title="`Professora ${CV.teacher}`">
@@ -51,64 +50,64 @@ import instructors from '../../common/instructors';
 import ilCards from './includes/cards.vue';
 import ilCv from './includes/cv.vue';
 export default {
-  name: 'Teachers',
-  components: {
-    ilCards,
-    ilCv
-  },
-  data() {
-    return {
-      whatIcon: 'il-pilates-icon flaticon-twisting-arms',
-      CV: {
-        index: 0,
-        id: null,
-        teacher: null,
-        picture: null,
-        avatar: null,
-        show: false
-      },
-      instructors: []
-    };
-  },
-  mounted() {
-    this.instructors = instructors;
-  },
-  computed: {
-    checkIntructors() {
-      if (this.instructors.length > 0) {
-        return true;
-      }
-      return false;
+    name: 'Teachers',
+    components: {
+        ilCards,
+        ilCv
     },
-    checkCV() {
-      if (this.CV.show) {
-        return true;
-      }
-      return false;
+    data() {
+        return {
+            whatIcon: 'il-pilates-icon flaticon-twisting-arms',
+            CV: {
+                index: 0,
+                id: null,
+                teacher: null,
+                picture: null,
+                avatar: null,
+                show: false
+            },
+            instructors: []
+        };
+    },
+    mounted() {
+        this.instructors = instructors;
+    },
+    computed: {
+        checkIntructors() {
+            if (this.instructors.length > 0) {
+                return true;
+            }
+            return false;
+        },
+        checkCV() {
+            if (this.CV.show) {
+                return true;
+            }
+            return false;
+        }
+    },
+    methods: {
+        getCurriculum() {
+            let index = this.CV.index;
+            return instructors[index].cv;
+        },
+        setCv(index) {
+            this.CV.show = false;
+            this.CV.index = index;
+            this.CV.id = this.instructors[index].id;
+            this.CV.teacher = this.instructors[index].title;
+            this.CV.picture = this.instructors[index].picture;
+            this.CV.avatar = this.instructors[index].cv.profile.avatar;
+            this.CV.show = true;
+        },
+        closeModal() {
+            this.CV.index = 0;
+            this.CV.id = null;
+            this.CV.teacher = null;
+            this.CV.picture = null;
+            this.CV.avatar = null;
+            this.CV.show = false;
+        }
     }
-  },
-  methods: {
-    getCurriculum() {
-      let index = this.CV.index;
-      return instructors[index].cv;
-    },
-    setCv(index) {
-      this.CV.show = false;
-      this.CV.index = index;
-      this.CV.id = this.instructors[index].id;
-      this.CV.teacher = this.instructors[index].title;
-      this.CV.picture = this.instructors[index].picture;
-      this.CV.avatar = this.instructors[index].cv.profile.avatar;
-      this.CV.show = true;
-    },
-    closeModal() {
-      this.CV.index = 0;
-      this.CV.id = null;
-      this.CV.teacher = null;
-      this.CV.picture = null;
-      this.CV.avatar = null;
-      this.CV.show = false;
-    }
-  }
 };
 </script>
