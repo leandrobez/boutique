@@ -20,7 +20,7 @@
             <a href="#!" title="Fechar Currículo" @click.prevent="closeModal">fechar</a>
             <div class="il-cv--content">
                 <div class="il-cv--profile">
-                    <img :src="CV.avatar" :alt="`professora ${CV.teacher}`" :title="`Professora ${CV.teacher}`">
+                    <img :src="CV.avatar" :alt="CV.teacher" :title="CV.teacher">
                 </div>
                 <div class="il-cv--info">
                     <ul>
@@ -47,14 +47,8 @@
 
 <script>
 import instructors from '../../common/instructors';
-import ilCards from './includes/cards.vue';
-import ilCv from './includes/cv.vue';
 export default {
     name: 'Teachers',
-    components: {
-        ilCards,
-        ilCv
-    },
     data() {
         return {
             whatIcon: 'il-pilates-icon flaticon-twisting-arms',

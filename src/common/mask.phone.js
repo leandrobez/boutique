@@ -14,6 +14,7 @@ const mask = {
   maskUp: (e, msc) => {
     if (e != undefined) {
       iCount2 = e.value.length;
+
       if (iCount2 > iCount1) {
         if (iCount2 - iCount1 > 1) {
           iCount1 = iCount2 - 1;
@@ -52,6 +53,7 @@ const mask = {
           }
         }
       } else {
+        //console.log('teste', iCount2, iCount1, msc);
         if (msc.substr(iCount2, 1) != '#') {
           nChar = 1;
           while (msc.substr(iCount1 - nChar, 1) != '#' && nChar <= iCount1) {

@@ -30,7 +30,7 @@ const mutations = {
     state.user = null;
   },
   DO_LOGIN(state, obj) {
-    console.log(login(obj));
+    //console.log(login(obj));
     state.status = { logginIn: true };
     status.user = JSON.stringify(login(obj).name);
   }

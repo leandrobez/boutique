@@ -31,10 +31,15 @@ export default {
   },
   computed: {
     getGallery() {
-      this.gallery = this.$parent.eventos;
+      this.setGallery()
+      return true
     }
   },
   methods: {
+    setGallery(){
+      let gallery = this.$parent.eventos;
+      this.gallery = gallery
+    },
     getBack(photo) {
       let background = `background: url('../images/gallery/gallery-studio-${photo}.jpg')`;
       return background;

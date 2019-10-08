@@ -3,7 +3,7 @@
 <section class="il-section il-section--contact">
     <div class="il-container--wrapper">
         <h1 class="il-section--title">Contate <span class="il-color--text__very-light"> agora.</span></h1>
-        <div class="il-contact--content">
+        <!--<div class="il-contact--content">
             <form name="form-contact" method="post" data-netlify="true" class="il-form" data-netlify-honeypot="bot-field" @submit.prevent="sendData">
                 <input type="hidden" name="form-name" value="form-contact" />
                 <fieldset>
@@ -28,20 +28,22 @@
                     </div>
                     <button type="submit" class="il-btn il-btn--submit">Enviar</button>
                 </fieldset>
-            </form>
-        </div>
-        <!--<div class="il-contact--form">
-            <ilForm />
+            </form>--
         </div>-->
+        <ilForm />
     </div>
 </section>
 </template>
 
 <script>
 import axios from 'axios';
+import ilForm from './includes/formContact.vue';
 //import mDown from '../../common/mask.phone.js';
 export default {
   name: 'contact',
+  components: {
+    ilForm
+  },
   data() {
     return {
       contact: {
@@ -85,20 +87,20 @@ export default {
     },
     maskD(ele) {
       if (ele == 'm') {
-        let mobil = document.getElementById('mobil');
+        //let mobil = document.getElementById('mobil');
         //mask.maskDown(mobil);
         //console.log(mask.maskDonw);
       } else if (ele == 'p') {
-        let phone = document.getElementById('phone');
+        //let phone = document.getElementById('phone');
         //mask.maskDown(phone);
       }
     },
     maskU(ele) {
       if (ele == 'p') {
-        let phone = document.getElementById('phone');
+        //let phone = document.getElementById('phone');
         //mask.maskUp(phone, '(##) ####-####');
       } else if (ele == 'm') {
-        let mobil = document.getElementById('mobil');
+        //let mobil = document.getElementById('mobil');
         //mask.maskUp(mobil, '(##) ####-####');
       }
     },

@@ -6,7 +6,7 @@
         <p class="il-weight il-color--text__dark"><i class="mdi mdi-cellphone-iphone mdi-12px"></i>{{mobil.ddd}} {{mobil.number}}</p>
         <p class="il-weight il-color--text__dark"><i class="mdi mdi-earth mdi-12px"></i>{{kayzenCity}}</p>
         <p class="il-weight il-color--text__dark"><i class="mdi mdi-email-variant mdi-12px"></i>{{kayzenEmail}}</p>
-        <p class="il-weight il-color--text__dark"><i class="mdi mdi-map-marker-radius mdi-12px" ></i><a href="#!" class="il-color--text__red" @click.prevent="loadMap()" :class="isDisabled" >veja o mapa</a></p>
+        <p class="il-weight il-color--text__dark"><i class="mdi mdi-map-marker-radius mdi-12px"></i><a href="#!" class="il-color--text__red" @click.prevent="loadMap()" :class="isDisabled">veja o mapa</a></p>
         <div class="il-clock" v-show="showLoad"></div>
     </div>
     <ilMap v-if="checkShowMap" :show="showMap" />
@@ -58,7 +58,7 @@ export default {
     methods: {
         removeScript(filename) {
             let check = false
-            var tags = document.getElementsByTagName('script');
+            var tags = document.getElementsByTagName('script')
             for (var i = tags.length; i >= 0; i--) {
 
                 if (
@@ -68,7 +68,7 @@ export default {
                 ) {
                     check = true
                     tags[i].parentNode.removeChild(tags[i])
-                };
+                }
             }
             return check
         },

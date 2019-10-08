@@ -1,8 +1,9 @@
 <template>
-<div class="container">
-    <p class="il-color--text__dark">Não se preocupe não compartilharemos seu endereço de e-mail. Ele é importante para podermos entrar em contato com você e entender suas reais necessidades.</p>
-    <div class="wrapper animated bounceInLeft">
-        <div class="company-info">
+<div class="il-contact--form">
+    <p class="il-color--text__dark">Não se preocupe não compartilharemos seu endereço de e-mail.<br>Ele é importante para podermos entrar em contato com você e entender suas reais necessidades.</p>
+    <div class="il-wrapper animated bounceInLeft">
+        <div class="il-info">
+            <img src="/images/banners/contact.jpg" alt="contact">
             <h3>Kaizen Pilates e CoreAlign</h3>
             <ul>
                 <li><i class="fa fa-road"></i> Av Lavras 334, Bairro Petrópolis</li>
@@ -10,22 +11,25 @@
                 <li><i class="fa fa-envelope"></i> contato@kaizenpilates.com</li>
             </ul>
         </div>
-        <div class="contact">
-            <h3>Email Us</h3>
-            {{msg}}
-            <form @submit.prevent="sendData" class="il-form" name="form-contact">
+        <div class="il-contact">
+            <h3>Envie um email</h3>
+            <div class="il-alert il-alert--warning" v-if="msg">
+                <p>{{msg}}</p>
+            </div>
+            <form @submit.prevent="sendData" data-netlify="true" class="il-form" data-netlify-honeypot="bot-field" name="form-contact">
                 <fieldset>
                     <div class="il-form--fields">
                         <input type="text" id="name" class="il-input" v-model="contact.name" placeholder="Seu nome" required>
                         <input type="text" id="lastname" class="il-input" v-model="contact.lastname" placeholder="Seu sobrenome" required>
                         <input type="email" id="email" class="il-input" v-model="contact.email" placeholder="Seu email" required>
-                        <input type="tel" id="phone" :onkeydown="maskD('p')" :onkeyup="maskU('p')" class="il-input" v-model="contact.phone" placeholder="Fone (xx) xxxx-xxxx">
-                        <input type="tel" id="mobil" class="il-input" :onkeydown="maskD('m')" :onkeyup="maskU('m')" v-model="contact.mobil" placeholder="Clr (xx) xxxx-xxxx">
+                        <input type="tel" id="phone" data-js="mask-phone" class="il-input" maxlength="15" v-model="contact.phone" placeholder="(xx) xxxx-xxxx">
+                        <input type="tel" id="mobil" data-js="mask-mobil" class="il-input" maxlength="15" v-model="contact.mobil" placeholder="(xx) xxxx-xxxx">
                         <input type="hidden" id="plan" v-model="contact.plan">
                         <select v-model="contact.frowhere" id="frowhere" class="il-select">
                             <option value="" selected>Como nos achou</option>
                             <option value="amigos">Meus amigos me indicaram</option>
                             <option value="facebook">Conheci a página no facebook</option>
+                            <option value="instagram">Conheci a página no instagram</option>
                             <option value="email">Recebi um email convidando</option>
                             <option value="encartes">Li em um encarte</option>
                         </select>
@@ -43,7 +47,6 @@
 
 <script>
 import axios from 'axios';
-import { MaskDown, MaskUp } from '../../../common/mask.phone.js';
 //import mail from 'nodemailer';
 export default {
   name: 'form-contact',
@@ -64,8 +67,43 @@ export default {
   },
   mounted() {
     this.setPlan();
+    this.mask();
   },
   methods: {
+    mask() {
+      /* máscara para telefone */
+      let maskPh = document.querySelector('[data-js="mask-phone"]');
+      let maskClr = document.querySelector('[data-js="mask-mobil"]');
+      maskPh.addEventListener(
+        'input',
+        e => {
+          this.makeMask(e);
+        },
+        false
+      );
+      maskClr.addEventListener(
+        'input',
+        e => {
+          this.makeMask(e);
+        },
+        false
+      );
+    },
+    makeMask(e) {
+      const maskPhone = phone => {
+        if (phone.length <= 15) {
+          console.log(phone);
+          phone = phone.replace(/D/g, '');
+          //phone = phone.replace(/^(\d)/, '($1');
+          phone = phone.replace(/^(d{2})(d)/g, '($1) $2');
+          phone = phone.replace(/(d)(d{4})$/, '$1-$2');
+          //.replace(/(-\d{6})\d+?$/, '$1');
+          return phone;
+        }
+        return phone;
+      };
+      e.target.value = maskPhone(e.target.value);
+    },
     setPlan() {
       let plan = '';
       let path = this.$route.params;
@@ -84,24 +122,6 @@ export default {
           break;
       }
     },
-    maskD(ele) {
-      if (ele == 'm') {
-        let mobil = document.getElementById('mobil');
-        MaskDown(mobil);
-      } else if (ele == 'p') {
-        let phone = document.getElementById('phone');
-        MaskDown(phone);
-      }
-    },
-    maskU(ele) {
-      if (ele == 'p') {
-        let phone = document.getElementById('phone');
-        MaskUp(phone, '(##) ####-####');
-      } else if (ele == 'm') {
-        let mobil = document.getElementById('mobil');
-        MaskUp(mobil, '(##) ####-####');
-      }
-    },
     encode(data) {
       return Object.keys(data)
         .map(
@@ -115,6 +135,37 @@ export default {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
       };
+      if (
+        this.contact.name == '' ||
+        this.contact.lastname == '' ||
+        this.contact.email == '' ||
+        this.contact.phone == '' ||
+        this.contact.mobil == ''
+      ) {
+        this.msg = 'Por favor prencha todos os campos.';
+        setTimeout(() => {
+          this.msg = '';
+        }, 3000);
+        return false;
+      }
+      if (this.contact.frowhere == '') {
+        this.msg =
+          'Por favor escolha uma das opções de como nos achou. Obrigado!';
+        setTimeout(() => {
+          this.msg = '';
+        }, 3000);
+        return false;
+      }
+      if (
+        this.contact.message == '' ||
+        this.contact.message == 'Deixe sua mensagem'
+      ) {
+        this.msg = 'Por favor preencha o campo mensagem. Obrigado!';
+        setTimeout(() => {
+          this.msg = '';
+        }, 3000);
+        return false;
+      }
       let content = this.encode({
         'form-name': 'form-contact',
         ...this.contact
@@ -145,107 +196,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.container {
-  width: 100%;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.brand {
-  text-align: center;
-}
-
-.brand span {
-  color: #fff;
-}
-
-.wrapper {
-  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
-}
-
-.wrapper > * {
-  padding: 1rem;
-}
-
-.company-info {
-  background: #324545;
-}
-
-.company-info h3,
-.company-info ul {
-  text-align: center;
-  margin: 0 0 1rem 0;
-  color: goldenrod;
-}
-
-.contact {
-  background: #f9feff;
-}
-
-/* FORM STYLES */
-/*.contact form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}*/
-
-.contact form label {
-  display: block;
-  font-size: 0.9rem;
-}
-
-.contact form p {
-  margin: 0;
-}
-
-.contact form .full {
-  grid-column: 1 / 3;
-}
-
-.contact form button,
-.contact form input,
-.contact form textarea {
-  width: 100%;
-  padding: 0.75rem 0.5rem;
-  border: 1px solid #c9e6ff;
-}
-
-.contact form button {
-  background: #342312;
-  border: 0;
-  outline: none;
-  color: #fccf00;
-  text-transform: uppercase;
-}
-
-.contact form button:hover,
-.contact form button:focus {
-  background: #454343;
-  color: #fff;
-  outline: 0;
-  transition: background-color 2s ease-out;
-}
-
-/* LARGE SCREENS */
-@media (min-width: 700px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .wrapper > * {
-    padding: 0.45rem;
-  }
-
-  .company-info h3,
-  .company-info ul,
-  .brand {
-    text-align: left;
-  }
-}
-</style>

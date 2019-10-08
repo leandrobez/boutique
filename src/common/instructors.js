@@ -2,7 +2,8 @@ const teachers = [
   {
     id: '1',
     title: 'Muraguti',
-    message: 'Paixão pelo movimento.',
+    message:
+      'Paixão pelo trabalho e dedicação no que for necessário para atingir a excelência no atendimento ao aluno/cliente.',
     picture: '/images/pictures/teacher01.jpg',
     show: false,
     cv: {
@@ -37,7 +38,7 @@ const teachers = [
       }
     }
   },
-  {
+  /*{
     id: '2',
     title: 'Eduardo',
     message:
@@ -68,12 +69,12 @@ const teachers = [
         ]
       }
     }
-  },
+  },*/
   {
     id: '3',
     title: 'Juliana Vogel',
     message:
-      'Vem descobrir suas capacidades corporais, experimentar movimentos conscientes, treinar sua força e flexibilidade!!! Vem treinar e ótima semana!!!.',
+      'Vem descobrir suas capacidades corporais, experimentar movimentos conscientes, treinar sua força e flexibilidade! Vem treinar e ótima semana!',
     picture: '/images/pictures/teacher1.jpg',
     show: false,
     cv: {
@@ -97,9 +98,7 @@ const teachers = [
           'Pós-graduação em Personal Training pela PUC/RS - 2000',
           'Pós-graduação em Reestruturação Corporal Global pela Universidade Gama Filho/RJ - 2005'
         ],
-        curses: [
-          ''
-        ]
+        curses: ['']
       }
     }
   }
