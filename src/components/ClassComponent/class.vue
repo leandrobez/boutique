@@ -21,7 +21,7 @@
     </section>
     <section class="il-section il-section--prices">
         <div class="il-container--wrapper">
-           <!-- <h4 class="il-color--accent text-center">Escolha um plano de aula:</h4>-->
+            <!-- <h4 class="il-color--accent text-center">Escolha um plano de aula:</h4>-->
             <div class="il-pricing--grid">
                 <ilCards v-for="plan in plans" :key="plan.key" :id="plan.id" :condicions="plan.condicions" :price="plan.value" :text="plan.text" />
             </div>

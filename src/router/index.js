@@ -17,7 +17,7 @@ import eventsGallery from '../components/GalleryComponent/includes/eventsGallery
 import Email from '../components/includes/SubmissionForms.vue';
 import Curses from '../components/includes/cursosComponent.vue';
 import Contact from '../components/ContactForm/contact.vue';
-//import Video from '../components/VideosComponent/videos.vue';
+import Video from '../components/VideosComponent/videos.vue';
 //import Login from '../components/LoginComponent/login.vue';
 //import Account from '../components/includes/accountComponent.vue';
 
@@ -67,11 +67,11 @@ const router = new VueRouter({
       name: 'advantage',
       component: Advantage
     },
-    /*{
+    {
       path: '/videos',
       name: 'video',
       component: Video
-    },*/
+    },
     {
       path: '/cursos',
       name: 'curse',

@@ -16,18 +16,12 @@
                     <router-link :to="{name:'gallery.studio'}" class="il-footer--list il-color--text__light" title="Veja fotos do studio">studio</router-link>
                 </h4>
             </div>
-
-            <!--	<div class="il-footer--col">
-
-<h4 class="il-footer--title">
-
-<i class="mdi mdi-24px mdi-camera-rear"></i>
-          <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__light" title="Veja fotos de eventos">eventos</router-link>
-
-</h4>
-
-</div>-->
-
+        <!--<div class="il-footer--col">
+              <h4 class="il-footer--title">
+                <i class="mdi mdi-24px mdi-camera-rear"></i>
+                <router-link :to="{name:'galleryEvents'}" class="il-footer--list il-color--text__light" title="Veja fotos de eventos">eventos</router-link>
+              </h4>
+            </div>-->
             <div class="il-footer--col">
                 <h4 class="il-footer--title">
                     <i class="mdi mdi-24px mdi-camera-party-mode"></i>

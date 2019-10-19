@@ -11,6 +11,7 @@ button.il-btn {
   transition: all 0.5s;
   max-width: $max-width;
   text-decoration: none;
+  cursor: pointer;
   outline: none;
   &.left {
     margin-left: 0;
@@ -71,7 +72,6 @@ button.il-btn--cards__price {
   &:focus,
   &:hover {
     background-color: $btn-cards-background-color-hoover;
-
   }
   &:active {
     transform: scale(1.1);

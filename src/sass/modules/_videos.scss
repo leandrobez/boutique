@@ -1,21 +1,81 @@
-section.il-section--videos {
+section.il-section--videos div {
   position: relative;
   .il-videos--content {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
     grid-gap: 0.35rem;
     justify-content: center;
+    .il-card--item {
+      height: 340px;
+      //border: 1px solid #817f7f;
+      border-radius: 7px;
+      box-shadow: 3px 2px 6px rgb(73, 54, 54);
+      .il-card--header {
+        height: 40px;
+        padding: 0.35rem 0;
+        background: #4f5b64;
+        span.il-card--title {
+          display: block;
+          text-align: center;
+          font-size: 0.89rem;
+          text-transform: uppercase;
+        }
+      }
+      .il-card--body {
+        height: 250px;
+        background: linear-gradient(
+          to bottom,
+          rgb(135, 141, 143) 10%,
+          rgb(197, 218, 238) 100%
+        );
+      }
+      .il-card--footer {
+        height: 50px;
+        background: #423b3b;
+        padding: 5px 0;
+        i {
+          display: block;
+          width: 40px;
+          height: 40px;
+          margin: auto;
+          border: 1px solid rgb(223, 223, 39);
+          line-height: 38px;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background 550ms ease;
+          &:hover {
+            background: #242113;
+            border: 3px solid rgb(243, 243, 236);
+            line-height: 34px;
+            transform: scale(0.9);
+            transition: background 550ms ease;
+            box-shadow: 2px 0px 7px rgb(229, 230, 231);
+          }
+        }
+      }
+    }
+    /*g
+    
     align-items: center;
     height: 100%;
     cursor: pointer;
-    transition: all 550ms;
+   
     @media screen and (min-width: 768px) {
       grid-template-columns: repeat(auto-fit, minmax(190px, 196px));
     }
-    @import '../theme/cards-videos';
+    @import '../theme/cards-videos';*/
+  }
+  .il-video--modal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    height: calc(90% * 0.5625);
+    background: white;
   }
   @import '../theme/player';
 }
+
 @keyframes pulse {
   0% {
     transform: scale(0.9);
