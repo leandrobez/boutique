@@ -12,52 +12,57 @@
         -->
         <div class="il-videos--content">
             <div class="il-card--item">
-              <div class="il-card--header">
-                <span class="il-card--title il-color--white">Equilíbrio</span>
-              </div>
-              <div class="il-card--body">
-                <img src="/images/snapshot/equilibrio.jpg" alt="equilibrio">
-              </div>
-              <div class="il-card--footer">
-                <i class="mdi mdi-36px mdi-play il-color--white"></i>
-              </div>
+                <div class="il-card--header">
+                    <span class="il-card--title il-color--white">Equilíbrio</span>
+                </div>
+                <div class="il-card--body">
+                    <img src="/images/snapshot/equilibrio.jpg" alt="equilibrio">
+                </div>
+                <div class="il-card--footer">
+                    <i class="mdi mdi-36px mdi-play il-color--white" @click="showModal"></i>
+                </div>
             </div>
             <div class="il-card--item">
-               <div class="il-card--header">
-                <span class="il-card--title il-color--white">Desafio</span>
-              </div>
-              <div class="il-card--body">
-                <img src="/images/snapshot/desafio.jpg" alt="desafio">
-              </div>
-              <div class="il-card--footer">
-                <i class="mdi mdi-36px mdi-play il-color--white"></i>
-              </div>
+                <div class="il-card--header">
+                    <span class="il-card--title il-color--white">Desafio</span>
+                </div>
+                <div class="il-card--body">
+                    <img src="/images/snapshot/desafio.jpg" alt="desafio">
+                </div>
+                <div class="il-card--footer">
+                    <i class="mdi mdi-36px mdi-play il-color--white" @click="showModal"></i>
+                </div>
             </div>
             <div class="il-card--item">
-               <div class="il-card--header">
-                <span class="il-card--title il-color--white">Tenacidade</span>
-              </div>
-              <div class="il-card--body">
-                <img src="/images/snapshot/tenacidade.jpg" alt="tenacidade">
-              </div>
-              <div class="il-card--footer">
-                <i class="mdi mdi-36px mdi-play il-color--white"></i>
-              </div>
+                <div class="il-card--header">
+                    <span class="il-card--title il-color--white">Tenacidade</span>
+                </div>
+                <div class="il-card--body">
+                    <img src="/images/snapshot/tenacidade.jpg" alt="tenacidade">
+                </div>
+                <div class="il-card--footer">
+                    <i class="mdi mdi-36px mdi-play il-color--white" @click="showModal"></i>
+                </div>
             </div>
             <div class="il-card--item">
-               <div class="il-card--header">
-                <span class="il-card--title il-color--white">Concentração</span>
-              </div>
-              <div class="il-card--body">
-                <img src="/images/snapshot/concentracao.jpg" alt="concentracao">
-              </div>
-              <div class="il-card--footer">
-                <i class="mdi mdi-36px mdi-play il-color--white"></i>
-              </div>
+                <div class="il-card--header">
+                    <span class="il-card--title il-color--white">Concentração</span>
+                </div>
+                <div class="il-card--body">
+                    <img src="/images/snapshot/concentracao.jpg" alt="concentracao">
+                </div>
+                <div class="il-card--footer">
+                    <i class="mdi mdi-36px mdi-play il-color--white" @click="showModal"></i>
+                </div>
             </div>
         </div>
         <div class="il-video--modal">
-          <video class="tWeCl" playsinline="" src="https://www.instagram.com/05167393-3854-4871-99f0-0b0e8a3b1e4c" type="video/mp4" autoplay></video>
+            <div class="il-close--btn">
+                <a href="#!" class="il-close" @click.prevent="closeModal">
+                    <i class="mdi mdi-close mdi-24px"></i>
+                </a>
+            </div>
+            <video class="tWeCl" playsinline="" src="https://www.instagram.com/05167393-3854-4871-99f0-0b0e8a3b1e4c" type="video/mp4" autoplay></video>
         </div>
     </div>
     <!--<div class="il-player" :class="getClass()" :width="getSize()" v-if="hasPlayer">
@@ -81,11 +86,11 @@ export default {
   },
   computed: {
     /*hasPlayer() {
-          if (this.player.size) {
-            return true;
-          }
-          return false;
-        }*/
+              if (this.player.size) {
+                return true;
+              }
+              return false;
+            }*/
   },
   data() {
     return {
@@ -98,38 +103,46 @@ export default {
   },
 
   methods: {
+    showModal() {
+      let modal = document.querySelector('.il-video--modal');
+      modal.classList.add('il-show');
+    },
+    closeModal() {
+      let modal = document.querySelector('.il-video--modal');
+      modal.classList.remove('il-show');
+    }
     /*getSize() {
-          let size = +this.player.size + 6;
-          console.log(size);
-          return size;
-        },
-        getClass() {
-          let theClass = this.show ? 'show' : '';
-          return theClass;
-        },
-        setTrailer(key) {
-          let movie = this.videos[key];
-          this.player = {
-            size: movie.youtube.width,
-            height: movie.youtube.width * 0.5625,
-            controls: 'controls',
-            allowfullscreen: 'allowfullscreen',
-            autoplay: false,
-            preload: 'auto',
-            poster: 'http://video-js.zencoder.com/oceans-clip.jpg',
-            aspectRatio: '640:267',
-            playbackRates: [1, 1.5, 2],
-            techOrder: ['youtube'],
-            sources: [
-              {
-                type: 'video/youtube',
-                src: 'https://www.youtube.com/embed/' + movie.youtube.cod
-              }
-            ]
-          };
+              let size = +this.player.size + 6;
+              console.log(size);
+              return size;
+            },
+            getClass() {
+              let theClass = this.show ? 'show' : '';
+              return theClass;
+            },
+            setTrailer(key) {
+              let movie = this.videos[key];
+              this.player = {
+                size: movie.youtube.width,
+                height: movie.youtube.width * 0.5625,
+                controls: 'controls',
+                allowfullscreen: 'allowfullscreen',
+                autoplay: false,
+                preload: 'auto',
+                poster: 'http://video-js.zencoder.com/oceans-clip.jpg',
+                aspectRatio: '640:267',
+                playbackRates: [1, 1.5, 2],
+                techOrder: ['youtube'],
+                sources: [
+                  {
+                    type: 'video/youtube',
+                    src: 'https://www.youtube.com/embed/' + movie.youtube.cod
+                  }
+                ]
+              };
 
-          this.show = true;
-        }*/
+              this.show = true;
+            }*/
   }
 };
 </script>

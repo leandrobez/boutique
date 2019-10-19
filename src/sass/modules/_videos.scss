@@ -1,3 +1,7 @@
+$video-w: 90%;
+section.il-section--videos {
+  margin-bottom: 1rem;
+}
 section.il-section--videos div {
   position: relative;
   .il-videos--content {
@@ -67,11 +71,50 @@ section.il-section--videos div {
   }
   .il-video--modal {
     position: absolute;
-    top: 50%;
+    left: -150%;
+    top: 20%;
+    @media (min-width: 768px) {
+      top: 15%;
+    }
+    @media (min-width: 1024px) {
+      top: 20%;
+    }
     transform: translateY(-50%);
-    width: 90%;
-    height: calc(90% * 0.5625);
+    width: $video-w;
+    height: calc($video-w * 0.5625);
+    min-height: 400px;
+    @media (min-width: 1024px) {
+      width: $video-w - 40%;
+      height: calc($video-w - 40% * 0.5625);
+    }
+
     background: white;
+    &.il-show {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .il-close--btn {
+      width: 100%;
+      height: 34px;
+      background: #50503e;
+      padding: 2px 0;
+      a.il-close {
+        display: block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        color: white;
+        margin: 0 auto;
+        i {
+          line-height: 30px;
+        }
+        &:hover {
+          opacity: 0.75;
+          border: 1px solid white;
+          border-radius: 50%;
+        }
+      }
+    }
   }
   @import '../theme/player';
 }
