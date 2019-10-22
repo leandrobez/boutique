@@ -1,7 +1,8 @@
 <template>
 <div class="il-gallery">
     <figure :class="`il-gallery--item il-gallery--item__${item.photo}`" v-for="item in gallery" :key="item.photo">
-        <img :src="`${item.thumbnail}/kaizen${item.photo}.jpg`" class="il-gallery--img" :title="item.description" :alt="`kaizen${item.photo}.jpg`">
+        <img :src="`${item.thumbnail}/kaizen${item.photo}.jpg`" class="il-gallery--img" :alt="`kaizen${item.photo}.jpg`" >
+        <span @click="showBigImg(item.photo)" title="Veja outras imagens">{{item.description}}</span>
     </figure>
 </div>
 </template>
@@ -17,7 +18,7 @@ export default {
           type: '',
           caption: 'Kaizen Foto 1',
           thumbnail: '/images/gallery/studio',
-          original: 'images/gallery/studio/big',
+          original: '/images/gallery/studio/big',
           name: 'kaizen',
           description: 'vista sala de Pilates',
           photo: '1'
@@ -26,7 +27,7 @@ export default {
           type: 'il-item--large',
           caption: 'Kaizen Foto 2',
           thumbnail: '/images/gallery/studio',
-          original: 'images/gallery/studio/big',
+          original: '/images/gallery/studio/big',
           name: 'kaizen',
           description: 'vista sala CoreAlign',
           photo: '2'
@@ -35,7 +36,7 @@ export default {
           type: '',
           caption: 'Kaizen Foto3',
           thumbnail: '/images/gallery/studio',
-          original: 'images/gallery/studio/big',
+          original: '/images/gallery/studio/big',
           name: 'kaizen',
           description: 'Molas',
           photo: '3'
@@ -44,7 +45,7 @@ export default {
           type: 'il-item--large',
           caption: 'Kaizen Foto 4',
           thumbnail: '/images/gallery/studio',
-          original: 'images/gallery/studio/big',
+          original: '/images/gallery/studio/big',
           name: 'kaizen',
           description: 'CoreAlign',
           photo: '4'
@@ -53,7 +54,7 @@ export default {
           type: 'il-item--medium',
           caption: 'Kaizen Foto 5',
           thumbnail: '/images/gallery/studio',
-          original: 'images/gallery/studio/big',
+          original: '/images/gallery/studio/big',
           name: 'kaizen',
           description: 'Reformers e Konnectors',
           photo: '5'
@@ -62,7 +63,7 @@ export default {
           type: 'il-item--large',
           caption: 'Kaizen Foto 6',
           thumbnail: '/images/gallery/studio',
-          original: 'images/gallery/studio/big',
+          original: '/images/gallery/studio/big',
           name: 'kaizen',
           description: 'CoreAlign',
           photo: '6'
@@ -71,7 +72,7 @@ export default {
           type: 'il-item--medium',
           caption: 'Kaizen Foto 7',
           thumbnail: '/images/gallery/studio',
-          original: 'images/gallery/studio/big',
+          original: '/images/gallery/studio/big',
           name: 'kaizen',
           description: 'Molas',
           photo: '7'
@@ -80,7 +81,7 @@ export default {
           type: 'il-item--medium',
           caption: 'Kaizen Foto 8',
           thumbnail: '/images/gallery/studio',
-          original: 'images/gallery/studio/big',
+          original: '/images/gallery/studio/big',
           name: 'kaizen',
           description: 'Trapézio',
           photo: '8'
@@ -97,10 +98,10 @@ export default {
     getBack(photo) {
       let background = `background: url('../images/gallery/studio/gallery-studio-${photo}.jpg')`;
       return background;
-
-      //console.log('background: url(../public/images/gallery/gallery-studio-1.jpg)')
+    },
+    showBigImg(photo) {
+      this.$parent.showBigImg(photo);
     }
   }
 };
 </script>
-

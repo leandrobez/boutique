@@ -2,8 +2,6 @@
 <section id="il-space" class="il-section il-section--space">
     <div class="il-container--wrapper">
         <h1 class="il-section--title">O <span class="il-color--text__very-light">Studio</span></h1>
-        <!--<h2 class="il-section--sub-title il-color--text__very-light text-right">{{$parent.titleCompost.title}}
-            <span class="il-color--text__red">{{$parent.titleCompost.subTitle}}</span></h2>-->
         <div class="il-space--content">
             <div class="il-box--items">
                 <div class="il-item il-box il-color--background__lighten">
