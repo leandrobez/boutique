@@ -81,13 +81,13 @@ section.il-section--videos div {
     }
     transform: translateY(-50%);
     width: $video-w;
-    height: calc($video-w * 0.5625);
+    height: $video-w * 0.5625;
     min-height: 400px;
+    $smallHeight: $video-w - 40%;
     @media (min-width: 1024px) {
       width: $video-w - 40%;
-      height: calc($video-w - 40% * 0.5625);
+      height: $smallHeight * 0.5625;
     }
-
     background: white;
     &.il-show {
       left: 50%;
