@@ -73,22 +73,22 @@ section.il-section--videos div {
     position: absolute;
     left: -150%;
     top: 20%;
+    transform: translateY(-50%);
+    width: $video-w;
+    $smallHeight: $video-w - 40%;
+    background: white;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1rem;
     @media (min-width: 768px) {
       top: 15%;
     }
     @media (min-width: 1024px) {
       top: 20%;
     }
-    transform: translateY(-50%);
-    width: $video-w;
-    height: $video-w * 0.5625;
-    min-height: 400px;
-    $smallHeight: $video-w - 40%;
-    @media (min-width: 1024px) {
-      width: $video-w - 40%;
-      height: $smallHeight * 0.5625;
-    }
-    background: white;
+
     &.il-show {
       left: 50%;
       transform: translateX(-50%);
@@ -96,12 +96,14 @@ section.il-section--videos div {
     .il-close--btn {
       width: 100%;
       height: 34px;
-      background: #50503e;
+
       padding: 2px 0;
+      margin-bottom: 1rem;
       a.il-close {
         display: block;
         width: 30px;
         height: 30px;
+        background: #50503e;
         text-align: center;
         color: white;
         margin: 0 auto;
@@ -116,7 +118,7 @@ section.il-section--videos div {
       }
     }
   }
-  @import '../theme/player';
+  //@import '../theme/player';
 }
 
 @keyframes pulse {
