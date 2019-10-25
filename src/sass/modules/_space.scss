@@ -12,5 +12,8 @@
   }
   .il-button--content {
     text-align: center;
+    a:first-child {
+      margin-right: 0.4rem;
+    }
   }
 }
