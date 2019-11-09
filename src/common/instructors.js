@@ -85,18 +85,19 @@ const teachers = [
         avatar: '/images/pictures/avatar-juliana.jpg'
       },
       info: {
-        email: '',
+        email: 'julilivogel@gmail.com',
         address: 'endereço: Rua Lavras 334/702 - Porto Alegre/RS',
-        fone: 'tel: 3333-33333'
+        fone: 'clr: 51 98254-6030'
       },
       graduation: {
-        colege: 'Graduada em Educação Física - URGS 2002'
+        colege:
+          'Habilitação Licenciatura Plena Educação Física - ESEF - URGS 2008'
       },
       details: {
         others: [
-          'Pós-graduação em Educação Física Escolar pela Universidade Estadual de Maringá/PR',
-          'Pós-graduação em Personal Training pela PUC/RS - 2000',
-          'Pós-graduação em Reestruturação Corporal Global pela Universidade Gama Filho/RJ - 2005'
+          'Formação Profissional no método Pilates (aparelho e solo) - Metacorpus Studio - 2005',
+          'Curso de Treinamento Neuromuscular com foco em corrida - Equipe 3DGYM - 2017',
+          'Curso de Exercícios do método Pilates para gestantes - PhD Roberta Bgeginski - 2018'
         ],
         curses: ['']
       }

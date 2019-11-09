@@ -61,17 +61,18 @@ button.il-btn--cards {
 a.il-btn--cards__price,
 button.il-btn--cards__price {
   padding: 0.3rem 0.4rem;
-  //border-radius: 60% 0 60% 0;
-  color: #434545;
-  background: none !important;
-  //background-color: rgb(145, 233, 189);
-  max-width: 140px;
-  margin-right: 60px;
-  font-size: 0.75rem;
-  border: none;
+  color: #554327;
+  //background: none !important;
+  border: 1px solid #454343;
+  color: white;
+  width: 100%;
+  max-width: 160px;
+  margin: 0 auto;
+  text-transform: none;
   &:focus,
   &:hover {
-    background-color: $btn-cards-background-color-hoover;
+    background: #f2f1f1 !important;
+    color: #434343;
   }
   &:active {
     transform: scale(1.1);

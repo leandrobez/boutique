@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
   .il-section--class,
   .il-section--prices {
     text-align: center;
@@ -40,12 +41,34 @@
       color: black;
     }
     & p.il-obs {
-      color: rgb(42, 39, 53);
+      color: rgb(20, 13, 13);
       padding: 0;
-      margin: 0;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
     }
     & a.il-close {
-      @include btnClose;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -5px;
+      background: rgb(34, 17, 17);
+      transition: 450ms all ease;
+      &:hover {
+        color: rgb(17, 17, 14);
+        background: white;
+        transition: 450ms all ease;
+      }
+      & i {
+        display: block;
+        line-height: 30px;
+      }
     }
     &.il-show {
       display: flex;
@@ -61,25 +84,10 @@
         content: '';
         position: absolute;
         z-index: -1;
-        opacity: 0.95;
         width: $max-width;
-        height: 100%;
-        background: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.15) 0%,
-            rgba(0, 0, 0, 0.15) 100%
-          ),
-          radial-gradient(
-              at top center,
-              rgba(255, 255, 255, 0.4) 0%,
-              rgba(0, 0, 0, 0.4) 120%
-            )
-            #989898;
-        //background: rgb(106, 184, 86);
-        border-radius: 55% 0 0 0;
-        @media screen and(min-width: 600px) {
-          border-radius: 0;
-        }
+        height: 390px;
+        background: #efe6d5;
+        //background: linear-gradient(to bottom, #5b4e38 10%, #feae45 130%);
       }
     }
   }

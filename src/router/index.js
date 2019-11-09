@@ -69,7 +69,7 @@ const router = new VueRouter({
     },
     {
       path: '/videos',
-      name: 'video',
+      name: 'videos',
       component: Video
     },
     {

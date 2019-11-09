@@ -114,6 +114,15 @@ export default {
         },
         {
           id: 8,
+          link: 'videos',
+          title: 'Uma imagem vale mais que mil palavras',
+          label: 'Vídeos',
+          icon: 'il-pilates-icon flaticon-pilates-equipment',
+          params: false,
+          show: true
+        },
+        {
+          id: 9,
           link: 'contact',
           title: 'Quer enviar uma mensagem?',
           label: 'Contato',

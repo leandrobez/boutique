@@ -1,10 +1,10 @@
 <template>
 <div :class="`il-plan il-plan--${id}`">
-    <h2 class="il-color--text__green">{{condicions}} X Semana</h2>
+    <h2 class="il-color--text__accent">{{condicions}} X semana</h2>
     <p class="il-price">
-      <span class="il-color--text__alt">R$ {{price}},00 </span>
-      <span class="il-color--text__green">por mês</span></p>
-    <router-link :to="{name: 'contact', params:{plan: 'plan'+id}}" class="il-btn il-btn--cards__price ">Inscreva-se</router-link>
+      <span class="il-color--text__light">R$ {{price}},00 </span>
+      <span class="il-color--text__accent">por mês</span></p>
+    <router-link :to="{name: 'contact', params:{plan: 'plan'+id}}" class="il-btn il-btn--cards__price">inscreva-se</router-link>
 </div>
 </template>
 
@@ -14,43 +14,43 @@
 import anime from 'animejs';
 //import gatewayGerencianet from '../../../common/gerencianet.js';
 export default {
-    name: 'classCards',
-    props: {
-        id: String,
-        condicions: Number,
-        price: Number,
-        text: String
+  name: 'classCards',
+  props: {
+    id: String,
+    condicions: Number,
+    price: Number,
+    text: String
+  },
+  data() {
+    return {};
+  },
+  mounted() {
+    this.startAnime();
+  },
+  methods: {
+    startAnime() {
+      let init = 400;
+      let include = 100;
+      let showAnime = anime.timeline({
+        targets: '.il-plan--1',
+        easing: 'easeInOutQuad'
+      });
+      showAnime.add({
+        opacity: ['0', '1'],
+        duration: init
+      });
+      showAnime.add({
+        targets: '.il-plan--2',
+        opacity: ['0', '1'],
+        duration: init + include
+      });
+      showAnime.add({
+        targets: '.il-plan--3',
+        opacity: ['0', '1'],
+        duration: init + 2 * include
+      });
     },
-    data() {
-        return {};
-    },
-    mounted() {
-        this.startAnime();
-    },
-    methods: {
-        startAnime() {
-            let init = 400;
-            let include = 100;
-            let showAnime = anime.timeline({
-                targets: '.il-plan--1',
-                easing: 'easeInOutQuad'
-            });
-            showAnime.add({
-                opacity: ['0', '1'],
-                duration: init
-            });
-            showAnime.add({
-                targets: '.il-plan--2',
-                opacity: ['0', '1'],
-                duration: init + include
-            });
-            showAnime.add({
-                targets: '.il-plan--3',
-                opacity: ['0', '1'],
-                duration: init + 2 * include
-            });
-        },
-        /*newPlan(key) {
+    /*newPlan(key) {
           let options = gatewayGerencianet.access.dev;
           let plans = gatewayGerencianet.plans;
           let gateway = new Gerencianet(options);
@@ -85,30 +85,29 @@ export default {
             console.log(e);
           }
         },*/
-        subscription(key) {
-            let plan = '';
-            switch (key) {
-                case 1:
-                    plan = 'contact.plan1';
-                    this.$router.push({
-                        name: plan
-                    });
-                    break;
-                case 2:
-                    plan = 'contact.plan2';
-                    this.$router.push({
-                        name: plan
-                    });
-                    break;
-                case 3:
-                    plan = 'contact.plan3';
-                    this.$router.push({
-                        name: plan
-                    });
-                    break;
-            }
-
-        }
+    subscription(key) {
+      let plan = '';
+      switch (key) {
+        case 1:
+          plan = 'contact.plan1';
+          this.$router.push({
+            name: plan
+          });
+          break;
+        case 2:
+          plan = 'contact.plan2';
+          this.$router.push({
+            name: plan
+          });
+          break;
+        case 3:
+          plan = 'contact.plan3';
+          this.$router.push({
+            name: plan
+          });
+          break;
+      }
     }
+  }
 };
 </script>

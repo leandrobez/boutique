@@ -107,7 +107,7 @@ export default {
           this.whereIAm = 'Cursos';
           this.whatIcon = 'il-pilates-icon flaticon-pilates-equipment';
           break;
-        case 'video':
+        case 'videos':
           currentFooter = 'il-video';
           this.whereIAm = 'videos';
           this.whatIcon = 'il-pilates-icon flaticon-exercise-bands';
