@@ -6,9 +6,10 @@
             <img src="/images/banners/contact.jpg" alt="contact">
             <h3>Kaizen Pilates e CoreAlign</h3>
             <ul>
-                <li><i class="fa fa-road"></i> Av Lavras 334, Bairro Petrópolis</li>
-                <li><i class="fa fa-phone"></i> 3519-3339</li>
-                <li><i class="fa fa-envelope"></i> contato@kaizenpilates.com</li>
+                <li><i class="mdi mdi-map"></i> Av Lavras 334 - sala 702</li>
+                <li><i class="mdi mdi-sign-caution"></i> Bairro Petrópolis</li>
+                <li><i class="mdi mdi-phone"></i> 3519-3339</li>
+                <li><i class="mdi mdi-email"></i> contato@kaizenpilates.com</li>
             </ul>
         </div>
         <div class="il-contact">
