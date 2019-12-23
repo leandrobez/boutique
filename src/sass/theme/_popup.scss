@@ -2,40 +2,102 @@
   display: table;
   text-align: center;
   display: none;
-}
-.popScroll.hidden {
   transition: 450ms ease-in-out;
-  position: relative;
-  z-index: -1;
-  left: -100%;
-  width: 0;
-  height: 0;
-  transition: all 750ms ease-in-out;
+  height: 100%;
+
+  &.hidden {
+    transition: 450ms ease-in-out;
+    position: relative;
+    z-index: -1;
+    left: -100%;
+    width: 0;
+    height: 0;
+  }
+  &.show {
+    transition: 450ms ease-in-out;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+  &.il-back {
+    background: rgba(101, 115, 116, 0.507);
+  }
+  .popup {
+    width: 350px;
+    position: relative;
+    margin: 1rem auto;
+    display: block;
+    text-align: center;
+    background-clip: padding-box;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+    transform-origin: top center;
+    animation: iconosani 1.2s forwards;
+    h1 {
+      height: 40px;
+      position: relative;
+      color: #fff;
+      font-size: 0.9rem;
+      line-height: 40px;
+      text-align: center;
+      text-transform: uppercase;
+      background: #434545;
+    }
+    p {
+      text-align: center;
+      padding: 7px 0;
+      font-size: 0.8rem;
+      margin: 3px auto;
+    }
+    &.il-christmas {
+      width: 70%;
+      min-height: 300px;
+      top: 15%;
+      border-radius: 15px 15px;
+      margin: 0 auto;
+      transform-origin: center center;
+      background-image: url('../public/images/banners/christmas-banner.jpg');
+      background-position: top left;
+      background-size: cover;
+      @media (min-width: 680px) {
+        background-position: center;
+      }
+      h1 {
+        position: relative;
+        border-radius: 15px 15px 0 0;
+        font-size: 0.7rem;
+        padding: 0 0.2rem;
+        @media (min-width: 680px) {
+          font-size: 0.8rem;
+        }
+        background: #0c3d5a;
+        color: #fcfbc9;
+      }
+      p {
+        font-family: $heading-font;
+        position: relative;
+        left: 16%;
+        top: 10px;
+        color: rgb(236, 228, 182);
+        width: 62%;
+        @media (min-width: 680px) {
+          left: 0;
+          top: 30px;
+          width: 70%;
+        }
+        span {
+          color: yellow;
+        }
+      }
+    }
+  }
 }
-.popScroll.show {
-  transition: all 750ms ease-in-out;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 100%;
-  height: 100%;  
-  z-index: 5;
-}
-.popup {
-  width: 350px;
-  //height: 450px;
-  position: relative;
-  margin: 1rem auto;
-  display: block;
-  text-align: center;
-  background-clip: padding-box; /* prevents bg color from leaking outside the border */
-  background-color: #fff; /* layer fill content */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.18); /* drop shadow */
-  transform-origin: top center;
-  animation: iconosani 1.2s forwards;
-}
+
 .il-picture {
   position: relative;
 }
@@ -55,24 +117,6 @@
     transform: perspective(800px) rotateX(0deg);
     opacity: 1;
   }
-}
-
-.popScroll h1 {
-  height: 40px;
-  position: relative;
-  color: #fff;
-  font-size: 0.9rem;
-  line-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  background: #434545;
-}
-
-.popScroll p {
-  text-align: center;
-  padding: 7px 0;
-  font-size: 0.8rem;
-  margin: 3px auto;
 }
 
 #option {

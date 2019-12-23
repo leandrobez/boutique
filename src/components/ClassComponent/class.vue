@@ -33,55 +33,60 @@
 </template>
 
 <script>
-import {
-    animeBox
-} from '../../common/animation';
+import { animeBox } from '../../common/animation';
 import ilCards from './includes/cards.vue';
 export default {
-    name: 'Class',
-    components: {
-        ilCards
-    },
-    mounted() {
-        this.startAnime();
-    },
-    data() {
-        return {
-            whatIcon: 'il-pilates-icon flaticon-exercises-with-chair',
-            plans: [{
-                    id: '1',
-                    key: 0,
-                    condicions: 1,
-                    value: 245,
-                    message: ''
-                },
-                {
-                    id: '2',
-                    key: 1,
-                    condicions: 2,
-                    value: 460,
-                    message: ''
-                },
-                {
-                    id: '3',
-                    key: 2,
-                    condicions: 3,
-                    value: 595,
-                    message: ''
-                }
-            ]
-        };
-    },
-    methods: {
-        showPanel() {
-            let panel = document.querySelector('.il-section.il-section--prices')
-            panel.classList.add('il-show')
+  name: 'Class',
+  components: {
+    ilCards
+  },
+  computed: {
+    showCards() {
+      if (this.show) {
+        return true;
+      }
+      return false;
+    }
+  },
+  data() {
+    return {
+      whatIcon: 'il-pilates-icon flaticon-exercises-with-chair',
+      show: false,
+      plans: [
+        {
+          id: '1',
+          key: 0,
+          condicions: 1,
+          value: 245,
+          message: ''
         },
-        closePanel() {
-            let panel = document.querySelector('.il-section.il-section--prices')
-            panel.classList.remove('il-show')
+        {
+          id: '2',
+          key: 1,
+          condicions: 2,
+          value: 460,
+          message: ''
+        },
+        {
+          id: '3',
+          key: 2,
+          condicions: 3,
+          value: 595,
+          message: ''
         }
+      ]
+    };
+  },
+  methods: {
+    showPanel() {
+      let panel = document.querySelector('.il-section.il-section--prices');
+      panel.classList.add('il-show');
     },
-    mixins: [animeBox]
+    closePanel() {
+      let panel = document.querySelector('.il-section.il-section--prices');
+      panel.classList.remove('il-show');
+    }
+  },
+  mixins: [animeBox]
 };
 </script>

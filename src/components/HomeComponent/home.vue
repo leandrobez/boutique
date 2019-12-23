@@ -1,55 +1,116 @@
 <template>
-<!--SECTION HOME-->
-<section class="il-section il-section--home">
+  <!--SECTION HOME-->
+  <section class="il-section il-section--home">
     <div class="il-container--wrapper">
-        <h1 class="il-section--title">Bem Vindo a <br>{{$parent.titleCompost.title}}
-            <span class="il-color--text__dark">{{$parent.titleCompost.title1}} e </span> <span class="il-color--text__red">{{$parent.titleCompost.subTitle}}</span>
-        </h1>
-        <h2 class="il-section--sub-title">Saúde em melhoria <span class="il-color--text__red">continua</span>.</h2>
-        <div class="il-home--content">
-            <p class="il-content--description il-color--text__alt">Olá! Você quer melhorar sua saúde reduzindo dores musculares?<br>Temos a solução do seu problema através de exercícios que vão melhorar a sua postura e queimar calorias de forma divertida.<br>Então conheça as inovações que a {{$parent.title}} oferece através do <span class="tooltip">
-              <a class="il-hints" id="konnector-picture" href="#!" >pilates</a>
+      <h1 class="il-section--title">
+        Bem Vindo a <br />{{ $parent.titleCompost.title }}
+        <span class="il-color--text__dark"
+          >{{ $parent.titleCompost.title1 }} e
+        </span>
+        <span class="il-color--text__red">{{
+          $parent.titleCompost.subTitle
+        }}</span>
+      </h1>
+      <h2 class="il-section--sub-title">
+        Saúde em melhoria <span class="il-color--text__red">continua</span>.
+      </h2>
+      <div class="il-home--content">
+        <p class="il-content--description il-color--text__alt">
+          Olá! Você quer melhorar sua saúde reduzindo dores musculares?<br />Temos
+          a solução do seu problema através de exercícios que vão melhorar a sua
+          postura e queimar calorias de forma divertida.<br />Então conheça as
+          inovações que a {{ $parent.title }} oferece através do
+          <span class="tooltip">
+            <a class="il-hints" id="konnector-picture" href="#!">pilates</a>
             <span class="tooltiptext">
               <picture id="konnector">
-                    <img :src="thumbs.konnector" alt="Konnector" title="Konnector">
-                </picture>
-              </span>
-                </span>
-                <!--colocar link sobr konnector--> e do <span class="tooltip">
-              <a class="il-hints" id="corealign-picture" href="#!" >CoreAlign</a>
-              <span class="tooltiptext">
+                <img
+                  :src="thumbs.konnector"
+                  alt="Konnector"
+                  title="Konnector"
+                />
+              </picture>
+            </span>
+          </span>
+          <!--colocar link sobr konnector-->
+          e do
+          <span class="tooltip">
+            <a class="il-hints" id="corealign-picture" href="#!">CoreAlign</a>
+            <span class="tooltiptext">
               <picture id="corealign">
-                    <img :src="thumbs.corealign" alt="CoreAlign" title="CoreAlign">
-                </picture>
-              </span>
-                </span>.<br><b>Quer saber mais</b> ? Entre em contato através do nosso <a class="il-color--text__dark il-link--decoration" href="#!" @click.prevent="socialNetOpen('wap')" title="Entra em contato através do whatsApp">whatsApp</a> ou mande uma <router-link :to="{name:'contact',params: {plan: 'message'}}" class="il-color--text__dark il-link--decoration">mensagem</router-link>.<br>Vem pra <strong>Kaizen</strong> !</p>
-            <h3>Nossa Localização</h3>
-            <ilAddress />
-        </div>
-        <div class="il-icons">
-            <a href="#" class="il-icons--link il-color--text__alt" title="Contate pelo whatsapp" @click="socialNetOpen('wap')"><i class="mdi mdi-whatsapp mdi-36px"></i></a>
-            <a href="#" class="il-icons--link il-color--text__alt" title="Visite a rede social" @click="socialNetOpen('fb')"><i class="mdi mdi-facebook mdi-36px"></i></a>
-            <a href="#" class="il-icons--link il-color--text__alt" title="Visite a rede social" @click="socialNetOpen('in')"><i class="mdi mdi-instagram mdi-36px"></i></a>
-        </div>
+                <img
+                  :src="thumbs.corealign"
+                  alt="CoreAlign"
+                  title="CoreAlign"
+                />
+              </picture>
+            </span> </span
+          >.<br /><b>Quer saber mais</b> ? Entre em contato através do nosso
+          <a
+            class="il-color--text__dark il-link--decoration"
+            href="#!"
+            @click.prevent="socialNetOpen('wap')"
+            title="Entra em contato através do whatsApp"
+            >whatsApp</a
+          >
+          ou mande uma
+          <router-link
+            :to="{ name: 'contact', params: { plan: 'message' } }"
+            class="il-color--text__dark il-link--decoration"
+            >mensagem</router-link
+          >.<br />Vem pra <strong>Kaizen</strong> !
+        </p>
+        <h3>Nossa Localização</h3>
+        <ilAddress />
+      </div>
+      <div class="il-icons">
+        <a
+          href="#"
+          class="il-icons--link il-color--text__alt"
+          title="Contate pelo whatsapp"
+          @click="socialNetOpen('wap')"
+          ><i class="mdi mdi-whatsapp mdi-36px"></i
+        ></a>
+        <a
+          href="#"
+          class="il-icons--link il-color--text__alt"
+          title="Visite a rede social"
+          @click="socialNetOpen('fb')"
+          ><i class="mdi mdi-facebook mdi-36px"></i
+        ></a>
+        <a
+          href="#"
+          class="il-icons--link il-color--text__alt"
+          title="Visite a rede social"
+          @click="socialNetOpen('in')"
+          ><i class="mdi mdi-instagram mdi-36px"></i
+        ></a>
+      </div>
     </div>
     <div class="il-container--wrapper">
-    <ilPopUp v-if="showThePopup" />
+      <ilPopUp v-if="showThePopup" />
     </div>
-</section>
+    <div class="il-container--wrapper">
+      <ilPopUpCh v-if="showThePopupCh" />
+    </div>
+  </section>
 </template>
 
 <script>
 import ilAddress from './includes/address.vue';
 import ilPopUp from './includes/popup.vue';
+import ilPopUpCh from './includes/popupCh.vue';
 export default {
   name: 'Home',
   components: {
     ilAddress,
-    ilPopUp
+    ilPopUp,
+    ilPopUpCh
   },
   data() {
     return {
       showPopup: false,
+      showPopupChristmas: false,
       whatIcon: 'il-pilates-icon flaticon-precision-posture',
       thumbs: {
         konnector: 'images/banners/thumbs/konnector.jpg',
@@ -63,13 +124,20 @@ export default {
         return true;
       }
       return false;
+    },
+    showThePopupCh() {
+      if (this.showPopupChristmas) {
+        return true;
+      }
+      return false;
     }
   },
 
   mounted() {
     setTimeout(() => {
-      this.showPopup = true;
-    }, 15000);
+      //this.showPopup = true;
+      this.showPopupChristmas = true;
+    }, 5000);
   },
   methods: {
     socialNetOpen(path) {
