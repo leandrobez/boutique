@@ -135,8 +135,8 @@ export default {
 
   mounted() {
     setTimeout(() => {
-      //this.showPopup = true;
-      this.showPopupChristmas = true;
+      this.showPopup = true;
+      //this.showPopupChristmas = true;
     }, 5000);
   },
   methods: {
