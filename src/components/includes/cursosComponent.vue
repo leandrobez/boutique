@@ -3,7 +3,7 @@
     <div class="il-container--wrapper">
         <h1 class="il-section--title">Cursos e  <span class="il-color--text__very-light">eventos</span>
         </h1>
-        <h2 class="il-section--sub-title il-color--text__very-light text-right">Calendário de Curso - 2019.</h2>
+        <h2 class="il-section--sub-title il-color--text__very-light text-right">Calendário de Curso - 2020.</h2>
         <div class="il-curse--content">
             <table class="il-table">
                 <thead>
